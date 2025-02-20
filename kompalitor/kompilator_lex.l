@@ -1,9 +1,13 @@
+%{
+#include <stdlib.h>
+#include <stdio.h>
+%}
+
 %option noyywrap
 D   [0-9]
 DECIMAL {D}+.{D}+
 E [Ee][-+]?{D}+
 CHAR [a_zA-Z]
-VAR [a_zA-Z0-9_]
 
 %%
 {D}+ 					printf(" tNB");
@@ -15,7 +19,6 @@ main              		printf(" tMAIN");
 "}"               		printf(" tCB");
 const					printf(" tCONST");
 int 					printf(" tINT");
-{CHAR}{VAR}*			printf( "tVAR");
 "+"               		printf(" tADD");
 "-"               		printf(" tSUB");
 "*"               		printf(" tMUL");
@@ -32,12 +35,10 @@ void              		printf(" tVOID");
 if 						printf(" tIF");
 else 					printf(" tELSE");
 for						printf(" tFOR");
-[a-z]+            		printf(" tID[%s]", yytext);
-{CHAR}+					printf(" tSTR");
+[A-Za-z_][A-Za-z0-9_]*	printf(" tID[%s]", yytext);
 .                 		{ printf(" ERROR\n"); exit(2); }
 
 %%
-
 void main(void) {
 	yylex();
 }

@@ -4,32 +4,20 @@
 int var[26];
 void yyerror(char *s);
 %}
+
 %union { int nb; char var; }
-%token tNB tEXP tREAL tEQ tMAIN tOB tCB tCONST tINT tVAR tADD tSUB tMUL tDIV tOP tCP tSEP tEOL tSEM tPRINTF tWHILE tVOID tIF tELSE tFOR tSTR 
-%token <nb> tNB
+%token tNB tEXP tREAL tEQ tMAIN tOB tCB tCONST tINT tADD tSUB tMUL tDIV tOP tCP tSEP tEOL tSEM tPRINTF tWHILE tVOID tIF tELSE tFOR tSTR 
 %token <var> tID
 %type <nb> Expr DivMul Terme
 %start Kompilator
 %%
 Kompilator : tVOID tMAIN tOP tCP tOB Instruction tCB 
 			| tINT tMAIN tOB tCP tOB Instruction tCB;
-Instruction : 
-Affectation :
-Declaration :
-Expression : 
-Fonction : tINT 
-Calcul :	  Expr tFL { printf("> %d\n", $1); }
-		| tID tEGAL Expr tFL { var[(int)$1] = $3; } ;
-Expr :		  Expr tADD DivMul { $$ = $1 + $3; }
-		| Expr tSOU DivMul { $$ = $1 - $3; }
-		| DivMul { $$ = $1; } ;
-DivMul :	  DivMul tMUL Terme { $$ = $1 * $3; }
-		| DivMul tDIV Terme { $$ = $1 / $3; }
-		| Terme { $$ = $1; } ;
-Terme :		  tPO Expr tPF { $$ = $2; }
-		| tID { $$ = var[$1]; }
-		| tNB { $$ = $1; } ;
-
+Instruction : ;
+Affectation : Declaration tEQ Expression;
+Declaration : tCONST | tINT;
+Expression : tID | tEXP | tNB;
+Fonction : tINT;
 
 %%
 void yyerror(char *s) { fprintf(stderr, "%s\n", s); }
