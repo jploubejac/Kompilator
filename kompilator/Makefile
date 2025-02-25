@@ -37,6 +37,12 @@ test:
 	@echo 🪐 TESTING 🪐
 	@./run_all.sh
 
+indent:
+	@echo "Running indent on all files in sample_files..."
+	@indent sample_files/* 2>/dev/null || echo "No valid files to indent."
+	@echo "Indentation complete!"
+
+
 
 
 
