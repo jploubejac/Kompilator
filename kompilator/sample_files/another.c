@@ -1,7 +1,4 @@
-#include <stdio.h>
-
-void
-main ()
+void main ()
 {
   int i, j, k, r;
   i = 3;

@@ -29,7 +29,7 @@ int 					{ printf(" tINT"); return tINT; }
 ")"               		{ printf(" tCP"); return tCP; }
 [ \t]	         		{ printf(" "); }
 ","	         			{ printf(" tSEP"); return tSEP; }
-[\n]+          			{ printf(" tEOL"); } // return tEOL; for now we return EOL, might change
+[\n]+          			{ printf(" \n"); } // return tEOL; for now we return EOL, might change
 ";"               		{ printf(" tSEM"); return tSEM; }
 printf					{ printf(" tPRINTF"); return tPRINTF; }
 while             		{ printf(" tWHILE"); return tWHILE; }

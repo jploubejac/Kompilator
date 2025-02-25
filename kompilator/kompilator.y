@@ -7,28 +7,41 @@ int yylex();
 %}
 
 %union { int nb; char var; }
-%token tNB tEXP tREAL tEQ tMAIN tOB tCB tCONST tINT tADD tSUB tMUL tDIV tOP tCP tSEP tEOL tSEM tPRINTF tWHILE tVOID tIF tELSE tFOR tSTR 
+%token tNB tEXP tREAL tEQ tMAIN tOB tCB tCONST tINT tADD tSUB tMUL tDIV tOP tCP tSEP tSEM tPRINTF tWHILE tVOID tIF tELSE tFOR tSTR 
 %token <var> tID
 %start Kompilator
 %%
 
 Kompilator : tVOID tMAIN tOP tCP tOB Instruction tCB 
-			      | tINT tMAIN tOP tCP tOB Instruction tCB;
+			      | tINT tMAIN tOP tCP tOB Instruction tCB
+            ;
 
-Instruction : Instruction Affectation tSEM 
-              | Instruction tEOL
-              | ;
+Instruction : Instruction Declaration tSEM
+              | Instruction Affectation tSEM
+              | 
+              ;
 
-Affectation : Declaration tEQ Expression;
+Declaration : Type Variable tEQ Expression
+              | Type Variable
+              ;
 
-Declaration : tCONST | tINT;
+Variable : tID
+         | Variable tSEP tID
+         ;
+
+Type : tCONST 
+      | tINT
+      ;
+
+Affectation : Variable tEQ Expression
+              ;
 
 Expression : Expression tADD Expression
             | Expression tSUB Expression 
             | Expression tMUL Expression 
             | Expression tDIV Expression 
-            | tID 
-            | tNB;
+            | tNB
+            ;
 
 %%
 void yyerror(char *s) {
@@ -43,9 +56,9 @@ int main(void) {
   printf("************************************************************************************\n");
 
   if (yyparse() == 0) {
-    printf("\n\nParsing successful! ✅\n");
+    printf("\nSyntax analysis successful! ✅\n");
   } else {
-    printf("\nParsing failed! ❌\n");
+    printf("\nSyntax analysis failed! ❌\n");
   }
 
   printf("\n************************************************************************************\n");
