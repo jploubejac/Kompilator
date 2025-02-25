@@ -1,4 +1,5 @@
 %{
+#pragma GCC diagnostic ignored "-Wunused-function"
 #include <stdlib.h>
 #include <stdio.h>
 %}
@@ -39,6 +40,3 @@ for						printf(" tFOR");
 .                 		{ printf(" ERROR\n"); exit(2); }
 
 %%
-void main(void) {
-	yylex();
-}
