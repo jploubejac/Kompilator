@@ -20,21 +20,17 @@ y.tab.c: $(GRM) # yacc part
 lex.yy.c: $(LEX) # flex part
 	flex $<
 
-$(BIN): $(OBJ)
+$(BIN): $(OBJ) # this combines flex and yacc output in the final executable
 	$(CC) $(CFLAGS) $(CPPFLAGS) $^ -o $@
 
 clean:
 	rm $(OBJ) y.tab.c y.tab.h lex.yy.c
 	rm kompilator
 
-build_lex: 
-	lex kompilator_lex.l
-	gcc lex.yy.c -o kompilator
-
-exec_lex:
-	@echo $(FILE)
-	@echo "\n"
-	cat $(FILE) | ./kompilator
+exec:
+	@echo 🛰️ FLEX and YACC execution on $(FILE) 🛰️
+	@echo "\nRESULT: 🚀"
+	@cat $(FILE) | ./kompilator
 	@echo "\n"
 
 

@@ -22,7 +22,9 @@ Fonction : tINT;
 %%
 void yyerror(char *s) { fprintf(stderr, "%s\n", s); }
 int main(void) {
-  printf("Kompilateur,non tor\n"); // yydebug=1;
+  printf("KOMPILATOR\n"); // yydebug=1;
+  printf("************************************************************************************\n");
   yyparse();
+  printf("\n************************************************************************************\n");
   return 0;
 }
