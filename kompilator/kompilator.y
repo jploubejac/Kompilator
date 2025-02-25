@@ -18,6 +18,7 @@ Kompilator : tVOID tMAIN tOP tCP tOB Instruction tCB
 
 Instruction : Instruction Declaration tSEM
               | Instruction Affectation tSEM
+              | Instruction Printf tSEM
               | 
               ;
 
@@ -41,8 +42,12 @@ Expression : Expression tADD Expression
             | Expression tMUL Expression 
             | Expression tDIV Expression 
             | tNB
+            | tID
+            | Expression tOP Expression tCP Expression
+            |
             ;
 
+Printf : tPRINTF tOP tID tCP
 %%
 void yyerror(char *s) {
     extern int yylineno;  // Line number from Flex

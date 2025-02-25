@@ -4,7 +4,7 @@ void main ()
   i = 3;
   j = 4;
   k = 8;
-  printf ("%d\n", i);
+  printf (i);
   r = (i + j) * (i + k / j);
-  printf ("%d\n", r);
+  printf (r);
 }
