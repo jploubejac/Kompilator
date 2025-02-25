@@ -1,4 +1,4 @@
-FILE?=tocompile.c
+FILE?=sample_files/tocompile.c
 
 GRM=kompilator.y
 LEX=kompilator.l
