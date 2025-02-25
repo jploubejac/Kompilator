@@ -3,12 +3,12 @@
 #include <stdio.h>
 int var[26];
 void yyerror(char *s);
+int yylex();
 %}
 
 %union { int nb; char var; }
 %token tNB tEXP tREAL tEQ tMAIN tOB tCB tCONST tINT tADD tSUB tMUL tDIV tOP tCP tSEP tEOL tSEM tPRINTF tWHILE tVOID tIF tELSE tFOR tSTR 
 %token <var> tID
-%type <nb> Expr DivMul Terme
 %start Kompilator
 %%
 Kompilator : tVOID tMAIN tOP tCP tOB Instruction tCB 
