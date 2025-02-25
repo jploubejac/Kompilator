@@ -33,6 +33,9 @@ exec:
 	@cat $(FILE) | ./kompilator
 	@echo "\n"
 
+test:
+	@echo 🪐 TESTING 🪐
+	@./run_all.sh
 
 
 
