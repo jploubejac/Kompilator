@@ -1,0 +1,15 @@
+
+# YACC and FLEX generated files
+kompilator/y.tab.c
+kompilator/y.tab.h
+kompilator/y.output
+kompilator/lex.yy.c
+
+# Object files and compiled binaries
+kompilator/*.o
+kompilator/kompilator 
+
+# Editor & OS-specific files
+.vscode/
+.idea/
+
