@@ -8,6 +8,9 @@ kompilator/lex.yy.c
 # Object files and compiled binaries
 kompilator/*.o
 kompilator/kompilator 
+kompilator/graph.gv
+kompilator/graph.pdf
+kompilator/y.output
 
 # Editor & OS-specific files
 .vscode/
