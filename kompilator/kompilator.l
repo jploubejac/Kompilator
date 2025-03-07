@@ -22,7 +22,9 @@ main              		{ return tMAIN; }
 const					{ return tCONST; }
 int 					{ return tINT; }
 "+"               		{ return tADD; }
+"++"               		{ return tINC; }
 "-"               		{ return tSUB; }
+"--"               		{ return tDEC; }
 "*"               		{ return tMUL; }
 "/"               		{ return tDIV; }
 "("               		{ return tOP; }
@@ -33,10 +35,11 @@ int 					{ return tINT; }
 "!"                     { return tNOT;}
 ">"                     { return tSUP;}
 "<"                     { return tINF;}
-"|"                     { return tOR;}
-"&"                     { return tAND;}
+"||"                     { return tOR;}
+"&&"                     { return tAND;}
 ";"               		{ return tSEM;}
-printf					{ return tPRINTF; }
+printf					{ return tPRINTF;}
+do  					{ return tDO;}
 while             		{ return tWHILE; }
 void              		{ return tVOID; }
 if 						{ return tIF; }

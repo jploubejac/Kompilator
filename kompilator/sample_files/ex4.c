@@ -15,7 +15,7 @@ void main ()
 
   while (!(a == b)) {}
 
-  while (a < b) {while (a < b) {} else {}}
+  while (a < b) {while (a < b) {}}
 
   do {} while (a < b);
 }
