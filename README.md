@@ -1,4 +1,1 @@
 # Kompilator
-
-## Chaman commands
-

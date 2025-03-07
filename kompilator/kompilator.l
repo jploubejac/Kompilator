@@ -12,32 +12,37 @@ E [Ee][-+]?{D}+
 CHAR [a_zA-Z]
 
 %%
-{D}+ 					{ printf(" tNB"); return tNB; }
-{D}+{E} 				{ printf(" tEXP"); return tEXP; }
-{D}*"."{D}*({E})? 		{ printf(" tREAL"); return tREAL; }
-"="               		{ printf(" tEQ"); return tEQ; }
-main              		{ printf(" tMAIN"); return tMAIN; }
-"{"               		{ printf(" tOB"); return tOB; }
-"}"               		{ printf(" tCB"); return tCB; }
-const					{ printf(" tCONST"); return tCONST; }
-int 					{ printf(" tINT"); return tINT; }
-"+"               		{ printf(" tADD"); return tADD; }
-"-"               		{ printf(" tSUB"); return tSUB; }
-"*"               		{ printf(" tMUL"); return tMUL; }
-"/"               		{ printf(" tDIV"); return tDIV; }
-"("               		{ printf(" tOP"); return tOP; }
-")"               		{ printf(" tCP"); return tCP; }
-[ \t]	         		{ printf(" "); }
-","	         			{ printf(" tSEP"); return tSEP; }
-[\n]+          			{ printf(" \n"); } // return tEOL; for now we return EOL, might change
-";"               		{ printf(" tSEM"); return tSEM; }
-printf					{ printf(" tPRINTF"); return tPRINTF; }
-while             		{ printf(" tWHILE"); return tWHILE; }
-void              		{ printf(" tVOID"); return tVOID; }
-if 						{ printf(" tIF"); return tIF; }
-else 					{ printf(" tELSE"); return tELSE; }
-for						{ printf(" tFOR"); return tFOR; }
-[A-Za-z_][A-Za-z0-9_]*	{ printf(" tID[%s]", yytext); return tID; }
-.                 		{ printf(" ERROR\n"); exit(2); }
+{D}+ 					{ return tNB; }
+{D}+{E} 				{ return tEXP; }
+{D}*"."{D}*({E})? 		{ return tREAL; }
+"="               		{ return tEQ; }
+main              		{ return tMAIN; }
+"{"               		{ return tOB; }
+"}"               		{ return tCB; }
+const					{ return tCONST; }
+int 					{ return tINT; }
+"+"               		{ return tADD; }
+"-"               		{ return tSUB; }
+"*"               		{ return tMUL; }
+"/"               		{ return tDIV; }
+"("               		{ return tOP; }
+")"               		{ return tCP; }
+[ \t]	         		{ }
+","	         			{ return tSEP; }
+[\n]+          			{ } // return tEOL; for now we return EOL, might change
+"!"                     { return tNOT;}
+">"                     { return tSUP;}
+"<"                     { return tINF;}
+"|"                     { return tOR;}
+"&"                     { return tAND;}
+";"               		{ return tSEM;}
+printf					{ return tPRINTF; }
+while             		{ return tWHILE; }
+void              		{ return tVOID; }
+if 						{ return tIF; }
+else 					{ return tELSE; }
+for						{ return tFOR; }
+[A-Za-z_][A-Za-z0-9_]*	{ return tID; }
+.                 		{ exit(2); }
 
 %%
