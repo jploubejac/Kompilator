@@ -48,6 +48,7 @@ Expression : Expression tADD Expression
             ;
 
 Printf : tPRINTF tOP tID tCP
+
 %%
 void yyerror(char *s) {
     extern int yylineno;  // Line number from Flex

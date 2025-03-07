@@ -11,7 +11,7 @@ for FILE in sample_files/*; do
     
     OUTPUT=$(make exec FILE="$FILE" 2>&1)
 
-    if echo "$OUTPUT" | grep -q "Parsing successful! ✅"; then
+    if echo "$OUTPUT" | grep -q "Syntax analysis successful! ✅"; then
         echo "$FILE : SUCCESS ✅"
     else
         echo "$FILE : ERROR ❌"
