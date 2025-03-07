@@ -15,7 +15,7 @@ OBJ=y.tab.o lex.yy.o
 	$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
 
 y.tab.c: $(GRM) # yacc part
-	yacc -d $<
+	yacc -t -v -ggraph.gv -d $<
 
 lex.yy.c: $(LEX) # flex part
 	flex $<
@@ -41,6 +41,10 @@ indent:
 	@echo "Running indent on all files in sample_files..."
 	@indent sample_files/* 2>/dev/null || echo "No valid files to indent."
 	@echo "Indentation complete!"
+
+graph: 
+	@dot -Tpdf graph.gv > graph.pdf 
+	@open graph.pdf
 
 
 
