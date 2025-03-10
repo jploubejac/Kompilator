@@ -21,67 +21,71 @@ container ts;
 
 
 
-Kompilator : tVOID tMAIN tOP tCP tOB Instruction tCB {printf("tVOID tMAIN tOP tCP tOB Instruction tCB\n");}
-			      | tINT tMAIN tOP tCP tOB Instruction tCB {printf("tINT tMAIN tOP tCP tOB Instruction tCB\n");}
+Kompilator : tVOID tMAIN tOP tCP tOB Instruction tCB {printf("tVOID tMAIN tOP tCP tOB Instruction tCB\n ");}
+			      | tINT tMAIN tOP tCP tOB Instruction tCB {printf("tINT tMAIN tOP tCP tOB Instruction tCB\n ");}
             ;
 
-Instruction : Instruction Declaration tSEM {printf("Instruction Declaration tSEM\n");}
-              | Instruction Affectation tSEM {printf("Instruction Affectation tSEM\n");}
-              | Instruction Printf tSEM {printf("Instruction Printf tSEM\n");}
-              | Instruction IfBody {printf("Instruction IfBody tSEM\n");}
-              | Instruction WhileBody {printf("Instruction WhileBody\n");}
-              | Instruction ForBody {printf("Instruction ForBody\n");}
+Instruction : Instruction Declaration tSEM {printf("Instruction Declaration tSEM \n");}
+              | Instruction Affectation tSEM {printf("Instruction Affectation tSEM \n");}
+              | Instruction Printf tSEM {printf("Instruction Printf tSEM \n");}
+              | Instruction IfBody {printf("Instruction IfBody tSEM \n");}
+              | Instruction WhileBody {printf("Instruction WhileBody \n");}
+              | Instruction ForBody {printf("Instruction ForBody \n");}
               |
               ;
 
-Declaration : Type ListeVariables {printf("Type ListeVariables");}
+Declaration : Type ListeVariables {printf("Type ListeVariables ");}
               ;
 
-ListeVariables : VariableFinale {printf("VariableFinale");}
-                | tID tSEP ListeVariables {printf("tID tSEP ListeVariables");}
-                ;
-
-VariableFinale : tID tEQ Expression {printf("tID tEQ Expression");}
-
-Type : tCONST {printf("tCONST");}
-      | tINT {printf("tINT");}
-      ;
-
-Affectation : ListeVariables tEQ Expression {printf("ListeVariables tEQ Expression");}
+Affectation : ListeVariables {printf("ListeVariables");}
               | ListeVariables tINC
               | ListeVariables tDEC
               ;
+              
+ListeVariables : Variable {printf("Variable ");}
+                | Variable tSEP ListeVariables {printf("tID tSEP ListeVariables ");}
+                ;
 
-Expression : Expression tADD Expression {printf("Expression tADD Expression");}
-            | Expression tSUB Expression {printf("Expression tSUB Expression");}
-            | Expression tMUL Expression {printf("Expression tMUL Expression");}
-            | Expression tDIV Expression {printf("Expression tDIV Expression");}
-            | tNB {printf("tNB");}
-            | tID {printf("tID");}
-            | tEXP {printf("tEXP");}
-            | tREAL {printf("tREAL");}
-            | tOP Expression tCP {printf("Expression tOP Expression tCP Expression");}
+Variable : tID tEQ Expression {printf("tID tEQ Expression ");}
+          | tID {printf("tID ");}
+          ;
+                
+Type : tCONST {printf("tCONST ");}
+      | tINT {printf("tINT ");}
+      ;
+
+
+
+Expression : Expression tADD Expression {printf("Expression tADD Expression ");}
+            | Expression tSUB Expression {printf("Expression tSUB Expression ");}
+            | Expression tMUL Expression {printf("Expression tMUL Expression ");}
+            | Expression tDIV Expression {printf("Expression tDIV Expression ");}
+            | tNB {printf("tNB ");}
+            | tID {printf("tID ");}
+            | tEXP {printf("tEXP ");}
+            | tREAL {printf("tREAL ");}
+            | tOP Expression tCP {printf("Expression tOP Expression tCP Expression ");}
             ;
 
-Printf : tPRINTF tOP tID tCP {printf("tPRINTF tOP tID tCP");}
+Printf : tPRINTF tOP tID tCP {printf("tPRINTF tOP tID tCP ");}
 
-IfBody : tIF tOP Condition tCP tOB Instruction tCB {printf("tIF tOP Expression tCP tOB Instruction tCB");}
-        | tIF tOP Condition tCP tOB Instruction tCB tELSE tOB Instruction tCB {printf("tIF tOP Expression tCP tOB Instruction tCB tELSE tOB Instruction tCB");}
+IfBody : tIF tOP Condition tCP tOB Instruction tCB {printf("tIF tOP Expression tCP tOB Instruction tCB ");}
+        | tIF tOP Condition tCP tOB Instruction tCB tELSE tOB Instruction tCB {printf("tIF tOP Expression tCP tOB Instruction tCB tELSE tOB Instruction tCB ");}
         ;
 
 
-Condition : Bool {printf("Bool");}
-          | tOP Bool tCP {printf("tOP Bool tCP");}
-          | Condition tAND Condition {printf("Condition tAND Condition");}
-          | Condition tOR Condition {printf("Condition tOR Condition");}
-          | tNOT tOP Condition tCP {printf("Condition tNOT tOP Condition tCP");}
+Condition : Bool {printf("Bool ");}
+          | tOP Bool tCP {printf("tOP Bool tCP ");}
+          | Condition tAND Condition {printf("Condition tAND Condition ");}
+          | Condition tOR Condition {printf("Condition tOR Condition ");}
+          | tNOT tOP Condition tCP {printf("Condition tNOT tOP Condition tCP ");}
           ;
 
 
-Bool : Expression tINF Expression {printf("Expression tINF Expression");}
-      | Expression tSUP Expression {printf("Expression tSUP Expression");}
-      | Expression tEQ tEQ Expression {printf("Expression tEQ tEQ Expression");}
-      | Expression tNOT tEQ Expression {printf("Expression tNOT tEQ Expression");}
+Bool : Expression tINF Expression {printf("Expression tINF Expression ");}
+      | Expression tSUP Expression {printf("Expression tSUP Expression ");}
+      | Expression tEQ tEQ Expression {printf("Expression tEQ tEQ Expression ");}
+      | Expression tNOT tEQ Expression {printf("Expression tNOT tEQ Expression ");}
       ;
 
 WhileBody : tWHILE tOP Condition tCP tOB Instruction tCB
