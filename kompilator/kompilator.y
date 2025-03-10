@@ -1,13 +1,15 @@
 %{
 #include <stdlib.h>
 #include <stdio.h>
-int var[26];
+#include "symbol_table.h"
+#include "container.h"
 void yyerror(char *s);
 int yylex();
 %}
 
+
 %union { int nb; char var; }
-%token tNB tEXP tREAL tEQ tMAIN tOB tCB tCONST tINT tADD tSUB tMUL tDIV tOP tCP tSEP tSEM tPRINTF tWHILE tVOID tIF tELSE tFOR tSTR tSUP tINF tAND tOR tNOT tDO tINC tDEC
+%token tNB tEXP tREAL tEQ tMAIN tOB tCB tCONST tINT tADD tSUB tMUL tDIV tOP tCP tSEP tSEM tPRINTF tWHILE tVOID tIF tELSE tFOR tSUP tINF tAND tOR tNOT tDO tINC tDEC
 %left tOR 
 %left tAND
 %left tADD tSUB
@@ -100,6 +102,10 @@ void yyerror(char *s) {
 
 // void yyerror(char *s) { fprintf(stderr, "%s\n", s); }
 int main(void) {
+  container cont;
+  entry_ts entry= {"a",3};
+  container_add(&cont, &entry);
+  printf("Mon premier: %s", ((entry_ts*)(cont.pHead->pVal))->name);
   yydebug = 0;
   printf("KOMPILATOR\n"); // yydebug=1;
   printf("************************************************************************************\n");
