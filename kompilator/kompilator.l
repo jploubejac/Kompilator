@@ -7,9 +7,7 @@
 
 %option noyywrap
 D   [0-9]
-DECIMAL {D}+.{D}+
 E [Ee][-+]?{D}+
-CHAR [a_zA-Z]
 
 %%
 {D}+ 					{ return tNB; }

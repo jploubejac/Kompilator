@@ -54,6 +54,8 @@ Expression : Expression tADD Expression {printf("Expression tADD Expression");}
             | Expression tDIV Expression {printf("Expression tDIV Expression");}
             | tNB {printf("tNB");}
             | tID {printf("tID");}
+            | tEXP {printf("tEXP");}
+            | tREAL {printf("tREAL");}
             | tOP Expression tCP {printf("Expression tOP Expression tCP Expression");}
             ;
 
