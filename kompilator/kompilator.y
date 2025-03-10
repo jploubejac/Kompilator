@@ -5,6 +5,7 @@
 #include "container.h"
 void yyerror(char *s);
 int yylex();
+container ts;
 %}
 
 
@@ -33,21 +34,22 @@ Instruction : Instruction Declaration tSEM {printf("Instruction Declaration tSEM
               |
               ;
 
-Declaration : Type Variable tEQ Expression {printf("Type Variable tEQ Expression");}
-              | Type Variable {printf("Type Variable");}
+Declaration : Type ListeVariables {printf("Type ListeVariables");}
               ;
 
-Variable : tID {printf("tID");}
-         | Variable tSEP tID {printf("Variable tSEP tID ");}
-         ;
+ListeVariables : VariableFinale {printf("VariableFinale");}
+                | tID tSEP ListeVariables {printf("tID tSEP ListeVariables");}
+                ;
+
+VariableFinale : tID tEQ Expression {printf("tID tEQ Expression");}
 
 Type : tCONST {printf("tCONST");}
       | tINT {printf("tINT");}
       ;
 
-Affectation : Variable tEQ Expression {printf("Variable tEQ Expression");}
-              | Variable tINC
-              | Variable tDEC
+Affectation : ListeVariables tEQ Expression {printf("ListeVariables tEQ Expression");}
+              | ListeVariables tINC
+              | ListeVariables tDEC
               ;
 
 Expression : Expression tADD Expression {printf("Expression tADD Expression");}
@@ -102,10 +104,6 @@ void yyerror(char *s) {
 
 // void yyerror(char *s) { fprintf(stderr, "%s\n", s); }
 int main(void) {
-  container cont;
-  entry_ts entry= {"a",3};
-  container_add(&cont, &entry);
-  printf("Mon premier: %s", ((entry_ts*)(cont.pHead->pVal))->name);
   yydebug = 0;
   printf("KOMPILATOR\n"); // yydebug=1;
   printf("************************************************************************************\n");

@@ -9,7 +9,7 @@ CFLAGS=-Wall -g
 
 all: $(BIN)
 
-OBJ=y.tab.o lex.yy.o
+OBJ=y.tab.o lex.yy.o container.o
 
 %.o: %.c  #tells how to compile .c files into .o
 	$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
