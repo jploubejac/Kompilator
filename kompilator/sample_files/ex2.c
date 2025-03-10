@@ -1,6 +1,6 @@
 void main ()
 {
-  int i, j, k, r;
+  int i,j,k,r;
   i = 3;
   j = 4;
   k = 8;

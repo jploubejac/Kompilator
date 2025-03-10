@@ -23,6 +23,9 @@ lex.yy.c: $(LEX) # flex part
 $(BIN): $(OBJ) # this combines flex and yacc output in the final executable
 	$(CC) $(CFLAGS) $(CPPFLAGS) $^ -o $@
 
+container.o: container.c container.h
+	$(CC) -c $(CFLAGS) $< -o $@
+
 clean:
 	rm $(OBJ) y.tab.c y.tab.h lex.yy.c
 	rm kompilator

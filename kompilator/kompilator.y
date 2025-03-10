@@ -1,21 +1,25 @@
 %{
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 #include "symbol_table.h"
 #include "container.h"
+
+extern char *yytext;
 void yyerror(char *s);
 int yylex();
 container ts;
 %}
 
 
-%union { int nb; char var; }
+%union { int nb; char* str;}
 %token tNB tEXP tREAL tEQ tMAIN tOB tCB tCONST tINT tADD tSUB tMUL tDIV tOP tCP tSEP tSEM tPRINTF tWHILE tVOID tIF tELSE tFOR tSUP tINF tAND tOR tNOT tDO tINC tDEC
 %left tOR 
 %left tAND
 %left tADD tSUB
 %left tMUL tDIV
-%token <var> tID
+%token <str> tID
+%type <str> Variable // `Variable` doit retourner un `char*`
 %start Kompilator
 %%
 
@@ -37,24 +41,35 @@ Instruction : Instruction Declaration tSEM {printf("Instruction Declaration tSEM
 Declaration : Type ListeVariables {printf("Type ListeVariables ");}
               ;
 
-Affectation : ListeVariables {printf("ListeVariables");}
-              | ListeVariables tINC
-              | ListeVariables tDEC
+Affectation : ListeVariablesAff {printf("ListeVariables");}
+              | ListeVariablesAff tINC
+              | ListeVariablesAff tDEC
               ;
-              
+
 ListeVariables : Variable {printf("Variable ");}
-                | Variable tSEP ListeVariables {printf("tID tSEP ListeVariables ");}
+                | Variable tSEP ListeVariables {
+                    printf("tID tSEP ListeVariables ");
+                    printf("DEBUG: Variable détectée = [%s]\n", $1);
+                    entry_ts* val = (entry_ts*) malloc(sizeof(entry_ts));
+                    strcpy(val->name, $1);
+                    val->address = (int*) malloc(4);
+                    container_add(&ts, val);
+                    printf("ICI: %s\n",((entry_ts*) (ts.pHead->pVal))->name);
+                }
+                ;
+
+ListeVariablesAff : Variable {printf("Variable ");}
+                | Variable tSEP ListeVariablesAff {printf("tID tSEP ListeVariablesAff ");}
                 ;
 
 Variable : tID tEQ Expression {printf("tID tEQ Expression ");}
-          | tID {printf("tID ");}
+          | tID {$$ = strdup(yytext); printf("tID ");
+          }
           ;
                 
 Type : tCONST {printf("tCONST ");}
       | tINT {printf("tINT ");}
       ;
-
-
 
 Expression : Expression tADD Expression {printf("Expression tADD Expression ");}
             | Expression tSUB Expression {printf("Expression tSUB Expression ");}
