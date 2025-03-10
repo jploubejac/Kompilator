@@ -15,7 +15,7 @@ OBJ=y.tab.o lex.yy.o container.o
 	$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
 
 y.tab.c: $(GRM) # yacc part
-	yacc -t -v -ggraph.gv -d $<
+	yacc -t -v -g -d $<
 
 lex.yy.c: $(LEX) # flex part
 	flex $<
