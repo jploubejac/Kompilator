@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include <string.h>
 #include "symbol_table.h"
-#include "container.h"
 
 extern char *yytext;
 void yyerror(char *s);
@@ -46,15 +45,15 @@ Affectation : ListeVariablesAff {printf("ListeVariables");}
               | ListeVariablesAff tDEC
               ;
 
-ListeVariables : Variable {printf("Variable ");}
+ListeVariables : Variable {
+                    printf("Variable ");
+                    container_add_sucre_symbol(&ts, $1, 4);
+                    // printf("ICI: %s ",((entry_ts*) (ts.pTail->pVal))->name);
+                  }
                 | Variable tSEP ListeVariables {
                     printf("tID tSEP ListeVariables ");
-                    printf("DEBUG: Variable détectée = [%s]\n", $1);
-                    entry_ts* val = (entry_ts*) malloc(sizeof(entry_ts));
-                    strcpy(val->name, $1);
-                    val->address = (int*) malloc(4);
-                    container_add(&ts, val);
-                    printf("ICI: %s\n",((entry_ts*) (ts.pHead->pVal))->name);
+                    container_add_sucre_symbol(&ts, $1, 4);
+                    // printf("ICI: %s ",((entry_ts*) (ts.pTail->pVal))->name);
                 }
                 ;
 
@@ -63,7 +62,9 @@ ListeVariablesAff : Variable {printf("Variable ");}
                 ;
 
 Variable : tID tEQ Expression {printf("tID tEQ Expression ");}
-          | tID {$$ = strdup(yytext); printf("tID ");
+          | tID {
+            $$ = strdup($1);
+            printf("tID[%s] ", $$);
           }
           ;
                 

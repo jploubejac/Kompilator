@@ -14,6 +14,7 @@ void container_add(container *pCont ,void *pVal){
         pCont->nb++;
     }
 }
+
 void container_del_all(container *pCont){
     node *pCur= pCont->pHead;
     while(pCur!=NULL){
@@ -23,3 +24,4 @@ void container_del_all(container *pCont){
       pCur=pNex;
     }
 }
+

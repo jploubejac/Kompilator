@@ -1,3 +1,6 @@
+#ifndef CONTAINER_H
+#define CONTAINER_H
+
 #include <stdlib.h>
 
 struct node{
@@ -16,6 +19,4 @@ typedef struct{
 void container_add(container *pCont ,void *pVal);
 void container_del_all(container *pCont);
 //void container_insert_back(container *pCont, void *pVal, int);
-
-
-
+#endif
