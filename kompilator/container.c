@@ -27,3 +27,11 @@ void container_del_all(container *pCont){
     }
 }
 
+void container_del_last(container *pCont){
+    if(pCont->pTail==NULL)return;
+    node *pDel= pCont->pTail;
+    pDel->pPrev->pNext=NULL;
+    pCont->pTail=pDel->pPrev;
+    free(pDel); 
+}
+
