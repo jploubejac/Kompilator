@@ -1,3 +1,5 @@
+#include "container.h"
+
 enum Operation{
     ADD=0x1,
     MUL=0x2,
@@ -11,13 +13,14 @@ enum Operation{
     SUP=0xA,
     EQU=0xB,
     PRI=0xC
-}
+};
 
 typedef struct{
-    Operation op;
-    void *pRes;
-    void *pArg1;
-    void *pArg2;
+    enum Operation op;
+    int res;
+    int arg1;
+    int arg2;
 }asmLine;
 
-asmLine *CreateAsmLine(Operation op, void *pRes, void *pArg1, void *pArg2);
+asmLine *CreateAsmLine(enum Operation op, int res, int arg1, int arg2);
+void container_add_sucre_asm(container *pCont, enum Operation op, int res, int arg1, int arg2);

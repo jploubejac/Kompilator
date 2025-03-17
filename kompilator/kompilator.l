@@ -10,7 +10,7 @@ D   [0-9]
 E [Ee][-+]?{D}+
 
 %%
-{D}+ 					{ return tNB; }
+{D}+ 					{ yylval.nb = strdup(yytext);return tNB; }
 {D}+{E} 				{ return tEXP; }
 {D}*"."{D}*({E})? 		{ return tREAL; }
 "="               		{ return tEQ; }

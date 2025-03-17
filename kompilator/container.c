@@ -1,6 +1,6 @@
 #include "container.h"
 
-void container_add(container *pCont ,void *pVal){
+int container_add(container *pCont ,void *pVal){
     node *pNew=(node*)malloc(sizeof(node));
     pNew->pVal=pVal;
     pNew->pPrev=pCont->pTail;
@@ -8,11 +8,13 @@ void container_add(container *pCont ,void *pVal){
     if(pCont->pTail==NULL){
         pCont->pTail=pNew;
         pCont->pHead=pNew;
+        pCont->nb=0;
     }else{
         pCont->pTail->pNext=pNew;
         pCont->pTail=pNew;
-        pCont->nb++;
     }
+    pCont->nb++;
+    return pCont->nb;
 }
 
 void container_del_all(container *pCont){
