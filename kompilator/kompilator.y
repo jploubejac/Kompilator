@@ -8,6 +8,7 @@ extern char *yytext;
 void yyerror(char *s);
 int yylex();
 container ts;
+container tAsm;
 %}
 
 
@@ -72,7 +73,10 @@ Type : tCONST {printf("tCONST ");}
       | tINT {printf("tINT ");}
       ;
 
-Expression : Expression tADD Expression {printf("Expression tADD Expression ");}
+Expression : Expression tADD Expression {container_add(&tAsm,createAsmLine(Operation.ADD, null, $1, $3));
+                                         
+
+                                          printf("Expression tADD Expression ");}
             | Expression tSUB Expression {printf("Expression tSUB Expression ");}
             | Expression tMUL Expression {printf("Expression tMUL Expression ");}
             | Expression tDIV Expression {printf("Expression tDIV Expression ");}
