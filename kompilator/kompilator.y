@@ -4,6 +4,7 @@
 #include <string.h>
 #include "symbol_table.h"
 #include "asm.h"
+#define ASM_FILE "asm.dump"
 
 extern char *yytext;
 void yyerror(char *s);
@@ -14,7 +15,7 @@ container tAsm = {NULL, NULL, 0};
 
 
 %union { int nb; char* str;}
-%token tEXP tREAL tEQ tMAIN tOB tCB tCONST tINT tADD tSUB tMUL tDIV tOP tCP tSEP tSEM tPRINTF tWHILE tVOID tIF tELSE tFOR tSUP tINF tAND tOR tNOT tDO tINC tDEC
+%token tEXP tREAL tEQ tMAIN tOB tCB tCONST tINT tADD tSUB tMUL tDIV tOP tCP tSEP tSEM tPRINTF tWHILE tVOID tIF tELSE tFOR tSUP tINF tAND tOR tNOT tDO tINC tDEC tEQEQ tINFEQ tSUPEQ
 %left tOR 
 %left tAND
 %left tADD tSUB
@@ -74,32 +75,45 @@ Type : tCONST {printf("tCONST ");}
       ;
 
 Expression : Expression tADD Expression {
-                int addr=container_add_sucre_symbol(&ts, "temp");
-                container_add_sucre_asm(&tAsm,ADD, addr, $1, $3);
+                //entry_ts *pExp1 = (entry_ts *)container_get_if(&ts, (bool(*)(void*,void*))entry_ts_isName, (void*)$1);
+                int addr_res=container_add_sucre_symbol(&ts, "temp");
+                //int addr_arg1= container_add_sucre_symbol(&ts, "temp");
+                //int addr_arg2= container_add_sucre_symbol(&ts, "temp");
+
+                container_add_sucre_asm(&tAsm,ADD, addr_res, $1, $3);
                 asmLine *pAsm= (asmLine*) tAsm.pTail->pVal;
+                $$=addr_res;
                 printf("Voici ton addition : op=%d, @res:%x @arg1:%x @arg2:%x\n", pAsm->op, pAsm->res, pAsm->arg1, pAsm->arg2);
-                printf("Expression[%x] tADD Expression[%x] ", $1, $3);
+                printf("Expression[%d] tADD Expression[%d] ", $1, $3);
               }
             | Expression tSUB Expression {
               int addr=container_add_sucre_symbol(&ts, "temp");
               container_add_sucre_asm(&tAsm,SOU, addr, $1, $3);
-              printf("Expression[%x] tADD Expression[$%x] ", $1, $3);
+              $$=addr;
+              printf("Expression[%d] tADD Expression[$%d] ", $1, $3);
             }
             | Expression tMUL Expression  {
               int addr=container_add_sucre_symbol(&ts, "temp");
               container_add_sucre_asm(&tAsm,MUL, addr, $1, $3);
-              printf("Expression[%x] tMUL Expression[%x] ", $1, $3);
+              $$=addr;
+              printf("Expression[%d] tMUL Expression[%d] ", $1, $3);
             }
             | Expression tDIV Expression  {
               int addr=container_add_sucre_symbol(&ts, "temp");
               container_add_sucre_asm(&tAsm,DIV, addr, $1, $3);
-              printf("Expression[%x] tDIV Expression[%x] ", $1, $3);
+              $$=addr;
+              printf("Expression[%d] tDIV Expression[%d] ", $1, $3);
             }
-            | tNB {$$=$1; printf("tNB[%d] ", $1);} 
-            | tID {$$=$1; printf("tID[%s] ", $1);}
-            | tEXP {$$=$1; printf("tEXP[%s] " $1);}
-            | tREAL {$$=$1; printf("tREAL[%f] ", $1);}
-            | tOP Expression tCP {printf("Expression tOP Expression tCP Expression ");}
+            | tNB {int addr=container_add_sucre_symbol(&ts, "temp");
+                  container_add_sucre_asm(&tAsm,AFC, addr, $1, 0);
+                  $$=addr;
+                  ;printf("tNB[%d] ", $1);} 
+            | tID {entry_ts *pExp1 = (entry_ts *)container_get_if(&ts, (bool(*)(void*,void*))entry_ts_isName, (void*)$1);
+                   if(pExp1!=NULL)$$=container_get_index(&ts,pExp1);
+                   printf("tID[] ");}
+            | tEXP {printf("tEXP[] ");}
+            | tREAL {printf("tREAL[] " );}
+            | tOP Expression tCP {$$=$2;printf("Expression tOP Expression tCP Expression ");}
             ;
 
 Printf : tPRINTF tOP tID tCP {printf("tPRINTF tOP tID tCP ");}
@@ -117,10 +131,24 @@ Condition : Bool {printf("Bool ");}
           ;
 
 
-Bool : Expression tINF Expression {printf("Expression tINF Expression ");}
-      | Expression tSUP Expression {printf("Expression tSUP Expression ");}
-      | Expression tEQ tEQ Expression {printf("Expression tEQ tEQ Expression ");}
+Bool : Expression tINF Expression {
+          int addr = container_add_sucre_symbol(&ts,"temp");
+          int addr_arg1= container_add_sucre_symbol(&ts, "temp");
+          int addr_arg2= container_add_sucre_symbol(&ts, "temp");
+
+          container_add_sucre_asm(&tAsm, INF, addr, addr_arg1, addr_arg2);
+          printf("Expression tINF Expression ");}
+      | Expression tSUP Expression {
+          int addr = container_add_sucre_symbol(&ts,"temp");
+          container_add_sucre_asm(&tAsm, SUP, addr, $1, $3);
+          printf("Expression tSUP Expression ");}
+      | Expression tEQEQ Expression {
+          int addr = container_add_sucre_symbol(&ts,"temp");
+          container_add_sucre_asm(&tAsm, EQU, addr, $1, $3);
+          printf("Expression tEQ tEQ Expression ");}
       | Expression tNOT tEQ Expression {printf("Expression tNOT tEQ Expression ");}
+      | Expression tINFEQ Expression {printf("Expression tINFEQ Expression ");}
+      | Expression tSUPEQ Expression {printf("Expression tSUPEQ Expression ");}
       ;
 
 WhileBody : tWHILE tOP Condition tCP tOB Instruction tCB {printf("tWHILE tOP Condition tCP tOB Instruction tCB ");}
@@ -161,6 +189,9 @@ int main(void) {
     printf("\nSyntax analysis failed! ❌\n");
   }
 
+  printf("\n************************************************************************************\n");
+  print_asm(&tAsm);
+  write_asm_to_file(&tAsm, ASM_FILE);
   printf("\n************************************************************************************\n");
   return 0;
 }

@@ -33,6 +33,9 @@ int 					{ return tINT; }
 "!"                     { return tNOT;}
 ">"                     { return tSUP;}
 "<"                     { return tINF;}
+"=="               		{ return tEQEQ; }
+"<="                     { return tINFEQ;}
+">="                     { return tSUPEQ;}
 "||"                     { return tOR;}
 "&&"                     { return tAND;}
 ";"               		{ return tSEM;}

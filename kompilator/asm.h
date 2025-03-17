@@ -24,3 +24,6 @@ typedef struct{
 
 asmLine *CreateAsmLine(enum Operation op, int res, int arg1, int arg2);
 void container_add_sucre_asm(container *pCont, enum Operation op, int res, int arg1, int arg2);
+void print_asm(container *pCont);
+char* int_to_instr(int inst);
+void write_asm_to_file(container *pCont, const char *filename);

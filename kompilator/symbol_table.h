@@ -11,5 +11,6 @@ typedef struct{
 
 entry_ts* create_entry_ts(char* name);
 int container_add_sucre_symbol(container *pCont, char* name);
+bool entry_ts_isName(entry_ts *pTs, char *name);
 
 #endif

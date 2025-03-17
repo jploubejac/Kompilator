@@ -13,6 +13,7 @@ kompilator/graph.pdf
 kompilator/y.output
 kompilator/y.dot
 kompilator/y.gv
+kompilator/asm.dump
 
 # Editor & OS-specific files
 .vscode/

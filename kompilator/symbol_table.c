@@ -17,3 +17,7 @@ int container_add_sucre_symbol(container *pCont , char *name) {
     }
     return entry->address;
 }
+
+bool entry_ts_isName(entry_ts *pTs, char *name){
+    return !strcmp(pTs->name, name);
+}

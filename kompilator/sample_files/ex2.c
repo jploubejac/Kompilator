@@ -6,6 +6,7 @@ void main ()
   k = 8;
   k = k;
   printf (i);
+  int c= 3+4;
   r = (i + j) * (i + k / j);
   printf (r);
 }

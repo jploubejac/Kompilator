@@ -6,6 +6,10 @@ void main ()
 
   if (a < b) {}
 
+  if (a <= b) {}
+
+  if (a >= b) {}
+
   if (a > b) {} else {}
 
   if (a == b || a < b) {} else {}
