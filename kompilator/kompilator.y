@@ -19,8 +19,10 @@ container tAsm = {NULL, NULL, 0};
 %left tAND
 %left tADD tSUB
 %left tMUL tDIV
+
 %token <str> tID
 %token <nb> tNB
+
 %type <str> Variable
 %type <nb> Expression
 %start Kompilator
@@ -75,28 +77,28 @@ Expression : Expression tADD Expression {
                 int addr=container_add_sucre_symbol(&ts, "temp");
                 container_add_sucre_asm(&tAsm,ADD, addr, $1, $3);
                 asmLine *pAsm= (asmLine*) tAsm.pTail->pVal;
-                printf("Voici ton addition : op=%d, @res:%x @arg1:%x @arg2:%d\n", pAsm->op, pAsm->res, pAsm->arg1, pAsm->arg2);
-                printf("Expression[$1] tADD Expression[$3] ");
+                printf("Voici ton addition : op=%d, @res:%x @arg1:%x @arg2:%x\n", pAsm->op, pAsm->res, pAsm->arg1, pAsm->arg2);
+                printf("Expression[%x] tADD Expression[%x] ", $1, $3);
               }
             | Expression tSUB Expression {
               int addr=container_add_sucre_symbol(&ts, "temp");
               container_add_sucre_asm(&tAsm,SOU, addr, $1, $3);
-              printf("Expression[$1] tADD Expression[$3] ");
+              printf("Expression[%x] tADD Expression[$%x] ", $1, $3);
             }
             | Expression tMUL Expression  {
               int addr=container_add_sucre_symbol(&ts, "temp");
               container_add_sucre_asm(&tAsm,MUL, addr, $1, $3);
-              printf("Expression[$1] tMUL Expression[$3] ");
+              printf("Expression[%x] tMUL Expression[%x] ", $1, $3);
             }
             | Expression tDIV Expression  {
               int addr=container_add_sucre_symbol(&ts, "temp");
               container_add_sucre_asm(&tAsm,DIV, addr, $1, $3);
-              printf("Expression[$1] tDIV Expression[$3] ");
+              printf("Expression[%x] tDIV Expression[%x] ", $1, $3);
             }
-            | tNB {$$=$1; printf("tNB[$1] ");} 
-            | tID {printf("tID ");}
-            | tEXP {printf("tEXP ");}
-            | tREAL {printf("tREAL ");}
+            | tNB {$$=$1; printf("tNB[%d] ", $1);} 
+            | tID {$$=$1; printf("tID[%s] ", $1);}
+            | tEXP {$$=$1; printf("tEXP[%s] " $1);}
+            | tREAL {$$=$1; printf("tREAL[%f] ", $1);}
             | tOP Expression tCP {printf("Expression tOP Expression tCP Expression ");}
             ;
 
