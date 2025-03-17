@@ -12,8 +12,10 @@ kompilator/graph.gv
 kompilator/graph.pdf
 kompilator/y.output
 kompilator/y.dot
+kompilator/y.gv
 
 # Editor & OS-specific files
 .vscode/
 .idea/
+
 
