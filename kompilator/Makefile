@@ -9,7 +9,7 @@ CFLAGS=-Wall -g
 
 all: $(BIN)
 
-OBJ=y.tab.o lex.yy.o container.o symbol_table.o asm.o
+OBJ=y.tab.o lex.yy.o dynamicArray.o symbolEntry.o asmLine.o
 
 %.o: %.c  #tells how to compile .c files into .o
 	$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
@@ -23,13 +23,13 @@ lex.yy.c: $(LEX) # flex part
 $(BIN): $(OBJ) # this combines flex and yacc output in the final executable
 	$(CC) $(CFLAGS) $(CPPFLAGS) $^ -o $@
 
-container.o: container.c container.h
+container.o: dynamicArray.c dynamicArray.h
 	$(CC) -c $(CFLAGS) $< -o $@
 
-symbol_table.o: symbol_table.c symbol_table.h
+symbol_table.o: symbolEntry.c symbolEntry.h
 	$(CC) -c $(CFLAGS) $< -o $@
 
-asm.o: asm.c asm.h
+asm.o: asmLine.c asmLine.h
 	$(CC) -c $(CFLAGS) $< -o $@
 
 clean:
