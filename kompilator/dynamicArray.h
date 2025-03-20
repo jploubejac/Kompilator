@@ -6,6 +6,7 @@
 typedef void(*ptfV)(void*);
 typedef int(*IptfVV)(void*,void*);
 
+// Opaque declaration of the dynamicArray_t structure (defined in the .c file)
 typedef struct dynamicArray_t dynamicArray_t;
 
 /**
