@@ -10,7 +10,6 @@
 
 typedef struct{
     char name[SYMBOL_NAME_MAX_LENGTH];
-    int address;
 }symbolEntry_t;
 
 symbolEntry_t* SymbolEntryNew(char* name);

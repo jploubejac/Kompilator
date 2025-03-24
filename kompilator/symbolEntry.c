@@ -3,8 +3,19 @@
 #include <stdio.h>
 
 symbolEntry_t *SymbolEntryNew(char* name) {
+    static int compteur = 0;
     symbolEntry_t* entry = (symbolEntry_t*)malloc(sizeof(symbolEntry_t));
-    strcpy(entry->name, name);
+    if (!strcmp(name, "temp")) {
+        char index[20];
+        sprintf(index, "%d", compteur++);
+        char variable[17];
+        strcpy(variable, name);
+        strcat(variable, index);
+        printf("%s\n", variable);
+        strcpy(entry->name, variable);
+    } else {
+        strcpy(entry->name, name);
+    }
     return entry;
 }
 

@@ -4,18 +4,21 @@
 #include "dynamicArray.h"
 
 enum operation_e{
-    OP_ADD=0x1,
-    OP_MUL=0x2,
-    OP_SOU=0x3,
-    OP_DIV=0x4,
-    OP_COP=0x5,
-    OP_AFC=0x6,
-    OP_JMP=0x7,
-    OP_JMF=0x8,
-    OP_INF=0x9,
-    OP_SUP=0xA,
-    OP_EQU=0xB,
-    OP_PRI=0xC
+    OP_ADD  =0x1,
+    OP_MUL  =0x2,
+    OP_SOU  =0x3,
+    OP_DIV  =0x4,
+    OP_COP  =0x5,
+    OP_AFC  =0x6,
+    OP_JMP  =0x7,
+    OP_JMF  =0x8,
+    OP_INF  =0x9,
+    OP_SUP  =0xA,
+    OP_EQU  =0xB,
+    OP_PRI  =0xC,
+    OP_NOT  =0xD,
+    OP_OR   =0xE,
+    OP_AND  =0xF
 };
 
 typedef struct{

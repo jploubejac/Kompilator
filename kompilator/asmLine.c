@@ -1,5 +1,4 @@
 #include "asmLine.h"
-#include "container.h"
 #include "string.h"
 #include <stdio.h>
 
@@ -26,6 +25,9 @@ char* int_to_instr(int inst) {
         case OP_SUP: return "SUP";
         case OP_EQU: return "EQU";
         case OP_PRI: return "PRI";
+        case OP_NOT: return "OP_NOT";
+        case OP_OR: return "OP_OR";
+        case OP_AND: return "OP_AND";
         default: return "";
     }
 }
@@ -49,12 +51,20 @@ void DynamicArrayAsmLinePrint(dynamicArray_t *pArray){
         pEntry = DynamicArrayGetByIndex(pArray, i);
         if(pEntry==NULL)return;
         strcpy(inst, int_to_instr(pEntry->op));
-        if (!strcmp(inst, "AFC")) {
-            printf("%d:\t%s %d #%d\n",i, inst, pEntry->res, pEntry->arg1);
-        } else if (!strcmp(inst, "COP")) {
-            printf("%d:\t%s %d %d\n",i, inst, pEntry->res, pEntry->arg1);
-        } else {
-            printf("%d:\t%s %d %d %d\n",i, inst, pEntry->res, pEntry->arg1, pEntry->arg2);
+        switch ((int)pEntry->op) {
+            case OP_AFC:
+                printf("%d:\t%s %d #%d\n",i, inst, pEntry->res, pEntry->arg1);
+                break;
+            case OP_COP:
+                printf("%d:\t%s %d %d\n",i, inst, pEntry->res, pEntry->arg1);
+                break;
+            case OP_PRI:
+                printf("%d:\t%s %d\n",i, inst, pEntry->res);
+                break;
+            default:
+                printf("%d:\t%s %d %d %d\n",i, inst, pEntry->res, pEntry->arg1, pEntry->arg2);
+                break;
+        
         }
         i++;
     }
@@ -79,15 +89,21 @@ void DynamicArrayAsmLinePrintToFile(dynamicArray_t *pArray, const char *filename
             return;
         }
         strcpy(inst, int_to_instr(pEntry->op));
-        if (!strcmp(inst, "AFC")) {
-            fprintf(file, "%d:\t%s %d #%x\n",i, inst, pEntry->res, pEntry->arg1);
-        } else if (!strcmp(inst, "COP")) {
-            fprintf(file,"%d:\t%s %d %d\n",i, inst, pEntry->res, pEntry->arg1);
-        } else {
-            fprintf(file,"%d:\t%s %d %d %d\n",i, inst, pEntry->res, pEntry->arg1, pEntry->arg2);
+        switch ((int)pEntry->op) {
+            case OP_AFC:
+                fprintf(file, "%d:\t%s %d #%x\n",i, inst, pEntry->res, pEntry->arg1);
+                break;
+            case OP_COP:
+                fprintf(file, "%d:\t%s %d %x\n",i, inst, pEntry->res, pEntry->arg1);
+                break;
+            case OP_PRI:
+                fprintf(file,"%d:\t%s %d\n",i, inst, pEntry->res);
+                break;
+            default:
+                fprintf(file,"%d:\t%s %d %d %d\n",i, inst, pEntry->res, pEntry->arg1, pEntry->arg2);                
+                break;
         }
         i++;
     }
-
     fclose(file);
 }
