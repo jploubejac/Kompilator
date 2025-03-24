@@ -91,45 +91,36 @@ Type : tCONST {printf("tCONST ");}
       ;
 
 Expression : Expression tADD Expression {
-              //entry_ts *pExp1 = (entry_ts *)container_get_if(&ts, (bool(*)(void*,void*))entry_ts_isName, (void*)$1);
-              printf("/*---------------------------------------ADD-----------------------------------------*/\n");
               DynamicArrayPushAsmLine(pAsmTable, OP_ADD, $1, $1, $3);
-              asmLine_t *pAsm= (asmLine_t*) DynamicArrayGetByIndex(pAsmTable, DynamicArrayGetSize(pAsmTable)-1);
               $$=$1;
               DynamicArrayPop(pSymbolTable);
-              printf("Voici ton addition : op=%d, @res:%x @arg1:%x @arg2:%x\n", pAsm->op, pAsm->res, pAsm->arg1, pAsm->arg2);
               printf("Expression[%d] tADD Expression[%d] ", $1, $3);
               }
             | Expression tSUB Expression {
-              //printf("/*---------------------------------------SUB-----------------------------------------*/\n");
               DynamicArrayPushAsmLine(pAsmTable, OP_SOU, $1, $1, $3);
               $$=$1;
               DynamicArrayPop(pSymbolTable);
               printf("Expression[%d] tADD Expression[$%d] ", $1, $3);
             }
             | Expression tMUL Expression  {
-              //printf("/*---------------------------------------MUL-----------------------------------------*/\n");
               DynamicArrayPushAsmLine(pAsmTable, OP_MUL, $1, $1, $3);
               $$=$1;
               DynamicArrayPop(pSymbolTable);
               printf("Expression[%d] tMUL Expression[%d] ", $1, $3);
             }
             | Expression tDIV Expression  {
-              printf("/*---------------------------------------DIV-----------------------------------------*/\n");
               DynamicArrayPushAsmLine(pAsmTable, OP_DIV, $1, $1, $3);
               $$=$1;
               DynamicArrayPop(pSymbolTable);
               printf("Expression[%d] tDIV Expression[%d] ", $1, $3);
             }
             | tNB {
-              printf("/*---------------------------------------NB-----------------------------------------*/\n");
               int addr=DynamicArrayPushSymbolEntry(pSymbolTable, "temp");
               DynamicArrayPushAsmLine(pAsmTable, OP_AFC, addr, $1, 0);
               $$=addr;
               printf("tNB[%d] ", $1);
             } 
             | tID {
-              printf("/*---------------------------------------ID-----------------------------------------*/\n");
               int index = DynamicArrayGetIndexIf(pSymbolTable,  (IptfVV)symbolEntryIsName, (void*)$1);
               if(index<0)index=DynamicArrayPushSymbolEntry(pSymbolTable, $1);
               int addr_ret=DynamicArrayPushSymbolEntry(pSymbolTable, "temp");
