@@ -66,6 +66,8 @@ void *DynamicArrayGetIfReverse(dynamicArray_t *pArray, IptfVV pFunc, void *pArg)
  */
 int DynamicArrayGetIndexIf(dynamicArray_t *pArray, IptfVV pFunc, void *pArg);
 
+int DynamicArrayGetIndexIfReverse(dynamicArray_t *pArray, IptfVV pFunc, void *pArg);
+
 /**
  * @brief Retrieves an element by its index 
  * @param pArray Pointer to the dynamic array

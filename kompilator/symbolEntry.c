@@ -46,7 +46,7 @@ void DynamicArraySymbolEntryPrint(dynamicArray_t *pArray){
 }
 
 void DynamicArraySymbolEntryPrintToFile(dynamicArray_t *pArray, const char *filename){
-    FILE *f = fopen(filename, "w");
+    FILE *f = fopen(filename, "a");
     if (f == NULL)
     {
         printf("Error opening file!\n");

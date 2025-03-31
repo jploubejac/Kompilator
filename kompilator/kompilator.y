@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "symbolEntry.h"
+#include "functionSymbolEntry.h"
 #include "asmLine.h"
 #include "dynamicArray.h"
 #define RESULT_FILE "result.dump"
@@ -14,11 +15,12 @@ int yylex();
 //container tAsm = {NULL, NULL, 0};
 dynamicArray_t *pSymbolTable;
 dynamicArray_t *pAsmTable;
+dynamicArray_t *pFunctionSymbolTable;
 %}
 
 
 %union { int nb; char* str;}
-%token tEXP tREAL tEQ tMAIN tOB tCB tCONST tINT tADD tSUB tMUL tDIV tOP tCP tSEP tSEM tPRINTF tWHILE tVOID tIF tELSE tFOR tSUP tINF tAND tOR tNOT tDO tINC tDEC tEQEQ tINFEQ tSUPEQ
+%token tEXP tREAL tEQ tMAIN tOB tCB tCONST tINT tADD tSUB tMUL tDIV tOP tCP tSEP tSEM tPRINTF tVOID tIF tELSE tFOR tSUP tINF tAND tOR tNOT tDO tINC tDEC tEQEQ tINFEQ tSUPEQ
 %left tOR 
 %left tAND
 %left tADD tSUB
@@ -26,11 +28,13 @@ dynamicArray_t *pAsmTable;
 
 %token <str> tID
 %token <nb> tNB
+%token <nb> tWHILE
 
 %type <str> Variable
 %type <nb> Expression
 %type <nb> Condition
 %type <nb> Bool
+
 
 %start Kompilator
 %%
@@ -236,11 +240,36 @@ Bool : Expression tINF Expression {
       }
       ;
 
-WhileBody : tWHILE tOP Condition tCP tOB Instruction tCB {printf("tWHILE tOP Condition tCP tOB Instruction tCB ");}
+WhileBody : tWHILE {$1= DynamicArrayGetSize(pAsmTable); DynamicArrayPop(pSymbolTable); } tOP Condition tCP {
+              DynamicArrayPushAsmLine(pAsmTable, OP_JMF, $4, -1,0);
+            }tOB Instruction tCB {
+              printf("tWHILE tOP Condition tCP tOB Instruction tCB ");
+              DynamicArrayPushAsmLine(pAsmTable, OP_JMP, -1, 0,0);
+              int index_jmf= DynamicArrayGetIndexIfReverse(pAsmTable, (IptfVV)isJmfWithoutAdress, NULL);
+              if(index_jmf>=0){
+                asmLine_t *pJmfLine=DynamicArrayGetByIndex(pAsmTable,index_jmf);
+                if(pJmfLine!=NULL) pJmfLine->arg1=DynamicArrayGetSize(pAsmTable);
+                asmLine_t *pJmpLine=DynamicArrayGetIfReverse(pAsmTable, (IptfVV)isJmpWithoutAdress, NULL);
+                if(pJmpLine!=NULL) pJmpLine->res=$1;
+              }
+            }
            |tDO tOB Instruction tCB tWHILE tOP Condition tCP tSEM {printf("tDO tOB Instruction tCB tWHILE tOP Condition tCP tSEM ");}
            ;
 
-ForBody : tFOR tOP ForCondition tCP tOB Instruction tCB {printf("tFOR tOP ForCondition tCP tOB Instruction tCB ");}; 
+ForBody : tFOR tOP ForCondition  tCP {
+              //DynamicArrayPushAsmLine(pAsmTable, OP_JMF, $3, -1,0);
+            } tOB Instruction tCB {
+              printf("tFOR tOP ForCondition tCP tOB Instruction tCB ");
+              DynamicArrayPushAsmLine(pAsmTable, OP_JMP, -1, 0,0);
+              int index_jmf= DynamicArrayGetIndexIfReverse(pAsmTable, (IptfVV)isJmfWithoutAdress, NULL);
+              if(index_jmf>=0){
+                asmLine_t *pJmfLine=DynamicArrayGetByIndex(pAsmTable,index_jmf);
+                if(pJmfLine!=NULL) pJmfLine->arg1=DynamicArrayGetSize(pAsmTable);
+                asmLine_t *pJmpLine=DynamicArrayGetIfReverse(pAsmTable, (IptfVV)isJmpWithoutAdress, NULL);
+                if(pJmpLine!=NULL) pJmpLine->res=index_jmf;
+              }
+              DynamicArrayPop(pSymbolTable);
+          }; 
  
 
 ForCondition: Declaration tSEM Condition tSEM Affectation {printf("Declaration tSEM Condition tSEM Affectation ");}
@@ -248,11 +277,21 @@ ForCondition: Declaration tSEM Condition tSEM Affectation {printf("Declaration t
              |tSEM Condition tSEM Affectation {printf("tSEM Condition tSEM Affectation ");}
              ;
 
-Function : tVOID tID tOP tCP tOB Instruction tCB {/*container_add_sucre_symbol(&ts, $2);*/ {printf("tVOID tID tOP tCP tOB Instruction tCB ");}}
-          | tINT tID tOP tCP tOB Instruction tCB {/*container_add_sucre_symbol(&ts, $2);*/ {printf("tINT tID tOP tCP tOB Instruction tCB ");}}
+Function : tVOID tID{
+                DynamicArrayPushFunctionSymbolEntry(pFunctionSymbolTable, $2, DynamicArrayGetSize(pAsmTable));
+              } tOP tCP tOB Instruction tCB 
+              {
+                printf("tVOID tID tOP tCP tOB Instruction tCB ");
+              }
+          | tINT tID tOP tCP tOB Instruction tCB {printf("tINT tID tOP tCP tOB Instruction tCB ");}
           ;
 
-Invocation : tID tOP tCP {printf("tID tOP tCP ");}
+Invocation : tID tOP tCP 
+            {
+              printf("tID tOP tCP ");
+              functionSymbolEntry_t* function = DynamicArrayGetIf(pFunctionSymbolTable, (IptfVV)symbolEntryIsName, (void*)$1);
+              DynamicArrayPushAsmLine(pAsmTable, OP_JMP, function->addr, 0,0);
+            }
 
 %%
 void yyerror(char *s) {
@@ -269,12 +308,17 @@ int main(void) {
   printf("INITIALISATION ✅\n");
   pAsmTable=DynamicArrayNew((ptfV)asmLineDeleteFunction);
   pSymbolTable=DynamicArrayNew((ptfV)symbolEntryDeleteFunction);
+  pFunctionSymbolTable=DynamicArrayNew((ptfV)functionSymbolEntryDeleteFunction);
   printf("STARTING ANALYSIS\n");
   if (yyparse() == 0) {
     printf("\nSyntax analysis successful! ✅\n");
   } else {
     printf("\nSyntax analysis failed! ❌\n");
   }
+  printf("\n************************************************************************************\n");
+  printf("FUNCTION SYMBOL TABLE\n");
+  DynamicArrayFunctionSymbolEntryPrint(pFunctionSymbolTable);
+  DynamicArrayFunctionSymbolEntryPrintToFile(pFunctionSymbolTable,RESULT_FILE);
   printf("\n************************************************************************************\n");
   printf("SYMBOL TABLE\n");
   DynamicArraySymbolEntryPrint(pSymbolTable);
@@ -285,8 +329,9 @@ int main(void) {
   DynamicArrayAsmLinePrintToFile(pAsmTable, RESULT_FILE);
   printf("\n************************************************************************************\n");
   printf("DELETING TABLES ✅\n");
-  DynamicArrayDel(pAsmTable);
+  DynamicArrayDel(pFunctionSymbolTable);
   DynamicArrayDel(pSymbolTable);
+  DynamicArrayDel(pAsmTable);
   printf("\n************************************************************************************\n");
   return 0;
 }

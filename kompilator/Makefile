@@ -9,7 +9,7 @@ CFLAGS=-Wall -g
 
 all: $(BIN)
 
-OBJ=y.tab.o lex.yy.o dynamicArray.o symbolEntry.o asmLine.o
+OBJ=y.tab.o lex.yy.o dynamicArray.o symbolEntry.o asmLine.o functionSymbolEntry.o
 
 %.o: %.c  #tells how to compile .c files into .o
 	$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
@@ -30,6 +30,9 @@ symbol_table.o: symbolEntry.c symbolEntry.h
 	$(CC) -c $(CFLAGS) $< -o $@
 
 asm.o: asmLine.c asmLine.h
+	$(CC) -c $(CFLAGS) $< -o $@
+
+functionSymbolEntry.o: functionSymbolEntry.c functionSymbolEntry.h
 	$(CC) -c $(CFLAGS) $< -o $@
 
 clean:
