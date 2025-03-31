@@ -1,0 +1,168 @@
+/*
+
+AMD Vivado v2023.1 (64-bit) [Major: 2023, Minor: 1]
+SW Build: 3865809 on Sun May  7 15:04:56 MDT 2023
+IP Build: 3864474 on Sun May  7 20:36:21 MDT 2023
+IP Build: 3864474 on Sun May  7 20:36:21 MDT 2023
+
+Process ID (PID): 26033
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Mon Mar 31 15:18:44 CEST 2025
+Time zone: 	Central European Standard Time (Europe/Paris)
+
+OS: Linux
+OS Version: 6.8.0-52-generic
+OS Architecture: amd64
+Available processors (cores): 12
+
+Display: 0
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+OS font scaling: 100%
+
+Java version: 	17.0.3 64-bit
+JavaFX version: 17.0.1
+Java home: 	/usr/local/insa/Xilinx/Vivado/2023.1/tps/lnx64/jre17.0.3_7
+Java executable: 	/usr/local/insa/Xilinx/Vivado/2023.1/tps/lnx64/jre17.0.3_7/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Djdk.gtk.version=2, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms512m, -Xmx4072m, -Xss10m, -Xrs]
+Java initial memory (-Xms): 	512 MB
+Java maximum memory (-Xmx):	 3 GB
+
+User name: 	loubejac-com
+User home directory: /home/loubejac-com
+User working directory: /home/loubejac-com/Documents/4A/Semestre2/PSI/Kompilator/u_controleur
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /usr/local/insa/Xilinx/Vivado
+HDI_APPROOT: /usr/local/insa/Xilinx/Vivado/2023.1
+RDI_DATADIR: /usr/local/insa/Xilinx/Vivado/2023.1/data
+RDI_BINDIR: /usr/local/insa/Xilinx/Vivado/2023.1/bin
+
+Vivado preferences file: /home/loubejac-com/.Xilinx/Vivado/2023.1/vivado.xml
+Vivado preferences directory: /home/loubejac-com/.Xilinx/Vivado/2023.1/
+Vivado layouts directory: /home/loubejac-com/.Xilinx/Vivado/2023.1/data/layouts
+PlanAhead jar file: 	/usr/local/insa/Xilinx/Vivado/2023.1/lib/classes/planAhead.jar
+Vivado log file: 	/home/loubejac-com/Documents/4A/Semestre2/PSI/Kompilator/u_controleur/vivado.log
+Vivado journal file: 	/home/loubejac-com/Documents/4A/Semestre2/PSI/Kompilator/u_controleur/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-26033-insa-20927
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+GNOME_SHELL_SESSION_MODE: 
+RDI_APPROOT: /usr/local/insa/Xilinx/Vivado/2023.1
+RDI_BASEROOT: /usr/local/insa/Xilinx/Vivado
+RDI_BINROOT: /usr/local/insa/Xilinx/Vivado/2023.1/bin
+RDI_BUILD: yes
+RDI_DATADIR: /usr/local/insa/Xilinx/Vivado/2023.1/data
+RDI_INSTALLROOT: /usr/local/insa/Xilinx
+RDI_INSTALLVER: 2023.1
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 17.0.3_7
+RDI_LIBDIR: /usr/local/insa/Xilinx/Vivado/2023.1/lib/lnx64.o/Default:/usr/local/insa/Xilinx/Vivado/2023.1/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /usr/local/insa/Xilinx/Vivado/2023.1/ids_lite/ISE/bin/lin64
+RDI_PROG: /usr/local/insa/Xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/vivado
+RDI_SESSION_INFO: /home/loubejac-com/Documents/4A/Semestre2/PSI/Kompilator/u_controleur:insa-20927_1743427077_25992
+RDI_SHARED_DATA: /usr/local/insa/Xilinx/SharedData/2023.1/data
+RDI_TPS_ROOT: /usr/local/insa/Xilinx/Vivado/2023.1/tps/lnx64
+RDI_USE_JDK17: True
+SHELL: /bin/bash
+XILINX: /usr/local/insa/Xilinx/Vivado/2023.1/ids_lite/ISE
+XILINX_DSP: /usr/local/insa/Xilinx/Vivado/2023.1/ids_lite/ISE
+XILINX_HLS: /usr/local/insa/Xilinx/Vitis_HLS/2023.1
+XILINX_PLANAHEAD: /usr/local/insa/Xilinx/Vivado/2023.1
+XILINX_VITIS: 
+XILINX_VIVADO: /usr/local/insa/Xilinx/Vivado/2023.1
+XILINX_VIVADO_HLS: /usr/local/insa/Xilinx/Vivado/2023.1
+
+
+GUI allocated memory:	512 MB
+GUI max memory:		4,072 MB
+Engine allocated memory: 1,414 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,421 MB. GUI used memory: 71 MB. Current time: 3/31/25, 3:18:45 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,516 MB. GUI used memory: 70 MB. Current time: 3/31/25, 3:19:00 PM CEST
+selectButton(PAResourceEtoH.GettingStartedView_CREATE_NEW_PROJECT, "Create Project"); // u
+// Run Command: PAResourceCommand.PACommandNames_NEW_PROJECT
+selectButton("NEXT", "Next >"); // JButton
+// Elapsed time: 24 seconds
+setText(PAResourceOtoP.ProjectNameChooser_PROJECT_NAME, "ALUME"); // Q
+selectButton(PAResourceOtoP.ProjectNameChooser_CHOOSE_PROJECT_LOCATION, (String) null); // r
+dismissFolderChooser();
+selectButton("NEXT", "Next >"); // JButton
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// [GUI Memory]: 143 MB (+147070kb) [00:01:17]
+// [Engine Memory]: 1,528 MB (+1451018kb) [00:01:17]
+// [GUI Memory]: 152 MB (+1931kb) [00:01:17]
+selectButton("NEXT", "Next >"); // JButton
+// HMemoryUtils.trashcanNow. Engine heap size: 1,566 MB. GUI used memory: 73 MB. Current time: 3/31/25, 3:19:45 PM CEST
+selectTab(PAResourceOtoP.PartChooser_TABBED_PANE, (HResource) null, "Boards", 1); // g
+setText("PAResourceAtoD.BoardChooser_BOARD_TABLE_SEARCH_FIELD", "basys"); // OverlayTextField
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Basys3 ; Basys3 ; Basys3 ; digilentinc.com ; 1.2 ; Basys3 ; 236 ; C.0 ; 106 ; 20800 ; 41600 ; 50 ; 0 ; 90 ;  ; 32 ;  ; 0 ; 0 ; 2 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 5 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 0, "Basys3", 0, false); // l
+openHTML ("https://digilent.com/reference/programmable-logic/basys-3/start");l
+selectButton("NEXT", "Next >"); // JButton
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// [GUI Memory]: 163 MB (+3754kb) [00:01:35]
+// Tcl Message: create_project ALUME /home/loubejac-com/Documents/4A/Semestre2/PSI/Kompilator/u_controleur/ALUME -part xc7a35tcpg236-1 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 228 MB (+60091kb) [00:01:39]
+// [Engine Memory]: 1,700 MB (+99937kb) [00:01:39]
+// WARNING: HEventQueue.dispatchEvent() is taking  1321 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/local/insa/Xilinx/Vivado/2023.1/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 7750.582 ; gain = 66.000 ; free physical = 6321 ; free virtual = 10529 
+// TclEventType: BOARD_MODIFIED
+// Tcl Message: set_property board_part digilentinc.com:basys3:part0:1.2 [current_project] 
+selectButton("FINISH", "Finish"); // JButton
+// 'g' command handler elapsed time: 64 seconds
+dismissDialog("Create Project"); // bq
+dismissDialog("New Project"); // f
+// HMemoryUtils.trashcanNow. Engine heap size: 1,753 MB. GUI used memory: 78 MB. Current time: 3/31/25, 3:20:10 PM CEST
+// Elapsed time: 11 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ag
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // ag
+selectMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // ag
+dismissMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // ag
+dismissMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_HELP, "Help"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_DESIGN_HUBS, "Design Hubs"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_DESIGN_HUBS, "Design Hubs"); // al
+dismissMenu(PAResourceItoN.MainMenuMgr_HELP, "Help"); // ag
