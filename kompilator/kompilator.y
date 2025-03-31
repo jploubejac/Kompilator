@@ -140,16 +140,17 @@ Printf : tPRINTF tOP Expression tCP
             printf("tPRINTF tOP tID tCP ");
           }
 
-IfBody : tIF tOP Condition tCP tOB Instruction tCB 
+IfBody : tIF tOP Condition tCP {DynamicArrayPushAsmLine(pAsmTable, OP_JMF, $3, -1,0);} tOB Instruction tCB ElseBody
           {
-            int addr_unresolved = DynamicArrayPushSymbolEntry(pSymbolTable, "unresolved");
-            DynamicArrayPushAsmLine(pAsmTable, OP_JMF, $3, addr_unresolved, 0);
+            asmLine_t *pJmfLine = DynamicArrayGetIfReverse(pAsmTable, (IptfVV)isJmfWithoutAdress, NULL);
+            if(pJmfLine!=NULL)pJmfLine->arg1=DynamicArrayGetSize(pAsmTable);
+            //Do: error handle
             printf("tIF tOP Expression tCP tOB Instruction tCB ");
           }
-        | tIF tOP Condition tCP tOB Instruction tCB tELSE tOB Instruction tCB 
-          {printf("tIF tOP Expression tCP tOB Instruction tCB tELSE tOB Instruction tCB ");}
         ;
-
+ElseBody: tELSE tOB Instruction tCB 
+          |
+          ;
 Condition : Bool {
                 printf("Bool ");
                 $$=$1;

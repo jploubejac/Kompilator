@@ -15,7 +15,7 @@ OBJ=y.tab.o lex.yy.o dynamicArray.o symbolEntry.o asmLine.o
 	$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
 
 y.tab.c: $(GRM) # yacc part
-	yacc -t -v -g -d $<
+	yacc -t -v -g -d  $<
 
 lex.yy.c: $(LEX) # flex part
 	flex $<

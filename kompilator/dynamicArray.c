@@ -64,6 +64,15 @@ void *DynamicArrayGetIf(dynamicArray_t *pArray, IptfVV pFunc, void *pArg){
     return NULL;
 }
 
+void *DynamicArrayGetIfReverse(dynamicArray_t *pArray, IptfVV pFunc, void *pArg){
+    if(pArray==NULL)return NULL;
+    for(int i =pArray->size-1; (pArray->pArray[i]!=NULL)&&(i>0); i--){
+        if(pFunc(pArray->pArray[i],pArg))return pArray->pArray[i];
+    }
+    return NULL;
+}
+
+
 int DynamicArrayGetIndexIf(dynamicArray_t *pArray, IptfVV pFunc, void *pArg){
     if(pArray==NULL)return -2;
     for(int i =0; (pArray->pArray[i]!=NULL)&&(i<pArray->size); i++){

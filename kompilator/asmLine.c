@@ -25,9 +25,9 @@ char* int_to_instr(int inst) {
         case OP_SUP: return "SUP";
         case OP_EQU: return "EQU";
         case OP_PRI: return "PRI";
-        case OP_NOT: return "OP_NOT";
-        case OP_OR: return "OP_OR";
-        case OP_AND: return "OP_AND";
+        case OP_NOT: return "NOT";
+        case OP_OR: return "OR";
+        case OP_AND: return "AND";
         default: return "";
     }
 }
@@ -106,4 +106,9 @@ void DynamicArrayAsmLinePrintToFile(dynamicArray_t *pArray, const char *filename
         i++;
     }
     fclose(file);
+}
+
+int isJmfWithoutAdress(asmLine_t *pAsm, void *pNull){
+    if(pAsm->op==OP_JMF&&pAsm->arg1==-1)return 1;
+    return 0;
 }

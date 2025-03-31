@@ -55,6 +55,8 @@ int DynamicArrayGetIndex(dynamicArray_t *pArray, void *pVal);
  */
 void *DynamicArrayGetIf(dynamicArray_t *pArray, IptfVV pFunc, void *pArg);
 
+void *DynamicArrayGetIfReverse(dynamicArray_t *pArray, IptfVV pFunc, void *pArg);
+
 /**
  * @brief Searches for the index of an element based on a criterion
  * @param pArray Pointer to the dynamic array
