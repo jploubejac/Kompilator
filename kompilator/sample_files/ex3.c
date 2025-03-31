@@ -8,7 +8,11 @@ void main ()
 
   if (a <= b) {}
 
-  if (a >= b) {}
+  if (a >= b) {
+    a=1+1;
+    b=a+695;
+    int c =45;
+  }
 
   if (a > b) {} else {}
 
@@ -18,7 +22,20 @@ void main ()
 
   if (!(a == b)) {} else {}
 
-  if (a < b) {if (a < b) {} else {}} else {}
+  if (a < b) {
+    if (a < b) {
+      a = 1;
+      int c =32;
+      if( c<a){
+        c=12;
+      }
+    } else {
+      a = 1;
+    } 
+  } 
+  else {
+    a = 1;
+  }
 
   if (a < b) {} else { if (a < b) {} else {}}
 }

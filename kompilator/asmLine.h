@@ -74,5 +74,7 @@ void DynamicArrayAsmLinePrint(dynamicArray_t *pArray);
 void DynamicArrayAsmLinePrintToFile(dynamicArray_t *pArray, const char *filename);
 
 int isJmfWithoutAdress(asmLine_t *pAsm, void *pNull);
+int isJmpWithoutAdress(asmLine_t *pAsm, void *pNull);
+
 
 #endif
