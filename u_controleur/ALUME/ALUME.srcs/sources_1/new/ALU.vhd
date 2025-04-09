@@ -22,6 +22,8 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.ALL;
+use IEEE.std_logic_signed.ALL;
+
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -45,27 +47,35 @@ end ALU;
 
 architecture Behavioral of ALU is
 
--- 00 : addition
--- 01 : soustraction
--- 10 : multiplication
--- 11 : division
+-- 000 : addition
+-- 001 : soustraction
+-- 010 : multiplication
+-- 011 : division
+-- 100 : and
+-- 101 : or
+-- 110 : not
+
 signal aux: std_logic_vector (15 downto 0):= (others=>'0');
  
 begin
     
     with Ctrl_Alu select
-        aux <= std_logic_vector(unsigned(A) + unsigned(B)) when "00",
-        std_logic_vector(unsigned(A) - unsigned(B)) when "01",
-        std_logic_vector(unsigned(A) * unsigned(B)) when "10",
-        std_logic_vector(unsigned(A) / unsigned(B)) when others
+        aux <= (x"00" & A) + (x"00" & B) when "000",
+        A * B when "001",
+        (x"00" & A) - (x"00" & B) when "010",
+        x"00" & ('0' & A(7 downto 1)) when "011",
+        "000000000000000" & (A(1) and B(1)) when "100",
+        "000000000000000" & (A(1) or B(1)) when "101",
+        "000000000000000" & (not(A(1))) when "110",
+        (x"00" & A) + (x"00" & B) when others
         ; 
        
     S  <= aux(7 downto 0);
       
-    N <= '1' when (B > A and Ctrl_Alu = "01");
-    O <= '1' when (unsigned(aux(15 downto 8)) > 0);
-    Z <= '1' when (aux = "00000000");
-    C <= aux(8);
+    N <= '1' when aux(15)='1' else '0';
+    O <= '1' when (unsigned(aux(15 downto 8)) > 0 and Ctrl_Alu="010") else '0';
+    Z <= '1' when (aux = "00000000") else '0';
+    C <= aux(8) when Ctrl_Alu = "000";
     
     
 end Behavioral;
