@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/loubejac-com/Documents/4A/Semestre2/PSI/Kompilator/u_controleur/ALUME/ALUME.runs/synth_1'
+HD_PWD='/home/lacau/GitHub/Kompilator/u_controleur/ALUME/ALUME.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

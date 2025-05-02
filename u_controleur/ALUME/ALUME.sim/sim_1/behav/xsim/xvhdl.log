@@ -1,2 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/loubejac-com/Documents/4A/Semestre2/PSI/Kompilator/u_controleur/ALUME/ALUME.srcs/sources_1/new/ALU.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'ALU'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/lacau/GitHub/Kompilator/u_controleur/ALUME/ALUME.srcs/sim_1/new/testDonnees.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'testDonnees'
