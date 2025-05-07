@@ -1,4 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/lacau/GitHub/Kompilator/u_controleur/ALUME/ALUME.srcs/sources_1/new/banc_instructions.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'banc_instructions'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/lacau/GitHub/Kompilator/u_controleur/ALUME/ALUME.srcs/sim_1/new/test_instruction.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'testInstruction'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/u_controleur/ALUME/ALUME.srcs/sim_1/new/test_pipeline.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_pipeline'

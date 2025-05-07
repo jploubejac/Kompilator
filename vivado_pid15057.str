@@ -1,0 +1,1281 @@
+/*
+
+AMD Vivado v2024.2 (64-bit) [Major: 2024, Minor: 2]
+SW Build: 5239630 on Fri Nov 08 22:34:34 MST 2024
+IP Build: 5239520 on Sun Nov 10 16:12:51 MST 2024
+IP Build: 5239520 on Sun Nov 10 16:12:51 MST 2024
+
+Process ID (PID): 15057
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Thu May 08 00:03:57 CEST 2025
+Time zone: 	Central European Standard Time (Europe/Paris)
+
+OS: PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"
+OS Version: 6.1.0-28-amd64
+OS Architecture: amd64
+Available processors (cores): 12
+LSB Release Description: Debian GNU/Linux 12 (bookworm)
+
+Display: 0.0
+Screen size: 1920x1080
+Local screen bounds: x = 0, y = 26, width = 1920, height = 1054
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+OS font scaling: 100%
+Anti-Alias Enabled: false
+
+Java version: 	21.0.1 64-bit
+
+Java home: 	/home/clem/Xilinx/Vivado/2024.2/tps/lnx64/jre21.0.1_12
+Java executable: 	/home/clem/Xilinx/Vivado/2024.2/tps/lnx64/jre21.0.1_12/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:ParallelGCThreads=4, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms512m, -Xmx4072m, -Xss10m, -Xrs]
+Java initial memory (-Xms): 	512 MB
+Java maximum memory (-Xmx):	 3 GB
+
+User name: 	clem
+User home directory: /home/clem
+User working directory: /home/clem/Documents/GitHub/Kompilator
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /home/clem/Xilinx/Vivado
+HDI_APPROOT: /home/clem/Xilinx/Vivado/2024.2
+RDI_DATADIR: /home/clem/Xilinx/Vivado/2024.2/data
+RDI_BINDIR: /home/clem/Xilinx/Vivado/2024.2/bin
+
+Vivado preferences file: /home/clem/.Xilinx/Vivado/2024.2/vivado.xml
+Vivado preferences directory: /home/clem/.Xilinx/Vivado/2024.2/
+Vivado layouts directory: /home/clem/.Xilinx/Vivado/2024.2/data/layouts
+PlanAhead jar file: 	/home/clem/Xilinx/Vivado/2024.2/lib/classes/planAhead.jar
+Vivado log file: 	/home/clem/Documents/GitHub/Kompilator/vivado.log
+Vivado journal file: 	/home/clem/Documents/GitHub/Kompilator/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-15057-maskass
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+RDI_APPROOT: /home/clem/Xilinx/Vivado/2024.2
+RDI_BASEROOT: /home/clem/Xilinx/Vivado
+RDI_BINROOT: /home/clem/Xilinx/Vivado/2024.2/bin
+RDI_BUILD: yes
+RDI_DATADIR: /home/clem/Xilinx/Vivado/2024.2/data
+RDI_INSTALLROOT: /home/clem/Xilinx
+RDI_INSTALLVER: 2024.2
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 21.0.1_12
+RDI_LIBDIR: /home/clem/Xilinx/Vivado/2024.2/lib/lnx64.o/Default:/home/clem/Xilinx/Vivado/2024.2/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /home/clem/Xilinx/Vitis/2024.2/bin:/home/clem/Xilinx/Vivado/2024.2/ids_lite/ISE/bin/lin64
+RDI_PROG: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado
+RDI_SESSION_INFO: /home/clem/Documents/GitHub/Kompilator:maskass_1746655425_14988
+RDI_SHARED_DATA: /home/clem/Xilinx/SharedData/2024.2/data
+RDI_TPS_ROOT: /home/clem/Xilinx/Vivado/2024.2/tps/lnx64
+RDI_USE_JDK21: True
+SHELL: /usr/bin/zsh
+XILINX: /home/clem/Xilinx/Vivado/2024.2/ids_lite/ISE
+XILINX_DSP: /home/clem/Xilinx/Vivado/2024.2/ids_lite/ISE
+XILINX_HLS: /home/clem/Xilinx/Vitis/2024.2
+XILINX_PLANAHEAD: /home/clem/Xilinx/Vivado/2024.2
+XILINX_SDK: /home/clem/Xilinx/Vitis/2024.2
+XILINX_VITIS: /home/clem/Xilinx/Vitis/2024.2
+XILINX_VIVADO: /home/clem/Xilinx/Vivado/2024.2
+
+
+GUI allocated memory:	512 MB
+GUI max memory:		4,072 MB
+Engine allocated memory: 1,427 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ai (PAResourceItoN.MainMenuMgr_FILE, File)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // an (PAResourceItoN.MainMenuMgr_PROJECT, Project)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // an (PAResourceItoN.MainMenuMgr_CHECKPOINT, Checkpoint)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // an (PAResourceItoN.MainMenuMgr_IP, IP)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // an (PAResourceItoN.MainMenuMgr_CHECKPOINT, Checkpoint)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // an (PAResourceItoN.MainMenuMgr_PROJECT, Project)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,437 MB. GUI used memory: 63 MB. Current time: 5/8/25, 12:03:58 AM CEST
+selectMenuItem(PAResourceCommand.PACommandNames_OPEN_PROJECT, "Open..."); // aq (PAResourceCommand.PACommandNames_OPEN_PROJECT, open_project_menu)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ai (PAResourceItoN.MainMenuMgr_FILE, File)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+setFileChooser("/home/clem/Documents/GitHub/Kompilator/u_controleur/ALUME/ALUME.xpr");
+selectButton(RDIResource.BaseDialog_OK, "OK", "Older Project Version"); // a (RDIResource.BaseDialog_OK)
+// Opening Vivado Project: /home/clem/Documents/GitHub/Kompilator/u_controleur/ALUME/ALUME.xpr. Version: Vivado v2023.1 
+dismissDialog("Older Project Version"); // az (dialog1)
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 105 MB (+107120kb) [00:00:20]
+// [Engine Memory]: 1,534 MB (+1457170kb) [00:00:20]
+// [GUI Memory]: 142 MB (+33289kb) [00:00:20]
+// WARNING: HEventQueue.dispatchEvent() is taking  1230 ms.
+// Tcl Message: open_project /home/clem/Documents/GitHub/Kompilator/u_controleur/ALUME/ALUME.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from '/home/lacau/GitHub/Kompilator/u_controleur/ALUME' since last save. 
+// Tcl Message: INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/clem/Documents/GitHub/Kompilator/u_controleur/ALUME/ALUME.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [Project 1-230] Project 'ALUME.xpr' upgraded for this version of Vivado. INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/clem/Xilinx/Vivado/2024.2/data/ip'. 
+// Project name: ALUME; location: /home/clem/Documents/GitHub/Kompilator/u_controleur/ALUME; part: xc7a35tcpg236-1
+dismissDialog("Open Project"); // bh (Open Project Progress)
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,594 MB. GUI used memory: 70 MB. Current time: 5/8/25, 12:04:13 AM CEST
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pipeline(Structural) (pipeline.vhd)]", 1, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pipeline(Structural) (pipeline.vhd)]", 1, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+// [Engine Memory]: 1,616 MB (+5180kb) [00:00:27]
+selectCodeEditor("pipeline.vhd", 411, 367); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,577 MB. GUI used memory: 72 MB. Current time: 5/8/25, 12:04:28 AM CEST
+// Elapsed time: 41 seconds
+selectCodeEditor("pipeline.vhd", 146, 425); // ae (pipeline.vhd)
+// Elapsed time: 77 seconds
+selectCodeEditor("pipeline.vhd", 103, 416); // ae (pipeline.vhd)
+// Elapsed time: 16 seconds
+selectCodeEditor("pipeline.vhd", 141, 433); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 141, 433, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 151, 427); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 205, 436); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 205, 436, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 205, 436); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 172, 435); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 128, 461); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 115, 435); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 115, 435, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 115, 435); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 157, 412); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 146, 327); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 147, 327, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 147, 327); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 113, 400); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 170, 399); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+typeControlKey(null, null, 'z');
+selectCodeEditor("pipeline.vhd", 116, 331); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+// Elapsed time: 10 seconds
+selectCodeEditor("pipeline.vhd", 160, 349); // ae (pipeline.vhd)
+// Elapsed time: 18 seconds
+selectCodeEditor("pipeline.vhd", 89, 242); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 65, 365); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 80, 384); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 67, 366); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 119, 365); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 104, 245); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 30, 393); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 30, 393, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 24, 384); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 24, 384, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 24, 384); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 148, 256); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+// [GUI Memory]: 150 MB (+1167kb) [00:03:54]
+selectCodeEditor("pipeline.vhd", 22, 390); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 22, 390, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 141, 288); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 22, 392); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 22, 392, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 85, 307); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+typeControlKey(null, null, 'z');
+selectCodeEditor("pipeline.vhd", 81, 293); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 27, 418); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 27, 418, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 79, 324); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 85, 314); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 13, 437); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 13, 437, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 113, 336); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 19, 451); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 19, 451, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 87, 348); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 87, 348, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 85, 350); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 25, 469); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 25, 469, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 92, 363); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 0, 243, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("pipeline.vhd", 85, 370); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 82, 348); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 93, 324); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 53, 315); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 99, 281); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 100, 257); // ae (pipeline.vhd)
+// Elapsed time: 250 seconds
+selectCodeEditor("pipeline.vhd", 164, 445); // ae (pipeline.vhd)
+// Elapsed time: 182 seconds
+selectCodeEditor("pipeline.vhd", 552, 369); // ae (pipeline.vhd)
+// Elapsed time: 14 seconds
+selectCodeEditor("pipeline.vhd", 182, 333); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 183, 334, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 183, 334); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 163, 375); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 58, 385); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 287, 374); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 93, 382); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 94, 382, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 161, 382); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 161, 382, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 161, 382); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+typeControlKey(null, null, 'z');
+selectCodeEditor("pipeline.vhd", 141, 382); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 141, 382, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 141, 382); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 135, 406); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 51, 317); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 51, 317, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 51, 317); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 565, 369); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 62, 401); // ae (pipeline.vhd)
+// Elapsed time: 11 seconds
+selectCodeEditor("pipeline.vhd", 85, 393); // ae (pipeline.vhd)
+// Elapsed time: 17 seconds
+selectCodeEditor("pipeline.vhd", 341, 455); // ae (pipeline.vhd)
+// Elapsed time: 29 seconds
+selectCodeEditor("pipeline.vhd", 172, 426); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 171, 426, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 171, 426); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 165, 476); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 159, 464); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 58, 469); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 235, 462); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 91, 471); // ae (pipeline.vhd)
+// Elapsed time: 10 seconds
+selectCodeEditor("pipeline.vhd", 135, 401); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 135, 400, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 135, 400); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 124, 441); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+// Elapsed time: 10 seconds
+selectCodeEditor("pipeline.vhd", 59, 235); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 87, 231); // ae (pipeline.vhd)
+// Elapsed time: 43 seconds
+selectCodeEditor("pipeline.vhd", 263, 386); // ae (pipeline.vhd)
+// Elapsed time: 15 seconds
+selectCodeEditor("pipeline.vhd", 133, 133); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 133, 133, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 133, 133); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 105, 394); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 51, 432); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 113, 437); // ae (pipeline.vhd)
+// Elapsed time: 39 seconds
+selectCodeEditor("pipeline.vhd", 112, 366); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 136, 193); // ae (pipeline.vhd)
+// Elapsed time: 16 seconds
+selectCodeEditor("pipeline.vhd", 273, 165); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 273, 165, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 273, 165); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 229, 179); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 47, 180); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 95, 169); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 111, 176); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 257, 173); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 468, 157); // ae (pipeline.vhd)
+// Elapsed time: 19 seconds
+selectCodeEditor("pipeline.vhd", 393, 286); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+// Elapsed time: 45 seconds
+selectCodeEditor("pipeline.vhd", 185, 194); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 156, 229); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+// Elapsed time: 39 seconds
+selectCodeEditor("pipeline.vhd", 92, 228); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 77, 109); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 140, 121, true, false, false, false, false); // ae (pipeline.vhd) - Shift Key
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 20 seconds
+selectCodeEditor("pipeline.vhd", 75, 251); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 74, 376); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 58, 367); // ae (pipeline.vhd)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 12 seconds
+selectCodeEditor("pipeline.vhd", 174, 379); // ae (pipeline.vhd)
+// Elapsed time: 25 seconds
+selectCodeEditor("pipeline.vhd", 329, 442); // ae (pipeline.vhd)
+// Elapsed time: 15 seconds
+selectCodeEditor("pipeline.vhd", 159, 469); // ae (pipeline.vhd)
+// Elapsed time: 103 seconds
+selectCodeEditor("pipeline.vhd", 136, 252); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 174, 300); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 136, 241); // ae (pipeline.vhd)
+// Elapsed time: 31 seconds
+selectCodeEditor("pipeline.vhd", 181, 280); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 131, 161); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 131, 161, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 131, 161); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 135, 273); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 129, 266); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 54, 276); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 102, 284); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 128, 277); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 159, 299); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 159, 299, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 159, 299); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 158, 277); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 160, 278, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 160, 278); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 125, 162); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 115, 175); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 115, 176, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 115, 176); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 183, 390); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 57, 393); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 97, 395); // ae (pipeline.vhd)
+// Elapsed time: 11 seconds
+selectCodeEditor("pipeline.vhd", 135, 372); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 135, 372, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 135, 372); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 130, 356); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 56, 358); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 121, 364); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 128, 308); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 129, 308, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+// Elapsed time: 14 seconds
+selectCodeEditor("pipeline.vhd", 142, 239); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 142, 239, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+// Elapsed time: 25 seconds
+selectCodeEditor("pipeline.vhd", 146, 142); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 146, 142, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 148, 351); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 149, 352, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+typeControlKey(null, null, 'z');
+selectCodeEditor("pipeline.vhd", 176, 376); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 154, 335); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 154, 335, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 145, 343); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 158, 350); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 158, 351, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("pipeline.vhd", 133, 246); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 133, 246, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 192, 266); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 191, 265); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,637 MB. GUI used memory: 73 MB. Current time: 5/8/25, 12:34:28 AM CEST
+// Elapsed time: 497 seconds
+selectCodeEditor("pipeline.vhd", 407, 252); // ae (pipeline.vhd)
+// Elapsed time: 41 seconds
+selectCodeEditor("pipeline.vhd", 155, 498); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 159, 241); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 159, 241, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 159, 241); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 237, 346); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 255, 367); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 255, 367, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 255, 367); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 255, 367); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 247, 383); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 247, 383, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 247, 383); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 224, 358); // ae (pipeline.vhd)
+// Elapsed time: 46 seconds
+selectCodeEditor("pipeline.vhd", 217, 386); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 214, 392); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 214, 392, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 214, 392); // ae (pipeline.vhd)
+// Elapsed time: 14 seconds
+selectCodeEditor("pipeline.vhd", 207, 481); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 133, 269); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 133, 269, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 133, 269); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 155, 359); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 237, 381); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 237, 381, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 237, 381); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 237, 381); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 237, 381, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 226, 392); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 226, 392, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 226, 392); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 117, 434); // ae (pipeline.vhd)
+// Elapsed time: 38 seconds
+selectCodeEditor("pipeline.vhd", 166, 508); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 128, 276); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 129, 277, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 129, 277); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 251, 373); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 261, 389); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 154, 403); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 154, 403, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 154, 403); // ae (pipeline.vhd)
+// Elapsed time: 77 seconds
+selectCodeEditor("pipeline.vhd", 132, 386); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 132, 386, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+// Elapsed time: 197 seconds
+selectCodeEditor("pipeline.vhd", 434, 324); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+// Elapsed time: 76 seconds
+selectCodeEditor("pipeline.vhd", 307, 181); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 158, 231); // ae (pipeline.vhd)
+// Elapsed time: 26 seconds
+selectCodeEditor("pipeline.vhd", 25, 230); // ae (pipeline.vhd)
+// Elapsed time: 12 seconds
+selectCodeEditor("pipeline.vhd", 351, 228); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 144, 483); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 97, 188); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 97, 188, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("pipeline.vhd", 113, 330); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 257, 355); // ae (pipeline.vhd)
+// Elapsed time: 63 seconds
+selectCodeEditor("pipeline.vhd", 174, 278); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+// Elapsed time: 34 seconds
+selectCodeEditor("pipeline.vhd", 203, 366); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 67, 401); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 65, 401, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 63, 399); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 65, 399, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 124, 429); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 124, 429, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 131, 414); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 110, 405); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 110, 405, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 100, 419); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 101, 419, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 101, 408); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 101, 408, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 141, 359); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 142, 360, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 142, 360); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 142, 360); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 165, 359); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 103, 433); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 121, 431); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 110, 280); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 95, 285); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 90, 271); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 82, 427); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 94, 429); // ae (pipeline.vhd)
+// Elapsed time: 12 seconds
+selectCodeEditor("pipeline.vhd", 92, 328); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 100, 461); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 216, 412); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+// Elapsed time: 29 seconds
+selectCodeEditor("pipeline.vhd", 343, 371); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 195, 246); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 187, 259); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 166, 311); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 165, 261); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 246, 413); // ae (pipeline.vhd)
+// Elapsed time: 48 seconds
+selectCodeEditor("pipeline.vhd", 178, 227); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 170, 248); // ae (pipeline.vhd)
+// Elapsed time: 259 seconds
+selectCodeEditor("pipeline.vhd", 205, 145); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 230, 122); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 54, 189); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 56, 211); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 39, 232); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 294, 198); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 279, 223); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 270, 213); // ae (pipeline.vhd)
+// Elapsed time: 307 seconds
+selectCodeEditor("pipeline.vhd", 214, 216); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 164, 163); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 164, 163, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 164, 163); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 191, 159); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 195, 178); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 195, 177); // ae (pipeline.vhd)
+// Elapsed time: 18 seconds
+selectCodeEditor("pipeline.vhd", 534, 414); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 101, 409); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 82, 391); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 149, 362); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 228, 468); // ae (pipeline.vhd)
+// Elapsed time: 38 seconds
+selectCodeEditor("pipeline.vhd", 229, 160); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 85, 140); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 55, 168); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 56, 176); // ae (pipeline.vhd)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("pipeline.vhd", 172, 317); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 86, 329); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 81, 208); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 178, 334); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 175, 358); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 243, 219); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 206, 414); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 197, 395); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 90, 411); // ae (pipeline.vhd)
+// Elapsed time: 13 seconds
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,639 MB. GUI used memory: 73 MB. Current time: 5/8/25, 1:04:28 AM CEST
+// Elapsed time: 112 seconds
+selectCodeEditor("pipeline.vhd", 252, 407); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 178, 190); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 46, 209); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 170, 416); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+// Elapsed time: 12 seconds
+selectCodeEditor("pipeline.vhd", 111, 410); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 111, 410, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+// Elapsed time: 41 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // x (PAResourceOtoP.PAViews_PROJECT_SUMMARY, PlanAheadTabProject Summary)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, doubleport(Behavioral) (doubleport.vhd)]", 4, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, doubleport(Behavioral) (doubleport.vhd)]", 4, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, doubleport(Behavioral) (doubleport.vhd)]", 4, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "pipeline.vhd", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("pipeline.vhd", 212, 436); // ae (pipeline.vhd)
+// Elapsed time: 23 seconds
+selectCodeEditor("pipeline.vhd", 82, 446); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 82, 446, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectCodeEditor("pipeline.vhd", 200, 450); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 206, 428); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 207, 360); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 242, 373); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 211, 247); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 49, 168); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 52, 173); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 55, 192); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 130, 201); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 141, 196); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 263, 192); // ae (pipeline.vhd)
+// Elapsed time: 111 seconds
+selectCodeEditor("pipeline.vhd", 258, 274); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 246, 279); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 259, 278); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 177, 292); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 189, 325); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 185, 319); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 192, 323); // ae (pipeline.vhd)
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 169, 294); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 194, 339); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 192, 345); // ae (pipeline.vhd)
+// Elapsed time: 37 seconds
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ae (pipeline.vhd)
+// Elapsed time: 92 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // C (PAResourceCommand.PACommandNames_ADD_SOURCES, Sources_add_sources)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_SIMULATION_SPECIFIC_HDL_FILES, "Add or create simulation sources"); // a (PAResourceAtoD.AddSrcWizard_SPECIFY_SIMULATION_SPECIFIC_HDL_FILES)
+selectButton("NEXT", "Next", "Add Sources"); // JButton (NEXT)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File", "Add Sources"); // a (PAResourceQtoS.SrcChooserPanel_CREATE_FILE)
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "test_pipeline"); // ad (PAResourceAtoD.CreateSrcFileDialog_FILE_NAME)
+selectButton(RDIResource.BaseDialog_OK, "OK", "Create Source File"); // a (RDIResource.BaseDialog_OK)
+dismissDialog("Create Source File"); // k (dialog3)
+selectButton("FINISH", "Finish", "Add Sources"); // JButton (FINISH)
+// 'f' command handler elapsed time: 15 seconds
+dismissDialog("Add Sources"); // c (dialog2)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property SOURCE_SET sources_1 [get_filesets sim_1] 
+// Tcl Message: close [ open /home/clem/Documents/GitHub/Kompilator/u_controleur/ALUME/ALUME.srcs/sim_1/new/test_pipeline.vhd w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset sim_1 /home/clem/Documents/GitHub/Kompilator/u_controleur/ALUME/ALUME.srcs/sim_1/new/test_pipeline.vhd 
+selectButton(RDIResource.BaseDialog_OK, "OK", "Define Module"); // a (RDIResource.BaseDialog_OK)
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "Yes", "Define Module"); // JButton (OptionPane.button)
+dismissDialog("Define Module"); // n (dialog4)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 01h:09m:20s
+// [Engine Memory]: 1,700 MB (+3348kb) [01:09:42]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 01h:09m:22s
+// Tcl Message: update_compile_order -fileset sim_1 
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 01h:09m:24s
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 01h:09m:26s
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 6); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 7); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, test_pipeline(Behavioral) (test_pipeline.vhd)]", 13, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, test_pipeline(Behavioral) (test_pipeline.vhd)]", 13, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+selectCodeEditor("test_pipeline.vhd", 267, 325); // ae (test_pipeline.vhd)
+typeControlKey((HResource) null, "test_pipeline.vhd", 'v'); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 148, 283); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 148, 283, false, false, false, false, true); // ae (test_pipeline.vhd) - Double Click
+selectCodeEditor("test_pipeline.vhd", 147, 289); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 147, 289, false, false, false, false, true); // ae (test_pipeline.vhd) - Double Click
+selectCodeEditor("test_pipeline.vhd", 147, 289); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 156, 324); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 156, 324, false, false, false, false, true); // ae (test_pipeline.vhd) - Double Click
+selectCodeEditor("test_pipeline.vhd", 156, 324); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 502, 340); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 550, 342); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 534, 324); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 137, 141); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 138, 141, false, false, false, false, true); // ae (test_pipeline.vhd) - Double Click
+selectCodeEditor("test_pipeline.vhd", 138, 141); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 162, 204); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 164, 205, false, false, false, false, true); // ae (test_pipeline.vhd) - Double Click
+selectCodeEditor("test_pipeline.vhd", 164, 205); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 159, 246); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 159, 246, false, false, false, false, true); // ae (test_pipeline.vhd) - Double Click
+selectCodeEditor("test_pipeline.vhd", 159, 246); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 193, 374); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 193, 374, false, false, false, false, true); // ae (test_pipeline.vhd) - Double Click
+selectCodeEditor("test_pipeline.vhd", 193, 374); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 137, 278); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 137, 278, false, false, false, false, true); // ae (test_pipeline.vhd) - Double Click
+selectCodeEditor("test_pipeline.vhd", 137, 278); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 125, 242); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 113, 133); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 113, 133, false, false, false, false, true); // ae (test_pipeline.vhd) - Double Click
+selectCodeEditor("test_pipeline.vhd", 113, 133); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 116, 84); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 116, 84, false, false, false, false, true); // ae (test_pipeline.vhd) - Double Click
+selectCodeEditor("test_pipeline.vhd", 116, 84); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 171, 221); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 171, 221, false, false, false, false, true); // ae (test_pipeline.vhd) - Double Click
+selectCodeEditor("test_pipeline.vhd", 171, 221); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 60, 73); // ae (test_pipeline.vhd)
+typeControlKey((HResource) null, "test_pipeline.vhd", 'c'); // ae (test_pipeline.vhd)
+typeControlKey((HResource) null, "test_pipeline.vhd", 'v'); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 194, 128); // ae (test_pipeline.vhd)
+typeControlKey((HResource) null, "test_pipeline.vhd", 'v'); // ae (test_pipeline.vhd)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, testALU(Behavioral) (testALU.vhd)]", 10, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, testALU(Behavioral) (testALU.vhd)]", 10, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+selectCodeEditor("testALU.vhd", 107, 251); // ae (testALU.vhd)
+selectCodeEditor("testALU.vhd", 108, 251, false, false, false, false, true); // ae (testALU.vhd) - Double Click
+selectCodeEditor("testALU.vhd", 108, 251); // ae (testALU.vhd)
+typeControlKey((HResource) null, "testALU.vhd", 'c'); // ae (testALU.vhd)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "test_pipeline.vhd", 2); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("test_pipeline.vhd", 123, 253); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 123, 253, false, false, false, false, true); // ae (test_pipeline.vhd) - Double Click
+selectCodeEditor("test_pipeline.vhd", 123, 253); // ae (test_pipeline.vhd)
+typeControlKey((HResource) null, "test_pipeline.vhd", 'v'); // ae (test_pipeline.vhd)
+// Elapsed time: 34 seconds
+selectCodeEditor("test_pipeline.vhd", 163, 193); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 163, 193, false, false, false, false, true); // ae (test_pipeline.vhd) - Double Click
+// Elapsed time: 37 seconds
+selectCodeEditor("test_pipeline.vhd", 148, 215); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 148, 215, false, false, false, false, true); // ae (test_pipeline.vhd) - Double Click
+selectCodeEditor("test_pipeline.vhd", 148, 215); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 202, 245); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 211, 340); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 404, 294); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 25, 218); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 25, 218, false, false, false, false, true); // ae (test_pipeline.vhd) - Double Click
+selectCodeEditor("test_pipeline.vhd", 31, 231); // ae (test_pipeline.vhd)
+selectCodeEditor("test_pipeline.vhd", 31, 231, false, false, false, false, true); // ae (test_pipeline.vhd) - Double Click
+selectCodeEditor("test_pipeline.vhd", 31, 231); // ae (test_pipeline.vhd)
+// Elapsed time: 14 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // C (RDIResourceCommand.RDICommands_SAVE_FILE)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,801 MB (+17170kb) [01:12:45]
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 01h:12m:24s
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 01h:12m:26s
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // aq (PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, simulation_run_behavioral_menu)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save", "Save Project"); // a (PAResourceQtoS.SaveProjectUtils_SAVE)
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Save Project"); // ac.d (dialog5)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-12493] Simulation top is 'testInstruction' INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/u_controleur/ALUME/ALUME.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-72] Using boost library from '/home/clem/Xilinx/Vivado/2024.2/tps/boost_1_72_0' 
+// Tcl Message: INFO: [SIM-utils-54] Inspecting design source files for 'testInstruction' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/u_controleur/ALUME/ALUME.sim/sim_1/behav/xsim' 
+// Tcl Message: xvhdl --incr --relax -prj testInstruction_vhdl.prj 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/u_controleur/ALUME/ALUME.srcs/sources_1/new/banc_instructions.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'banc_instructions' INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/u_controleur/ALUME/ALUME.srcs/sim_1/new/test_instruction.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'testInstruction' Waiting for jobs to finish... No pending jobs, compilation finished. 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/u_controleur/ALUME/ALUME.sim/sim_1/behav/xsim' 
+// Tcl Message: xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot testInstruction_behav xil_defaultlib.testInstruction -log elaborate.log 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/clem/Documents/GitHub/Kompilator/u_controleur/ALUME/ALUME.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "testInstruction_behav -key {Behavioral:sim_1:Functional:testInstruction} -tclbatch {testInstruction.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,873 MB. GUI used memory: 69 MB. Current time: 5/8/25, 1:16:45 AM CEST
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: source testInstruction.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 1000ns 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'testInstruction_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 7967.324 ; gain = 60.312 ; free physical = 210 ; free virtual = 4349 
+// 'd' command handler elapsed time: 8 seconds
+dismissDialog("Run Simulation"); // e (Run Simulation Progress)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 01h:12m:36s
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// HMemoryUtils.trashcanNow. Engine heap size: 1,873 MB. GUI used memory: 67 MB. Current time: 5/8/25, 1:16:48 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// HMemoryUtils.trashcanNow. Engine heap size: 1,873 MB. GUI used memory: 67 MB. Current time: 5/8/25, 1:16:48 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// HMemoryUtils.trashcanNow. Engine heap size: 1,873 MB. GUI used memory: 67 MB. Current time: 5/8/25, 1:16:49 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// HMemoryUtils.trashcanNow. Engine heap size: 1,853 MB. GUI used memory: 67 MB. Current time: 5/8/25, 1:16:49 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 67 MB. Current time: 5/8/25, 1:16:50 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,853 MB. GUI used memory: 67 MB. Current time: 5/8/25, 1:16:53 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,853 MB. GUI used memory: 67 MB. Current time: 5/8/25, 1:16:53 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,853 MB. GUI used memory: 67 MB. Current time: 5/8/25, 1:16:53 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,853 MB. GUI used memory: 67 MB. Current time: 5/8/25, 1:16:53 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 67 MB. Current time: 5/8/25, 1:16:53 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// [Engine Memory]: 2,897 MB (+1055093kb) [01:13:04]
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 67 MB. Current time: 5/8/25, 1:16:53 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,769 MB. GUI used memory: 67 MB. Current time: 5/8/25, 1:16:53 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 10 seconds
+selectTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, ADDR_i[7:0]]", 0, true); // k (RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE) - Node
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,853 MB. GUI used memory: 67 MB. Current time: 5/8/25, 1:16:56 AM CEST
+expandTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, ADDR_i[7:0]]", 0); // k (RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+collapseTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, ADDR_i[7:0]]", 0); // k (RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "testALU.vhd", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // J (PAResourceOtoP.PAViews_CODE, PlanAheadTabCode)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "test_pipeline.vhd", 2); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Untitled 1", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectTab((HResource) null, (HResource) null, "Sources", 1); // aa
+selectTab((HResource) null, (HResource) null, "Scope", 0); // aa
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "Label_uut ; banc_instructions(Behavioral) ; VHDL Entity", 1, "Label_uut", 0, false); // c (PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE)
+// TclEventType: SIMULATION_REQUEST_SELECT_SCOPES
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE, "testInstruction ; testInstruction(Behavioral) ; VHDL Entity", 0, "testInstruction", 0, true); // c (PAResourceQtoS.SimulationScopesPanel_SIMULATE_SCOPE_TABLE) - Node
+// TclEventType: SIMULATION_REQUEST_SELECT_SCOPES
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// Elapsed time: 40 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "test_pipeline.vhd", 2); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab((HResource) null, (HResource) null, "Sources", 1); // aa
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "doubleport.vhd", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "test_pipeline.vhd", 2); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Syntax Error Files]", 10, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Syntax Error Files]", 10); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "pipeline.vhd", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("pipeline.vhd", 819, 136); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 55, 7); // ae (pipeline.vhd)
+selectCodeEditor("pipeline.vhd", 55, 7, false, false, false, false, true); // ae (pipeline.vhd) - Double Click
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // C (RDIResourceCommand.RDICommands_SAVE_FILE)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 01h:14m:32s
+typeControlKey(null, null, 'z');
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 01h:14m:34s
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // C (RDIResourceCommand.RDICommands_SAVE_FILE)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 01h:14m:40s
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 01h:14m:42s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, banc_instructions(Behavioral) (banc_instructions.vhd)]", 2, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, etage_pipeline(Behavioral) (etage_pipeline.vhd)]", 6, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, etage_pipeline(Behavioral) (etage_pipeline.vhd)]", 6, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, etage_pipeline(Behavioral) (etage_pipeline.vhd)]", 6, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "etage_pipeline.vhd", 4); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // J (PAResourceOtoP.PAViews_CODE, PlanAheadTabCode)
+// Elapsed time: 21 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, etage_pipeline(Behavioral) (etage_pipeline.vhd)]", 6, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, etage_pipeline(Behavioral) (etage_pipeline.vhd)]", 6, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, pipeline.vhd]", 2, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, pipeline.vhd]", 2, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+selectButton(RDIResourceCommand.RDICommands_PASTE, "edit_paste"); // C (RDIResourceCommand.RDICommands_PASTE, edit_paste)
+typeControlKey(null, null, 'z');
+selectCodeEditor("pipeline.vhd", 143, 29); // ae (pipeline.vhd)
+// Elapsed time: 20 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, pipeline.vhd]", 2, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, pipeline.vhd]", 2, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+// Elapsed time: 29 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, test_pipeline(behavior) (test_pipeline.vhd)]", 18, true, false, false, false, true, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // an (PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, Hierarchy Update)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // an (PAResourceQtoS.SrcMenu_IP_HIERARCHY, IP Hierarchy)
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // aq (PAResourceCommand.PACommandNames_SET_AS_TOP, set_as_top_menu)
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top test_pipeline [get_filesets sim_1] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top_lib xil_defaultlib [get_filesets sim_1] 
+// TclEventType: DG_GRAPH_STALE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 01h:16m:24s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, etage_pipeline(Behavioral) (etage_pipeline.vhd)]", 7, false, false, false, false, true, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Popup Trigger
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, etage_pipeline(Behavioral) (etage_pipeline.vhd)]", 7, false, false, false, false, true, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Popup Trigger
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, etage_pipeline(Behavioral) (etage_pipeline.vhd)]", 7, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 01h:16m:28s
+// Tcl Message: update_compile_order -fileset sim_1 
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 01h:16m:30s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, pipeline.vhd]", 2, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, pipeline.vhd]", 2, false, false, false, false, true, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_OPEN_FILE_WITH, "Open With"); // an (PAResourceCommand.PACommandNames_OPEN_FILE_WITH, Open With)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // an (PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, Hierarchy Update)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // an (PAResourceQtoS.SrcMenu_IP_HIERARCHY, IP Hierarchy)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // an (PAResourceQtoS.SrcMenu_IP_HIERARCHY, IP Hierarchy)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // an (PAResourceQtoS.SrcMenu_IP_HIERARCHY, IP Hierarchy)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 01h:16m:36s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, test_pipeline(behavior) (test_pipeline.vhd)]", 13, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // aq (PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, simulation_run_behavioral_menu)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: xvhdl --incr --relax -prj test_pipeline_vhdl.prj 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/u_controleur/ALUME/ALUME.srcs/sim_1/new/test_pipeline.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'test_pipeline' Waiting for jobs to finish... No pending jobs, compilation finished. 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/u_controleur/ALUME/ALUME.sim/sim_1/behav/xsim' 
+// Tcl Message: xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/clem/Documents/GitHub/Kompilator/u_controleur/ALUME/ALUME.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "test_pipeline_behav -key {Behavioral:sim_1:Functional:test_pipeline} -tclbatch {test_pipeline.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// Tcl Message: Time resolution is 1 ps 
+// Tcl Message: source test_pipeline.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 1000ns 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// Elapsed time: 28 seconds
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel", "Run Simulation"); // a (RDIResource.ProgressDialog_CANCEL)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+selectButton("OptionPane.button", "Yes", "Confirm Cancellation"); // JButton (OptionPane.button)
+// Tcl Message: INFO: [Common 17-41] Interrupt caught. Command should exit soon. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,983 MB. GUI used memory: 77 MB. Current time: 5/8/25, 1:21:21 AM CEST
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_STOPPED
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:26 . Memory (MB): peak = 8083.211 ; gain = 10.008 ; free physical = 240 ; free virtual = 4341 
+// Tcl Message: INFO: [Common 17-344] 'run' was cancelled INFO: [Common 17-344] 'source' was cancelled 
+// Tcl Message: xsim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:28 . Memory (MB): peak = 8083.211 ; gain = 43.812 ; free physical = 239 ; free virtual = 4341 
+// Tcl Message: INFO: [Common 17-344] 'xsim' was cancelled INFO: [Vivado 12-5357] 'simulate' step aborted 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:30 . Memory (MB): peak = 8083.211 ; gain = 43.812 ; free physical = 239 ; free virtual = 4341 
+// Tcl Message: INFO: [Common 17-344] 'launch_simulation' was cancelled 
+// CommandFailedException: ERROR: [Common 17-69] Command failed:  
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/h': 30s
+// 'd' command handler elapsed time: 30 seconds
+dismissDialog("Run Simulation"); // e (Run Simulation Progress)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
