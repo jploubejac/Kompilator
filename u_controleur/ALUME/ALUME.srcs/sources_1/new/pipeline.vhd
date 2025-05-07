@@ -137,6 +137,8 @@ architecture Structural of pipeline is
     --Inputs
     signal BAIN_ADDR_i: std_logic_vector(7 downto 0) := (others => '0');     
     
+    --===========================BANC_REGISTREs=========================== 
+    
 begin
 
     Label_LIDI: etage_pipeline PORT MAP (
@@ -194,4 +196,12 @@ begin
     );
 
 
+-- Multiplexeur
+process
+begin
+    case LIDI_i is
+        when x"06" => DIEX_B_i <= LIDI_B_o;
+        
+    end case;
+end process;
 end Structural;

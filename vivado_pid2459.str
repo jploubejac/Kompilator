@@ -1,0 +1,230 @@
+/*
+
+AMD Vivado v2023.1 (64-bit) [Major: 2023, Minor: 1]
+SW Build: 3865809 on Sun May  7 15:04:56 MDT 2023
+IP Build: 3864474 on Sun May  7 20:36:21 MDT 2023
+IP Build: 3864474 on Sun May  7 20:36:21 MDT 2023
+
+Process ID (PID): 2459
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Wed May 07 09:01:37 CEST 2025
+Time zone: 	Central European Standard Time (Europe/Paris)
+
+OS: NAME="Linux Mint"
+OS Version: 6.8.0-59-generic
+OS Architecture: amd64
+Available processors (cores): 12
+
+Display: 0
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+OS font scaling: 100%
+
+Java version: 	17.0.3 64-bit
+JavaFX version: 17.0.1
+Java home: 	/usr/local/insa/Xilinx/Vivado/2023.1/tps/lnx64/jre17.0.3_7
+Java executable: 	/usr/local/insa/Xilinx/Vivado/2023.1/tps/lnx64/jre17.0.3_7/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Djdk.gtk.version=2, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms512m, -Xmx4072m, -Xss10m, -Xrs]
+Java initial memory (-Xms): 	512 MB
+Java maximum memory (-Xmx):	 3 GB
+
+User name: 	lacau
+User home directory: /home/lacau
+User working directory: /home/lacau/GitHub/Kompilator
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /usr/local/insa/Xilinx/Vivado
+HDI_APPROOT: /usr/local/insa/Xilinx/Vivado/2023.1
+RDI_DATADIR: /usr/local/insa/Xilinx/Vivado/2023.1/data
+RDI_BINDIR: /usr/local/insa/Xilinx/Vivado/2023.1/bin
+
+Vivado preferences file: /home/lacau/.Xilinx/Vivado/2023.1/vivado.xml
+Vivado preferences directory: /home/lacau/.Xilinx/Vivado/2023.1/
+Vivado layouts directory: /home/lacau/.Xilinx/Vivado/2023.1/data/layouts
+PlanAhead jar file: 	/usr/local/insa/Xilinx/Vivado/2023.1/lib/classes/planAhead.jar
+Vivado log file: 	/home/lacau/GitHub/Kompilator/vivado.log
+Vivado journal file: 	/home/lacau/GitHub/Kompilator/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-2459-insa-20931
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+GNOME_SHELL_SESSION_MODE: 
+RDI_APPROOT: /usr/local/insa/Xilinx/Vivado/2023.1
+RDI_BASEROOT: /usr/local/insa/Xilinx/Vivado
+RDI_BINROOT: /usr/local/insa/Xilinx/Vivado/2023.1/bin
+RDI_BUILD: yes
+RDI_DATADIR: /usr/local/insa/Xilinx/Vivado/2023.1/data
+RDI_INSTALLROOT: /usr/local/insa/Xilinx
+RDI_INSTALLVER: 2023.1
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 17.0.3_7
+RDI_LIBDIR: /usr/local/insa/Xilinx/Vivado/2023.1/lib/lnx64.o/Default:/usr/local/insa/Xilinx/Vivado/2023.1/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /usr/local/insa/Xilinx/Vivado/2023.1/ids_lite/ISE/bin/lin64
+RDI_PROG: /usr/local/insa/Xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/vivado
+RDI_SESSION_INFO: /home/lacau/GitHub/Kompilator:insa-20931_1746601260_2418
+RDI_SHARED_DATA: /usr/local/insa/Xilinx/SharedData/2023.1/data
+RDI_TPS_ROOT: /usr/local/insa/Xilinx/Vivado/2023.1/tps/lnx64
+RDI_USE_JDK17: True
+SHELL: /bin/bash
+XILINX: /usr/local/insa/Xilinx/Vivado/2023.1/ids_lite/ISE
+XILINX_DSP: /usr/local/insa/Xilinx/Vivado/2023.1/ids_lite/ISE
+XILINX_HLS: /usr/local/insa/Xilinx/Vitis_HLS/2023.1
+XILINX_PLANAHEAD: /usr/local/insa/Xilinx/Vivado/2023.1
+XILINX_VITIS: 
+XILINX_VIVADO: /usr/local/insa/Xilinx/Vivado/2023.1
+XILINX_VIVADO_HLS: /usr/local/insa/Xilinx/Vivado/2023.1
+
+
+GUI allocated memory:	512 MB
+GUI max memory:		4,072 MB
+Engine allocated memory: 1,411 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,416 MB. GUI used memory: 71 MB. Current time: 5/7/25, 9:01:38 AM CEST
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/lacau/GitHub/Kompilator/u_controleur/ALUME/ALUME.xpr", 0); // b.c
+// Opening Vivado Project: /home/lacau/GitHub/Kompilator/u_controleur/ALUME/ALUME.xpr. Version: Vivado v2023.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,558 MB. GUI used memory: 71 MB. Current time: 5/7/25, 9:01:53 AM CEST
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project /home/lacau/GitHub/Kompilator/u_controleur/ALUME/ALUME.xpr 
+// Tcl Message: INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/lacau/GitHub/Kompilator/u_controleur/ALUME/ALUME.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 106 MB (+109152kb) [00:00:34]
+// [Engine Memory]: 1,592 MB (+1517398kb) [00:00:34]
+// [GUI Memory]: 149 MB (+39483kb) [00:00:34]
+// [Engine Memory]: 1,707 MB (+37222kb) [00:00:34]
+// WARNING: HEventQueue.dispatchEvent() is taking  1476 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/local/insa/Xilinx/Vivado/2023.1/data/ip'. 
+// Project name: ALUME; location: /home/lacau/GitHub/Kompilator/u_controleur/ALUME; part: xc7a35tcpg236-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 7767.199 ; gain = 174.844 ; free physical = 12266 ; free virtual = 13936 
+// Elapsed time: 10 seconds
+dismissDialog("Open Project"); // bq
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Utility Sources]", 1); // E
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pipeline(Structural) (pipeline.vhd)]", 1, true); // E - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pipeline(Structural) (pipeline.vhd)]", 1, true, false, false, false, false, true); // E - Double Click - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 1,789 MB. GUI used memory: 78 MB. Current time: 5/7/25, 9:02:13 AM CEST
+// Elapsed time: 10 seconds
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // L
+// [Engine Memory]: 1,792 MB (+201kb) [00:02:49]
+// Elapsed time: 199 seconds
+selectCodeEditor("pipeline.vhd", 203, 425); // ad
+// Elapsed time: 306 seconds
+selectCodeEditor("pipeline.vhd", 128, 172); // ad
+selectCodeEditor("pipeline.vhd", 128, 172, false, false, false, false, true); // ad - Double Click
+selectCodeEditor("pipeline.vhd", 139, 272); // ad
+selectCodeEditor("pipeline.vhd", 139, 272, false, false, false, false, true); // ad - Double Click
+selectCodeEditor("pipeline.vhd", 193, 277); // ad
+// Elapsed time: 75 seconds
+selectCodeEditor("pipeline.vhd", 177, 664); // ad
+// Elapsed time: 60 seconds
+selectCodeEditor("pipeline.vhd", 96, 681); // ad
+selectCodeEditor("pipeline.vhd", 76, 639); // ad
+// Elapsed time: 17 seconds
+selectCodeEditor("pipeline.vhd", 74, 635); // ad
+selectCodeEditor("pipeline.vhd", 159, 641); // ad
+// Elapsed time: 20 seconds
+selectCodeEditor("pipeline.vhd", 92, 682); // ad
+// Elapsed time: 35 seconds
+selectCodeEditor("pipeline.vhd", 78, 661); // ad
+// Elapsed time: 130 seconds
+selectCodeEditor("pipeline.vhd", 157, 681); // ad
+selectCodeEditor("pipeline.vhd", 157, 681); // ad
+// Elapsed time: 99 seconds
+selectCodeEditor("pipeline.vhd", 147, 646); // ad
+selectCodeEditor("pipeline.vhd", 102, 651); // ad
+// Elapsed time: 90 seconds
+selectCodeEditor("pipeline.vhd", 126, 681); // ad
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ad
+// Elapsed time: 50 seconds
+selectCodeEditor("pipeline.vhd", 258, 357); // ad
+selectCodeEditor("pipeline.vhd", 178, 653); // ad
+// Elapsed time: 112 seconds
+selectCodeEditor("pipeline.vhd", 454, 240); // ad
+selectCodeEditor("pipeline.vhd", 427, 177); // ad
+selectCodeEditor("pipeline.vhd", 441, 180); // ad
+selectCodeEditor("pipeline.vhd", 441, 180, false, false, false, false, true); // ad - Double Click
+selectCodeEditor("pipeline.vhd", 441, 180); // ad
+typeControlKey((HResource) null, "pipeline.vhd", 'c'); // ad
+selectCodeEditor("pipeline.vhd", 349, 240); // ad
+typeControlKey((HResource) null, "pipeline.vhd", 'v'); // ad
+selectCodeEditor("pipeline.vhd", 320, 241); // ad
+selectCodeEditor("pipeline.vhd", 325, 248); // ad
+selectCodeEditor("pipeline.vhd", 325, 248, false, false, false, false, true); // ad - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 1,799 MB. GUI used memory: 78 MB. Current time: 5/7/25, 9:23:03 AM CEST
+// Elapsed time: 11 seconds
+selectCodeEditor("pipeline.vhd", 517, 161); // ad
+selectCodeEditor("pipeline.vhd", 505, 156); // ad
+selectCodeEditor("pipeline.vhd", 373, 536); // ad
+selectCodeEditor("pipeline.vhd", 175, 634); // ad
+selectCodeEditor("pipeline.vhd", 169, 655); // ad
+// Elapsed time: 198 seconds
+selectCodeEditor("pipeline.vhd", 70, 606); // ad
+selectCodeEditor("pipeline.vhd", 70, 606, false, false, false, false, true); // ad - Double Click
+// Elapsed time: 43 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // al
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ag
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ag
+selectCodeEditor("pipeline.vhd", 412, 279); // ad
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 25m:28s
+// HMemoryUtils.trashcanNow. Engine heap size: 1,837 MB. GUI used memory: 79 MB. Current time: 5/7/25, 9:27:28 AM CEST
+// Elapsed Time for: 'L.f': 25m:30s
