@@ -39,3 +39,11 @@ set_property source_mgmt_mode All [current_project]
 update_compile_order -fileset sim_1
 launch_simulation
 source test_pipeline.tcl
+close_sim
+launch_simulation
+source test_pipeline.tcl
+close_sim
+launch_simulation
+source test_pipeline.tcl
+close_sim
+close_sim

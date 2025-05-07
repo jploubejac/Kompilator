@@ -124,9 +124,5 @@ BEGIN
     WAIT FOR CLOCK_PERIOD / 2;
   END PROCESS;
 
-  STIMULUS : PROCESS
-  BEGIN
-    LIDI_i <= x"00010607";
-  END PROCESS;
-
+LIDI_i <= x"00000000" after 10ns, x"00010607" after 20 ns;
 END behavior;
