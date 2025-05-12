@@ -40,7 +40,14 @@ end banc_instructions;
 architecture Behavioral of banc_instructions is
 
     type MEM is array (255 downto 0) of std_logic_vector(31 downto 0);
-    signal instr: MEM := (others => (others => '0'));
+    signal instr: MEM := (
+        0 => x"00000001",
+        1 => x"00000002",
+        2 => x"00000003",
+    -- ...
+        others => x"ffffffff"
+    );  
+
     
 begin
 

@@ -4,7 +4,6 @@ Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-4940] 'pipeline' remains a black box since it has no binding entity [/home/clem/Documents/GitHub/Kompilator/u_controleur/ALUME/ALUME.srcs/sim_1/new/test_pipeline.vhd:86]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -14,5 +13,8 @@ Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.std_logic_arith
 Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.banc_instructions [banc_instructions_default]
+Compiling architecture behavioral of entity xil_defaultlib.pipeline [pipeline_default]
 Compiling architecture behavior of entity xil_defaultlib.test_pipeline
 Built simulation snapshot test_pipeline_behav

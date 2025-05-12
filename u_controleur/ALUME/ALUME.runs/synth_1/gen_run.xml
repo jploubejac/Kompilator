@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1746168777" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/ALU.dcp">
-  <File Type="RDS-DCP" Name="ALU.dcp"/>
-  <File Type="RDS-RDS" Name="ALU.vds"/>
-  <File Type="REPORTS-TCL" Name="ALU_reports.tcl"/>
-  <File Type="PA-TCL" Name="ALU.tcl"/>
-  <File Type="RDS-UTIL" Name="banc_instructions_utilization_synth.rpt"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1747066087" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/ALU.dcp">
+  <File Type="VDS-TIMINGSUMMARY" Name="banc_instructions_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="banc_instructions.dcp"/>
   <File Type="RDS-UTIL-PB" Name="banc_instructions_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="banc_instructions_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="banc_instructions_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="banc_instructions.vds"/>
+  <File Type="REPORTS-TCL" Name="banc_instructions_reports.tcl"/>
+  <File Type="VDS-TIMING-PB" Name="banc_instructions_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="banc_instructions.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/ALU.vhd">
+    <File Path="$PSRCDIR/sources_1/new/banc_instructions.vhd">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/banc_donnees.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -21,10 +31,30 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/ALU.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/etage_pipeline.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/pipeline.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="ALU"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="banc_instructions"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">

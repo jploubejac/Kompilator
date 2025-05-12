@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Mon Mar 31 15:18:00 2025
+# Process ID: 26033
+# Current directory: /home/loubejac-com/Documents/4A/Semestre2/PSI/Kompilator/u_controleur
+# Command line: vivado
+# Log file: /home/loubejac-com/Documents/4A/Semestre2/PSI/Kompilator/u_controleur/vivado.log
+# Journal file: /home/loubejac-com/Documents/4A/Semestre2/PSI/Kompilator/u_controleur/vivado.jou
+# Running On: insa-20927, OS: Linux, CPU Frequency: 1042.874 MHz, CPU Physical cores: 6, Host memory: 16443 MB
+#-----------------------------------------------------------
+start_gui
+create_project ALUME /home/loubejac-com/Documents/4A/Semestre2/PSI/Kompilator/u_controleur/ALUME -part xc7a35tcpg236-1
+set_property board_part digilentinc.com:basys3:part0:1.2 [current_project]
+file mkdir /home/loubejac-com/Documents/4A/Semestre2/PSI/Kompilator/u_controleur/ALUME/ALUME.srcs/sources_1/new
+close [ open /home/loubejac-com/Documents/4A/Semestre2/PSI/Kompilator/u_controleur/ALUME/ALUME.srcs/sources_1/new/ALU.vhd w ]
+add_files /home/loubejac-com/Documents/4A/Semestre2/PSI/Kompilator/u_controleur/ALUME/ALUME.srcs/sources_1/new/ALU.vhd
+update_compile_order -fileset sources_1

@@ -1,41 +1,15 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 05/02/2025 10:44:36 AM
--- Design Name: 
--- Module Name: pipeline - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use ieee.numeric_std.all;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
+-- add leds
 entity pipeline is
---  Port ( );
+    Port(
+        clk : in std_logic;
+        rst: in std_logic);
 end pipeline;
 
-architecture Structural of pipeline is
+architecture Behavioral of pipeline is
     COMPONENT banc_instructions
     PORT( ADDR : in STD_LOGIC_VECTOR (7 downto 0);
        CLK : in STD_LOGIC;
@@ -130,7 +104,7 @@ architecture Structural of pipeline is
     signal BI_ADDR_i: std_logic_vector(7 downto 0) := (others => '0');
     
     --Outputs     
-    signal BI_OUTD_o: std_logic_vector(32 downto 0) := (others => '0');     
+    signal BI_OUTD_o: std_logic_vector(31 downto 0) := (others => '0');     
 
     --===========================BANC_DONNEES=========================== 
     --Inputs
@@ -166,15 +140,25 @@ begin
 --Chargement 0x07
 --Sauvegarde 0x08
 
+-- Instanciation du composant banc_instructions
+U_banc_instructions : banc_instructions
+    Port map(
+        ADDR => BI_ADDR_i,
+        CLK => CLK_c,
+        OUTD => BI_OUTD_o
+    );
+
 -- Multiplexeurs
 process(CLK_c)
 begin
   if rising_edge(CLK_c) then
-  
+    BI_ADDR_i <= std_logic_vector(unsigned(BI_ADDR_i) + 1);
+    report "ADDR: " & integer'image(to_integer(unsigned(BI_ADDR_i)));
+    LIDI_i <= BI_OUTD_o;
     LIDI_A_o <= LIDI_i(7 downto 0);
-    LIDI_B_o <= LIDI_i(15 downto 0);
-    LIDI_C_o <= LIDI_i(23 downto 0);
-    LIDI_OP_o <= LIDI_i(31 downto 0);
+    LIDI_B_o <= LIDI_i(15 downto 8);
+    LIDI_C_o <= LIDI_i(23 downto 16);
+    LIDI_OP_o <= LIDI_i(31 downto 24);
     
     DIEX_A_o <= DIEX_A_i;
     DIEX_B_o <= DIEX_B_i;
@@ -234,12 +218,11 @@ begin
       when x"04" =>
       when x"05" =>
       when x"06" =>
-        BR_W_i <= EXMEM_A_o;
+        BR_W_i <= EXMEM_A_o(3 downto 0);
         BR_Wb_i <= '1';
         BR_DATA_i <= EXMEM_B_o;
       when others => null;
     end case;
   end if;
 end process;
-
-
+end Behavioral;

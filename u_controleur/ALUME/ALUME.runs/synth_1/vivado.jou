@@ -1,14 +1,24 @@
 #-----------------------------------------------------------
-# Vivado v2023.1 (64-bit)
-# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
-# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
-# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Fri May  2 08:53:00 2025
-# Process ID: 12108
-# Current directory: /home/lacau/GitHub/Kompilator/u_controleur/ALUME/ALUME.runs/synth_1
-# Command line: vivado -log ALU.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ALU.tcl
-# Log file: /home/lacau/GitHub/Kompilator/u_controleur/ALUME/ALUME.runs/synth_1/ALU.vds
-# Journal file: /home/lacau/GitHub/Kompilator/u_controleur/ALUME/ALUME.runs/synth_1/vivado.jou
-# Running On: insa-10585, OS: Linux, CPU Frequency: 3692.046 MHz, CPU Physical cores: 4, Host memory: 16687 MB
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Mon May 12 18:08:08 2025
+# Process ID         : 8689
+# Current directory  : /home/clem/Documents/GitHub/Kompilator/u_controleur/ALUME/ALUME.runs/synth_1
+# Command line       : vivado -log banc_instructions.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source banc_instructions.tcl
+# Log file           : /home/clem/Documents/GitHub/Kompilator/u_controleur/ALUME/ALUME.runs/synth_1/banc_instructions.vds
+# Journal file       : /home/clem/Documents/GitHub/Kompilator/u_controleur/ALUME/ALUME.runs/synth_1/vivado.jou
+# Running On         : maskass
+# Platform           : Debian
+# Operating System   : Debian GNU/Linux 12 (bookworm)
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i5-1235U
+# CPU Frequency      : 3622.338 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 8005 MB
+# Swap memory        : 1023 MB
+# Total Virtual      : 9029 MB
+# Available Virtual  : 4493 MB
 #-----------------------------------------------------------
-source ALU.tcl -notrace
+source banc_instructions.tcl -notrace

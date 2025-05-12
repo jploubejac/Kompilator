@@ -4,13 +4,13 @@
 # Vivado(TM)
 # runme.sh: a Vivado-generated Runs Script for UNIX
 # Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-# Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+# Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/usr/local/insa/Xilinx/Vivado/2023.1/ids_lite/ISE/bin/lin64:/usr/local/insa/Xilinx/Vivado/2023.1/bin
+  PATH=/home/clem/Xilinx/Vitis/2024.2/bin:/home/clem/Xilinx/Vivado/2024.2/ids_lite/ISE/bin/lin64:/home/clem/Xilinx/Vivado/2024.2/bin
 else
-  PATH=/usr/local/insa/Xilinx/Vivado/2023.1/ids_lite/ISE/bin/lin64:/usr/local/insa/Xilinx/Vivado/2023.1/bin:$PATH
+  PATH=/home/clem/Xilinx/Vitis/2024.2/bin:/home/clem/Xilinx/Vivado/2024.2/ids_lite/ISE/bin/lin64:/home/clem/Xilinx/Vivado/2024.2/bin:$PATH
 fi
 export PATH
 
@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/lacau/GitHub/Kompilator/u_controleur/ALUME/ALUME.runs/synth_1'
+HD_PWD='/home/clem/Documents/GitHub/Kompilator/u_controleur/ALUME/ALUME.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -37,4 +37,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log ALU.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ALU.tcl
+EAStep vivado -log banc_instructions.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source banc_instructions.tcl
