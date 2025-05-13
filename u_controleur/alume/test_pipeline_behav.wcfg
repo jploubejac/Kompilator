@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="test_pipeline_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="test_pipeline" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="236.934 ns"></ZoomEndTime>
+      <Cursor1Time time="0.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="92"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="20" />
+   <wvobject type="logic" fp_name="/test_pipeline/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/test_pipeline/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/test_pipeline/Clock_period">
+      <obj_property name="ElementShortName">Clock_period</obj_property>
+      <obj_property name="ObjectShortName">Clock_period</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_pipeline/uut/LIDI_B_o">
+      <obj_property name="ElementShortName">LIDI_B_o[7:0]</obj_property>
+      <obj_property name="ObjectShortName">LIDI_B_o[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_pipeline/uut/MEMRE_A_o">
+      <obj_property name="ElementShortName">MEMRE_A_o[7:0]</obj_property>
+      <obj_property name="ObjectShortName">MEMRE_A_o[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_pipeline/uut/MEMRE_OP_i">
+      <obj_property name="ElementShortName">MEMRE_OP_i[7:0]</obj_property>
+      <obj_property name="ObjectShortName">MEMRE_OP_i[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_pipeline/uut/MEMRE_B_o">
+      <obj_property name="ElementShortName">MEMRE_B_o[7:0]</obj_property>
+      <obj_property name="ObjectShortName">MEMRE_B_o[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/test_pipeline/uut/BR_Wb_i">
+      <obj_property name="ElementShortName">BR_Wb_i</obj_property>
+      <obj_property name="ObjectShortName">BR_Wb_i</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_pipeline/uut/BR_DATA_i">
+      <obj_property name="ElementShortName">BR_DATA_i[7:0]</obj_property>
+      <obj_property name="ObjectShortName">BR_DATA_i[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_pipeline/uut/BR_W_i">
+      <obj_property name="ElementShortName">BR_W_i[3:0]</obj_property>
+      <obj_property name="ObjectShortName">BR_W_i[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_pipeline/uut/BR_A_i">
+      <obj_property name="ElementShortName">BR_A_i[3:0]</obj_property>
+      <obj_property name="ObjectShortName">BR_A_i[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_pipeline/uut/BR_Qa_o">
+      <obj_property name="ElementShortName">BR_Qa_o[7:0]</obj_property>
+      <obj_property name="ObjectShortName">BR_Qa_o[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_pipeline/uut/U_banc_registres/registres">
+      <obj_property name="ElementShortName">registres[15:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">registres[15:0][7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/test_pipeline/uut/U_banc_registres/Wb">
+      <obj_property name="ElementShortName">Wb</obj_property>
+      <obj_property name="ObjectShortName">Wb</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_pipeline/uut/U_banc_registres/A">
+      <obj_property name="ElementShortName">A[3:0]</obj_property>
+      <obj_property name="ObjectShortName">A[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_pipeline/uut/U_banc_registres/B">
+      <obj_property name="ElementShortName">B[3:0]</obj_property>
+      <obj_property name="ObjectShortName">B[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_pipeline/uut/U_banc_registres/DATA">
+      <obj_property name="ElementShortName">DATA[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_pipeline/uut/U_banc_registres/W">
+      <obj_property name="ElementShortName">W[3:0]</obj_property>
+      <obj_property name="ObjectShortName">W[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_pipeline/uut/U_ALU/S">
+      <obj_property name="ElementShortName">S[7:0]</obj_property>
+      <obj_property name="ObjectShortName">S[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_pipeline/uut/DIEX_B_o">
+      <obj_property name="ElementShortName">DIEX_B_o[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DIEX_B_o[7:0]</obj_property>
+   </wvobject>
+</wave_config>

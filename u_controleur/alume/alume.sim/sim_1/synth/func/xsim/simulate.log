@@ -1,0 +1,6 @@
+Time resolution is 1 ps
+ERROR: Index -4 out of bound 15 downto 0
+Time: 50 ns  Iteration: 0  Process: /testALU/Label_uut/line__59
+  File: /home/lacau/GitHub/Kompilator/u_controleur/ALUME/ALUME.srcs/sources_1/new/doubleport.vhd
+
+HDL Line: /home/lacau/GitHub/Kompilator/u_controleur/ALUME/ALUME.srcs/sources_1/new/doubleport.vhd:65

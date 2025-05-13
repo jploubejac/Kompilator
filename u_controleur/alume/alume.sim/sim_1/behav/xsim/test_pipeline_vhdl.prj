@@ -1,0 +1,11 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../alume.srcs/sources_1/new/ALU.vhd" \
+"../../../../alume.srcs/sources_1/new/banc_donnees.vhd" \
+"../../../../alume.srcs/sources_1/new/banc_instructions.vhd" \
+"../../../../alume.srcs/sources_1/new/doubleport.vhd" \
+"../../../../alume.srcs/sources_1/new/pipeline.vhd" \
+"../../../../alume.srcs/sim_1/new/test_pipeline.vhd" \
+
+# Do not sort compile order
+nosort
