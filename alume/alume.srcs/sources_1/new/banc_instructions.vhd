@@ -47,29 +47,34 @@ architecture Behavioral of banc_instructions is
         0 => x"00020601",
         
         --cop
-        6 => x"00010502",
+        1 => x"00010502",
+        --6 => x"00010502",
         
         -- add
-        11 => x"02010103",
+        2 => x"02010103",
+        --11 => x"02010103",
         
         --sous
-        16 => x"03010304",
+        3 => x"03010304",
+        --16 => x"03010304",
         
         --mul
-        21 => x"03010205",
+        4 => x"03010205",
+        --21 => x"03010205",
 
         --div
-        26 => x"05010406",
+        5 => x"05010406",
+        --26 => x"05010406",
         
         --str
-        31 => x"00051101",
-        32 => x"00051101",
+        6 => x"00051101",
+        --31 => x"00051101",
 
         --ldr
-        36 => x"00011000",
-        --37 => x"00011000",
+        7 => x"00011000",
+        --36 => x"00011000",
     -- ...
-        others => x"ffffffff"
+        others => x"00001200"
     );  
 
     
@@ -77,7 +82,7 @@ begin
 
     process(CLK)
     begin
-        if (CLK'Event and CLK='1') then
+        if rising_edge(CLK) then
             OUTD <= instr(to_integer(unsigned(ADDR)));
         end if;
     end process;

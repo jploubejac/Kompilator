@@ -160,6 +160,10 @@ architecture Behavioral of pipeline is
     signal OP_LDR : std_logic_vector(7 downto 0) := x"10";
     signal OP_STR : std_logic_vector(7 downto 0) := x"11";
     signal OP_NOP : std_logic_vector(7 downto 0) := x"12";
+    
+    --===========================ALEA=========================== 
+    signal ALEA : std_logic := '0';
+    signal NOP_LINE : std_logic_vector(31 downto 0) := x"00001200";
 begin
 
 
@@ -282,15 +286,41 @@ BD_Addr_i <= EXMEM_A_o when EXMEM_OP_o = OP_STR else EXMEM_B_o;
 BD_RW_i <= LC_BD;
 BD_IND_i <= EXMEM_B_o;
 
+ALEA <= '1' when    (LIDI_OP_o /= OP_NOP and LIDI_OP_o /= OP_STR and LIDI_i(15 downto 8) /= OP_NOP and LIDI_i(15 downto 8) /= OP_AFC
+                and LIDI_i(15 downto 8) /= OP_LDR and  LIDI_A_o = LIDI_i(23 downto 16)) 
+                or
+                (LIDI_OP_o /= OP_NOP and LIDI_OP_o /= OP_STR and (LIDI_i(15 downto 8) = OP_ADD or LIDI_i(15 downto 8) = OP_MUL
+                or LIDI_i(15 downto 8) = OP_SOU or LIDI_i(15 downto 8) = OP_DIV) and  LIDI_A_o = LIDI_i(31 downto 24)) 
+                or
+                (DIEX_OP_o /= OP_NOP and DIEX_OP_o /= OP_STR and LIDI_i(15 downto 8) /= OP_NOP and LIDI_i(15 downto 8) /= OP_AFC
+                and LIDI_i(15 downto 8) /= OP_LDR and  DIEX_A_o = LIDI_i(23 downto 16)) 
+                or
+                (DIEX_OP_o /= OP_NOP and DIEX_OP_o /= OP_STR and (LIDI_i(15 downto 8) = OP_ADD or LIDI_i(15 downto 8) = OP_MUL
+                or LIDI_i(15 downto 8) = OP_SOU or LIDI_i(15 downto 8) = OP_DIV) and  DIEX_A_o = LIDI_i(31 downto 24)) 
+                or
+                (EXMEM_OP_o /= OP_NOP and EXMEM_OP_o /= OP_STR and LIDI_i(15 downto 8) /= OP_NOP and LIDI_i(15 downto 8) /= OP_AFC
+                and LIDI_i(15 downto 8) /= OP_LDR and  EXMEM_A_o = LIDI_i(23 downto 16)) 
+                or
+                (EXMEM_OP_o /= OP_NOP and EXMEM_OP_o /= OP_STR and (LIDI_i(15 downto 8) = OP_ADD or LIDI_i(15 downto 8) = OP_MUL
+                or LIDI_i(15 downto 8) = OP_SOU or LIDI_i(15 downto 8) = OP_DIV) and  EXMEM_A_o = LIDI_i(31 downto 24)) else
+                '0';
+
 process(CLK)
 begin
   if falling_edge(CLK) then
-    BI_ADDR_i <= std_logic_vector(unsigned(BI_ADDR_i) + 1);
+    if ALEA='0' then 
+        BI_ADDR_i <= std_logic_vector(unsigned(BI_ADDR_i) + 1);
+        LIDI_A_o <= LIDI_i(7 downto 0);
+        LIDI_OP_o <= LIDI_i(15 downto 8);
+        LIDI_B_o <= LIDI_i(23 downto 16);
+        LIDI_C_o <= LIDI_i(31 downto 24);
+    else 
+        LIDI_A_o <= NOP_LINE(7 downto 0);
+        LIDI_OP_o <= NOP_LINE(15 downto 8);
+        LIDI_B_o <= NOP_LINE(23 downto 16);
+        LIDI_C_o <= NOP_LINE(31 downto 24);
+    end if;
     --report "ADDR: " & integer'image(to_integer(unsigned(BI_ADDR_i)));
-    LIDI_A_o <= LIDI_i(7 downto 0);
-    LIDI_OP_o <= LIDI_i(15 downto 8);
-    LIDI_B_o <= LIDI_i(23 downto 16);
-    LIDI_C_o <= LIDI_i(31 downto 24);
 
     -----------PAS TOUCHER-------------
     DIEX_A_o <= DIEX_A_i;
