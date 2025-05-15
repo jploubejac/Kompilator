@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/loubejac-com/Documents/4A/Semestre2/PSI/Kompilator/u_controleur/alume/alume.srcs/sources_1/new/pipeline.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pipeline'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/loubejac-com/Documents/4A/Semestre2/PSI/Kompilator/u_controleur/alume/alume.srcs/sim_1/new/test_pipeline.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_pipeline'

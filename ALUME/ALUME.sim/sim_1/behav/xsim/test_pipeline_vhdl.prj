@@ -1,6 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../ALUME.srcs/sim_1/new/test_pipeline.vhd" \
-
-# Do not sort compile order
-nosort
