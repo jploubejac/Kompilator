@@ -61,6 +61,7 @@ Instruction :  Declaration tSEM Instruction {printf("Instruction Declaration tSE
               ;
 
 Declaration : Type ListeVariables {printf("Type ListeVariables ");}
+              |tERROR {fprintf(stderr, "Lexical error caught in parser at line %d near '%s'\n", yylineno, yytext);yyerrok;}
               ;
 
 Affectation : ListeVariablesAff {printf("ListeVariables");}
@@ -92,6 +93,7 @@ Variable : tID tEQ Expression {
             if(index<0)DynamicArrayPushSymbolEntry(pSymbolTable, $1);
             printf("tID[%s] ", $$);
           }
+          |tERROR {fprintf(stderr, "Lexical error caught in parser at line %d near '%s'\n", yylineno, yytext);yyerrok;}
           ;
                 
 Type : tCONST {printf("tCONST ");}
@@ -139,6 +141,7 @@ Expression : Expression tADD Expression {
             | tEXP {printf("tEXP[] ");}
             | tREAL {printf("tREAL[] " );}
             | tOP Expression tCP {$$=$2;printf("Expression tOP Expression tCP Expression ");}
+            |tERROR {fprintf(stderr, "Lexical error caught in parser at line %d near '%s'\n", yylineno, yytext);yyerrok;}
             ;
 
 Printf : tPRINTF tOP Expression tCP 
@@ -194,6 +197,7 @@ Condition : Bool {
               DynamicArrayPop(pSymbolTable);
               $$=$3;
             }
+          |tERROR {fprintf(stderr, "Lexical error caught in parser at line %d near '%s'\n", yylineno, yytext);yyerrok;}
           ;
 
 
