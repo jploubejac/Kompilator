@@ -23,7 +23,14 @@ def parse_table(table):
         index = int(parts[0].strip())
         tokens = parts[1].strip().split()
         op = tokens[0]
-        args = [int(tok.strip("#")) if tok.strip("#").lstrip("-").isdigit() else tok for tok in tokens[1:]]
+        args = []
+        for tok in tokens[1:]:
+            if tok.startswith("#"):
+                args.append(tok)
+            elif tok.lstrip("-").isdigit():
+                args.append(int(tok))
+            else:
+                args.append(tok)
         while len(args) < 3:
             args.append(None)
         instructions.append(Instruction(index, op, *args))
@@ -45,7 +52,12 @@ def compile_to_asm_with_registers(instructions):
         op, a, b, c = instr.op, instr.a, instr.b, instr.c
 
         def reg(x):
-            return get_reg(x) if isinstance(x, int) else x
+            if isinstance(x, int):
+                return get_reg(x)
+            elif isinstance(x, str) and x.startswith("#"):
+                return x
+            else:
+                return x
 
         line_output = f"{instr.line:02}: {op}"
         if a is not None:
@@ -58,39 +70,18 @@ def compile_to_asm_with_registers(instructions):
 
     return output
 
-# test
-asm_input = """0:	AFC 0 #3
-1:	AFC 1 #5
-2:	COP 2 0
-3:	COP 3 1
-4:	INF 2 2 3
-5:	COP 3 0
-6:	AFC 4 #1
-7:	ADD 3 3 4
-8:	COP 0 3
-9:	COP 3 0
-10:	COP 4 1
-11:	INF 3 3 4
-12:	JMF 3 4 0
-13:	COP 5 0
-14:	COP 6 1
-15:	SUP 5 5 6
-16:	COP 6 0
-17:	COP 7 1
-18:	EQU 6 6 7
-19:	COP 7 0
-20:	COP 8 1
-21:	INF 7 7 8
-22:	OP_OR 0 0 0
-23:	COP 7 0
-24:	COP 8 1
-25:	EQU 7 7 8
-26:	COP 8 0
-27:	COP 9 1
-28:	INF 8 8 9"""
+# === MAIN ===
+input_filename = "asm_memoire.txt"
+output_filename = "asm_registres.txt"
+
+with open(input_filename, "r") as f:
+    asm_input = f.read()
 
 instructions = parse_table(asm_input)
 reg_asm = compile_to_asm_with_registers(instructions)
 
-print("\n".join(reg_asm))
+with open(output_filename, "w") as f:
+    f.write("\n".join(reg_asm))
+
+print(f"✅ Compilation terminée. Résultat écrit dans {output_filename}")
 

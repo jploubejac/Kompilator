@@ -1,0 +1,22 @@
+0:	AFC 4 #3
+1:	AFC 5 #4
+2:	COP 1 5
+3:	AFC 5 #8
+4:	COP 2 5
+5:	COP 5 2
+6:	COP 2 5
+7:	AFC 5 #1
+8:	COP 0 5
+9:	AFC 5 #3
+10:	AFC 6 #4
+11:	ADD 5 5 6
+12:	COP 6 0
+13:	COP 7 1
+14:	ADD 6 6 7
+15:	COP 7 0
+16:	COP 8 2
+17:	COP 9 1
+18:	DIV 8 8 9
+19:	ADD 7 7 8
+20:	MUL 6 6 7
+21:	COP 3 6
