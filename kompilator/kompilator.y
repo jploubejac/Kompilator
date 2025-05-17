@@ -240,7 +240,7 @@ Bool : Expression tINF Expression {
       }
       ;
 
-WhileBody : tWHILE {$1= DynamicArrayGetSize(pAsmTable); DynamicArrayPop(pSymbolTable); } tOP Condition tCP {
+WhileBody : tWHILE {$1= DynamicArrayGetSize(pAsmTable); } tOP Condition tCP {
               DynamicArrayPushAsmLine(pAsmTable, OP_JMF, $4, -1,0);
             }tOB Instruction tCB {
               printf("tWHILE tOP Condition tCP tOB Instruction tCB ");
