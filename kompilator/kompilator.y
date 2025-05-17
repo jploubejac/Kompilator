@@ -16,11 +16,13 @@ int yylex();
 dynamicArray_t *pSymbolTable;
 dynamicArray_t *pAsmTable;
 dynamicArray_t *pFunctionSymbolTable;
+extern int yylineno;
+extern char *yytext;
 %}
 
 
 %union { int nb; char* str;}
-%token tEXP tREAL tEQ tMAIN tOB tCB tCONST tINT tADD tSUB tMUL tDIV tOP tCP tSEP tSEM tPRINTF tVOID tIF tELSE tFOR tSUP tINF tAND tOR tNOT tDO tINC tDEC tEQEQ tINFEQ tSUPEQ
+%token tEXP tREAL tEQ tMAIN tOB tCB tCONST tINT tADD tSUB tMUL tDIV tOP tCP tSEP tSEM tPRINTF tVOID tIF tELSE tFOR tSUP tINF tAND tOR tNOT tDO tINC tDEC tEQEQ tINFEQ tSUPEQ tERROR
 %left tOR 
 %left tAND
 %left tADD tSUB
@@ -53,6 +55,8 @@ Instruction :  Declaration tSEM Instruction {printf("Instruction Declaration tSE
               |WhileBody Instruction {printf("Instruction WhileBody \n");}
               |ForBody Instruction {printf("Instruction ForBody \n");}
               |Invocation tSEM Instruction {printf("Instruction Invocation tSEM \n");}
+              |tERROR {fprintf(stderr, "Lexical error caught in parser at line %d near '%s'\n", yylineno, yytext);yyerrok;}
+              |tERROR tSEM {fprintf(stderr, "Lexical error caught in parser at line %d near '%s'\n", yylineno, yytext);yyerrok;}
               |
               ;
 
@@ -104,7 +108,7 @@ Expression : Expression tADD Expression {
               DynamicArrayPushAsmLine(pAsmTable, OP_SOU, $1, $1, $3);
               $$=$1;
               DynamicArrayPop(pSymbolTable);
-              printf("Expression[%d] tADD Expression[$%d] ", $1, $3);
+              printf("Expression[%d] tADD Expression[%d] ", $1, $3);
             }
             | Expression tMUL Expression  {
               DynamicArrayPushAsmLine(pAsmTable, OP_MUL, $1, $1, $3);

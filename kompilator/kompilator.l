@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include "y.tab.h"
 %}
-
+%option yylineno
 %option noyywrap
 D   [0-9]
 E [Ee][-+]?{D}+
@@ -29,7 +29,7 @@ int 					{ return tINT; }
 ")"               		{ return tCP; }
 [ \t]	         		{ }
 ","	         			{ return tSEP; }
-[\n]+          			{ } // return tEOL; for now we return EOL, might change
+[\n]+          			{} // return tEOL; for now we return EOL, might change
 "!"                     { return tNOT;}
 ">"                     { return tSUP;}
 "<"                     { return tINF;}
@@ -49,6 +49,8 @@ for						{ return tFOR; }
 [A-Za-z_][A-Za-z0-9_]*	{ yylval.str = strdup(yytext);
                           return tID;
                         }
-.                 		{ exit(2); }
+.                 		{ fprintf(stderr, "Lexical error at line %d: unexpected character '%s'\n", yylineno, yytext);
+                          return tERROR;
+                        }
 
 %%
