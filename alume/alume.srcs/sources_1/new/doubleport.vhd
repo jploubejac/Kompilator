@@ -40,7 +40,8 @@ entity doubleport is
            RST : in STD_LOGIC;
            CLK : in STD_LOGIC;
            QA : out STD_LOGIC_VECTOR (7 downto 0);
-           QB : out STD_LOGIC_VECTOR (7 downto 0));
+           QB : out STD_LOGIC_VECTOR (7 downto 0);
+           R9 : out std_logic_vector(7 downto 0));
 end doubleport;
 
 architecture Behavioral of doubleport is
@@ -52,7 +53,7 @@ begin
 
     QA <= DATA when Wb = '1' and W = A  else registres(to_integer(unsigned(A)));
     QB <= DATA when Wb = '1' and W = B  else registres(to_integer(unsigned(B)));
-
+    R9 <= registres(9);
     process (CLK)
     begin
         if CLK'Event and CLK='1' then

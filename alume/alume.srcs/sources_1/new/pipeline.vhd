@@ -7,7 +7,8 @@ entity pipeline is
     Port(
         clk : in std_logic;
         rst: in std_logic;
-        result_alu : out std_logic_vector(7 downto 0)
+        result_alu : out std_logic_vector(7 downto 0);
+        result_R9 : out std_logic_vector(7 downto 0)
         );
 end pipeline;
 
@@ -44,7 +45,8 @@ architecture Behavioral of pipeline is
            RST : in STD_LOGIC;
            CLK : in STD_LOGIC;
            QA : out STD_LOGIC_VECTOR (7 downto 0);
-           QB : out STD_LOGIC_VECTOR (7 downto 0));
+           QB : out STD_LOGIC_VECTOR (7 downto 0);
+           R9 : out std_logic_vector(7 downto 0));
     END COMPONENT;
     
     
@@ -111,7 +113,7 @@ architecture Behavioral of pipeline is
     signal BD_ADDR_i : std_logic_vector(7 downto 0) := (others => '0');
     signal BD_IND_i  : std_logic_vector(7 downto 0) := (others => '0');
     signal BD_RW_i   : std_logic := '0';
-    signal BD_RST_i  : std_logic := '1';
+    signal BD_RST_i  : std_logic := '0';
 
     --Outputs
     signal BD_OUTD_o : std_logic_vector(7 downto 0) := (others => '0');
@@ -123,11 +125,12 @@ architecture Behavioral of pipeline is
     signal BR_W_i: std_logic_vector(3 downto 0) := (others => '0');     
     signal BR_Wb_i: std_logic := '0';
     signal BR_DATA_i: std_logic_vector(7 downto 0) := (others => '0');     
-    signal BR_RST_i: std_logic := '1';
+    signal BR_RST_i: std_logic := '0';
     
     --Outputs
     signal BR_Qa_o : std_logic_vector(7 downto 0) := (others => '0');
     signal BR_Qb_o : std_logic_vector(7 downto 0) := (others => '0');
+    signal BR_R9_o : std_logic_vector(7 downto 0) := (others => '0');
 
     --===========================ALU=========================== 
     signal ALU_A_i : std_logic_vector(7 downto 0) := (others => '0');
@@ -169,6 +172,7 @@ architecture Behavioral of pipeline is
 begin
 
 result_alu <= ALU_S_o;
+result_R9 <= BR_R9_o;
 
 -- Instanciation du composant banc_instructions
 U_banc_instructions : banc_instructions
@@ -200,7 +204,8 @@ U_banc_registres : doubleport
            RST => BR_RST_i,
            CLK => CLK,
            QA => BR_QA_o,
-           QB => BR_QB_o
+           QB => BR_QB_o,
+           R9 => BR_R9_o
     );
    
     

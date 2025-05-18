@@ -21,7 +21,7 @@ END COMPONENT;
 signal ADDR_i : std_logic_vector(7 downto 0) := (others => '0');
 signal IND_i : std_logic_vector(7 downto 0) := (others => '0');
 signal RW_i : std_logic := '1';
-signal RST_i : std_logic := '1';
+signal RST_i : std_logic := '0';
 signal CLK_i : std_logic := '0';
 
 --Outputs

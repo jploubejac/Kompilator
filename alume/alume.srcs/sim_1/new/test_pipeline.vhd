@@ -10,6 +10,7 @@ ARCHITECTURE behavior OF test_pipeline IS
 signal clk : std_logic := '0';
 signal rst: std_logic:= '0';
 signal result_alu : std_logic_vector(7 downto 0) := (others => '0');
+signal result_R9 : std_logic_vector(7 downto 0) := (others => '0');
 
   -- Clock generation
 constant Clock_period : time := 10 ns;
@@ -28,7 +29,8 @@ uut: entity work.pipeline
     port map(
         clk => clk,
         rst => rst,
-        result_alu => result_alu
+        result_alu => result_alu,
+        result_R9 => result_R9
     );
 
 -- mettre un reset

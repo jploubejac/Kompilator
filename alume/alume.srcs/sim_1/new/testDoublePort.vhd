@@ -27,12 +27,13 @@ signal B_i : std_logic_vector(3 downto 0) := (others => '0');
 signal W_i : std_logic_vector(3 downto 0) := (others => '0');
 signal Wb_i : std_logic := '0';
 signal DATA_i : std_logic_vector(7 downto 0) := (others => '0');
-signal RST_i : std_logic := '1';
+signal RST_i : std_logic := '0';
 signal CLK_i : std_logic := '0';
 
 --Outputs
 signal QA_o : std_logic_vector(7 downto 0) := (others => '0');
 signal QB_o : std_logic_vector(7 downto 0) := (others => '0');
+signal R9_o : std_logic_vector(7 downto 0) := (others => '0');
 
 -- Clock period definitions
 -- Si 100 MHz
@@ -48,7 +49,8 @@ DATA => DATA_i,
 RST => RST_i,
 CLK => CLK_i,
 QA => QA_o,
-QB => QB_o
+QB => QB_o,
+R9 => R9_o
 );
 
 -- Stimulus process
