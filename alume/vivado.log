@@ -1119,3 +1119,15 @@ INFO: [Labtools 27-3164] End of startup status: HIGH
 refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 close_hw_manager
+save_wave_config {/home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+save_wave_config {/home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun May 18 10:51:06 2025...

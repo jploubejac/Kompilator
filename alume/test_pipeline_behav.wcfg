@@ -10,15 +10,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="445.500 ns"></ZoomStartTime>
-      <ZoomEndTime time="617.701 ns"></ZoomEndTime>
-      <Cursor1Time time="5,000.000 ns"></Cursor1Time>
+      <ZoomStartTime time="183.402 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,048.403 ns"></ZoomEndTime>
+      <Cursor1Time time="582.402 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="72"></NameColumnWidth>
+      <NameColumnWidth column_width="68"></NameColumnWidth>
       <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="5" />
+   <WVObjectSize size="6" />
    <wvobject type="logic" fp_name="/test_pipeline/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -38,5 +38,9 @@
    <wvobject type="array" fp_name="/test_pipeline/uut/U_banc_registres/registres">
       <obj_property name="ElementShortName">registres[15:0][7:0]</obj_property>
       <obj_property name="ObjectShortName">registres[15:0][7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_pipeline/result_R9">
+      <obj_property name="ElementShortName">result_R9[7:0]</obj_property>
+      <obj_property name="ObjectShortName">result_R9[7:0]</obj_property>
    </wvobject>
 </wave_config>

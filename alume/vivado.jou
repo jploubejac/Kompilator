@@ -128,3 +128,7 @@ set_property PROGRAM.FILE {/home/clem/Documents/GitHub/Kompilator/alume/alume.ru
 program_hw_devices [get_hw_devices xc7a35t_0]
 refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
 close_hw_manager
+save_wave_config {/home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg}
+close_sim
+save_wave_config {/home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg}
+close_sim
