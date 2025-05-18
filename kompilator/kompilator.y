@@ -22,7 +22,7 @@ extern char *yytext;
 
 
 %union { int nb; char* str;}
-%token tEXP tREAL tEQ tMAIN tOB tCB tCONST tINT tADD tSUB tMUL tDIV tOP tCP tSEP tSEM tPRINTF tVOID tIF tELSE tFOR tSUP tINF tAND tOR tNOT tDO tINC tDEC tEQEQ tINFEQ tSUPEQ tERROR
+%token tEXP tREAL tEQ tMAIN tOB tCB tCONST tINT tADD tSUB tMUL tDIV tOP tCP tSEP tSEM tPRINTF tVOID tIF tELSE tFOR tSUP tINF tAND tOR tNOT tINC tDEC tEQEQ tINFEQ tSUPEQ tERROR
 %left tOR 
 %left tAND
 %left tADD tSUB
@@ -31,6 +31,7 @@ extern char *yytext;
 %token <str> tID
 %token <nb> tNB
 %token <nb> tWHILE
+%token <nb> tDO
 
 %type <str> Variable
 %type <nb> Expression
@@ -257,7 +258,16 @@ WhileBody : tWHILE {$1= DynamicArrayGetSize(pAsmTable); } tOP Condition tCP {
               }
               DynamicArrayPop(pSymbolTable);
             }
-           |tDO tOB Instruction tCB tWHILE tOP Condition tCP tSEM {printf("tDO tOB Instruction tCB tWHILE tOP Condition tCP tSEM ");}
+           |tDO {$1 = DynamicArrayGetSize(pAsmTable);} tOB Instruction tCB tWHILE tOP Condition tCP tSEM {
+              printf("tDO tOB Instruction tCB tWHILE tOP Condition tCP tSEM ");
+              int index_jmf = DynamicArrayPushAsmLine(pAsmTable, OP_JMF, $8, -1,0); 
+              DynamicArrayPushAsmLine(pAsmTable, OP_JMP, $1, 0,0);
+              if(index_jmf>=0){
+                asmLine_t *pJmfLine=DynamicArrayGetByIndex(pAsmTable,index_jmf);
+                if(pJmfLine!=NULL) pJmfLine->arg1=DynamicArrayGetSize(pAsmTable);
+              }
+              DynamicArrayPop(pSymbolTable);
+            }
            ;
 
 ForBody : tFOR tOP ForCondition  tCP {
