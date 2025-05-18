@@ -22,11 +22,11 @@ extern char *yytext;
 
 
 %union { int nb; char* str;}
-%token tEXP tREAL tEQ tMAIN tOB tCB tCONST tINT tADD tSUB tMUL tDIV tOP tCP tSEP tSEM tPRINTF tVOID tIF tELSE tFOR tSUP tINF tAND tOR tNOT tINC tDEC tEQEQ tINFEQ tSUPEQ tERROR
+%token tEXP tREAL tEQ tMAIN tOB tCB tCONST tINT tADD tSUB tSTAR tDIV tOP tCP tSEP tSEM tPRINTF tVOID tIF tELSE tFOR tSUP tINF tAND tOR tNOT tINC tDEC tEQEQ tINFEQ tSUPEQ tERROR
 %left tOR 
 %left tAND
 %left tADD tSUB
-%left tMUL tDIV
+%left tSTAR tDIV
 
 %token <str> tID
 %token <nb> tNB
@@ -63,6 +63,7 @@ Instruction :  Declaration tSEM Instruction {printf("Instruction Declaration tSE
               ;
 
 Declaration : Type ListeVariables {printf("Type ListeVariables ");}
+              | Type tSTAR ListeVariablesPointeurs {printf("Type tSTAR ListeVariables ");}
               ;
 
 Affectation : ListeVariablesAff {printf("ListeVariables");}
@@ -73,6 +74,13 @@ Affectation : ListeVariablesAff {printf("ListeVariables");}
 ListeVariables : Variable {printf("Variable ");}
                 | Variable tSEP ListeVariables {printf("tID tSEP ListeVariables ");}
                 ;
+
+ListeVariablesPointeurs : VariablePointeur {printf("Variable ");}
+                | VariablePointeur tSEP ListeVariablesPointeurs {printf("tID tSEP ListeVariables ");}
+                ;
+
+VariablePointeur: tID {printf("tSTAR tID");}
+                | tID tEQ Expression {printf("tSTAR tID tEQ Expression");}
 
 ListeVariablesAff : Variable {printf("Variable ");}
                 | Variable tSEP ListeVariablesAff {printf("tID tSEP ListeVariablesAff ");}
@@ -89,6 +97,7 @@ Variable : tID tEQ Expression {
             }
             printf("tID tEQ Expression ");
           }
+          |  tID tSTAR tEQ Expression {printf("tSTAR tID tEQ Expression ");}
           | tID {
             int index = DynamicArrayGetIndexIf(pSymbolTable,  (IptfVV)symbolEntryIsName, (void*)$1);
             if(index<0)DynamicArrayPushSymbolEntry(pSymbolTable, $1);
@@ -112,11 +121,11 @@ Expression : Expression tADD Expression {
               DynamicArrayPop(pSymbolTable);
               printf("Expression[%d] tADD Expression[%d] ", $1, $3);
             }
-            | Expression tMUL Expression  {
+            | Expression tSTAR Expression  {
               DynamicArrayPushAsmLine(pAsmTable, OP_MUL, $1, $1, $3);
               $$=$1;
               DynamicArrayPop(pSymbolTable);
-              printf("Expression[%d] tMUL Expression[%d] ", $1, $3);
+              printf("Expression[%d] tSTAR Expression[%d] ", $1, $3);
             }
             | Expression tDIV Expression  {
               DynamicArrayPushAsmLine(pAsmTable, OP_DIV, $1, $1, $3);

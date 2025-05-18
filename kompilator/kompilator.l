@@ -23,7 +23,7 @@ int 					        { return tINT; }
 "++"               		{ return tINC; }
 "-"               		{ return tSUB; }
 "--"               		{ return tDEC; }
-"*"               		{ return tMUL; }
+"*"               		{ return tSTAR; }
 "/"               		{ return tDIV; }
 "("               		{ return tOP; }
 ")"               		{ return tCP; }
