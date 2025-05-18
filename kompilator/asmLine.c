@@ -28,6 +28,9 @@ char* int_to_instr(int inst) {
         case OP_NOT: return "NOT";
         case OP_OR: return "OR";
         case OP_AND: return "AND";
+        case OP_LDR: return "LDR";
+        case OP_STR: return "STR";
+        case OP_NOP: return "NOP";
         default: return "";
     }
 }

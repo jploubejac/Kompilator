@@ -44,9 +44,10 @@ extern char *yytext;
 
 
 
-Kompilator : tVOID tMAIN tOP tCP tOB Instruction tCB {printf("tVOID tMAIN tOP tCP tOB Instruction tCB\n ");}
-			      | tINT tMAIN tOP tCP tOB Instruction tCB {printf("tINT tMAIN tOP tCP tOB Instruction tCB\n ");}
-            | Function Kompilator {printf("Function\n");}
+Kompilator : //tVOID tMAIN tOP tCP tOB Instruction tCB {printf("tVOID tMAIN tOP tCP tOB Instruction tCB\n ");}
+			      //| tINT tMAIN tOP tCP tOB Instruction tCB {printf("tINT tMAIN tOP tCP tOB Instruction tCB\n ");}
+            Function Kompilator {printf("Function\n");}
+            |Function {printf("Function\n");}
             ;
 
 Instruction :  Declaration tSEM Instruction {printf("Instruction Declaration tSEM \n");}
@@ -293,18 +294,53 @@ ForCondition: Declaration tSEM Condition tSEM Affectation {printf("Declaration t
 
 Function : tVOID tID{
                 DynamicArrayPushFunctionSymbolEntry(pFunctionSymbolTable, $2, DynamicArrayGetSize(pAsmTable));
+                DynamicArrayPushSymbolEntry(pSymbolTable, $2);
+              } tOP tCP tOB Instruction tCB 
+              {
+                printf("tVOID tID tOP tCP tOB Instruction tCB ");
+                
+                int index = DynamicArrayPushSymbolEntry(pSymbolTable, "temp");
+                DynamicArrayPushAsmLine(pAsmTable, OP_LDR, index ,DynamicArrayGetIndexIf(pFunctionSymbolTable, (IptfVV)functionSymbolEntryIsName, (void*)$2),0);
+                DynamicArrayPushAsmLine(pAsmTable, OP_JMP, index, 0,0);
+                DynamicArrayPop(pSymbolTable);
+
+                //todo: debugger cette merde
+                symbolEntry_t *pSymbol = (symbolEntry_t*)DynamicArrayGetByIndex(pSymbolTable,DynamicArrayGetSize(pSymbolTable) - 1);
+                printf("pSymbol->name[%s] ", pSymbol->name);
+                while(strcmp(pSymbol->name,$2)){
+                  DynamicArrayPop(pSymbolTable);
+                  pSymbol = (symbolEntry_t*)DynamicArrayGetByIndex(pSymbolTable,DynamicArrayGetSize(pSymbolTable) - 1);
+                }
+                DynamicArrayPop(pSymbolTable);
+              }
+          | tINT tID tOP tCP tOB Instruction tCB {
+            printf("tINT tID tOP tCP tOB Instruction tCB ");
+            
+          }
+          | tVOID tMAIN{
+                DynamicArrayPushFunctionSymbolEntry(pFunctionSymbolTable,"main", DynamicArrayGetSize(pAsmTable));
+                DynamicArrayPushSymbolEntry(pSymbolTable, "main");
               } tOP tCP tOB Instruction tCB 
               {
                 printf("tVOID tID tOP tCP tOB Instruction tCB ");
               }
-          | tINT tID tOP tCP tOB Instruction tCB {printf("tINT tID tOP tCP tOB Instruction tCB ");}
+          | tINT tMAIN tOP tCP tOB Instruction tCB {
+            printf("tINT tID tOP tCP tOB Instruction tCB ");
+            
+          }
           ;
 
 Invocation : tID tOP tCP 
             {
               printf("tID tOP tCP ");
               functionSymbolEntry_t* function = DynamicArrayGetIf(pFunctionSymbolTable, (IptfVV)symbolEntryIsName, (void*)$1);
+              int index_registre = DynamicArrayPushSymbolEntry(pSymbolTable,"temp");
+              int addr = DynamicArrayGetSize(pAsmTable) + 3;
+              DynamicArrayPushAsmLine(pAsmTable, OP_AFC, index_registre, addr, 0);
+              DynamicArrayPushAsmLine(pAsmTable, OP_STR, DynamicArrayGetIndexIf(pFunctionSymbolTable, (IptfVV)functionSymbolEntryIsName, (void*)$1) , index_registre,0);
+              //Todo: gerer les erreurs si fonction n'existe pas
               DynamicArrayPushAsmLine(pAsmTable, OP_JMP, function->addr, 0,0);
+              DynamicArrayPop(pSymbolTable);
             }
 
 %%

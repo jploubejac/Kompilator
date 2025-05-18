@@ -28,7 +28,7 @@ void DynamicArrayFunctionSymbolEntryPrint(dynamicArray_t *pArray){
     while (i!=DynamicArrayGetSize(pArray)) {
         pEntry = DynamicArrayGetByIndex(pArray, i);
         if(pEntry==NULL)return;
-        printf("%d:\t%s\n",i, pEntry->name);
+        printf("%d:\t%s\t%d\n",i, pEntry->name, pEntry->addr);
         i++;
     }
 }
@@ -46,7 +46,7 @@ void DynamicArrayFunctionSymbolEntryPrintToFile(dynamicArray_t *pArray, const ch
     while (i!=DynamicArrayGetSize(pArray)) {
         pEntry = DynamicArrayGetByIndex(pArray, i);
         if(pEntry==NULL)return;
-        fprintf(f, "%d:\t%s\n",i, pEntry->name);
+        fprintf(f, "%d:\t%s\t%d\n",i, pEntry->name,pEntry->addr);
         i++;
     }
     fclose(f);
