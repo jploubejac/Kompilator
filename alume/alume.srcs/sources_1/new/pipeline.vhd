@@ -6,7 +6,9 @@ use ieee.numeric_std.all;
 entity pipeline is
     Port(
         clk : in std_logic;
-        rst: in std_logic);
+        rst: in std_logic;
+        result_alu : out std_logic_vector(7 downto 0)
+        );
 end pipeline;
 
 architecture Behavioral of pipeline is
@@ -166,6 +168,7 @@ architecture Behavioral of pipeline is
     signal NOP_LINE : std_logic_vector(31 downto 0) := x"00001200";
 begin
 
+result_alu <= ALU_S_o;
 
 -- Instanciation du composant banc_instructions
 U_banc_instructions : banc_instructions
@@ -340,4 +343,5 @@ begin
     -----------------------------
   end if;
 end process;
+
 end Behavioral;

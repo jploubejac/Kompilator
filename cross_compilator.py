@@ -39,7 +39,8 @@ def parse_table(table):
 def compile_to_asm_with_registers(instructions):
     mem_to_reg = {}
     reg_counter = 0
-    output = []
+    output_lines = []
+    updated_instructions = []
 
     def get_reg(mem_addr):
         nonlocal reg_counter
@@ -59,16 +60,59 @@ def compile_to_asm_with_registers(instructions):
             else:
                 return x
 
-        line_output = f"{instr.line:02}: {op}"
-        if a is not None:
-            line_output += f" {reg(a)}"
-        if b is not None:
-            line_output += f" {reg(b)}"
-        if c is not None:
-            line_output += f" {reg(c)}"
-        output.append(line_output)
+        reg_instr = Instruction(instr.line, op, reg(a), reg(b), reg(c))
+        updated_instructions.append(reg_instr)
+        output_lines.append(str(reg_instr))
 
-    return output
+    return output_lines, updated_instructions
+
+
+OPCODES = {
+    "ADD": 0x01,
+    "MUL": 0x02,
+    "SOU": 0x03,
+    "DIV": 0x04,
+    "COP": 0x05,
+    "AFC": 0x06,
+    "JMP": 0x07,
+    "JMF": 0x08,
+    "INF": 0x09,
+    "SUP": 0x0A,
+    "EQU": 0x0B,
+    "PRI": 0x0C,
+    "NOT": 0x0D,
+    "OR":  0x0E,
+    "AND": 0x0F,
+    "LDR": 0x10,
+    "STR": 0x11,
+    "NOP": 0x12,
+}
+
+def to_byte(val):
+    if val is None:
+        return 0
+    elif isinstance(val, str) and val.startswith("#"):
+        return int(val[1:])  # valeur immédiate
+    elif isinstance(val, int):
+        return val
+    elif isinstance(val, str) and val.startswith("R"):
+        return int(val[1:])  # registre
+    else:
+        raise ValueError(f"Unsupported operand: {val}")
+
+def instructions_to_hex_lines(instructions):
+    hex_lines = []
+    for instr in instructions:
+        op_hex = OPCODES.get(instr.op.upper(), 0)
+        a = to_byte(instr.a)
+        b = to_byte(instr.b)
+        c = to_byte(instr.c)
+
+        word = (c << 24) | (b << 16) | (op_hex << 8) | a
+        hex_line = f"{instr.line} => x\"{word:08X}\","
+        hex_lines.append(hex_line)
+    return hex_lines
+
 
 # === MAIN ===
 input_filename = "asm_memoire.txt"
@@ -78,10 +122,17 @@ with open(input_filename, "r") as f:
     asm_input = f.read()
 
 instructions = parse_table(asm_input)
-reg_asm = compile_to_asm_with_registers(instructions)
+reg_asm_lines, reg_instructions = compile_to_asm_with_registers(instructions)
 
 with open(output_filename, "w") as f:
-    f.write("\n".join(reg_asm))
+    f.write("\n".join(reg_asm_lines))
 
 print(f"✅ Compilation terminée. Résultat écrit dans {output_filename}")
 
+hex_lines = instructions_to_hex_lines(reg_instructions)
+
+with open("asm_hexa.txt", "w") as f:
+    for line in hex_lines:
+        f.write(line + "\n")
+
+print("✅ Fichier hexadécimal généré dans asm_hexa.txt")

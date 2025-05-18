@@ -43,7 +43,6 @@ end banc_donnees;
 
 architecture Behavioral of banc_donnees is
 
-
 type RAM is array (255 downto 0) of std_logic_vector(7 downto 0);
 signal data: RAM := (others => (others => '0'));
 
@@ -51,7 +50,7 @@ begin
 process(CLK)
 begin
     if (CLK'Event and CLK='1') then
-        if RST='0' then
+        if RST='1' then
             data <= (others => (others =>'0'));
         elsif RW = '1' then
             OUTD <= data(to_integer(unsigned(ADDR)));

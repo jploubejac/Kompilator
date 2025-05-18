@@ -26,15 +26,13 @@ begin
     left_bcd  <= left_in;   -- Simplification (à remplacer par un vrai convertisseur BCD)
 
     -- Processus de comptage pour le multiplexage
-    process(clk)
-    begin
-        if rising_edge(clk) then
-            counter <= counter + 1;
-            if counter = 0 then
-                digit_sel <= (digit_sel + 1) mod 4;
-            end if;
-        end if;
-    end process;
+process(clk)
+begin
+    if rising_edge(clk) then
+        counter <= counter + 1;
+        digit_sel <= to_integer(counter(19 downto 18));  -- 2 bits pour 4 états
+    end if;
+end process;
 
     -- Sélection du chiffre à afficher selon digit_sel
     with digit_sel select

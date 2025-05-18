@@ -56,7 +56,7 @@ begin
     process (CLK)
     begin
         if CLK'Event and CLK='1' then
-            if RST='0' then
+            if RST='1' then
                 registres <= (others => (others =>'0'));
             elsif Wb = '1' then
                 registres(to_integer(unsigned(W))) <= DATA;

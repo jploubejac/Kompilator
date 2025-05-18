@@ -3,76 +3,36 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="test_pipeline_behav.wdb" id="1">
+      <db_ref path="test_main_behav.wdb" id="1">
          <top_modules>
-            <top_module name="test_pipeline" />
+            <top_module name="test_main" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="157.320 ns"></ZoomStartTime>
-      <ZoomEndTime time="552.355 ns"></ZoomEndTime>
-      <Cursor1Time time="367.763 ns"></Cursor1Time>
+      <ZoomStartTime time="289.166 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,142.167 ns"></ZoomEndTime>
+      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="90"></NameColumnWidth>
-      <ValueColumnWidth column_width="60"></ValueColumnWidth>
+      <NameColumnWidth column_width="80"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="14" />
-   <wvobject type="logic" fp_name="/test_pipeline/clk">
+   <WVObjectSize size="4" />
+   <wvobject type="logic" fp_name="/test_main/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/test_pipeline/rst">
+   <wvobject type="logic" fp_name="/test_main/main/slow_clk">
+      <obj_property name="ElementShortName">slow_clk</obj_property>
+      <obj_property name="ObjectShortName">slow_clk</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_main/main/clock_div/aux">
+      <obj_property name="ElementShortName">aux[31:0]</obj_property>
+      <obj_property name="ObjectShortName">aux[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/test_main/rst">
       <obj_property name="ElementShortName">rst</obj_property>
       <obj_property name="ObjectShortName">rst</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/test_pipeline/Clock_period">
-      <obj_property name="ElementShortName">Clock_period</obj_property>
-      <obj_property name="ObjectShortName">Clock_period</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/test_pipeline/uut/LIDI_OP_o">
-      <obj_property name="ElementShortName">LIDI_OP_o[7:0]</obj_property>
-      <obj_property name="ObjectShortName">LIDI_OP_o[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/test_pipeline/uut/LIDI_B_o">
-      <obj_property name="ElementShortName">LIDI_B_o[7:0]</obj_property>
-      <obj_property name="ObjectShortName">LIDI_B_o[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/test_pipeline/uut/MEMRE_OP_i">
-      <obj_property name="ElementShortName">MEMRE_OP_i[7:0]</obj_property>
-      <obj_property name="ObjectShortName">MEMRE_OP_i[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/test_pipeline/uut/MEMRE_B_i">
-      <obj_property name="ElementShortName">MEMRE_B_i[7:0]</obj_property>
-      <obj_property name="ObjectShortName">MEMRE_B_i[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/test_pipeline/uut/U_banc_registres/registres">
-      <obj_property name="ElementShortName">registres[15:0][7:0]</obj_property>
-      <obj_property name="ObjectShortName">registres[15:0][7:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/test_pipeline/uut/U_banc_donnees/RW">
-      <obj_property name="ElementShortName">RW</obj_property>
-      <obj_property name="ObjectShortName">RW</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/test_pipeline/uut/U_banc_donnees/IND">
-      <obj_property name="ElementShortName">IND[7:0]</obj_property>
-      <obj_property name="ObjectShortName">IND[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/test_pipeline/uut/U_banc_donnees/ADDR">
-      <obj_property name="ElementShortName">ADDR[7:0]</obj_property>
-      <obj_property name="ObjectShortName">ADDR[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/test_pipeline/uut/U_banc_donnees/CLK">
-      <obj_property name="ElementShortName">CLK</obj_property>
-      <obj_property name="ObjectShortName">CLK</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/test_pipeline/uut/U_banc_donnees/data[1]">
-      <obj_property name="ElementShortName">[1][7:0]</obj_property>
-      <obj_property name="ObjectShortName">[1][7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/test_pipeline/uut/U_banc_donnees/OUTD">
-      <obj_property name="ElementShortName">OUTD[7:0]</obj_property>
-      <obj_property name="ObjectShortName">OUTD[7:0]</obj_property>
    </wvobject>
 </wave_config>

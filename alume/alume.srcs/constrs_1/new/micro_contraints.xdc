@@ -2,10 +2,10 @@
 # Connecte le signal leds[7:0] aux 8 LEDs de la carte
 
 ## Horloge
-set_property -dict { PACKAGE_PIN W5   IOSTANDARD LVCMOS33 } [get_ports { clk_external }]; # Horloge 100MHz
+set_property -dict { PACKAGE_PIN W5   IOSTANDARD LVCMOS33 } [get_ports { clk }]; # Horloge 100MHz
 
 ## Bouton Reset
-set_property -dict { PACKAGE_PIN R2  IOSTANDARD LVCMOS33 } [get_ports { rst }]; # Bouton Reset (BTNU)
+set_property -dict { PACKAGE_PIN R2 IOSTANDARD LVCMOS33 PULLUP TRUE } [get_ports { rst }];
 
 ## LEDs
 set_property -dict { PACKAGE_PIN U16  IOSTANDARD LVCMOS33 } [get_ports { leds[0] }]; # LED0
