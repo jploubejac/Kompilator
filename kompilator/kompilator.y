@@ -191,7 +191,6 @@ Condition : Bool {
           | tNOT tOP Condition tCP {
               printf("Condition tNOT tOP Condition tCP ");
               DynamicArrayPushAsmLine(pAsmTable, OP_NOT, $3, $3, 0);
-              DynamicArrayPop(pSymbolTable);
               $$=$3;
             }
           ;
@@ -256,6 +255,7 @@ WhileBody : tWHILE {$1= DynamicArrayGetSize(pAsmTable); } tOP Condition tCP {
                 asmLine_t *pJmpLine=DynamicArrayGetIfReverse(pAsmTable, (IptfVV)isJmpWithoutAdress, NULL);
                 if(pJmpLine!=NULL) pJmpLine->res=$1;
               }
+              DynamicArrayPop(pSymbolTable);
             }
            |tDO tOB Instruction tCB tWHILE tOP Condition tCP tSEM {printf("tDO tOB Instruction tCB tWHILE tOP Condition tCP tSEM ");}
            ;
