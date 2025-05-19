@@ -350,7 +350,6 @@ Function : tVOID tID{
                 DynamicArrayPushAsmLine(pAsmTable, OP_JMP, index, 0,0);
                 DynamicArrayPop(pSymbolTable);
 
-                //todo: debugger cette merde
                 symbolEntry_t *pSymbol = (symbolEntry_t*)DynamicArrayGetByIndex(pSymbolTable,DynamicArrayGetSize(pSymbolTable) - 1);
                 printf("pSymbol->name[%s] ", pSymbol->name);
                 while(strcmp(pSymbol->name,$2)){

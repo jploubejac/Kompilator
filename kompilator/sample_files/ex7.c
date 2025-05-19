@@ -1,6 +1,5 @@
 void fabrice () {
     int a = 890;
-    int b = 0;
 }
 
 void test() {
@@ -11,5 +10,5 @@ void main ()
 {   
     int d =3;
     fabrice();
-    a = a + 1;
+    int o = 1;
 }
