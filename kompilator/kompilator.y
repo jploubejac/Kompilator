@@ -369,9 +369,11 @@ Function : tVOID tID{
               {
                 printf("tVOID tID tOP tCP tOB Instruction tCB ");
               }
-          | tINT tMAIN tOP tCP tOB Instruction tCB {
-            printf("tINT tID tOP tCP tOB Instruction tCB ");
-            
+          | tINT tMAIN {
+            DynamicArrayPushFunctionSymbolEntry(pFunctionSymbolTable,"main", DynamicArrayGetSize(pAsmTable));
+            DynamicArrayPushSymbolEntry(pSymbolTable, "main");
+            } tOP tCP tOB Instruction tCB {
+            printf("tINT tMAIN tOP tCP tOB Instruction tCB ");
           }
           ;
 
