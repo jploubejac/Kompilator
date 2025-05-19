@@ -3,8 +3,8 @@
 # SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Mon May 19 19:39:55 2025
-# Process ID         : 6616
+# Start of session at: Tue May 20 01:02:43 2025
+# Process ID         : 76849
 # Current directory  : /home/clem/Documents/GitHub/Kompilator
 # Command line       : vivado
 # Log file           : /home/clem/Documents/GitHub/Kompilator/vivado.log
@@ -13,16 +13,17 @@
 # Platform           : Debian
 # Operating System   : Debian GNU/Linux 12 (bookworm)
 # Processor Detail   : 12th Gen Intel(R) Core(TM) i5-1235U
-# CPU Frequency      : 2754.653 MHz
+# CPU Frequency      : 3929.304 MHz
 # CPU Physical cores : 10
 # CPU Logical cores  : 12
 # Host memory        : 8005 MB
 # Swap memory        : 1023 MB
 # Total Virtual      : 9029 MB
-# Available Virtual  : 6839 MB
+# Available Virtual  : 3674 MB
 #-----------------------------------------------------------
 start_gui
 open_project /home/clem/Documents/GitHub/Kompilator/alume/alume.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/zaifu/Desktop/INSA 4A/Semestre 2/PSI/Kompilator/alume' since last save.
 INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/clem/Documents/GitHub/Kompilator/alume/alume.gen/sources_1'.
 Scanning sources...
 Finished scanning sources
@@ -30,27 +31,7 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/clem/Xilinx/Vivado/2024.2/data/ip'.
 update_compile_order -fileset sources_1
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-set_property top pipeline [current_fileset]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-update_compile_order -fileset sources_1
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-set_property top test_pipeline [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-update_compile_order -fileset sim_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
 WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
 WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
 WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
@@ -61,1338 +42,11 @@ INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
 INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
 INFO: [SIM-utils-72] Using boost library from '/home/clem/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'test_pipeline' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj test_pipeline_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'pipeline'
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log
-Vivado Simulator v2024.2.0
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_signed
-Compiling architecture behavioral of entity xil_defaultlib.banc_instructions [banc_instructions_default]
-Compiling architecture behavioral of entity xil_defaultlib.banc_donnees [banc_donnees_default]
-Compiling architecture behavioral of entity xil_defaultlib.doubleport [doubleport_default]
-Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
-Compiling architecture behavioral of entity xil_defaultlib.pipeline [pipeline_default]
-Compiling architecture behavior of entity xil_defaultlib.test_pipeline
-Built simulation snapshot test_pipeline_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "test_pipeline_behav -key {Behavioral:sim_1:Functional:test_pipeline} -tclbatch {test_pipeline.tcl} -view {/home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-open_wave_config /home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg
-source test_pipeline.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 5000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_pipeline_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 5000ns
-launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 7884.934 ; gain = 76.219 ; free physical = 161 ; free virtual = 5004
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from '/home/clem/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'test_pipeline' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj test_pipeline_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'pipeline'
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log
-Vivado Simulator v2024.2.0
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_signed
-Compiling architecture behavioral of entity xil_defaultlib.banc_instructions [banc_instructions_default]
-Compiling architecture behavioral of entity xil_defaultlib.banc_donnees [banc_donnees_default]
-Compiling architecture behavioral of entity xil_defaultlib.doubleport [doubleport_default]
-Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
-Compiling architecture behavioral of entity xil_defaultlib.pipeline [pipeline_default]
-Compiling architecture behavior of entity xil_defaultlib.test_pipeline
-Built simulation snapshot test_pipeline_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "test_pipeline_behav -key {Behavioral:sim_1:Functional:test_pipeline} -tclbatch {test_pipeline.tcl} -view {/home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-open_wave_config /home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg
-source test_pipeline.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 5000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_pipeline_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 5000ns
-set_property top main [current_fileset]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-set_property top test_main [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'test_main'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from '/home/clem/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'test_main' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj test_main_vhdl.prj
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_main_behav xil_defaultlib.test_main -log elaborate.log
-Vivado Simulator v2024.2.0
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_main_behav xil_defaultlib.test_main -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_signed
-Compiling architecture behavioral of entity xil_defaultlib.banc_instructions [banc_instructions_default]
-Compiling architecture behavioral of entity xil_defaultlib.banc_donnees [banc_donnees_default]
-Compiling architecture behavioral of entity xil_defaultlib.doubleport [doubleport_default]
-Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
-Compiling architecture behavioral of entity xil_defaultlib.pipeline [pipeline_default]
-Compiling architecture behavioral of entity xil_defaultlib.seven_seg_controller [seven_seg_controller_default]
-Compiling architecture behavioral of entity xil_defaultlib.clock_div [clock_div_default]
-Compiling architecture behavioral of entity xil_defaultlib.main [main_default]
-Compiling architecture behavioral of entity xil_defaultlib.test_main
-Built simulation snapshot test_main_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "test_main_behav -key {Behavioral:sim_1:Functional:test_main} -tclbatch {test_main.tcl} -view {/home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-open_wave_config /home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg
-WARNING: Simulation object /test_pipeline/clk was not found in the design.
-WARNING: Simulation object /test_pipeline/uut/LIDI_i was not found in the design.
-WARNING: Simulation object /test_pipeline/uut/DIEX_OP_o was not found in the design.
-WARNING: Simulation object /test_pipeline/result_alu was not found in the design.
-WARNING: Simulation object /test_pipeline/uut/U_banc_registres/registres was not found in the design.
-WARNING: Simulation object /test_pipeline/result_R9 was not found in the design.
-source test_main.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 5000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_main_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 5000ns
-update_compile_order -fileset sources_1
-update_compile_order -fileset sim_1
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-relaunch_sim
-Command: launch_simulation -step compile -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'test_main'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from '/home/clem/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'test_main' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj test_main_vhdl.prj
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'test_main'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_main_behav xil_defaultlib.test_main -log elaborate.log
-Vivado Simulator v2024.2.0
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_main_behav xil_defaultlib.test_main -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Time resolution is 1 ps
-reset_run synth_1
-INFO: [Project 1-1161] Replacing file /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp with file /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/synth_1/main.dcp
-launch_runs synth_1 -jobs 6
-[Mon May 19 19:55:01 2025] Launched synth_1...
-Run output will be captured here: /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/synth_1/runme.log
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-launch_runs impl_1 -jobs 6
-[Mon May 19 19:55:36 2025] Launched impl_1...
-Run output will be captured here: /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/runme.log
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Mon May 19 19:56:17 2025] Launched impl_1...
-Run output will be captured here: /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/runme.log
-open_hw_manager
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-****** Xilinx hw_server v2024.2
-  **** Build date : Oct 29 2024 at 10:16:47
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-
-
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
-INFO: [Labtools 27-3417] Launching cs_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-
-******** Xilinx cs_server v2024.2.0
-  ****** Build date   : Oct 30 2024-19:19:07
-    **** Build number : 2024.2.1730312347
-      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
-      ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
-
-
-
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183AB4E8FA
-set_property PROGRAM.FILE {/home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
-current_hw_device [get_hw_devices xc7a35t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {/home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183AB4E8FA
-close_hw_manager
-set_property top pipeline [current_fileset]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-set_property top test_pipeline [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-update_compile_order -fileset sources_1
-update_compile_order -fileset sim_1
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-current_sim simulation_2
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from '/home/clem/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'test_pipeline' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj test_pipeline_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'pipeline'
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log
-Vivado Simulator v2024.2.0
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_signed
-Compiling architecture behavioral of entity xil_defaultlib.banc_instructions [banc_instructions_default]
-Compiling architecture behavioral of entity xil_defaultlib.banc_donnees [banc_donnees_default]
-Compiling architecture behavioral of entity xil_defaultlib.doubleport [doubleport_default]
-Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
-Compiling architecture behavioral of entity xil_defaultlib.pipeline [pipeline_default]
-Compiling architecture behavior of entity xil_defaultlib.test_pipeline
-Built simulation snapshot test_pipeline_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "test_pipeline_behav -key {Behavioral:sim_1:Functional:test_pipeline} -tclbatch {test_pipeline.tcl} -view {/home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-open_wave_config /home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg
-source test_pipeline.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 5000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_pipeline_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 5000ns
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from '/home/clem/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'test_pipeline' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj test_pipeline_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'banc_instructions'
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log
-Vivado Simulator v2024.2.0
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_signed
-Compiling architecture behavioral of entity xil_defaultlib.banc_instructions [banc_instructions_default]
-Compiling architecture behavioral of entity xil_defaultlib.banc_donnees [banc_donnees_default]
-Compiling architecture behavioral of entity xil_defaultlib.doubleport [doubleport_default]
-Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
-Compiling architecture behavioral of entity xil_defaultlib.pipeline [pipeline_default]
-Compiling architecture behavior of entity xil_defaultlib.test_pipeline
-Built simulation snapshot test_pipeline_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "test_pipeline_behav -key {Behavioral:sim_1:Functional:test_pipeline} -tclbatch {test_pipeline.tcl} -view {/home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-open_wave_config /home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg
-source test_pipeline.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 5000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_pipeline_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 5000ns
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from '/home/clem/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'test_pipeline' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj test_pipeline_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'banc_instructions'
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '0' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log
-Vivado Simulator v2024.2.0
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_signed
-Compiling architecture behavioral of entity xil_defaultlib.banc_instructions [banc_instructions_default]
-Compiling architecture behavioral of entity xil_defaultlib.banc_donnees [banc_donnees_default]
-Compiling architecture behavioral of entity xil_defaultlib.doubleport [doubleport_default]
-Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
-Compiling architecture behavioral of entity xil_defaultlib.pipeline [pipeline_default]
-Compiling architecture behavior of entity xil_defaultlib.test_pipeline
-Built simulation snapshot test_pipeline_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "test_pipeline_behav -key {Behavioral:sim_1:Functional:test_pipeline} -tclbatch {test_pipeline.tcl} -view {/home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-open_wave_config /home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg
-source test_pipeline.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 5000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_pipeline_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 5000ns
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from '/home/clem/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'test_pipeline' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj test_pipeline_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'banc_instructions'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'pipeline'
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log
-Vivado Simulator v2024.2.0
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_signed
-Compiling architecture behavioral of entity xil_defaultlib.banc_instructions [banc_instructions_default]
-Compiling architecture behavioral of entity xil_defaultlib.banc_donnees [banc_donnees_default]
-Compiling architecture behavioral of entity xil_defaultlib.doubleport [doubleport_default]
-Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
-Compiling architecture behavioral of entity xil_defaultlib.pipeline [pipeline_default]
-Compiling architecture behavior of entity xil_defaultlib.test_pipeline
-Built simulation snapshot test_pipeline_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "test_pipeline_behav -key {Behavioral:sim_1:Functional:test_pipeline} -tclbatch {test_pipeline.tcl} -view {/home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-open_wave_config /home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg
-source test_pipeline.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 5000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_pipeline_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 5000ns
-set_property top main [current_fileset]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-set_property top test_main [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-update_compile_order -fileset sources_1
-update_compile_order -fileset sim_1
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-reset_run synth_1
-INFO: [Project 1-1161] Replacing file /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp with file /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/synth_1/main.dcp
-launch_runs synth_1 -jobs 6
-[Mon May 19 20:10:22 2025] Launched synth_1...
-Run output will be captured here: /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/synth_1/runme.log
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-launch_runs impl_1 -jobs 6
-[Mon May 19 20:11:05 2025] Launched impl_1...
-Run output will be captured here: /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/runme.log
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Mon May 19 20:12:21 2025] Launched impl_1...
-Run output will be captured here: /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/runme.log
-open_hw_manager
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-****** Xilinx hw_server v2024.2
-  **** Build date : Oct 29 2024 at 10:16:47
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-
-
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
-INFO: [Labtools 27-3417] Launching cs_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-
-******** Xilinx cs_server v2024.2.0
-  ****** Build date   : Oct 30 2024-19:19:07
-    **** Build number : 2024.2.1730312347
-      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
-      ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
-
-
-
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183AB4E8FA
-set_property PROGRAM.FILE {/home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
-current_hw_device [get_hw_devices xc7a35t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {/home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183AB4E8FA
-close_hw_manager
-current_sim simulation_3
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'test_main'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from '/home/clem/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'test_main' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj test_main_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'banc_instructions'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'pipeline'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'main'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sim_1/new/test_main.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'test_main'
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_main_behav xil_defaultlib.test_main -log elaborate.log
-Vivado Simulator v2024.2.0
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_main_behav xil_defaultlib.test_main -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_signed
-Compiling architecture behavioral of entity xil_defaultlib.banc_instructions [banc_instructions_default]
-Compiling architecture behavioral of entity xil_defaultlib.banc_donnees [banc_donnees_default]
-Compiling architecture behavioral of entity xil_defaultlib.doubleport [doubleport_default]
-Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
-Compiling architecture behavioral of entity xil_defaultlib.pipeline [pipeline_default]
-Compiling architecture behavioral of entity xil_defaultlib.seven_seg_controller [seven_seg_controller_default]
-Compiling architecture behavioral of entity xil_defaultlib.clock_div [clock_div_default]
-Compiling architecture behavioral of entity xil_defaultlib.main [main_default]
-Compiling architecture behavioral of entity xil_defaultlib.test_main
-Built simulation snapshot test_main_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "test_main_behav -key {Behavioral:sim_1:Functional:test_main} -tclbatch {test_main.tcl} -view {/home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-open_wave_config /home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg
-WARNING: Simulation object /test_pipeline/clk was not found in the design.
-WARNING: Simulation object /test_pipeline/uut/LIDI_i was not found in the design.
-WARNING: Simulation object /test_pipeline/uut/DIEX_OP_o was not found in the design.
-WARNING: Simulation object /test_pipeline/result_alu was not found in the design.
-WARNING: Simulation object /test_pipeline/uut/U_banc_registres/registres was not found in the design.
-WARNING: Simulation object /test_pipeline/result_R9 was not found in the design.
-source test_main.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 5000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_main_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 5000ns
-set_property top pipeline [current_fileset]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
 WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
 WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
 WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
 WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
 WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-set_property top test_pipeline [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-update_compile_order -fileset sources_1
-update_compile_order -fileset sim_1
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-current_sim simulation_7
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from '/home/clem/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'test_pipeline' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj test_pipeline_vhdl.prj
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log
-Vivado Simulator v2024.2.0
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_signed
-Compiling architecture behavioral of entity xil_defaultlib.banc_instructions [banc_instructions_default]
-Compiling architecture behavioral of entity xil_defaultlib.banc_donnees [banc_donnees_default]
-Compiling architecture behavioral of entity xil_defaultlib.doubleport [doubleport_default]
-Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
-Compiling architecture behavioral of entity xil_defaultlib.pipeline [pipeline_default]
-Compiling architecture behavior of entity xil_defaultlib.test_pipeline
-Built simulation snapshot test_pipeline_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "test_pipeline_behav -key {Behavioral:sim_1:Functional:test_pipeline} -tclbatch {test_pipeline.tcl} -view {/home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-open_wave_config /home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg
-source test_pipeline.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 5000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_pipeline_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 5000ns
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from '/home/clem/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'test_pipeline' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj test_pipeline_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'banc_instructions'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'pipeline'
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log
-Vivado Simulator v2024.2.0
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_signed
-Compiling architecture behavioral of entity xil_defaultlib.banc_instructions [banc_instructions_default]
-Compiling architecture behavioral of entity xil_defaultlib.banc_donnees [banc_donnees_default]
-Compiling architecture behavioral of entity xil_defaultlib.doubleport [doubleport_default]
-Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
-Compiling architecture behavioral of entity xil_defaultlib.pipeline [pipeline_default]
-Compiling architecture behavior of entity xil_defaultlib.test_pipeline
-Built simulation snapshot test_pipeline_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "test_pipeline_behav -key {Behavioral:sim_1:Functional:test_pipeline} -tclbatch {test_pipeline.tcl} -view {/home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-open_wave_config /home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg
-source test_pipeline.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 5000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_pipeline_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 5000ns
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from '/home/clem/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'test_pipeline' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj test_pipeline_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'banc_instructions'
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '0' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log
-Vivado Simulator v2024.2.0
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_signed
-Compiling architecture behavioral of entity xil_defaultlib.banc_instructions [banc_instructions_default]
-Compiling architecture behavioral of entity xil_defaultlib.banc_donnees [banc_donnees_default]
-Compiling architecture behavioral of entity xil_defaultlib.doubleport [doubleport_default]
-Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
-Compiling architecture behavioral of entity xil_defaultlib.pipeline [pipeline_default]
-Compiling architecture behavior of entity xil_defaultlib.test_pipeline
-Built simulation snapshot test_pipeline_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "test_pipeline_behav -key {Behavioral:sim_1:Functional:test_pipeline} -tclbatch {test_pipeline.tcl} -view {/home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-open_wave_config /home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg
-source test_pipeline.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 5000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_pipeline_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 5000ns
-relaunch_sim
-Command: launch_simulation -step compile -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj test_pipeline_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'banc_instructions'
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log
-Vivado Simulator v2024.2.0
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_signed
-Compiling architecture behavioral of entity xil_defaultlib.banc_instructions [banc_instructions_default]
-Compiling architecture behavioral of entity xil_defaultlib.banc_donnees [banc_donnees_default]
-Compiling architecture behavioral of entity xil_defaultlib.doubleport [doubleport_default]
-Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
-Compiling architecture behavioral of entity xil_defaultlib.pipeline [pipeline_default]
-Compiling architecture behavior of entity xil_defaultlib.test_pipeline
-Built simulation snapshot test_pipeline_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 8227.449 ; gain = 0.000 ; free physical = 1335 ; free virtual = 4453
-relaunch_sim
-Command: launch_simulation -step compile -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj test_pipeline_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'banc_instructions'
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log
-Vivado Simulator v2024.2.0
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_signed
-Compiling architecture behavioral of entity xil_defaultlib.banc_instructions [banc_instructions_default]
-Compiling architecture behavioral of entity xil_defaultlib.banc_donnees [banc_donnees_default]
-Compiling architecture behavioral of entity xil_defaultlib.doubleport [doubleport_default]
-Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
-Compiling architecture behavioral of entity xil_defaultlib.pipeline [pipeline_default]
-Compiling architecture behavior of entity xil_defaultlib.test_pipeline
-Built simulation snapshot test_pipeline_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 8236.188 ; gain = 0.000 ; free physical = 1292 ; free virtual = 4411
-relaunch_sim
-Command: launch_simulation -step compile -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj test_pipeline_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'banc_instructions'
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log
-Vivado Simulator v2024.2.0
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_signed
-Compiling architecture behavioral of entity xil_defaultlib.banc_instructions [banc_instructions_default]
-Compiling architecture behavioral of entity xil_defaultlib.banc_donnees [banc_donnees_default]
-Compiling architecture behavioral of entity xil_defaultlib.doubleport [doubleport_default]
-Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
-Compiling architecture behavioral of entity xil_defaultlib.pipeline [pipeline_default]
-Compiling architecture behavior of entity xil_defaultlib.test_pipeline
-Built simulation snapshot test_pipeline_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 8236.188 ; gain = 0.000 ; free physical = 1294 ; free virtual = 4413
-relaunch_sim
-Command: launch_simulation -step compile -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-2] XSim::Compile design
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj test_pipeline_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'banc_instructions'
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log
-Vivado Simulator v2024.2.0
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_signed
-Compiling architecture behavioral of entity xil_defaultlib.banc_instructions [banc_instructions_default]
-Compiling architecture behavioral of entity xil_defaultlib.banc_donnees [banc_donnees_default]
-Compiling architecture behavioral of entity xil_defaultlib.doubleport [doubleport_default]
-Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
-Compiling architecture behavioral of entity xil_defaultlib.pipeline [pipeline_default]
-Compiling architecture behavior of entity xil_defaultlib.test_pipeline
-Built simulation snapshot test_pipeline_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 8236.188 ; gain = 0.000 ; free physical = 1173 ; free virtual = 4337
-relaunch_sim
-Command: launch_simulation -step compile -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-xvhdl --incr --relax -prj test_pipeline_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'banc_instructions'
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log
-Vivado Simulator v2024.2.0
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_signed
-Compiling architecture behavioral of entity xil_defaultlib.banc_instructions [banc_instructions_default]
-Compiling architecture behavioral of entity xil_defaultlib.banc_donnees [banc_donnees_default]
-Compiling architecture behavioral of entity xil_defaultlib.doubleport [doubleport_default]
-Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
-Compiling architecture behavioral of entity xil_defaultlib.pipeline [pipeline_default]
-Compiling architecture behavior of entity xil_defaultlib.test_pipeline
-Built simulation snapshot test_pipeline_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 8236.219 ; gain = 0.000 ; free physical = 1179 ; free virtual = 4337
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from '/home/clem/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
 INFO: [SIM-utils-54] Inspecting design source files for 'test_pipeline' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
@@ -1401,390 +55,95 @@ INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Document
 xvhdl --incr --relax -prj test_pipeline_vhdl.prj
 INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'ALU'
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log
-Vivado Simulator v2024.2.0
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_signed
-Compiling architecture behavioral of entity xil_defaultlib.banc_instructions [banc_instructions_default]
-Compiling architecture behavioral of entity xil_defaultlib.banc_donnees [banc_donnees_default]
-Compiling architecture behavioral of entity xil_defaultlib.doubleport [doubleport_default]
-Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
-Compiling architecture behavioral of entity xil_defaultlib.pipeline [pipeline_default]
-Compiling architecture behavior of entity xil_defaultlib.test_pipeline
-Built simulation snapshot test_pipeline_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "test_pipeline_behav -key {Behavioral:sim_1:Functional:test_pipeline} -tclbatch {test_pipeline.tcl} -view {/home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-open_wave_config /home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg
-source test_pipeline.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 5000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_pipeline_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 5000ns
-relaunch_sim
-Command: launch_simulation -step compile -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj test_pipeline_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_donnees.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'banc_donnees'
 INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'banc_instructions'
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log
-Vivado Simulator v2024.2.0
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_signed
-Compiling architecture behavioral of entity xil_defaultlib.banc_instructions [banc_instructions_default]
-Compiling architecture behavioral of entity xil_defaultlib.banc_donnees [banc_donnees_default]
-Compiling architecture behavioral of entity xil_defaultlib.doubleport [doubleport_default]
-Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
-Compiling architecture behavioral of entity xil_defaultlib.pipeline [pipeline_default]
-Compiling architecture behavior of entity xil_defaultlib.test_pipeline
-Built simulation snapshot test_pipeline_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 8254.199 ; gain = 0.000 ; free physical = 1066 ; free virtual = 4255
-relaunch_sim
-Command: launch_simulation -step compile -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-xvhdl --incr --relax -prj test_pipeline_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'banc_instructions'
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log
-Vivado Simulator v2024.2.0
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_signed
-Compiling architecture behavioral of entity xil_defaultlib.banc_instructions [banc_instructions_default]
-Compiling architecture behavioral of entity xil_defaultlib.banc_donnees [banc_donnees_default]
-Compiling architecture behavioral of entity xil_defaultlib.doubleport [doubleport_default]
-Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
-Compiling architecture behavioral of entity xil_defaultlib.pipeline [pipeline_default]
-Compiling architecture behavior of entity xil_defaultlib.test_pipeline
-Built simulation snapshot test_pipeline_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 8254.199 ; gain = 0.000 ; free physical = 916 ; free virtual = 4125
-relaunch_sim
-Command: launch_simulation -step compile -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-2] XSim::Compile design
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj test_pipeline_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'banc_instructions'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'doubleport'
 INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'pipeline'
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log
-Vivado Simulator v2024.2.0
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-ERROR: [VRFC 10-3219] choice '3' is already covered [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:104]
-ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit test_pipeline in library work failed.
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-99] Step results log file:'/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim/elaborate.log'
-ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim/elaborate.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from '/home/clem/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'test_pipeline' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj test_pipeline_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'ALU'
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log
-Vivado Simulator v2024.2.0
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-ERROR: [VRFC 10-3219] choice '3' is already covered [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:104]
-ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit test_pipeline in library work failed.
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-99] Step results log file:'/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim/elaborate.log'
-ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim/elaborate.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from '/home/clem/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-INFO: [SIM-utils-54] Inspecting design source files for 'test_pipeline' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj test_pipeline_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'banc_instructions'
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log
-Vivado Simulator v2024.2.0
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_signed
-Compiling architecture behavioral of entity xil_defaultlib.banc_instructions [banc_instructions_default]
-Compiling architecture behavioral of entity xil_defaultlib.banc_donnees [banc_donnees_default]
-Compiling architecture behavioral of entity xil_defaultlib.doubleport [doubleport_default]
-Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
-Compiling architecture behavioral of entity xil_defaultlib.pipeline [pipeline_default]
-Compiling architecture behavior of entity xil_defaultlib.test_pipeline
-Built simulation snapshot test_pipeline_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "test_pipeline_behav -key {Behavioral:sim_1:Functional:test_pipeline} -tclbatch {test_pipeline.tcl} -view {/home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-open_wave_config /home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg
-source test_pipeline.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 5000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_pipeline_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 5000ns
-relaunch_sim
-Command: launch_simulation -step compile -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj test_pipeline_vhdl.prj
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log
-Vivado Simulator v2024.2.0
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 8303.242 ; gain = 0.000 ; free physical = 800 ; free virtual = 4061
-relaunch_sim
-Command: launch_simulation -step compile -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj test_pipeline_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'banc_instructions'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sim_1/new/test_pipeline.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_pipeline'
 Waiting for jobs to finish...
 No pending jobs, compilation finished.
 INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_signed
+Compiling architecture behavioral of entity xil_defaultlib.banc_instructions [banc_instructions_default]
+Compiling architecture behavioral of entity xil_defaultlib.banc_donnees [banc_donnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.doubleport [doubleport_default]
+Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.pipeline [pipeline_default]
+Compiling architecture behavior of entity xil_defaultlib.test_pipeline
+Built simulation snapshot test_pipeline_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_pipeline_behav -key {Behavioral:sim_1:Functional:test_pipeline} -tclbatch {test_pipeline.tcl} -view {/home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config /home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg
+source test_pipeline.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 5000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_pipeline_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 5000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 7871.129 ; gain = 43.027 ; free physical = 1763 ; free virtual = 4579
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/home/clem/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_pipeline' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj test_pipeline_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'banc_instructions'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
 Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
 INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
 INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
@@ -1816,23 +175,194 @@ Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
 Compiling architecture behavioral of entity xil_defaultlib.pipeline [pipeline_default]
 Compiling architecture behavior of entity xil_defaultlib.test_pipeline
 Built simulation snapshot test_pipeline_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
 Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 8303.242 ; gain = 0.000 ; free physical = 845 ; free virtual = 4093
+relaunch_sim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 7871.129 ; gain = 0.000 ; free physical = 1747 ; free virtual = 4543
 relaunch_sim
 Command: launch_simulation -step compile -simset sim_1 -mode behavioral
 INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
 WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
 WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
 WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
 WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
 WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj test_pipeline_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'banc_instructions'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_signed
+Compiling architecture behavioral of entity xil_defaultlib.banc_instructions [banc_instructions_default]
+Compiling architecture behavioral of entity xil_defaultlib.banc_donnees [banc_donnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.doubleport [doubleport_default]
+Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.pipeline [pipeline_default]
+Compiling architecture behavior of entity xil_defaultlib.test_pipeline
+Built simulation snapshot test_pipeline_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 7882.551 ; gain = 1.973 ; free physical = 1728 ; free virtual = 4533
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
 WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
 WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
 WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
 WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
 WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
 INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+xvhdl --incr --relax -prj test_pipeline_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'banc_instructions'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_signed
+Compiling architecture behavioral of entity xil_defaultlib.banc_instructions [banc_instructions_default]
+Compiling architecture behavioral of entity xil_defaultlib.banc_donnees [banc_donnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.doubleport [doubleport_default]
+Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.pipeline [pipeline_default]
+Compiling architecture behavior of entity xil_defaultlib.test_pipeline
+Built simulation snapshot test_pipeline_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 7882.582 ; gain = 0.000 ; free physical = 1711 ; free virtual = 4519
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj test_pipeline_vhdl.prj
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'banc_instructions'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_signed
+Compiling architecture behavioral of entity xil_defaultlib.banc_instructions [banc_instructions_default]
+Compiling architecture behavioral of entity xil_defaultlib.banc_donnees [banc_donnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.doubleport [doubleport_default]
+Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.pipeline [pipeline_default]
+Compiling architecture behavior of entity xil_defaultlib.test_pipeline
+Built simulation snapshot test_pipeline_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 7882.582 ; gain = 0.000 ; free physical = 1556 ; free virtual = 4363
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
@@ -1875,4 +405,63 @@ Compiling architecture behavior of entity xil_defaultlib.test_pipeline
 Built simulation snapshot test_pipeline_behav
 INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
 Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 8303.242 ; gain = 0.000 ; free physical = 809 ; free virtual = 4069
+relaunch_sim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 7882.582 ; gain = 0.000 ; free physical = 1706 ; free virtual = 4514
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj test_pipeline_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pipeline'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sim_1/new/test_pipeline.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_pipeline'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_signed
+Compiling architecture behavioral of entity xil_defaultlib.banc_instructions [banc_instructions_default]
+Compiling architecture behavioral of entity xil_defaultlib.banc_donnees [banc_donnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.doubleport [doubleport_default]
+Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.pipeline [pipeline_default]
+Compiling architecture behavior of entity xil_defaultlib.test_pipeline
+Built simulation snapshot test_pipeline_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 7882.582 ; gain = 0.000 ; free physical = 1685 ; free virtual = 4493

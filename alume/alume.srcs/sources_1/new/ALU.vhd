@@ -6,7 +6,7 @@ use IEEE.std_logic_signed.ALL;
 entity ALU is
     Port ( A : in STD_LOGIC_VECTOR (7 downto 0);
            B : in STD_LOGIC_VECTOR (7 downto 0);
-           Ctrl_Alu : in STD_LOGIC_VECTOR (2 downto 0);
+           Ctrl_Alu : in STD_LOGIC_VECTOR (3 downto 0);
            N : out STD_LOGIC;
            O : out STD_LOGIC;
            Z : out STD_LOGIC;
@@ -25,17 +25,26 @@ architecture Behavioral of ALU is
 -- 110 : not
 
 signal aux: std_logic_vector (15 downto 0):= (others=>'0');
- 
+signal inf_result : std_logic_vector(15 downto 0);
+signal sup_result : std_logic_vector(15 downto 0);
+signal equ_result : std_logic_vector(15 downto 0);
+
 begin
-    
+    inf_result <= x"0001" when signed(A) < signed(B) else x"0000";
+    sup_result <= x"0001" when signed(A) > signed(B) else x"0000";
+    equ_result <= x"0001" when signed(A) = signed(B) else x"0000";
+
     with Ctrl_Alu select
-        aux <= (x"00" & A) + (x"00" & B) when "000",
-        A * B when "001",
-        (x"00" & A) - (x"00" & B) when "010",
-        x"00" & ('0' & A(7 downto 1)) when "011",
-        x"00" & (A and B) when "100",
-        x"00" & (A or B) when "101",
-        x"00" & (not(A)) when "110",
+        aux <= (x"00" & A) + (x"00" & B) when "0000",
+        A * B when "0001",
+        (x"00" & A) - (x"00" & B) when "0010",
+        x"00" & ('0' & A(7 downto 1)) when "0011",
+        x"00" & (A and B) when "0100",
+        x"00" & (A or B) when "0101",
+        x"00" & (not(A)) when "0110",
+        inf_result when "0111",
+        sup_result when "1000",
+        equ_result when "1001",
         (x"00" & A) + (x"00" & B) when others
         ; 
        

@@ -29,7 +29,7 @@ architecture Behavioral of pipeline is
     COMPONENT ALU
     PORT( A : in STD_LOGIC_VECTOR (7 downto 0);
            B : in STD_LOGIC_VECTOR (7 downto 0);
-           Ctrl_Alu : in STD_LOGIC_VECTOR (2 downto 0);
+           Ctrl_Alu : in STD_LOGIC_VECTOR (3 downto 0);
            N : out STD_LOGIC;
            O : out STD_LOGIC;
            Z : out STD_LOGIC;
@@ -135,7 +135,7 @@ architecture Behavioral of pipeline is
     --===========================ALU=========================== 
     signal ALU_A_i : std_logic_vector(7 downto 0) := (others => '0');
     signal ALU_B_i : std_logic_vector(7 downto 0) := (others => '0');
-    signal ALU_Ctrl_Alu_i : std_logic_vector(2 downto 0) := (others => '0');
+    signal ALU_Ctrl_Alu_i : std_logic_vector(3 downto 0) := (others => '0');
     signal ALU_N_o :  std_logic := '0';
     signal ALU_O_o : std_logic := '0';
     signal ALU_Z_o : std_logic := '0';
@@ -143,7 +143,7 @@ architecture Behavioral of pipeline is
     signal ALU_S_o : std_logic_vector(7 downto 0) := (others => '0');
 
     signal LC_DONNEES : std_logic := '0';
-    signal LC_ALU : std_logic_vector(2 downto 0) := "000";
+    signal LC_ALU : std_logic_vector(3 downto 0) := "0000";
     signal LC_BD : std_logic := '0'; 
 
     --===========================OP_Code=========================== 
@@ -250,7 +250,10 @@ LC_DONNEES <= '1' when  MEMRE_OP_o = OP_AFC or
                         MEMRE_OP_o = OP_LDR or
                         MEMRE_OP_o = OP_AND or
                         MEMRE_OP_o = OP_OR or
-                        MEMRE_OP_o = OP_NOT else
+                        MEMRE_OP_o = OP_NOT or
+                        MEMRE_OP_o = OP_INF or
+                        MEMRE_OP_o = OP_SUP or
+                        MEMRE_OP_o = OP_EQU else
                         '0';
     
 BR_DATA_i <= MEMRE_B_o;
@@ -264,14 +267,17 @@ ALU_A_i <= DIEX_B_o;
 
 ALU_Ctrl_Alu_i <= LC_ALU;
 
-LC_ALU <=  "000" when DIEX_OP_o = OP_ADD else
-           "001" when DIEX_OP_o = OP_MUL else
-           "010" when DIEX_OP_o = OP_SOU else
-           "011" when DIEX_OP_o = OP_DIV else
-           "100" when DIEX_OP_o = OP_AND else
-           "101" when DIEX_OP_o = OP_OR else
-           "110" when DIEX_OP_o = OP_NOT else
-           "000";
+LC_ALU <=  "0000" when DIEX_OP_o = OP_ADD else
+           "0001" when DIEX_OP_o = OP_MUL else
+           "0010" when DIEX_OP_o = OP_SOU else
+           "0011" when DIEX_OP_o = OP_DIV else
+           "0100" when DIEX_OP_o = OP_AND else
+           "0101" when DIEX_OP_o = OP_OR else
+           "0110" when DIEX_OP_o = OP_NOT else
+           "0111" when DIEX_OP_o = OP_INF else
+           "1000" when DIEX_OP_o = OP_SUP else
+           "1001" when DIEX_OP_o = OP_EQU else
+           "0000";
 
 LC_BD <= '0' when EXMEM_OP_o = OP_STR else '1';
 
@@ -284,21 +290,24 @@ ALEA <= '1' when    (LIDI_OP_o /= OP_NOP and LIDI_OP_o /= OP_STR and LIDI_i(15 d
                 or
                 (LIDI_OP_o /= OP_NOP and LIDI_OP_o /= OP_STR and (LIDI_i(15 downto 8) = OP_ADD or LIDI_i(15 downto 8) = OP_MUL
                 or LIDI_i(15 downto 8) = OP_SOU or LIDI_i(15 downto 8) = OP_DIV or LIDI_i(15 downto 8) = OP_AND
-                or LIDI_i(15 downto 8) = OP_OR or LIDI_i(15 downto 8) = OP_NOT) and  LIDI_A_o = LIDI_i(31 downto 24)) 
+                or LIDI_i(15 downto 8) = OP_OR or LIDI_i(15 downto 8) = OP_NOT or LIDI_i(15 downto 8) = OP_SUP or LIDI_i(15 downto 8) = OP_INF
+                or LIDI_i(15 downto 8) = OP_EQU) and  LIDI_A_o = LIDI_i(31 downto 24)) 
                 or
                 (DIEX_OP_o /= OP_NOP and DIEX_OP_o /= OP_STR and LIDI_i(15 downto 8) /= OP_NOP and LIDI_i(15 downto 8) /= OP_AFC
                 and LIDI_i(15 downto 8) /= OP_LDR and  DIEX_A_o = LIDI_i(23 downto 16)) 
                 or
                 (DIEX_OP_o /= OP_NOP and DIEX_OP_o /= OP_STR and (LIDI_i(15 downto 8) = OP_ADD or LIDI_i(15 downto 8) = OP_MUL
                 or LIDI_i(15 downto 8) = OP_SOU or LIDI_i(15 downto 8) = OP_DIV or LIDI_i(15 downto 8) = OP_AND
-                or LIDI_i(15 downto 8) = OP_OR or LIDI_i(15 downto 8) = OP_NOT) and  DIEX_A_o = LIDI_i(31 downto 24)) 
+                or LIDI_i(15 downto 8) = OP_OR or LIDI_i(15 downto 8) = OP_NOT or LIDI_i(15 downto 8) = OP_SUP or LIDI_i(15 downto 8) = OP_INF
+                or LIDI_i(15 downto 8) = OP_EQU) and  DIEX_A_o = LIDI_i(31 downto 24)) 
                 or
                 (EXMEM_OP_o /= OP_NOP and EXMEM_OP_o /= OP_STR and LIDI_i(15 downto 8) /= OP_NOP and LIDI_i(15 downto 8) /= OP_AFC
                 and LIDI_i(15 downto 8) /= OP_LDR and  EXMEM_A_o = LIDI_i(23 downto 16)) 
                 or
                 (EXMEM_OP_o /= OP_NOP and EXMEM_OP_o /= OP_STR and (LIDI_i(15 downto 8) = OP_ADD or LIDI_i(15 downto 8) = OP_MUL
                 or LIDI_i(15 downto 8) = OP_SOU or LIDI_i(15 downto 8) = OP_DIV or LIDI_i(15 downto 8) = OP_AND
-                or LIDI_i(15 downto 8) = OP_OR or LIDI_i(15 downto 8) = OP_NOT) and  EXMEM_A_o = LIDI_i(31 downto 24)) else
+                or LIDI_i(15 downto 8) = OP_OR or LIDI_i(15 downto 8) = OP_NOT or LIDI_i(15 downto 8) = OP_SUP or LIDI_i(15 downto 8) = OP_INF
+                or LIDI_i(15 downto 8) = OP_EQU) and  EXMEM_A_o = LIDI_i(31 downto 24)) else
                 '0';
                 
 --BI_ADDR_i <= LIDI_B_o when LIDI_OP_o = OP_JMP;
