@@ -45,7 +45,7 @@ extern char *yytext;
 %%
 
 Start : {DynamicArrayPushAsmLine(pAsmTable, OP_JMP, -1,0,0);} Kompilator {
-          int index = 0;//DynamicArrayGetIndexIfReverse(pAsmTable, (IptfVV)isJmpWithoutAdress, NULL);
+          int index = DynamicArrayGetIndexIfReverse(pAsmTable, (IptfVV)isJmpWithoutAdress, NULL);
           //todo: error handle if index!=0
           asmLine_t *pJmpLine;
           if(index>=0){
