@@ -63,7 +63,6 @@ Instruction :  Declaration tSEM Instruction {printf("Instruction Declaration tSE
               ;
 
 Declaration : Type ListeVariables {printf("Type ListeVariables ");}
-              | Type tSTAR ListeVariablesPointeurs {printf("Type tSTAR ListeVariables ");}
               ;
 
 Affectation : ListeVariablesAff {printf("ListeVariables");}
@@ -74,13 +73,6 @@ Affectation : ListeVariablesAff {printf("ListeVariables");}
 ListeVariables : Variable {printf("Variable ");}
                 | Variable tSEP ListeVariables {printf("tID tSEP ListeVariables ");}
                 ;
-
-ListeVariablesPointeurs : VariablePointeur {printf("Variable ");}
-                | VariablePointeur tSEP ListeVariablesPointeurs {printf("tID tSEP ListeVariables ");}
-                ;
-
-VariablePointeur: tID {printf("tSTAR tID");}
-                | tID tEQ Expression {printf("tSTAR tID tEQ Expression");}
 
 ListeVariablesAff : Variable {printf("Variable ");}
                 | Variable tSEP ListeVariablesAff {printf("tID tSEP ListeVariablesAff ");}
@@ -97,11 +89,26 @@ Variable : tID tEQ Expression {
             }
             printf("tID tEQ Expression ");
           }
-          |  tID tSTAR tEQ Expression {printf("tSTAR tID tEQ Expression ");}
+          |  tSTAR tID tEQ Expression {
+              int addr_res = DynamicArrayGetIndexIf(pSymbolTable,  (IptfVV)symbolEntryIsName, (void*)$2);
+              if(addr_res<0){
+                DynamicArrayPop(pSymbolTable);
+                addr_res=DynamicArrayPushSymbolEntry(pSymbolTable, $2);
+              } else {
+                DynamicArrayPop(pSymbolTable);
+              }
+              DynamicArrayPushAsmLine(pAsmTable, OP_STR, addr_res, $4, 0);
+              printf("tSTAR tID tEQ Expression ");
+            }
           | tID {
             int index = DynamicArrayGetIndexIf(pSymbolTable,  (IptfVV)symbolEntryIsName, (void*)$1);
             if(index<0)DynamicArrayPushSymbolEntry(pSymbolTable, $1);
             printf("tID[%s] ", $$);
+          }
+          | tSTAR tID {
+            int index = DynamicArrayGetIndexIf(pSymbolTable,  (IptfVV)symbolEntryIsName, (void*)$2);
+            if(index<0)DynamicArrayPushSymbolEntry(pSymbolTable, $2);
+            printf("tSTAR tID[%s] ", $2);
           }
           ;
                 
@@ -144,6 +151,14 @@ Expression : Expression tADD Expression {
               if(index<0)index=DynamicArrayPushSymbolEntry(pSymbolTable, $1);
               int addr_ret=DynamicArrayPushSymbolEntry(pSymbolTable, "temp");
               DynamicArrayPushAsmLine(pAsmTable, OP_COP, addr_ret, index,0);
+              $$=addr_ret;
+              printf("tID[] ");
+            }
+            | tSTAR tID {
+              int index = DynamicArrayGetIndexIf(pSymbolTable,  (IptfVV)symbolEntryIsName, (void*)$2);
+              if(index<0)index=DynamicArrayPushSymbolEntry(pSymbolTable, $2);
+              int addr_ret=DynamicArrayPushSymbolEntry(pSymbolTable, "temp");
+              DynamicArrayPushAsmLine(pAsmTable, OP_LDR, addr_ret, index,0);
               $$=addr_ret;
               printf("tID[] ");
             }
