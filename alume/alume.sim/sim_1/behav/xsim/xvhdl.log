@@ -1,4 +1,2 @@
 INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'banc_instructions'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'pipeline'

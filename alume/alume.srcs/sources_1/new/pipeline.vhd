@@ -255,7 +255,8 @@ DIEX_C_i <= BR_QB_o;
 
 EXMEM_A_i <= DIEX_A_o;
 EXMEM_OP_i <= DIEX_OP_o;
-EXMEM_B_i <= ALU_S_o when (DIEX_OP_o = OP_ADD or DIEX_OP_o = OP_MUL or DIEX_OP_o = OP_SOU or DIEX_OP_o = OP_DIV) else DIEX_B_o;
+EXMEM_B_i <= ALU_S_o when (DIEX_OP_o = OP_ADD or DIEX_OP_o = OP_MUL or DIEX_OP_o = OP_SOU or DIEX_OP_o = OP_DIV or DIEX_OP_o = OP_INF
+                            or DIEX_OP_o = OP_SUP or DIEX_OP_o = OP_EQU or DIEX_OP_o = OP_NOT) else DIEX_B_o;
 
 
 MEMRE_A_i <= EXMEM_A_o;
@@ -268,7 +269,10 @@ LC_DONNEES <= '1' when  MEMRE_OP_o = OP_AFC or
                         MEMRE_OP_o = OP_MUL or 
                         MEMRE_OP_o = OP_SOU or
                         MEMRE_OP_o = OP_DIV or
-                        MEMRE_OP_o = OP_LDR else
+                        MEMRE_OP_o = OP_LDR or
+                        MEMRE_OP_o = OP_AND or
+                        MEMRE_OP_o = OP_OR or
+                        MEMRE_OP_o = OP_NOT else
                         '0';
     
 BR_DATA_i <= MEMRE_B_o;
@@ -286,6 +290,9 @@ LC_ALU <=  "000" when DIEX_OP_o = OP_ADD else
            "001" when DIEX_OP_o = OP_MUL else
            "010" when DIEX_OP_o = OP_SOU else
            "011" when DIEX_OP_o = OP_DIV else
+           "100" when DIEX_OP_o = OP_AND else
+           "101" when DIEX_OP_o = OP_OR else
+           "110" when DIEX_OP_o = OP_NOT else
            "000";
 
 LC_BD <= '0' when EXMEM_OP_o = OP_STR else '1';
@@ -298,19 +305,22 @@ ALEA <= '1' when    (LIDI_OP_o /= OP_NOP and LIDI_OP_o /= OP_STR and LIDI_i(15 d
                 and LIDI_i(15 downto 8) /= OP_LDR and  LIDI_A_o = LIDI_i(23 downto 16)) 
                 or
                 (LIDI_OP_o /= OP_NOP and LIDI_OP_o /= OP_STR and (LIDI_i(15 downto 8) = OP_ADD or LIDI_i(15 downto 8) = OP_MUL
-                or LIDI_i(15 downto 8) = OP_SOU or LIDI_i(15 downto 8) = OP_DIV) and  LIDI_A_o = LIDI_i(31 downto 24)) 
+                or LIDI_i(15 downto 8) = OP_SOU or LIDI_i(15 downto 8) = OP_DIV or LIDI_i(15 downto 8) = OP_AND
+                or LIDI_i(15 downto 8) = OP_OR or LIDI_i(15 downto 8) = OP_NOT) and  LIDI_A_o = LIDI_i(31 downto 24)) 
                 or
                 (DIEX_OP_o /= OP_NOP and DIEX_OP_o /= OP_STR and LIDI_i(15 downto 8) /= OP_NOP and LIDI_i(15 downto 8) /= OP_AFC
                 and LIDI_i(15 downto 8) /= OP_LDR and  DIEX_A_o = LIDI_i(23 downto 16)) 
                 or
                 (DIEX_OP_o /= OP_NOP and DIEX_OP_o /= OP_STR and (LIDI_i(15 downto 8) = OP_ADD or LIDI_i(15 downto 8) = OP_MUL
-                or LIDI_i(15 downto 8) = OP_SOU or LIDI_i(15 downto 8) = OP_DIV) and  DIEX_A_o = LIDI_i(31 downto 24)) 
+                or LIDI_i(15 downto 8) = OP_SOU or LIDI_i(15 downto 8) = OP_DIV or LIDI_i(15 downto 8) = OP_AND
+                or LIDI_i(15 downto 8) = OP_OR or LIDI_i(15 downto 8) = OP_NOT) and  DIEX_A_o = LIDI_i(31 downto 24)) 
                 or
                 (EXMEM_OP_o /= OP_NOP and EXMEM_OP_o /= OP_STR and LIDI_i(15 downto 8) /= OP_NOP and LIDI_i(15 downto 8) /= OP_AFC
                 and LIDI_i(15 downto 8) /= OP_LDR and  EXMEM_A_o = LIDI_i(23 downto 16)) 
                 or
                 (EXMEM_OP_o /= OP_NOP and EXMEM_OP_o /= OP_STR and (LIDI_i(15 downto 8) = OP_ADD or LIDI_i(15 downto 8) = OP_MUL
-                or LIDI_i(15 downto 8) = OP_SOU or LIDI_i(15 downto 8) = OP_DIV) and  EXMEM_A_o = LIDI_i(31 downto 24)) else
+                or LIDI_i(15 downto 8) = OP_SOU or LIDI_i(15 downto 8) = OP_DIV or LIDI_i(15 downto 8) = OP_AND
+                or LIDI_i(15 downto 8) = OP_OR or LIDI_i(15 downto 8) = OP_NOT) and  EXMEM_A_o = LIDI_i(31 downto 24)) else
                 '0';
                 
 --BI_ADDR_i <= LIDI_B_o when LIDI_OP_o = OP_JMP;
@@ -319,14 +329,15 @@ process(CLK)
 begin
   if falling_edge(CLK) then
     if ALEA='0' then 
-        
             LIDI_A_o <= LIDI_i(7 downto 0);
             LIDI_OP_o <= LIDI_i(15 downto 8);
             LIDI_B_o <= LIDI_i(23 downto 16);
             LIDI_C_o <= LIDI_i(31 downto 24);
         if LIDI_OP_o = OP_JMP then
             BI_ADDR_i <= LIDI_A_o;
-        else 
+        elsif LIDI_OP_o = OP_JMF and LIDI_A_o = x"00" then
+            BI_ADDR_i <= LIDI_B_o;
+        else
             BI_ADDR_i <= std_logic_vector(unsigned(BI_ADDR_i) + 1);
         end if;
     else 

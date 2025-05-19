@@ -142,3 +142,39 @@ set_property PROGRAM.FILE {/home/clem/Documents/GitHub/Kompilator/alume/alume.ru
 program_hw_devices [get_hw_devices xc7a35t_0]
 refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
 close_hw_manager
+current_sim simulation_3
+close_sim
+launch_simulation
+open_wave_config /home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg
+source test_main.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top pipeline [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top test_pipeline [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+current_sim simulation_7
+close_sim
+launch_simulation
+open_wave_config /home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg
+source test_pipeline.tcl
+close_sim
+launch_simulation
+open_wave_config /home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg
+source test_pipeline.tcl
+close_sim
+launch_simulation
+open_wave_config /home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg
+source test_pipeline.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
