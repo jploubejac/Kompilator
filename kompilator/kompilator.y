@@ -22,7 +22,7 @@ extern char *yytext;
 
 
 %union { int nb; char* str;}
-%token tEXP tREAL tEQ tMAIN tOB tCB tCONST tINT tADD tSUB tSTAR tDIV tOP tCP tSEP tSEM tPRINTF tVOID tIF tELSE tFOR tSUP tINF tAND tOR tNOT tINC tDEC tEQEQ tINFEQ tSUPEQ tERROR
+%token tEQ tMAIN tOB tCB tCONST tINT tADD tSUB tSTAR tDIV tOP tCP tSEP tSEM tPRINTF tVOID tIF tELSE tFOR tSUP tINF tAND tOR tNOT tINC tDEC tEQEQ tINFEQ tSUPEQ tERROR tFLOAT
 %left tOR 
 %left tAND
 %left tADD tSUB
@@ -32,6 +32,8 @@ extern char *yytext;
 %token <nb> tNB
 %token <nb> tWHILE
 %token <nb> tDO
+%token <nb> tREAL
+%token <nb> tEXP
 
 %type <str> Variable
 %type <nb> Expression
@@ -114,6 +116,7 @@ Variable : tID tEQ Expression {
                 
 Type : tCONST {printf("tCONST ");}
       | tINT {printf("tINT ");}
+      | tFLOAT {printf("tFLOAT ");}
       ;
 
 Expression : Expression tADD Expression {
@@ -160,10 +163,20 @@ Expression : Expression tADD Expression {
               int addr_ret=DynamicArrayPushSymbolEntry(pSymbolTable, "temp");
               DynamicArrayPushAsmLine(pAsmTable, OP_LDR, addr_ret, index,0);
               $$=addr_ret;
-              printf("tID[] ");
+              printf("tID[%s] ", $2);
             }
-            | tEXP {printf("tEXP[] ");}
-            | tREAL {printf("tREAL[] " );}
+            | tREAL {
+              int addr=DynamicArrayPushSymbolEntry(pSymbolTable, "temp");
+              DynamicArrayPushAsmLine(pAsmTable, OP_AFC, addr, $1, 0);
+              $$=addr;
+              printf("tREAL[%d] ", $1);
+            } 
+            | tEXP {
+              printf("tEXP[] ");
+              int addr=DynamicArrayPushSymbolEntry(pSymbolTable, "temp");
+              DynamicArrayPushAsmLine(pAsmTable, OP_AFC, addr, $1, 0);
+              $$=addr;
+            }
             | tOP Expression tCP {$$=$2;printf("Expression tOP Expression tCP Expression ");}
             ;
 

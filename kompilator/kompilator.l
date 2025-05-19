@@ -19,6 +19,7 @@ main              		{ return tMAIN; }
 "}"               		{ return tCB; }
 const					        { return tCONST; }
 int 					        { return tINT; }
+float                 { return tFLOAT; }
 "+"               		{ return tADD; }
 "++"               		{ return tINC; }
 "-"               		{ return tSUB; }
