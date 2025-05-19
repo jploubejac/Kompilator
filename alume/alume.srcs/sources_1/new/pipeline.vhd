@@ -319,11 +319,16 @@ process(CLK)
 begin
   if falling_edge(CLK) then
     if ALEA='0' then 
-        BI_ADDR_i <= std_logic_vector(unsigned(BI_ADDR_i) + 1);
-        LIDI_A_o <= LIDI_i(7 downto 0);
-        LIDI_OP_o <= LIDI_i(15 downto 8);
-        LIDI_B_o <= LIDI_i(23 downto 16);
-        LIDI_C_o <= LIDI_i(31 downto 24);
+        
+            LIDI_A_o <= LIDI_i(7 downto 0);
+            LIDI_OP_o <= LIDI_i(15 downto 8);
+            LIDI_B_o <= LIDI_i(23 downto 16);
+            LIDI_C_o <= LIDI_i(31 downto 24);
+        if LIDI_OP_o = OP_JMP then
+            BI_ADDR_i <= LIDI_A_o;
+        else 
+            BI_ADDR_i <= std_logic_vector(unsigned(BI_ADDR_i) + 1);
+        end if;
     else 
         LIDI_A_o <= NOP_LINE(7 downto 0);
         LIDI_OP_o <= NOP_LINE(15 downto 8);

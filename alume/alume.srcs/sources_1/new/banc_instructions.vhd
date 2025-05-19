@@ -96,6 +96,7 @@ architecture Behavioral of banc_instructions is
     19 => x"07060106",
     20 => x"06050205",
     21 => x"00050509",
+    22 => x"00000700",
 
         others => x"00001200"
     );  
