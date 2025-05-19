@@ -41,10 +41,19 @@ extern char *yytext;
 %type <nb> Bool
 
 
-%start Kompilator
+%start Start 
 %%
 
-
+Start : {DynamicArrayPushAsmLine(pAsmTable, OP_JMP, -1,0,0);} Kompilator {
+          int index = 0;//DynamicArrayGetIndexIfReverse(pAsmTable, (IptfVV)isJmpWithoutAdress, NULL);
+          //todo: error handle if index!=0
+          asmLine_t *pJmpLine;
+          if(index>=0){
+            pJmpLine=DynamicArrayGetByIndex(pAsmTable,index);
+            if(pJmpLine!=NULL) pJmpLine->res=((functionSymbolEntry_t*)DynamicArrayGetIf(pFunctionSymbolTable, (IptfVV)functionSymbolEntryIsName, (void*)"main"))->addr;
+          }
+        }
+       ;
 
 Kompilator : //tVOID tMAIN tOP tCP tOB Instruction tCB {printf("tVOID tMAIN tOP tCP tOB Instruction tCB\n ");}
 			      //| tINT tMAIN tOP tCP tOB Instruction tCB {printf("tINT tMAIN tOP tCP tOB Instruction tCB\n ");}
@@ -151,7 +160,7 @@ Expression : Expression tADD Expression {
             } 
             | tID {
               int index = DynamicArrayGetIndexIf(pSymbolTable,  (IptfVV)symbolEntryIsName, (void*)$1);
-              if(index<0)index=DynamicArrayPushSymbolEntry(pSymbolTable, $1);
+              if(index<0)index=DynamicArrayPushSymbolEntry(pSymbolTable, $1); //error handle
               int addr_ret=DynamicArrayPushSymbolEntry(pSymbolTable, "temp");
               DynamicArrayPushAsmLine(pAsmTable, OP_COP, addr_ret, index,0);
               $$=addr_ret;
