@@ -234,7 +234,7 @@ DIEX_C_i <= BR_QB_o;
 EXMEM_A_i <= DIEX_A_o;
 EXMEM_OP_i <= DIEX_OP_o;
 EXMEM_B_i <= ALU_S_o when (DIEX_OP_o = OP_ADD or DIEX_OP_o = OP_MUL or DIEX_OP_o = OP_SOU or DIEX_OP_o = OP_DIV or DIEX_OP_o = OP_INF
-                            or DIEX_OP_o = OP_SUP or DIEX_OP_o = OP_EQU or DIEX_OP_o = OP_NOT) else DIEX_B_o;
+                            or DIEX_OP_o = OP_SUP or DIEX_OP_o = OP_EQU or DIEX_OP_o = OP_NOT or DIEX_OP_o = OP_OR or DIEX_OP_o = OP_AND) else DIEX_B_o;
 
 
 MEMRE_A_i <= EXMEM_A_o;

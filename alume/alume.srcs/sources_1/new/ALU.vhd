@@ -33,9 +33,9 @@ begin
         A * B when "001",
         (x"00" & A) - (x"00" & B) when "010",
         x"00" & ('0' & A(7 downto 1)) when "011",
-        "00000000" & (A and B) when "100",
-        "00000000" & (A or B) when "101",
-        "00000000" & (not(A)) when "110",
+        x"00" & (A and B) when "100",
+        x"00" & (A or B) when "101",
+        x"00" & (not(A)) when "110",
         (x"00" & A) + (x"00" & B) when others
         ; 
        
