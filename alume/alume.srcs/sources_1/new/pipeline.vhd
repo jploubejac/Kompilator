@@ -224,28 +224,6 @@ U_ALU : ALU
     
 LIDI_i <= BI_OUTD_o;
 
-
-
---Addition          0x01    v
---Multiplication    0x02    v
---Soustraction      0x03    v
---Division          0x04    v
---Copie             0x05    v
---Affectation       0x06    v
---Saut              0x07    
---Saut si faux      0x08
---Inférieur         0x09
---Supérieur         0x0A
---Egal              0x0B
---Print             0x0C
---Not               0x0D
---Ou                0x0E
---Et                0x0F
---Chargement        0x10    v
---Sauvegarde        0x11    v
---Nop               0x12
-
---
 -- Multiplexeurs
 
 DIEX_A_i <= LIDI_A_o;

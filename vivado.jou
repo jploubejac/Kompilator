@@ -178,3 +178,18 @@ relaunch_sim
 relaunch_sim
 relaunch_sim
 relaunch_sim
+close_sim
+launch_simulation
+open_wave_config /home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg
+source test_pipeline.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+close_sim
+launch_simulation
+launch_simulation
+open_wave_config /home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg
+source test_pipeline.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim

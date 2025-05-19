@@ -1,38 +1,7 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 03/31/2025 03:40:32 PM
--- Design Name: 
--- Module Name: ALU - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.ALL;
 use IEEE.std_logic_signed.ALL;
-
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity ALU is
     Port ( A : in STD_LOGIC_VECTOR (7 downto 0);
@@ -64,9 +33,9 @@ begin
         A * B when "001",
         (x"00" & A) - (x"00" & B) when "010",
         x"00" & ('0' & A(7 downto 1)) when "011",
-        "000000000000000" & (A(1) and B(1)) when "100",
-        "000000000000000" & (A(1) or B(1)) when "101",
-        "000000000000000" & (not(A(1))) when "110",
+        "00000000" & (A and B) when "100",
+        "00000000" & (A or B) when "101",
+        "00000000" & (not(A)) when "110",
         (x"00" & A) + (x"00" & B) when others
         ; 
        
