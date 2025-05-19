@@ -312,6 +312,8 @@ ALEA <= '1' when    (LIDI_OP_o /= OP_NOP and LIDI_OP_o /= OP_STR and LIDI_i(15 d
                 (EXMEM_OP_o /= OP_NOP and EXMEM_OP_o /= OP_STR and (LIDI_i(15 downto 8) = OP_ADD or LIDI_i(15 downto 8) = OP_MUL
                 or LIDI_i(15 downto 8) = OP_SOU or LIDI_i(15 downto 8) = OP_DIV) and  EXMEM_A_o = LIDI_i(31 downto 24)) else
                 '0';
+                
+--BI_ADDR_i <= LIDI_B_o when LIDI_OP_o = OP_JMP;
 
 process(CLK)
 begin
