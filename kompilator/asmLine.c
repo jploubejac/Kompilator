@@ -59,6 +59,9 @@ void DynamicArrayAsmLinePrint(dynamicArray_t *pArray){
             case OP_JMP:
                 printf("%d:\t%s #%d\n",i, inst, pEntry->res);
                 break;
+            case OP_RSS:
+                printf("%d:\t%s %d\n",i, inst, pEntry->res);
+                break;
             case OP_JMF:
                 printf("%d:\t%s #%d %d\n",i, inst, pEntry->res, pEntry->arg1);
                 break;
@@ -70,6 +73,9 @@ void DynamicArrayAsmLinePrint(dynamicArray_t *pArray){
                 break;
             case OP_PRI:
                 printf("%d:\t%s %d\n",i, inst, pEntry->res);
+                break;
+            case OP_NOT:
+                printf("%d:\t%s %d %d\n",i, inst, pEntry->res, pEntry->arg1);
                 break;
             default:
                 printf("%d:\t%s %d %d %d\n",i, inst, pEntry->res, pEntry->arg1, pEntry->arg2);
@@ -103,6 +109,9 @@ void DynamicArrayAsmLinePrintToFile(dynamicArray_t *pArray, const char *filename
             case OP_JMP:
                 fprintf(file, "%d:\t%s #%d\n",i, inst, pEntry->res);
                 break;
+            case OP_RSS:
+                fprintf(file, "%d:\t%s %d\n",i, inst, pEntry->res);
+                break;
             case OP_JMF:
                 fprintf(file, "%d:\t%s #%d %d\n",i, inst, pEntry->res, pEntry->arg1);
                 break;
@@ -114,6 +123,9 @@ void DynamicArrayAsmLinePrintToFile(dynamicArray_t *pArray, const char *filename
                 break;
             case OP_PRI:
                 fprintf(file,"%d:\t%s %d\n",i, inst, pEntry->res);
+                break;
+            case OP_NOT:
+                fprintf(file,"%d:\t%s %d %d\n",i, inst, pEntry->res, pEntry->arg1);
                 break;
             default:
                 fprintf(file,"%d:\t%s %d %d %d\n",i, inst, pEntry->res, pEntry->arg1, pEntry->arg2);                

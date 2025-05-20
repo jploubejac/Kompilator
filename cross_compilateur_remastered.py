@@ -17,6 +17,7 @@ OPCODES = {
     "LDR": 0x10,
     "STR": 0x11,
     "NOP": 0x12,
+    "RSS": 0x13,
 }
 
 class ligneInstruction:
