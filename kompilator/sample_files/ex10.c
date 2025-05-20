@@ -7,7 +7,7 @@ void function() {
     int valeur_attendue = 0;
 
     while (timer > 1) {
-        led_to_choose = led_to_choose + timer;
+        led_to_choose = (led_to_choose * 3 + timer) * 2 - timer;
         while (led_to_choose > 7) {
             led_to_choose = led_to_choose - 7;
         }

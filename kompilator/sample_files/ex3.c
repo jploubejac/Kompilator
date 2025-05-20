@@ -6,7 +6,11 @@ void main ()
 
   if (a < b) {}
 
-  if (a <= b) {}
+  if (a <= b) {
+    int c = 11;
+  } else {
+    int d = 22;
+  }
 
   if (a >= b) {
     a=1+1;

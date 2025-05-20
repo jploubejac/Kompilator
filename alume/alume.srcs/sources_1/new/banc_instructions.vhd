@@ -1,35 +1,6 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 05/02/2025 10:05:15 AM
--- Design Name: 
--- Module Name: banc_instructions - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity banc_instructions is
     Port ( ADDR : in STD_LOGIC_VECTOR (7 downto 0);
@@ -45,35 +16,28 @@ architecture Behavioral of banc_instructions is
         -- ex: 00020601 => AFC R1 2 
         --afc
         -- 0 => x"00020601",
-
         --cop
         -- 1 => x"00010502",
         --6 => x"00010502",
-        
         -- add
         -- 2 => x"02010103",
         --11 => x"02010103",
-        
         --sous
         -- 3 => x"03010304",
         --16 => x"03010304",
-        
         --mul
         -- 4 => x"03010205",
         --21 => x"03010205",
-
         --div
         -- 5 => x"05010406",
         --26 => x"05010406",
-        
         --str
         -- 6 => x"00051101",
         --31 => x"00051101",
-
         --ldr
         -- 7 => x"00011000",
         --36 => x"00011000",
-    -- ...
+    -- Test ex8.c
 --    0 => x"00030600",
 --    1 => x"00040601",
 --    2 => x"00010502",
@@ -97,6 +61,8 @@ architecture Behavioral of banc_instructions is
 --    20 => x"06050205",
 --    21 => x"00050509",
 --    22 => x"00000700",
+
+    -- Tests not, or, and
     -- 0 => x"00090600",
     --1 => x"00000D00",
 --    1 => x"00050601",

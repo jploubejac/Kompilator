@@ -19,7 +19,7 @@ architecture Behavioral of ALU is
 -- 0000 : addition
 -- 0001 : multiplication
 -- 0010 : soustraction
--- 0011 : division
+-- 0011 : division, non fonctionnelle
 -- 0100 : and
 -- 0101 : or
 -- 0110 : not

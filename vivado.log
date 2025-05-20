@@ -3,8 +3,8 @@
 # SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Tue May 20 20:26:03 2025
-# Process ID         : 263947
+# Start of session at: Tue May 20 22:20:28 2025
+# Process ID         : 165174
 # Current directory  : /home/clem/Documents/GitHub/Kompilator
 # Command line       : vivado
 # Log file           : /home/clem/Documents/GitHub/Kompilator/vivado.log
@@ -13,13 +13,13 @@
 # Platform           : Debian
 # Operating System   : Debian GNU/Linux 12 (bookworm)
 # Processor Detail   : 12th Gen Intel(R) Core(TM) i5-1235U
-# CPU Frequency      : 3400.000 MHz
+# CPU Frequency      : 4077.319 MHz
 # CPU Physical cores : 10
 # CPU Logical cores  : 12
 # Host memory        : 8005 MB
 # Swap memory        : 1023 MB
 # Total Virtual      : 9029 MB
-# Available Virtual  : 3583 MB
+# Available Virtual  : 5018 MB
 #-----------------------------------------------------------
 start_gui
 open_project /home/clem/Documents/GitHub/Kompilator/alume/alume.xpr
@@ -33,15 +33,76 @@ update_compile_order -fileset sources_1
 reset_run synth_1
 INFO: [Project 1-1161] Replacing file /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp with file /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/synth_1/main.dcp
 launch_runs synth_1 -jobs 6
-[Tue May 20 20:27:17 2025] Launched synth_1...
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+[Tue May 20 22:22:16 2025] Launched synth_1...
 Run output will be captured here: /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/synth_1/runme.log
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
 launch_runs impl_1 -jobs 6
-[Tue May 20 20:28:18 2025] Launched impl_1...
+[Tue May 20 22:22:51 2025] Launched impl_1...
 Run output will be captured here: /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/runme.log
 launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Tue May 20 20:29:02 2025] Launched impl_1...
+[Tue May 20 22:23:28 2025] Launched impl_1...
 Run output will be captured here: /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/runme.log
 open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2024.2
+  **** Build date : Oct 29 2024 at 10:16:47
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2024.2.0
+  ****** Build date   : Oct 30 2024-19:19:07
+    **** Build number : 2024.2.1730312347
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+close_hw_manager
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2024.2.0
+  ****** Build date   : Oct 30 2024-19:19:07
+    **** Build number : 2024.2.1730312347
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+disconnect_hw_server localhost:3121
 connect_hw_server -allow_non_jtag
 INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
 INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
@@ -62,6 +123,55 @@ INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/
 set_property PROGRAM.FILE {/home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
 current_hw_device [get_hw_devices xc7a35t_0]
 refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp with file /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/synth_1/main.dcp
+launch_runs synth_1 -jobs 6
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+[Tue May 20 22:26:02 2025] Launched synth_1...
+Run output will be captured here: /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/synth_1/runme.log
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+launch_runs impl_1 -jobs 6
+[Tue May 20 22:26:39 2025] Launched impl_1...
+Run output will be captured here: /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Tue May 20 22:27:20 2025] Launched impl_1...
+Run output will be captured here: /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
@@ -71,86 +181,498 @@ INFO: [Labtools 27-3164] End of startup status: HIGH
 refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 close_hw_manager
-reset_run synth_1
-INFO: [Project 1-1161] Replacing file /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp with file /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/synth_1/main.dcp
-launch_runs synth_1 -jobs 6
-[Tue May 20 20:42:01 2025] Launched synth_1...
-Run output will be captured here: /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/synth_1/runme.log
-launch_runs impl_1 -jobs 6
-[Tue May 20 20:42:47 2025] Launched impl_1...
-Run output will be captured here: /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/runme.log
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Tue May 20 20:43:34 2025] Launched impl_1...
-Run output will be captured here: /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/runme.log
-open_hw_manager
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
-INFO: [Labtools 27-3417] Launching cs_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-
-******** Xilinx cs_server v2024.2.0
-  ****** Build date   : Oct 30 2024-19:19:07
-    **** Build number : 2024.2.1730312347
-      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
-      ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
-
-
-
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183AB4E8FA
-set_property PROGRAM.FILE {/home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
-current_hw_device [get_hw_devices xc7a35t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {/home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-close_hw_manager
-reset_run synth_1
-INFO: [Project 1-1161] Replacing file /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp with file /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/synth_1/main.dcp
-launch_runs synth_1 -jobs 6
-[Tue May 20 20:47:00 2025] Launched synth_1...
-Run output will be captured here: /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/synth_1/runme.log
-launch_runs impl_1 -jobs 6
-[Tue May 20 20:47:47 2025] Launched impl_1...
-Run output will be captured here: /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/runme.log
-launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Tue May 20 20:48:31 2025] Launched impl_1...
-Run output will be captured here: /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/runme.log
-open_hw_manager
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
-INFO: [Labtools 27-3417] Launching cs_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-
-******** Xilinx cs_server v2024.2.0
-  ****** Build date   : Oct 30 2024-19:19:07
-    **** Build number : 2024.2.1730312347
-      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
-      ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
-
-
-
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183AB4E8FA
-set_property PROGRAM.FILE {/home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
-current_hw_device [get_hw_devices xc7a35t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {/home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-exit
-INFO: [Common 17-206] Exiting Vivado at Tue May 20 20:50:38 2025...
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+INFO: [Common 17-14] Message 'filemgmt 56-199' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+INFO: [Common 17-14] Message 'filemgmt 56-199' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'test_main'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/home/clem/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/etage_pipeline.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:]
+INFO: [SIM-utils-54] Inspecting design source files for 'test_main' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj test_main_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_donnees.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'banc_donnees'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'banc_instructions'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'clock_div'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pipeline'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'seven_seg_controller'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'main'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sim_1/new/test_main.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_main'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_main_behav xil_defaultlib.test_main -log elaborate.log
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot test_main_behav xil_defaultlib.test_main -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package xil_defaultlib.types_banc
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling architecture behavioral of entity xil_defaultlib.banc_instructions [banc_instructions_default]
+Compiling architecture behavioral of entity xil_defaultlib.banc_donnees [banc_donnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.doubleport [doubleport_default]
+Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.pipeline [pipeline_default]
+Compiling architecture behavioral of entity xil_defaultlib.seven_seg_controller [seven_seg_controller_default]
+Compiling architecture behavioral of entity xil_defaultlib.clock_div [clock_div_default]
+Compiling architecture behavioral of entity xil_defaultlib.main [main_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_main
+Built simulation snapshot test_main_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/clem/Documents/GitHub/Kompilator/alume/alume.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_main_behav -key {Behavioral:sim_1:Functional:test_main} -tclbatch {test_main.tcl} -view {/home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config /home/clem/Documents/GitHub/Kompilator/alume/test_pipeline_behav.wcfg
+source test_main.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 50000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_main_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 50000ns
+launch_simulation: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 8332.832 ; gain = 27.250 ; free physical = 409 ; free virtual = 3017

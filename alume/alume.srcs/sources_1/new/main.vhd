@@ -10,8 +10,8 @@ entity main is
         seg: out std_logic_vector(6 downto 0);
         an : out std_logic_vector(3 downto 0);
         leds : out std_logic_vector(7 downto 0);
-        pc_leds : out std_logic_vector(7 downto 0);
-        --clk_led : out std_logic;
+        debug_leds : out std_logic_vector(7 downto 0);
+        --clk_debug : out std_logic;
         sw : in std_logic_vector(15 downto 0)
     );
 end main;
@@ -54,7 +54,7 @@ begin
 --clk_led <= slow_clk;
 button <= result_registres(3);
 leds <= std_logic_vector(to_unsigned(1, 8) sll to_integer(unsigned(result_registres(0)(2 downto 0))));
-pc_leds <= result_registres(3);
+debug_leds <= result_registres(3);
 left_in_data <=  x"FF" when unsigned(result_registres(2)) < 1 else
                 x"CA" when unsigned(result_registres(2)) >= 1 and unsigned(result_registres(1)) >= 10 else
                 result_registres(5); --when unsigned(result_registres(2)) < 15 and unsigned(result_registres(1)) < 10;
