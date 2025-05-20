@@ -9,7 +9,8 @@ entity main is
         an : out std_logic_vector(3 downto 0);
         leds : out std_logic_vector(7 downto 0);
         pc_leds : out std_logic_vector(6 downto 0);
-        clk_led : out std_logic
+        clk_led : out std_logic;
+        sw : in std_logic_vector(15 downto 0)
     );
 end main;
 
@@ -26,7 +27,8 @@ begin
             clk => slow_clk,
             rst => rst,
             result_alu => result_alu,
-            result_R9 => result_R9
+            result_R9 => result_R9,
+            leds <= sw(15 downto 0);
         );
     seven_seg: entity work.seven_seg_controller
         port map(

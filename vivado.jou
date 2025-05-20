@@ -27,3 +27,15 @@ update_compile_order -fileset sources_1
 reset_run synth_1
 launch_runs synth_1 -jobs 6
 wait_on_run synth_1
+close_project
+open_project /home/clem/Documents/GitHub/Kompilator/alume_ta_bougie/alume_ta_bougie.xpr
+update_compile_order -fileset sources_1
+close_project
+open_project /home/clem/Documents/GitHub/Kompilator/alume/alume.xpr
+update_compile_order -fileset sources_1
+close_project
+open_project /home/clem/Documents/GitHub/Kompilator/alume_ta_bougie/alume_ta_bougie.xpr
+update_compile_order -fileset sources_1
+close_project
+open_project /home/clem/Documents/GitHub/Kompilator/alume_ta_bougie/alume_ta_bougie.xpr
+update_compile_order -fileset sources_1
