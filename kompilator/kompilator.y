@@ -155,7 +155,7 @@ Expression : Expression tADD Expression {
             | tID {
               int index = DynamicArrayGetIndexIf(pSymbolTable,  (IptfVV)symbolEntryIsName, (void*)$1);
               if(index<0){
-                fprintf(stderr, "Erreur: variables '%s', utilisée main non déclarée (ligne %d).\n", $1, yylineno);
+                fprintf(stderr, "Erreur: variables '%s', utilisée main, n’a pas été déclarée (ligne %d).\n", $1, yylineno);
                 return -1;
               }
               int addr_ret=DynamicArrayPushSymbolEntry(pSymbolTable, "temp");
@@ -165,7 +165,7 @@ Expression : Expression tADD Expression {
             | tSTAR tID {
               int index = DynamicArrayGetIndexIf(pSymbolTable,  (IptfVV)symbolEntryIsName, (void*)$2);
               if(index<0){
-                fprintf(stderr, "Erreur: variables '%s', utilisée main non déclarée (ligne %d).\n", $2, yylineno);
+                fprintf(stderr, "Erreur: variables '%s', utilisée main, n’a pas été déclarée (ligne %d).\n", $2, yylineno);
                 return -1;
               }
               int addr_ret=DynamicArrayPushSymbolEntry(pSymbolTable, "temp");
@@ -392,14 +392,13 @@ Function : tVOID tID{
 
 Invocation : tID tOP tCP 
             {
-              printf("tID tOP tCP ");
               functionSymbolEntry_t* function = DynamicArrayGetIf(pFunctionSymbolTable, (IptfVV)symbolEntryIsName, (void*)$1);
               int index_registre = DynamicArrayPushSymbolEntry(pSymbolTable,"temp");
               int addr = DynamicArrayGetSize(pAsmTable) + 3;
               DynamicArrayPushAsmLine(pAsmTable, OP_AFC, index_registre, addr, 0);
               int index_fonction = DynamicArrayGetIndexIf(pFunctionSymbolTable, (IptfVV)functionSymbolEntryIsName, (void*)$1);
               if(index_fonction==-1){
-                  fprintf(stderr, "Erreur: fonction '%s', introuvable ou déclarée plus bas (ligne %d).\n", $1, yylineno);
+                  fprintf(stderr, "Erreur : fonction '%s' introuvable ou déclarée après la fonction appelante. (ligne %d).\n", $1, yylineno);
                   return -1;
               }
               DynamicArrayPushAsmLine(pAsmTable, OP_STR, index_fonction, index_registre,0);

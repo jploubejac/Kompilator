@@ -1,7 +1,7 @@
 #ifndef ASM_LINE_H
 #define ASM_LINE_H
-#include "container.h"
 #include "dynamicArray.h"
+#include <stdlib.h>
 
 enum operation_e{
     OP_ADD  =0x01,
@@ -43,8 +43,6 @@ typedef struct{
 asmLine_t *AsmLineNew(enum operation_e op, int res, int arg1, int arg2);
 
 char* int_to_instr(int inst);
-
-void write_asm_to_file(container *pCont, const char *filename);
 
 /**
  * @brief Deletes an asmLine structure and frees associated memory.

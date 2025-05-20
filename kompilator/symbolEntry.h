@@ -2,7 +2,6 @@
 #define SYMBOL_ENTRY_H
 
 #include <stdlib.h>
-#include "container.h"
 #include "dynamicArray.h"
 
 

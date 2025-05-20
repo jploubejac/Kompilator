@@ -11,7 +11,6 @@ symbolEntry_t *SymbolEntryNew(char* name) {
         char variable[17];
         strcpy(variable, name);
         strcat(variable, index);
-        printf("%s\n", variable);
         strcpy(entry->name, variable);
     } else {
         strcpy(entry->name, name);
