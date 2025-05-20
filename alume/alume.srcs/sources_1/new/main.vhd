@@ -22,7 +22,7 @@ architecture Behavioral of main is
     signal result_alu : std_logic_vector(7 downto 0) := (others => '0');
     signal result_registres : Banc := (others => (others => '0'));
     signal be : std_logic_vector(7 downto 0) := (others => '0');
-
+    signal button : std_logic_vector(7 downto 0) := (others => '0');
 begin
     
     pipeline: entity work.pipeline
@@ -36,8 +36,8 @@ begin
     seven_seg: entity work.seven_seg_controller
         port map(
             clk => clk,
-            left_in => result_registres(2),
-            right_in => result_registres(1),
+            left_in => result_registres(8),
+            right_in => button,
             seg => seg,
             an => an
         );
@@ -49,6 +49,7 @@ begin
         );
 
 --clk_led <= slow_clk;
+button <= result_registres(3);
 leds <= std_logic_vector(to_unsigned(1, 8) sll to_integer(unsigned(result_registres(0)(2 downto 0))));
 pc_leds <= result_registres(3);
 end Behavioral;

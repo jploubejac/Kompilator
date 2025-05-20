@@ -355,7 +355,7 @@ begin
             LIDI_C_o <= LIDI_i(31 downto 24);
         if LIDI_i(15 downto 8) = OP_JMP then
             BI_ADDR_i <= LIDI_i(7 downto 0);
-        elsif DIEX_OP_o = OP_JMF and DIEX_B_o = x"00" then
+        elsif DIEX_OP_o = OP_JMF and DIEX_B_o(0) = '0' then
             BI_ADDR_i <= DIEX_A_o;
         else
             BI_ADDR_i <= std_logic_vector(unsigned(BI_ADDR_i) + 1);
@@ -365,7 +365,7 @@ begin
         LIDI_OP_o <= NOP_LINE(15 downto 8);
         LIDI_B_o <= NOP_LINE(23 downto 16);
         LIDI_C_o <= NOP_LINE(31 downto 24);
-        if DIEX_OP_o = OP_JMF and DIEX_B_o = x"00" then
+        if DIEX_OP_o = OP_JMF and DIEX_B_o(0) = '0' then
             BI_ADDR_i <= DIEX_A_o;
         end if;
     end if;
