@@ -47,7 +47,10 @@ extern char *yytext;
 
 Start : {DynamicArrayPushAsmLine(pAsmTable, OP_JMP, -1,0,0);} Kompilator {
           int index = DynamicArrayGetIndexIfReverse(pAsmTable, (IptfVV)isJmpWithoutAdress, NULL);
-          if(index !=0 )fprintf(stderr, "Erreur du compilateur, on ne trouve pas le jump initial, veuillez contacter les développeurs");
+          if(index !=0 ){
+            fprintf(stderr, "Erreur du compilateur, on ne trouve pas le jump initial, veuillez contacter les développeurs");
+            return -1;
+          }
           asmLine_t *pJmpLine;
           if(index>=0){
             pJmpLine=DynamicArrayGetByIndex(pAsmTable,index);
@@ -152,35 +155,34 @@ Expression : Expression tADD Expression {
             | tID {
               int index = DynamicArrayGetIndexIf(pSymbolTable,  (IptfVV)symbolEntryIsName, (void*)$1);
               if(index<0){
-                
-                index=DynamicArrayPushSymbolEntry(pSymbolTable, $1); //error handle
+                fprintf(stderr, "Erreur: variables '%s', utilisée main non déclarée (ligne %d).\n", $1, yylineno);
+                return -1;
               }
               int addr_ret=DynamicArrayPushSymbolEntry(pSymbolTable, "temp");
               DynamicArrayPushAsmLine(pAsmTable, OP_COP, addr_ret, index,0);
               $$=addr_ret;
-              printf("tID[] ");
             }
             | tSTAR tID {
               int index = DynamicArrayGetIndexIf(pSymbolTable,  (IptfVV)symbolEntryIsName, (void*)$2);
-              if(index<0)index=DynamicArrayPushSymbolEntry(pSymbolTable, $2);
+              if(index<0){
+                fprintf(stderr, "Erreur: variables '%s', utilisée main non déclarée (ligne %d).\n", $2, yylineno);
+                return -1;
+              }
               int addr_ret=DynamicArrayPushSymbolEntry(pSymbolTable, "temp");
               DynamicArrayPushAsmLine(pAsmTable, OP_LDR, addr_ret, index,0);
               $$=addr_ret;
-              printf("tID[%s] ", $2);
             }
             | tREAL {
               int addr=DynamicArrayPushSymbolEntry(pSymbolTable, "temp");
               DynamicArrayPushAsmLine(pAsmTable, OP_AFC, addr, $1, 0);
               $$=addr;
-              printf("tREAL[%d] ", $1);
             } 
             | tEXP {
-              printf("tEXP[] ");
               int addr=DynamicArrayPushSymbolEntry(pSymbolTable, "temp");
               DynamicArrayPushAsmLine(pAsmTable, OP_AFC, addr, $1, 0);
               $$=addr;
             }
-            | tOP Expression tCP {$$=$2;printf("Expression tOP Expression tCP Expression ");}
+            | tOP Expression tCP {$$=$2;}
             | Invocation {$$=$1;}
             ;
 
@@ -188,7 +190,6 @@ Printf : tPRINTF tOP Expression tCP
           {
             DynamicArrayPushAsmLine(pAsmTable, OP_PRI, $3, 0,0);
             DynamicArrayPop(pSymbolTable);
-            printf("tPRINTF tOP tID tCP ");
           }
 
 IfBody : tIF tOP Condition tCP 
@@ -201,17 +202,23 @@ IfBody : tIF tOP Condition tCP
             DynamicArrayPushAsmLine(pAsmTable, OP_JMP, -1,0,0);
             asmLine_t *pJmfLine = DynamicArrayGetIfReverse(pAsmTable, (IptfVV)isJmfWithoutAdress, NULL);
             if(pJmfLine!=NULL)pJmfLine->res=DynamicArrayGetSize(pAsmTable);
-            //Do: error handle
+            else {
+              fprintf(stderr, "Erreur du compilateur, on ne trouve pas un jump, veuillez contacter les développeurs");
+              return -1;
+            }
             symbolEntry_t *pSymbol = (symbolEntry_t*)DynamicArrayGetByIndex(pSymbolTable,DynamicArrayGetSize(pSymbolTable) - 1);
             while(strcmp(pSymbol->name,"if_system")){
               DynamicArrayPop(pSymbolTable);
               pSymbol = (symbolEntry_t*)DynamicArrayGetByIndex(pSymbolTable,DynamicArrayGetSize(pSymbolTable) - 1);
             }
             DynamicArrayPop(pSymbolTable);
-            printf("tIF tOP Expression tCP tOB Instruction tCB ");
           }ElseBody{
             asmLine_t *pJmpLine = DynamicArrayGetIfReverse(pAsmTable, (IptfVV)isJmpWithoutAdress, NULL);
             if(pJmpLine!=NULL)pJmpLine->res=DynamicArrayGetSize(pAsmTable);
+            else {
+              fprintf(stderr, "Erreur du compilateur, on ne trouve pas un jump, veuillez contacter les développeurs");
+              return -1;
+            }
           }
         ;
 ElseBody: tELSE {DynamicArrayPushSymbolEntry(pSymbolTable, "else_system");} tOB Instruction tCB{
@@ -225,29 +232,24 @@ ElseBody: tELSE {DynamicArrayPushSymbolEntry(pSymbolTable, "else_system");} tOB 
           |
           ;
 Condition : Bool {
-                printf("Bool ");
                 $$=$1;
               }
 
           | tOP Bool tCP {
-                printf("tOP Bool tCP ");
                 $$=$2;
               }
               
           | Condition tAND Condition {
-              printf("Condition tAND Condition ");
               DynamicArrayPushAsmLine(pAsmTable, OP_AND, $1, $1, $3);
               DynamicArrayPop(pSymbolTable);
               $$=$1;
             }
           | Condition tOR Condition {
-              printf("Condition tOR Condition ");
               DynamicArrayPushAsmLine(pAsmTable, OP_OR, $1, $1, $3);
               DynamicArrayPop(pSymbolTable);
               $$=$1;
             }
           | tNOT tOP Condition tCP {
-              printf("Condition tNOT tOP Condition tCP ");
               DynamicArrayPushAsmLine(pAsmTable, OP_NOT, $3, $3, 0);
               $$=$3;
             }
@@ -258,26 +260,22 @@ Bool : Expression tINF Expression {
         DynamicArrayPushAsmLine(pAsmTable, OP_INF, $1, $1, $3);
         DynamicArrayPop(pSymbolTable);
         $$=$1;
-        printf("Expression tINF Expression ");
       }
       | Expression tSUP Expression {
         DynamicArrayPushAsmLine(pAsmTable, OP_SUP, $1, $1, $3);
         DynamicArrayPop(pSymbolTable);
         $$=$1;
-        printf("Expression tSUP Expression ");
       }
       | Expression tEQEQ Expression {
         DynamicArrayPushAsmLine(pAsmTable, OP_EQU, $1, $1, $3);
         DynamicArrayPop(pSymbolTable);
         $$=$1;
-        printf("Expression tEQ tEQ Expression ");
       }
       | Expression tNOT tEQ Expression {
         DynamicArrayPushAsmLine(pAsmTable,OP_EQU, $1,$1,$4);
         DynamicArrayPushAsmLine(pAsmTable,OP_NOT, $1, $1, 0);
         DynamicArrayPop(pSymbolTable);
         $$=$1;
-        printf("Expression tNOT tEQ Expression ");
       }
       | Expression tINFEQ Expression {
         int addr_temp= DynamicArrayPushSymbolEntry(pSymbolTable, "temp");
@@ -287,7 +285,6 @@ Bool : Expression tINF Expression {
         DynamicArrayPop(pSymbolTable);
         DynamicArrayPop(pSymbolTable);
         $$=$1;
-        printf("Expression tINFEQ Expression ");
       }
       | Expression tSUPEQ Expression {
         int addr_temp= DynamicArrayPushSymbolEntry(pSymbolTable, "temp");
@@ -297,21 +294,27 @@ Bool : Expression tINF Expression {
         DynamicArrayPop(pSymbolTable);
         DynamicArrayPop(pSymbolTable);
         $$=$1;
-        printf("Expression tSUPEQ Expression ");
       }
       ;
 
 WhileBody : tWHILE {$1= DynamicArrayGetSize(pAsmTable); DynamicArrayPushSymbolEntry(pSymbolTable, "while_system");} tOP Condition tCP {
               DynamicArrayPushAsmLine(pAsmTable, OP_JMF, -1 ,$4, 0);
             }tOB Instruction tCB {
-              printf("tWHILE tOP Condition tCP tOB Instruction tCB ");
               DynamicArrayPushAsmLine(pAsmTable, OP_JMP, -1, 0,0);
               int index_jmf= DynamicArrayGetIndexIfReverse(pAsmTable, (IptfVV)isJmfWithoutAdress, NULL);
               if(index_jmf>=0){
                 asmLine_t *pJmfLine=DynamicArrayGetByIndex(pAsmTable,index_jmf);
                 if(pJmfLine!=NULL) pJmfLine->res=DynamicArrayGetSize(pAsmTable);
+                else {
+                  fprintf(stderr, "Erreur du compilateur, on ne trouve pas un jumpf, veuillez contacter les développeurs");
+                  return -1;
+                }
                 asmLine_t *pJmpLine=DynamicArrayGetIfReverse(pAsmTable, (IptfVV)isJmpWithoutAdress, NULL);
                 if(pJmpLine!=NULL) pJmpLine->res=$1;
+                else {
+                  fprintf(stderr, "Erreur du compilateur, on ne trouve pas un jump, veuillez contacter les développeurs");
+                  return -1;
+                }
               }
               symbolEntry_t *pSymbol = (symbolEntry_t*)DynamicArrayGetByIndex(pSymbolTable,DynamicArrayGetSize(pSymbolTable) - 1);
               while(strcmp(pSymbol->name,"while_system")){
@@ -321,12 +324,14 @@ WhileBody : tWHILE {$1= DynamicArrayGetSize(pAsmTable); DynamicArrayPushSymbolEn
               DynamicArrayPop(pSymbolTable);
             }
            |tDO {$1 = DynamicArrayGetSize(pAsmTable); DynamicArrayPushSymbolEntry(pSymbolTable, "do_while_system");} tOB Instruction tCB tWHILE tOP Condition tCP tSEM {
-              printf("tDO tOB Instruction tCB tWHILE tOP Condition tCP tSEM ");
               int index_jmf = DynamicArrayPushAsmLine(pAsmTable, OP_JMF, -1, $8,0); 
               DynamicArrayPushAsmLine(pAsmTable, OP_JMP, $1, 0,0);
               if(index_jmf>=0){
                 asmLine_t *pJmfLine=DynamicArrayGetByIndex(pAsmTable,index_jmf);
                 if(pJmfLine!=NULL) pJmfLine->res=DynamicArrayGetSize(pAsmTable);
+              }else {
+                  fprintf(stderr, "Erreur du compilateur, on ne trouve pas un jumpf, veuillez contacter les développeurs");
+                  return -1;
               }
               symbolEntry_t *pSymbol = (symbolEntry_t*)DynamicArrayGetByIndex(pSymbolTable,DynamicArrayGetSize(pSymbolTable) - 1);
               while(strcmp(pSymbol->name,"do_while_system")){
@@ -340,7 +345,6 @@ WhileBody : tWHILE {$1= DynamicArrayGetSize(pAsmTable); DynamicArrayPushSymbolEn
 ForBody : tFOR tOP ForCondition  tCP {
               //DynamicArrayPushAsmLine(pAsmTable, OP_JMF,-1, $3,0);
             } tOB Instruction tCB {
-              printf("tFOR tOP ForCondition tCP tOB Instruction tCB ");
               DynamicArrayPushAsmLine(pAsmTable, OP_JMP, -1, 0,0);
               int index_jmf= DynamicArrayGetIndexIfReverse(pAsmTable, (IptfVV)isJmfWithoutAdress, NULL);
               if(index_jmf>=0){
@@ -353,9 +357,9 @@ ForBody : tFOR tOP ForCondition  tCP {
           }; 
  
 
-ForCondition: Declaration tSEM Condition tSEM Affectation {printf("Declaration tSEM Condition tSEM Affectation ");}
-             |Affectation tSEM Condition tSEM Affectation {printf("Affectation tSEM Condition tSEM Affectation ");}
-             |tSEM Condition tSEM Affectation {printf("tSEM Condition tSEM Affectation ");}
+ForCondition: Declaration tSEM Condition tSEM Affectation 
+             |Affectation tSEM Condition tSEM Affectation 
+             |tSEM Condition tSEM Affectation 
              ;
 
 Function : tVOID tID{
@@ -363,13 +367,11 @@ Function : tVOID tID{
                 DynamicArrayPushSymbolEntry(pSymbolTable, $2);
               } tOP tCP tOB Instruction tCB 
               {
-                printf("tVOID tID tOP tCP tOB Instruction tCB ");
                 
                 int index = DynamicArrayPushSymbolEntry(pSymbolTable, "temp");
                 DynamicArrayPushAsmLine(pAsmTable, OP_LDR, index ,DynamicArrayGetIndexIf(pFunctionSymbolTable, (IptfVV)functionSymbolEntryIsName, (void*)$2),0);
                 DynamicArrayPushAsmLine(pAsmTable, OP_JMP, index, 0,0);
                 DynamicArrayPop(pSymbolTable);
-
                 symbolEntry_t *pSymbol = (symbolEntry_t*)DynamicArrayGetByIndex(pSymbolTable,DynamicArrayGetSize(pSymbolTable) - 1);
                 while(strcmp(pSymbol->name,$2)){
                   DynamicArrayPop(pSymbolTable);
@@ -377,23 +379,15 @@ Function : tVOID tID{
                 }
                 DynamicArrayPop(pSymbolTable);
               }
-          | tINT tID tOP tCP tOB Instruction tCB {
-            printf("tINT tID tOP tCP tOB Instruction tCB ");
-            
-          }
+          | tINT tID tOP tCP tOB Instruction tCB
           | tVOID tMAIN{
                 DynamicArrayPushFunctionSymbolEntry(pFunctionSymbolTable,"main", DynamicArrayGetSize(pAsmTable));
                 DynamicArrayPushSymbolEntry(pSymbolTable, "main");
               } tOP tCP tOB Instruction tCB 
-              {
-                printf("tVOID tID tOP tCP tOB Instruction tCB ");
-              }
           | tINT tMAIN {
             DynamicArrayPushFunctionSymbolEntry(pFunctionSymbolTable,"main", DynamicArrayGetSize(pAsmTable));
             DynamicArrayPushSymbolEntry(pSymbolTable, "main");
-            } tOP tCP tOB Instruction tCB {
-            printf("tINT tMAIN tOP tCP tOB Instruction tCB ");
-          }
+            } tOP tCP tOB Instruction tCB
           ;
 
 Invocation : tID tOP tCP 
@@ -403,8 +397,12 @@ Invocation : tID tOP tCP
               int index_registre = DynamicArrayPushSymbolEntry(pSymbolTable,"temp");
               int addr = DynamicArrayGetSize(pAsmTable) + 3;
               DynamicArrayPushAsmLine(pAsmTable, OP_AFC, index_registre, addr, 0);
-              DynamicArrayPushAsmLine(pAsmTable, OP_STR, DynamicArrayGetIndexIf(pFunctionSymbolTable, (IptfVV)functionSymbolEntryIsName, (void*)$1) , index_registre,0);
-              //Todo: gerer les erreurs si fonction n'existe pas
+              int index_fonction = DynamicArrayGetIndexIf(pFunctionSymbolTable, (IptfVV)functionSymbolEntryIsName, (void*)$1);
+              if(index_fonction==-1){
+                  fprintf(stderr, "Erreur: fonction '%s', introuvable ou déclarée plus bas (ligne %d).\n", $1, yylineno);
+                  return -1;
+              }
+              DynamicArrayPushAsmLine(pAsmTable, OP_STR, index_fonction, index_registre,0);
               DynamicArrayPushAsmLine(pAsmTable, OP_JMP, function->addr, 0,0);
               DynamicArrayPop(pSymbolTable);
               $$=0;
