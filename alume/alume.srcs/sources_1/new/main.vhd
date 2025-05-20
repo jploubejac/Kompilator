@@ -31,8 +31,7 @@ begin
             rst => rst,
             result_alu => result_alu,
             registres_o => result_registres,
-            switches => sw,
-            buttonEntry => be
+            switches => sw
         );
     seven_seg: entity work.seven_seg_controller
         port map(
@@ -51,6 +50,5 @@ begin
 
 --clk_led <= slow_clk;
 leds <= std_logic_vector(to_unsigned(1, 8) sll to_integer(unsigned(result_registres(0)(2 downto 0))));
-be <= sw(7 downto 0);
 pc_leds <= result_registres(3);
 end Behavioral;

@@ -12,8 +12,7 @@ entity pipeline is
         registres_o : out Banc;
         switches : in std_logic_vector(15 downto 0);
         score : out std_logic_vector(7 downto 0);
-        timer : out std_logic_vector(7 downto 0);
-        buttonEntry : in std_logic_vector(7 downto 0)
+        timer : out std_logic_vector(7 downto 0)
         );
 end pipeline;
 
@@ -51,8 +50,7 @@ architecture Behavioral of pipeline is
            CLK : in STD_LOGIC;
            QA : out STD_LOGIC_VECTOR (7 downto 0);
            QB : out STD_LOGIC_VECTOR (7 downto 0);
-           registres_o : out Banc;
-           buttonEntry : in std_logic_vector(7 downto 0)
+           registres_o : out Banc
            );
     END COMPONENT;
 
@@ -130,7 +128,6 @@ architecture Behavioral of pipeline is
     signal BR_Wb_i: std_logic := '0';
     signal BR_DATA_i: std_logic_vector(7 downto 0) := (others => '0');     
     signal BR_RST_i: std_logic := '0';
-    signal BR_buttonEntry_i : std_logic_vector(7 downto 0) := (others => '0');
 
     --Outputs
     signal BR_Qa_o : std_logic_vector(7 downto 0) := (others => '0');
@@ -170,7 +167,8 @@ architecture Behavioral of pipeline is
     signal OP_LDR : std_logic_vector(7 downto 0) := x"10";
     signal OP_STR : std_logic_vector(7 downto 0) := x"11";
     signal OP_NOP : std_logic_vector(7 downto 0) := x"12";
-    
+    signal OP_RSS : std_logic_vector(7 downto 0) := x"13";
+
     --===========================ALEA=========================== 
     signal ALEA : std_logic := '0';
     signal NOP_LINE : std_logic_vector(31 downto 0) := x"00001200";
@@ -210,8 +208,7 @@ U_banc_registres : doubleport
            CLK => CLK,
            QA => BR_QA_o,
            QB => BR_QB_o,
-           registres_o => BR_registres_o,
-           buttonEntry => BR_buttonEntry_i
+           registres_o => BR_registres_o
     );
    
     
@@ -245,7 +242,9 @@ EXMEM_B_i <= ALU_S_o when (DIEX_OP_o = OP_ADD or DIEX_OP_o = OP_MUL or DIEX_OP_o
 
 MEMRE_A_i <= EXMEM_A_o;
 MEMRE_OP_i <= EXMEM_OP_o ;
-MEMRE_B_i <= BD_OUTD_o when (EXMEM_OP_o = OP_LDR) else EXMEM_B_o ;
+MEMRE_B_i <= BD_OUTD_o when (EXMEM_OP_o = OP_LDR) else 
+             switches(7 downto 0) when (EXMEM_OP_o = OP_RSS) else
+             EXMEM_B_o ;
 
 LC_DONNEES <= '1' when  MEMRE_OP_o = OP_AFC or
                         MEMRE_OP_o = OP_COP or 
@@ -259,7 +258,8 @@ LC_DONNEES <= '1' when  MEMRE_OP_o = OP_AFC or
                         MEMRE_OP_o = OP_NOT or
                         MEMRE_OP_o = OP_INF or
                         MEMRE_OP_o = OP_SUP or
-                        MEMRE_OP_o = OP_EQU else
+                        MEMRE_OP_o = OP_EQU or
+                        MEMRE_OP_o = OP_RSS else
                         '0';
     
 BR_DATA_i <= MEMRE_B_o;

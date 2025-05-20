@@ -7,7 +7,7 @@
   **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
   **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
   **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-  **** Start of session at: Tue May 20 16:24:30 2025
+  **** Start of session at: Tue May 20 17:49:36 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -24,25 +24,25 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 64887
+INFO: [Synth 8-7075] Helper process launched with PID 111833
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1836.125 ; gain = 365.789 ; free physical = 723 ; free virtual = 3552
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1836.129 ; gain = 368.789 ; free physical = 165 ; free virtual = 1890
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'main' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd:19]
-INFO: [Synth 8-638] synthesizing module 'pipeline' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:20]
-INFO: [Synth 8-3491] module 'banc_instructions' declared at '/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:34' bound to instance 'U_banc_instructions' of component 'banc_instructions' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:183]
+INFO: [Synth 8-638] synthesizing module 'pipeline' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:19]
+INFO: [Synth 8-3491] module 'banc_instructions' declared at '/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:34' bound to instance 'U_banc_instructions' of component 'banc_instructions' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:181]
 INFO: [Synth 8-638] synthesizing module 'banc_instructions' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:40]
 INFO: [Synth 8-256] done synthesizing module 'banc_instructions' (0#1) [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd:40]
-INFO: [Synth 8-3491] module 'banc_donnees' declared at '/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_donnees.vhd:35' bound to instance 'U_banc_donnees' of component 'banc_donnees' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:191]
+INFO: [Synth 8-3491] module 'banc_donnees' declared at '/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_donnees.vhd:35' bound to instance 'U_banc_donnees' of component 'banc_donnees' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:189]
 INFO: [Synth 8-638] synthesizing module 'banc_donnees' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_donnees.vhd:44]
 INFO: [Synth 8-256] done synthesizing module 'banc_donnees' (0#1) [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_donnees.vhd:44]
-INFO: [Synth 8-3491] module 'doubleport' declared at '/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:6' bound to instance 'U_banc_registres' of component 'doubleport' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:202]
-INFO: [Synth 8-638] synthesizing module 'doubleport' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:22]
-INFO: [Synth 8-256] done synthesizing module 'doubleport' (0#1) [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:22]
-INFO: [Synth 8-3491] module 'ALU' declared at '/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:6' bound to instance 'U_ALU' of component 'ALU' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:219]
+INFO: [Synth 8-3491] module 'doubleport' declared at '/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:6' bound to instance 'U_banc_registres' of component 'doubleport' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:200]
+INFO: [Synth 8-638] synthesizing module 'doubleport' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'doubleport' (0#1) [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:21]
+INFO: [Synth 8-3491] module 'ALU' declared at '/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:6' bound to instance 'U_ALU' of component 'ALU' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:216]
 INFO: [Synth 8-638] synthesizing module 'ALU' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:17]
 INFO: [Synth 8-256] done synthesizing module 'ALU' (0#1) [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:17]
-INFO: [Synth 8-256] done synthesizing module 'pipeline' (0#1) [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'pipeline' (0#1) [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd:19]
 INFO: [Synth 8-638] synthesizing module 'seven_seg_controller' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:15]
 INFO: [Synth 8-226] default block is never used [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:45]
 INFO: [Synth 8-226] default block is never used [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd:53]
@@ -80,35 +80,19 @@ WARNING: [Synth 8-7129] Port switches[11] in module pipeline is either unconnect
 WARNING: [Synth 8-7129] Port switches[10] in module pipeline is either unconnected or has no load
 WARNING: [Synth 8-7129] Port switches[9] in module pipeline is either unconnected or has no load
 WARNING: [Synth 8-7129] Port switches[8] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port switches[7] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port switches[6] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port switches[5] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port switches[4] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port switches[3] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port switches[2] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port switches[1] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port switches[0] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port buttonEntry[7] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port buttonEntry[6] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port buttonEntry[5] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port buttonEntry[4] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port buttonEntry[3] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port buttonEntry[2] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port buttonEntry[1] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port buttonEntry[0] in module pipeline is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1955.062 ; gain = 484.727 ; free physical = 601 ; free virtual = 3432
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1955.066 ; gain = 487.727 ; free physical = 161 ; free virtual = 1774
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1972.875 ; gain = 502.539 ; free physical = 590 ; free virtual = 3421
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1972.879 ; gain = 505.539 ; free physical = 156 ; free virtual = 1770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1972.875 ; gain = 502.539 ; free physical = 590 ; free virtual = 3421
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1972.879 ; gain = 505.539 ; free physical = 156 ; free virtual = 1770
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1972.875 ; gain = 0.000 ; free physical = 591 ; free virtual = 3422
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1972.879 ; gain = 0.000 ; free physical = 152 ; free virtual = 1769
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -121,32 +105,32 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2116.625 ; gain = 0.000 ; free physical = 560 ; free virtual = 3391
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2120.629 ; gain = 0.000 ; free physical = 144 ; free virtual = 1758
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2116.625 ; gain = 0.000 ; free physical = 560 ; free virtual = 3391
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2120.629 ; gain = 0.000 ; free physical = 143 ; free virtual = 1758
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2116.625 ; gain = 646.289 ; free physical = 562 ; free virtual = 3393
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2120.629 ; gain = 653.289 ; free physical = 155 ; free virtual = 1761
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2124.629 ; gain = 654.293 ; free physical = 562 ; free virtual = 3393
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2128.633 ; gain = 661.293 ; free physical = 155 ; free virtual = 1761
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2124.629 ; gain = 654.293 ; free physical = 562 ; free virtual = 3393
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2128.633 ; gain = 661.293 ; free physical = 154 ; free virtual = 1761
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-327] inferring latch for variable 'C_reg' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd:59]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2124.629 ; gain = 654.293 ; free physical = 562 ; free virtual = 3394
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2128.633 ; gain = 661.293 ; free physical = 153 ; free virtual = 1761
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -164,7 +148,8 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	 257 Input   32 Bit        Muxes := 1     
-	   2 Input    8 Bit        Muxes := 10    
+	   2 Input    8 Bit        Muxes := 11    
+	   3 Input    8 Bit        Muxes := 1     
 	   2 Input    4 Bit        Muxes := 1     
 	   4 Input    4 Bit        Muxes := 2     
 	   2 Input    1 Bit        Muxes := 17    
@@ -210,67 +195,27 @@ WARNING: [Synth 8-7129] Port switches[11] in module pipeline is either unconnect
 WARNING: [Synth 8-7129] Port switches[10] in module pipeline is either unconnected or has no load
 WARNING: [Synth 8-7129] Port switches[9] in module pipeline is either unconnected or has no load
 WARNING: [Synth 8-7129] Port switches[8] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port switches[7] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port switches[6] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port switches[5] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port switches[4] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port switches[3] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port switches[2] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port switches[1] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port switches[0] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port buttonEntry[7] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port buttonEntry[6] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port buttonEntry[5] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port buttonEntry[4] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port buttonEntry[3] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port buttonEntry[2] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port buttonEntry[1] in module pipeline is either unconnected or has no load
-WARNING: [Synth 8-7129] Port buttonEntry[0] in module pipeline is either unconnected or has no load
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin buttonEntry[7] with 1st driver pin 'pipeline/U_banc_registres/registres_reg[3][7]/Q' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:30]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin buttonEntry[7] with 2nd driver pin 'GND' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:30]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net buttonEntry[7] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:30]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin buttonEntry[6] with 1st driver pin 'pipeline/U_banc_registres/registres_reg[3][6]/Q' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:30]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin buttonEntry[6] with 2nd driver pin 'GND' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:30]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net buttonEntry[6] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:30]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin buttonEntry[5] with 1st driver pin 'pipeline/U_banc_registres/registres_reg[3][5]/Q' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:30]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin buttonEntry[5] with 2nd driver pin 'GND' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:30]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net buttonEntry[5] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:30]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin buttonEntry[4] with 1st driver pin 'pipeline/U_banc_registres/registres_reg[3][4]/Q' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:30]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin buttonEntry[4] with 2nd driver pin 'GND' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:30]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net buttonEntry[4] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:30]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin buttonEntry[3] with 1st driver pin 'pipeline/U_banc_registres/registres_reg[3][3]/Q' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:30]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin buttonEntry[3] with 2nd driver pin 'GND' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:30]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net buttonEntry[3] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:30]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin buttonEntry[2] with 1st driver pin 'pipeline/U_banc_registres/registres_reg[3][2]/Q' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:30]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin buttonEntry[2] with 2nd driver pin 'GND' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:30]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net buttonEntry[2] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:30]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin buttonEntry[1] with 1st driver pin 'pipeline/U_banc_registres/registres_reg[3][1]/Q' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:30]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin buttonEntry[1] with 2nd driver pin 'GND' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:30]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net buttonEntry[1] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:30]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin buttonEntry[0] with 1st driver pin 'pipeline/U_banc_registres/registres_reg[3][0]/Q' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:30]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin buttonEntry[0] with 2nd driver pin 'GND' [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:30]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net buttonEntry[0] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd:30]
-WARNING: [Synth 8-3332] Sequential element (U_ALU/C_reg) is unused and will be removed from module pipeline.
+WARNING: [Synth 8-3332] Sequential element (C_reg) is unused and will be removed from module ALU.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2124.629 ; gain = 654.293 ; free physical = 552 ; free virtual = 3391
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2128.633 ; gain = 661.293 ; free physical = 140 ; free virtual = 1729
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2124.629 ; gain = 654.293 ; free physical = 498 ; free virtual = 3337
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2128.633 ; gain = 661.293 ; free physical = 155 ; free virtual = 1706
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2124.629 ; gain = 654.293 ; free physical = 498 ; free virtual = 3337
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2128.633 ; gain = 661.293 ; free physical = 153 ; free virtual = 1704
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2148.652 ; gain = 678.316 ; free physical = 474 ; free virtual = 3313
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2147.664 ; gain = 680.324 ; free physical = 152 ; free virtual = 1674
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -288,37 +233,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2287.465 ; gain = 817.129 ; free physical = 351 ; free virtual = 3191
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2288.477 ; gain = 821.137 ; free physical = 151 ; free virtual = 1562
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2287.465 ; gain = 817.129 ; free physical = 351 ; free virtual = 3190
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2288.477 ; gain = 821.137 ; free physical = 151 ; free virtual = 1562
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2287.465 ; gain = 817.129 ; free physical = 350 ; free virtual = 3190
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2288.477 ; gain = 821.137 ; free physical = 150 ; free virtual = 1561
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2287.465 ; gain = 817.129 ; free physical = 350 ; free virtual = 3190
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2288.477 ; gain = 821.137 ; free physical = 150 ; free virtual = 1561
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2287.465 ; gain = 817.129 ; free physical = 350 ; free virtual = 3190
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2288.477 ; gain = 821.137 ; free physical = 150 ; free virtual = 1561
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2287.465 ; gain = 817.129 ; free physical = 350 ; free virtual = 3190
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2288.477 ; gain = 821.137 ; free physical = 150 ; free virtual = 1561
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -336,44 +281,43 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     2|
 |2     |CARRY4 |    22|
-|3     |LUT1   |     4|
-|4     |LUT2   |    46|
-|5     |LUT3   |    47|
-|6     |LUT4   |   159|
-|7     |LUT5   |   178|
-|8     |LUT6   |   673|
-|9     |MUXF7  |   281|
-|10    |MUXF8  |   109|
-|11    |FDRE   |  1811|
-|12    |FDSE   |     2|
-|13    |IBUF   |     2|
-|14    |OBUF   |    27|
+|3     |LUT1   |     2|
+|4     |LUT2   |    93|
+|5     |LUT3   |    32|
+|6     |LUT4   |    56|
+|7     |LUT5   |    88|
+|8     |LUT6   |   984|
+|9     |MUXF7  |   322|
+|10    |MUXF8  |   141|
+|11    |FDRE   |  2359|
+|12    |IBUF   |    10|
+|13    |OBUF   |    27|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2287.465 ; gain = 817.129 ; free physical = 350 ; free virtual = 3190
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2288.477 ; gain = 821.137 ; free physical = 150 ; free virtual = 1561
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 24 critical warnings and 45 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2287.465 ; gain = 673.379 ; free physical = 348 ; free virtual = 3187
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2287.473 ; gain = 817.129 ; free physical = 348 ; free virtual = 3187
+Synthesis finished with 0 errors, 0 critical warnings and 29 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2288.477 ; gain = 673.387 ; free physical = 148 ; free virtual = 1560
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2288.484 ; gain = 821.137 ; free physical = 148 ; free virtual = 1560
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2287.473 ; gain = 0.000 ; free physical = 518 ; free virtual = 3357
-INFO: [Netlist 29-17] Analyzing 412 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2288.484 ; gain = 0.000 ; free physical = 150 ; free virtual = 1560
+INFO: [Netlist 29-17] Analyzing 485 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'main' is not ideal for floorplanning, since the cellview 'banc_donnees' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2343.492 ; gain = 0.000 ; free physical = 516 ; free virtual = 3356
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2344.504 ; gain = 0.000 ; free physical = 305 ; free virtual = 1720
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 379057d3
+Synth Design complete | Checksum: 98b84746
 INFO: [Common 17-83] Releasing license: Synthesis
-43 Infos, 91 Warnings, 24 Critical Warnings and 0 Errors encountered.
+43 Infos, 60 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 2343.492 ; gain = 873.168 ; free physical = 516 ; free virtual = 3355
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1519.670; main = 1517.498; forked = 268.239
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3032.961; main = 2343.492; forked = 908.332
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2367.504 ; gain = 0.000 ; free physical = 516 ; free virtual = 3355
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 2344.504 ; gain = 877.176 ; free physical = 305 ; free virtual = 1720
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1733.143; main = 1546.562; forked = 300.769
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3196.793; main = 2344.504; forked = 908.332
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2368.516 ; gain = 0.000 ; free physical = 304 ; free virtual = 1720
 INFO: [Common 17-1381] The checkpoint '/home/clem/Documents/GitHub/Kompilator/alume/alume.runs/synth_1/main.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue May 20 16:24:54 2025...
+INFO: [Common 17-206] Exiting Vivado at Tue May 20 17:50:03 2025...
