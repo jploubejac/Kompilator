@@ -20,6 +20,7 @@ OPCODES = {
     "RSS": 0x13,
 }
 
+# classe étant une ligne asm
 class ligneInstruction:
     def __init__(self, lineNumber, OP=None, A=None,B=None, C=None ):
         self.lineNumber = lineNumber
@@ -38,6 +39,7 @@ class ligneInstruction:
             instLine.append(str(self.C))
         return f"{self.lineNumber}: " + " ".join(instLine)
 
+# passe des lignes du fichier à un tableau contenant des ligneInstruction
 def parse_asm(asm):
     asm_lines = []
     for asm_line in asm.strip().split("\n"):
@@ -58,6 +60,7 @@ def parse_asm(asm):
         asm_lines.append(ligneInstruction(index,opcode,*arguments))
     return asm_lines
 
+# orienté mémoire -> orienté registres, via un dictionnaire
 def memory_to_registers(asm_lines):
     memReg = {}
     counter = 0
@@ -86,6 +89,7 @@ def memory_to_registers(asm_lines):
         reg_lines_str.append(str(lineConverted))
     return reg_lines_str, reg_lines
 
+# valeur string -> valeur int
 def byteConversion(val):
     if val is None:
         return 0
@@ -98,6 +102,7 @@ def byteConversion(val):
     else:
         raise ValueError("ERREUR: valeur inconnue: {val}")
 
+# ligne asm_registre -> ligne asm_hexa : C B OP A
 def registres_to_hex(instr_reg):
     hex_lines = []
     for instr in instr_reg:
@@ -115,6 +120,7 @@ asm_memoire = "asm_memoire.txt"
 asm_registres = "asm_registres.txt"
 asm_hexa = "asm_hexa.txt"
 
+# lectures / écritures des fichiers
 with open(asm_memoire, "r") as mem_f:
     asm_i = mem_f.read()
 
