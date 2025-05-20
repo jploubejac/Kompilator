@@ -1,4 +1,4 @@
-void main() {
+void function() {
     int led_to_choose = 0;
     int score = 0;
     int timer = 60;
@@ -27,13 +27,24 @@ void main() {
         if (reset == 1) {
             score = 0;
             timer = 60;
+            reset = 0;
         }
-
-        while(button != valeur_attendue){
+        int previous_button = button;
+        while(button == previous_button  || button == 0){
             button= read_switchs8();
         }
-        score = score + 1;
+        if(button==valeur_attendue){
+            score = score + 1;
+        }else {
+            score = score - 1;
+        }
         timer = timer - 1;
     }
     int c = 0;
+}
+
+void main() {
+    int b = 0;
+    function();
+    b = b + 1;
 }
