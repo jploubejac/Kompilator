@@ -182,3 +182,6 @@ dismissDialog("Synthesis Completed"); // W.a (dialog1)
 // HMemoryUtils.trashcanNow. Engine heap size: 1,552 MB. GUI used memory: 71 MB. Current time: 5/20/25, 9:46:55 AM CEST
 // [Engine Memory]: 1,552 MB (+9025kb) [00:02:50]
 // HMemoryUtils.trashcanNow. Engine heap size: 1,542 MB. GUI used memory: 70 MB. Current time: 5/20/25, 10:16:55 AM CEST
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,542 MB. GUI used memory: 70 MB. Current time: 5/20/25, 10:46:55 AM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,542 MB. GUI used memory: 52 MB. Current time: 5/20/25, 11:16:55 AM CEST
