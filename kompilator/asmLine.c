@@ -112,7 +112,7 @@ void DynamicArrayAsmLinePrintToFile(dynamicArray_t *pArray, const char *filename
 }
 
 int isJmfWithoutAdress(asmLine_t *pAsm, void *pNull){
-    if(pAsm->op==OP_JMF&&pAsm->arg1==-1)return 1;
+    if(pAsm->op==OP_JMF&&pAsm->res==-1)return 1;
     return 0;
 }
 

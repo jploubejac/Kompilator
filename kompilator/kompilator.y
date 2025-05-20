@@ -197,13 +197,13 @@ Printf : tPRINTF tOP Expression tCP
           }
 
 IfBody : tIF tOP Condition tCP 
-          { DynamicArrayPushAsmLine(pAsmTable, OP_JMF, $3, -1,0);
+          { DynamicArrayPushAsmLine(pAsmTable, OP_JMF, -1 , $3,0);
             DynamicArrayPop(pSymbolTable);} 
           tOB Instruction tCB 
           {
             DynamicArrayPushAsmLine(pAsmTable, OP_JMP, -1,0,0);
             asmLine_t *pJmfLine = DynamicArrayGetIfReverse(pAsmTable, (IptfVV)isJmfWithoutAdress, NULL);
-            if(pJmfLine!=NULL)pJmfLine->arg1=DynamicArrayGetSize(pAsmTable);
+            if(pJmfLine!=NULL)pJmfLine->res=DynamicArrayGetSize(pAsmTable);
             //Do: error handle
             printf("tIF tOP Expression tCP tOB Instruction tCB ");
           }ElseBody{
@@ -292,14 +292,14 @@ Bool : Expression tINF Expression {
       ;
 
 WhileBody : tWHILE {$1= DynamicArrayGetSize(pAsmTable); } tOP Condition tCP {
-              DynamicArrayPushAsmLine(pAsmTable, OP_JMF, $4, -1,0);
+              DynamicArrayPushAsmLine(pAsmTable, OP_JMF, -1 ,$4, 0);
             }tOB Instruction tCB {
               printf("tWHILE tOP Condition tCP tOB Instruction tCB ");
               DynamicArrayPushAsmLine(pAsmTable, OP_JMP, -1, 0,0);
               int index_jmf= DynamicArrayGetIndexIfReverse(pAsmTable, (IptfVV)isJmfWithoutAdress, NULL);
               if(index_jmf>=0){
                 asmLine_t *pJmfLine=DynamicArrayGetByIndex(pAsmTable,index_jmf);
-                if(pJmfLine!=NULL) pJmfLine->arg1=DynamicArrayGetSize(pAsmTable);
+                if(pJmfLine!=NULL) pJmfLine->res=DynamicArrayGetSize(pAsmTable);
                 asmLine_t *pJmpLine=DynamicArrayGetIfReverse(pAsmTable, (IptfVV)isJmpWithoutAdress, NULL);
                 if(pJmpLine!=NULL) pJmpLine->res=$1;
               }
@@ -307,25 +307,25 @@ WhileBody : tWHILE {$1= DynamicArrayGetSize(pAsmTable); } tOP Condition tCP {
             }
            |tDO {$1 = DynamicArrayGetSize(pAsmTable);} tOB Instruction tCB tWHILE tOP Condition tCP tSEM {
               printf("tDO tOB Instruction tCB tWHILE tOP Condition tCP tSEM ");
-              int index_jmf = DynamicArrayPushAsmLine(pAsmTable, OP_JMF, $8, -1,0); 
+              int index_jmf = DynamicArrayPushAsmLine(pAsmTable, OP_JMF, -1, $8,0); 
               DynamicArrayPushAsmLine(pAsmTable, OP_JMP, $1, 0,0);
               if(index_jmf>=0){
                 asmLine_t *pJmfLine=DynamicArrayGetByIndex(pAsmTable,index_jmf);
-                if(pJmfLine!=NULL) pJmfLine->arg1=DynamicArrayGetSize(pAsmTable);
+                if(pJmfLine!=NULL) pJmfLine->res=DynamicArrayGetSize(pAsmTable);
               }
               DynamicArrayPop(pSymbolTable);
             }
            ;
 
 ForBody : tFOR tOP ForCondition  tCP {
-              //DynamicArrayPushAsmLine(pAsmTable, OP_JMF, $3, -1,0);
+              //DynamicArrayPushAsmLine(pAsmTable, OP_JMF,-1, $3,0);
             } tOB Instruction tCB {
               printf("tFOR tOP ForCondition tCP tOB Instruction tCB ");
               DynamicArrayPushAsmLine(pAsmTable, OP_JMP, -1, 0,0);
               int index_jmf= DynamicArrayGetIndexIfReverse(pAsmTable, (IptfVV)isJmfWithoutAdress, NULL);
               if(index_jmf>=0){
                 asmLine_t *pJmfLine=DynamicArrayGetByIndex(pAsmTable,index_jmf);
-                if(pJmfLine!=NULL) pJmfLine->arg1=DynamicArrayGetSize(pAsmTable);
+                if(pJmfLine!=NULL) pJmfLine->res=DynamicArrayGetSize(pAsmTable);
                 asmLine_t *pJmpLine=DynamicArrayGetIfReverse(pAsmTable, (IptfVV)isJmpWithoutAdress, NULL);
                 if(pJmpLine!=NULL) pJmpLine->res=index_jmf;
               }
