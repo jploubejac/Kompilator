@@ -22,7 +22,7 @@ extern char *yytext;
 
 
 %union { int nb; char* str;}
-%token tEQ tMAIN tOB tCB tCONST tINT tADD tSUB tSTAR tDIV tOP tCP tSEP tSEM tPRINTF tVOID tIF tELSE tFOR tSUP tINF tAND tOR tNOT tINC tDEC tEQEQ tINFEQ tSUPEQ tERROR tFLOAT
+%token tEQ tMAIN tOB tCB tCONST tINT tADD tSUB tSTAR tDIV tOP tCP tSEP tSEM tPRINTF tVOID tIF tELSE tFOR tSUP tINF tAND tOR tNOT tINC tDEC tEQEQ tINFEQ tSUPEQ tERROR tFLOAT tSWITCH
 %left tOR 
 %left tAND
 %left tADD tSUB
@@ -38,6 +38,7 @@ extern char *yytext;
 %type <str> Variable
 %type <nb> Expression
 %type <nb> Condition
+%type <nb> Invocation
 %type <nb> Bool
 
 
@@ -187,6 +188,7 @@ Expression : Expression tADD Expression {
               $$=addr;
             }
             | tOP Expression tCP {$$=$2;printf("Expression tOP Expression tCP Expression ");}
+            | Invocation {$$=$1;}
             ;
 
 Printf : tPRINTF tOP Expression tCP 
@@ -198,20 +200,35 @@ Printf : tPRINTF tOP Expression tCP
 
 IfBody : tIF tOP Condition tCP 
           { DynamicArrayPushAsmLine(pAsmTable, OP_JMF, -1 , $3,0);
-            DynamicArrayPop(pSymbolTable);} 
+            DynamicArrayPop(pSymbolTable); 
+            DynamicArrayPushSymbolEntry(pSymbolTable, "if_system");
+          } 
           tOB Instruction tCB 
           {
             DynamicArrayPushAsmLine(pAsmTable, OP_JMP, -1,0,0);
             asmLine_t *pJmfLine = DynamicArrayGetIfReverse(pAsmTable, (IptfVV)isJmfWithoutAdress, NULL);
             if(pJmfLine!=NULL)pJmfLine->res=DynamicArrayGetSize(pAsmTable);
             //Do: error handle
+            symbolEntry_t *pSymbol = (symbolEntry_t*)DynamicArrayGetByIndex(pSymbolTable,DynamicArrayGetSize(pSymbolTable) - 1);
+            while(strcmp(pSymbol->name,"if_system")){
+              DynamicArrayPop(pSymbolTable);
+              pSymbol = (symbolEntry_t*)DynamicArrayGetByIndex(pSymbolTable,DynamicArrayGetSize(pSymbolTable) - 1);
+            }
+            DynamicArrayPop(pSymbolTable);
             printf("tIF tOP Expression tCP tOB Instruction tCB ");
           }ElseBody{
             asmLine_t *pJmpLine = DynamicArrayGetIfReverse(pAsmTable, (IptfVV)isJmpWithoutAdress, NULL);
             if(pJmpLine!=NULL)pJmpLine->res=DynamicArrayGetSize(pAsmTable);
           }
         ;
-ElseBody: tELSE tOB Instruction tCB 
+ElseBody: tELSE {DynamicArrayPushSymbolEntry(pSymbolTable, "else_system");} tOB Instruction tCB{
+            symbolEntry_t *pSymbol = (symbolEntry_t*)DynamicArrayGetByIndex(pSymbolTable,DynamicArrayGetSize(pSymbolTable) - 1);
+            while(strcmp(pSymbol->name,"else_system")){
+              DynamicArrayPop(pSymbolTable);
+              pSymbol = (symbolEntry_t*)DynamicArrayGetByIndex(pSymbolTable,DynamicArrayGetSize(pSymbolTable) - 1);
+            }
+            DynamicArrayPop(pSymbolTable);
+          } 
           |
           ;
 Condition : Bool {
@@ -291,7 +308,7 @@ Bool : Expression tINF Expression {
       }
       ;
 
-WhileBody : tWHILE {$1= DynamicArrayGetSize(pAsmTable); } tOP Condition tCP {
+WhileBody : tWHILE {$1= DynamicArrayGetSize(pAsmTable); DynamicArrayPushSymbolEntry(pSymbolTable, "while_system");} tOP Condition tCP {
               DynamicArrayPushAsmLine(pAsmTable, OP_JMF, -1 ,$4, 0);
             }tOB Instruction tCB {
               printf("tWHILE tOP Condition tCP tOB Instruction tCB ");
@@ -303,15 +320,25 @@ WhileBody : tWHILE {$1= DynamicArrayGetSize(pAsmTable); } tOP Condition tCP {
                 asmLine_t *pJmpLine=DynamicArrayGetIfReverse(pAsmTable, (IptfVV)isJmpWithoutAdress, NULL);
                 if(pJmpLine!=NULL) pJmpLine->res=$1;
               }
+              symbolEntry_t *pSymbol = (symbolEntry_t*)DynamicArrayGetByIndex(pSymbolTable,DynamicArrayGetSize(pSymbolTable) - 1);
+              while(strcmp(pSymbol->name,"while_system")){
+                DynamicArrayPop(pSymbolTable);
+                pSymbol = (symbolEntry_t*)DynamicArrayGetByIndex(pSymbolTable,DynamicArrayGetSize(pSymbolTable) - 1);
+              }
               DynamicArrayPop(pSymbolTable);
             }
-           |tDO {$1 = DynamicArrayGetSize(pAsmTable);} tOB Instruction tCB tWHILE tOP Condition tCP tSEM {
+           |tDO {$1 = DynamicArrayGetSize(pAsmTable); DynamicArrayPushSymbolEntry(pSymbolTable, "do_while_system");} tOB Instruction tCB tWHILE tOP Condition tCP tSEM {
               printf("tDO tOB Instruction tCB tWHILE tOP Condition tCP tSEM ");
               int index_jmf = DynamicArrayPushAsmLine(pAsmTable, OP_JMF, -1, $8,0); 
               DynamicArrayPushAsmLine(pAsmTable, OP_JMP, $1, 0,0);
               if(index_jmf>=0){
                 asmLine_t *pJmfLine=DynamicArrayGetByIndex(pAsmTable,index_jmf);
                 if(pJmfLine!=NULL) pJmfLine->res=DynamicArrayGetSize(pAsmTable);
+              }
+              symbolEntry_t *pSymbol = (symbolEntry_t*)DynamicArrayGetByIndex(pSymbolTable,DynamicArrayGetSize(pSymbolTable) - 1);
+              while(strcmp(pSymbol->name,"do_while_system")){
+                DynamicArrayPop(pSymbolTable);
+                pSymbol = (symbolEntry_t*)DynamicArrayGetByIndex(pSymbolTable,DynamicArrayGetSize(pSymbolTable) - 1);
               }
               DynamicArrayPop(pSymbolTable);
             }
@@ -351,7 +378,6 @@ Function : tVOID tID{
                 DynamicArrayPop(pSymbolTable);
 
                 symbolEntry_t *pSymbol = (symbolEntry_t*)DynamicArrayGetByIndex(pSymbolTable,DynamicArrayGetSize(pSymbolTable) - 1);
-                printf("pSymbol->name[%s] ", pSymbol->name);
                 while(strcmp(pSymbol->name,$2)){
                   DynamicArrayPop(pSymbolTable);
                   pSymbol = (symbolEntry_t*)DynamicArrayGetByIndex(pSymbolTable,DynamicArrayGetSize(pSymbolTable) - 1);
@@ -388,6 +414,12 @@ Invocation : tID tOP tCP
               //Todo: gerer les erreurs si fonction n'existe pas
               DynamicArrayPushAsmLine(pAsmTable, OP_JMP, function->addr, 0,0);
               DynamicArrayPop(pSymbolTable);
+              $$=0;
+            }
+            |tSWITCH tOP tCP{
+              int index_registre = DynamicArrayPushSymbolEntry(pSymbolTable,"temp");
+              DynamicArrayPushAsmLine(pAsmTable, OP_RSS, index_registre, 0, 0);
+              $$ = index_registre;
             }
 
 %%

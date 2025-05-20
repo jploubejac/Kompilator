@@ -21,7 +21,8 @@ enum operation_e{
     OP_AND  =0x0F,
     OP_LDR  =0x10,
     OP_STR  =0x11,
-    OP_NOP  =0x12
+    OP_NOP  =0x12,
+    OP_RSS  =0x13,
 };
 
 typedef struct{

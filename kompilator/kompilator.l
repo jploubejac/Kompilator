@@ -47,6 +47,7 @@ void              		{ return tVOID; }
 if 						        { return tIF; }
 else 					        { return tELSE; }
 for						        { return tFOR; }
+read_switchs8         { return tSWITCH;}
 "//"+[^\n]*	          { } 
 [A-Za-z_][A-Za-z0-9_]*	{ yylval.str = strdup(yytext);
                           return tID;

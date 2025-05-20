@@ -5,7 +5,6 @@ void main() {
     int button = 1;
     int timer_while=0;
     int win = 0;
-    int choosing = 0;
     int finished = 0;
     int reset = 0;
 
@@ -20,25 +19,20 @@ void main() {
             valeur_attendue = valeur_attendue * 2;
             i = i - 1;
         }
-        timer_while=0;
 
         if (score > 5) {
             finished = 1;
         }
+
         if (reset == 1) {
             score = 0;
             timer = 60;
         }
 
-        choosing = 1;
-        while((timer_while < 5) && (win == 0)){
-            if (button == valeur_attendue) {
-                score = score + 1;
-                win=1;
-            }
-            timer_while = timer_while + 1;
+        while(button != valeur_attendue){
+            button= read_switchs8();
         }
-        choosing = 0;
+        score = score + 1;
         timer = timer - 1;
     }
     int c = 0;

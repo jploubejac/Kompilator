@@ -31,6 +31,7 @@ char* int_to_instr(int inst) {
         case OP_LDR: return "LDR";
         case OP_STR: return "STR";
         case OP_NOP: return "NOP";
+        case OP_RSS: return "RSS";
         default: return "";
     }
 }
