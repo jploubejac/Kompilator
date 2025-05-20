@@ -46,7 +46,7 @@ begin
             aux <= (others => '0');
         else
             aux <= aux + 1;
-            slow_clk_int <= aux(20); -- comme 100Mhz / 2^27
+            slow_clk_int <= aux(16); -- comme 100Mhz / 2^27
         end if;
     end if;
 end process;

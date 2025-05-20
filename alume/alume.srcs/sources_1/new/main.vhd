@@ -37,7 +37,7 @@ begin
         port map(
             clk => clk,
             left_in => result_registres(8),
-            right_in => button,
+            right_in => result_registres(1),
             seg => seg,
             an => an
         );

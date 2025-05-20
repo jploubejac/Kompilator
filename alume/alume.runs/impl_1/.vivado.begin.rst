@@ -98,3 +98,13 @@
     <Process Command="vivado" Owner="clem" Host="maskass" Pid="214701" HostCore="12" HostMemory="7818284">
     </Process>
 </ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="clem" Host="maskass" Pid="217865" HostCore="12" HostMemory="7818284">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="clem" Host="maskass" Pid="236150" HostCore="12" HostMemory="7818284">
+    </Process>
+</ProcessHandle>
