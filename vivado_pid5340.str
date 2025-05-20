@@ -1,0 +1,184 @@
+/*
+
+AMD Vivado v2024.2 (64-bit) [Major: 2024, Minor: 2]
+SW Build: 5239630 on Fri Nov 08 22:34:34 MST 2024
+IP Build: 5239520 on Sun Nov 10 16:12:51 MST 2024
+IP Build: 5239520 on Sun Nov 10 16:12:51 MST 2024
+
+Process ID (PID): 5340
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Tue May 20 09:44:14 CEST 2025
+Time zone: 	Central European Standard Time (Europe/Paris)
+
+OS: PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"
+OS Version: 6.1.0-28-amd64
+OS Architecture: amd64
+Available processors (cores): 12
+LSB Release Description: Debian GNU/Linux 12 (bookworm)
+
+Display: 0.0
+Screen size: 1920x1080
+Local screen bounds: x = 0, y = 26, width = 1920, height = 1054
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+OS font scaling: 100%
+Anti-Alias Enabled: false
+
+Java version: 	21.0.1 64-bit
+
+Java home: 	/home/clem/Xilinx/Vivado/2024.2/tps/lnx64/jre21.0.1_12
+Java executable: 	/home/clem/Xilinx/Vivado/2024.2/tps/lnx64/jre21.0.1_12/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:ParallelGCThreads=4, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms512m, -Xmx4072m, -Xss10m, -Xrs]
+Java initial memory (-Xms): 	512 MB
+Java maximum memory (-Xmx):	 3 GB
+
+User name: 	clem
+User home directory: /home/clem
+User working directory: /home/clem/Documents/GitHub/Kompilator
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /home/clem/Xilinx/Vivado
+HDI_APPROOT: /home/clem/Xilinx/Vivado/2024.2
+RDI_DATADIR: /home/clem/Xilinx/Vivado/2024.2/data
+RDI_BINDIR: /home/clem/Xilinx/Vivado/2024.2/bin
+
+Vivado preferences file: /home/clem/.Xilinx/Vivado/2024.2/vivado.xml
+Vivado preferences directory: /home/clem/.Xilinx/Vivado/2024.2/
+Vivado layouts directory: /home/clem/.Xilinx/Vivado/2024.2/data/layouts
+PlanAhead jar file: 	/home/clem/Xilinx/Vivado/2024.2/lib/classes/planAhead.jar
+Vivado log file: 	/home/clem/Documents/GitHub/Kompilator/vivado.log
+Vivado journal file: 	/home/clem/Documents/GitHub/Kompilator/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-5340-maskass
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+RDI_APPROOT: /home/clem/Xilinx/Vivado/2024.2
+RDI_BASEROOT: /home/clem/Xilinx/Vivado
+RDI_BINROOT: /home/clem/Xilinx/Vivado/2024.2/bin
+RDI_BUILD: yes
+RDI_DATADIR: /home/clem/Xilinx/Vivado/2024.2/data
+RDI_INSTALLROOT: /home/clem/Xilinx
+RDI_INSTALLVER: 2024.2
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 21.0.1_12
+RDI_LIBDIR: /home/clem/Xilinx/Vivado/2024.2/lib/lnx64.o/Default:/home/clem/Xilinx/Vivado/2024.2/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /home/clem/Xilinx/Vitis/2024.2/bin:/home/clem/Xilinx/Vivado/2024.2/ids_lite/ISE/bin/lin64
+RDI_PROG: /home/clem/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado
+RDI_SESSION_INFO: /home/clem/Documents/GitHub/Kompilator:maskass_1747727036_5271
+RDI_SHARED_DATA: /home/clem/Xilinx/SharedData/2024.2/data
+RDI_TPS_ROOT: /home/clem/Xilinx/Vivado/2024.2/tps/lnx64
+RDI_USE_JDK21: True
+SHELL: /usr/bin/zsh
+XILINX: /home/clem/Xilinx/Vivado/2024.2/ids_lite/ISE
+XILINX_DSP: /home/clem/Xilinx/Vivado/2024.2/ids_lite/ISE
+XILINX_HLS: /home/clem/Xilinx/Vitis/2024.2
+XILINX_PLANAHEAD: /home/clem/Xilinx/Vivado/2024.2
+XILINX_SDK: /home/clem/Xilinx/Vitis/2024.2
+XILINX_VITIS: /home/clem/Xilinx/Vitis/2024.2
+XILINX_VIVADO: /home/clem/Xilinx/Vivado/2024.2
+
+
+GUI allocated memory:	512 MB
+GUI max memory:		4,072 MB
+Engine allocated memory: 1,355 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/clem/Documents/GitHub/Kompilator/alume/alume.xpr", 0); // b.c (PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS)
+// Opening Vivado Project: /home/clem/Documents/GitHub/Kompilator/alume/alume.xpr. Version: Vivado v2024.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,387 MB. GUI used memory: 63 MB. Current time: 5/20/25, 9:44:15 AM CEST
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project /home/clem/Documents/GitHub/Kompilator/alume/alume.xpr 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 118 MB (+121767kb) [00:00:11]
+// [Engine Memory]: 1,470 MB (+1389521kb) [00:00:11]
+// WARNING: HEventQueue.dispatchEvent() is taking  1343 ms.
+// Tcl Message: open_project /home/clem/Documents/GitHub/Kompilator/alume/alume.xpr 
+// Tcl Message: INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/clem/Documents/GitHub/Kompilator/alume/alume.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/clem/Xilinx/Vivado/2024.2/data/ip'. 
+// [GUI Memory]: 137 MB (+13246kb) [00:00:12]
+// Project name: alume; location: /home/clem/Documents/GitHub/Kompilator/alume; part: xc7a35tcpg236-1
+dismissDialog("Open Project"); // bh (Open Project Progress)
+// [GUI Memory]: 149 MB (+4946kb) [00:00:12]
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 120 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 15, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+selectButton(RDIResource.BaseDialog_OK, "OK", "Run Synthesis"); // a (RDIResource.BaseDialog_OK)
+// TclEventType: RUN_MODIFY
+dismissDialog("Run Synthesis"); // u (dialog0)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp with file /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/synth_1/main.dcp 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 6 
+// Tcl Message: [Tue May 20 09:46:20 2025] Launched synth_1... Run output will be captured here: /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bh (Starting Design Runs Progress)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 34 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel", "Synthesis Completed"); // a (RDIResource.BaseDialog_CANCEL)
+dismissDialog("Synthesis Completed"); // W.a (dialog1)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,552 MB. GUI used memory: 71 MB. Current time: 5/20/25, 9:46:55 AM CEST
+// [Engine Memory]: 1,552 MB (+9025kb) [00:02:50]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,542 MB. GUI used memory: 70 MB. Current time: 5/20/25, 10:16:55 AM CEST
