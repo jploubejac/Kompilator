@@ -2,9 +2,13 @@
 2020.2
 Nov  8 2024
 22:36:55
+/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sim_1/new/test_main.vhd,1747738693,vhdl,,,,test_main,,,,,,,,
 /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sim_1/new/test_pipeline.vhd,1747557834,vhdl,,,,test_pipeline,,,,,,,,
-/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd,1747697079,vhdl,,,,alu,,,,,,,,
-/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_donnees.vhd,1747528629,vhdl,,,,banc_donnees,,,,,,,,
-/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd,1747697590,vhdl,,,,banc_instructions,,,,,,,,
-/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd,1747557834,vhdl,,,,doubleport,,,,,,,,
-/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd,1747697732,vhdl,/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sim_1/new/test_pipeline.vhd,,,pipeline,,,,,,,,
+/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd,1747737716,vhdl,,,,alu,,,,,,,,
+/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_donnees.vhd,1747737716,vhdl,,,,banc_donnees,,,,,,,,
+/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd,1747737716,vhdl,,,,banc_instructions,,,,,,,,
+/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd,1747739105,vhdl,/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd,,,clock_div,,,,,,,,
+/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd,1747737716,vhdl,,,,doubleport,,,,,,,,
+/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd,1747738829,vhdl,/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sim_1/new/test_main.vhd,,,main,,,,,,,,
+/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd,1747739351,vhdl,/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd,,,pipeline,,,,,,,,
+/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd,1747737716,vhdl,/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd,,,seven_seg_controller,,,,,,,,

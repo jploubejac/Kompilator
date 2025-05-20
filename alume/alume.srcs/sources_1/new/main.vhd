@@ -19,7 +19,10 @@ architecture Behavioral of main is
     signal slow_clk : std_logic;
     signal result_alu : std_logic_vector(7 downto 0) := (others => '0');
     signal result_R9 : std_logic_vector(7 downto 0) := (others => '0');
-
+    signal result_R1 : std_logic_vector(7 downto 0) := (others => '0');
+    signal result_R2 : std_logic_vector(7 downto 0) := (others => '0');
+    signal score : std_logic_vector(7 downto 0) := (others => '0');
+    signal timer : std_logic_vector(7 downto 0) := (others => '0');
 begin
     
     pipeline: entity work.pipeline
@@ -28,13 +31,15 @@ begin
             rst => rst,
             result_alu => result_alu,
             result_R9 => result_R9,
-            leds <= sw(15 downto 0);
+            result_R1 => result_R1,
+            result_R2 => result_R2,
+            switches => sw
         );
     seven_seg: entity work.seven_seg_controller
         port map(
             clk => clk,
-            left_in => result_R9(7 downto 0),
-            right_in => result_alu(7 downto 0),
+            left_in => timer,
+            right_in => score,
             seg => seg,
             an => an
         );
@@ -47,4 +52,7 @@ begin
 
 clk_led <= slow_clk;
 leds <= result_alu;
+score <= result_R1;
+timer <= result_R2;
+
 end Behavioral;

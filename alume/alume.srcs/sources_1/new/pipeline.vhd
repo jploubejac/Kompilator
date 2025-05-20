@@ -8,7 +8,12 @@ entity pipeline is
         clk : in std_logic;
         rst: in std_logic;
         result_alu : out std_logic_vector(7 downto 0);
-        result_R9 : out std_logic_vector(7 downto 0)
+        result_R9 : out std_logic_vector(7 downto 0);
+        result_R1 : out std_logic_vector(7 downto 0);
+        result_R2 : out std_logic_vector(7 downto 0);        
+        switches : in std_logic_vector(15 downto 0);
+        score : out std_logic_vector(7 downto 0);
+        timer : out std_logic_vector(7 downto 0)
         );
 end pipeline;
 
@@ -46,9 +51,11 @@ architecture Behavioral of pipeline is
            CLK : in STD_LOGIC;
            QA : out STD_LOGIC_VECTOR (7 downto 0);
            QB : out STD_LOGIC_VECTOR (7 downto 0);
-           R9 : out std_logic_vector(7 downto 0));
+           R9 : out std_logic_vector(7 downto 0);
+           R1 : out STD_LOGIC_VECTOR (7 downto 0);
+           R2 : out STD_LOGIC_VECTOR (7 downto 0)
+           );
     END COMPONENT;
-    
     
  
 
@@ -131,6 +138,8 @@ architecture Behavioral of pipeline is
     signal BR_Qa_o : std_logic_vector(7 downto 0) := (others => '0');
     signal BR_Qb_o : std_logic_vector(7 downto 0) := (others => '0');
     signal BR_R9_o : std_logic_vector(7 downto 0) := (others => '0');
+    signal BR_R1_o : std_logic_vector(7 downto 0) := (others => '0');
+    signal BR_R2_o : std_logic_vector(7 downto 0) := (others => '0');
 
     --===========================ALU=========================== 
     signal ALU_A_i : std_logic_vector(7 downto 0) := (others => '0');
@@ -173,6 +182,8 @@ begin
 
 result_alu <= ALU_S_o;
 result_R9 <= BR_R9_o;
+result_R1 <= BR_R1_o;
+result_R2 <= BR_R2_o;
 
 -- Instanciation du composant banc_instructions
 U_banc_instructions : banc_instructions
@@ -205,7 +216,9 @@ U_banc_registres : doubleport
            CLK => CLK,
            QA => BR_QA_o,
            QB => BR_QB_o,
-           R9 => BR_R9_o
+           R9 => BR_R9_o,
+           R1 => BR_R1_o,
+           R2 => BR_R2_o
     );
    
     
@@ -285,29 +298,56 @@ BD_Addr_i <= EXMEM_A_o when EXMEM_OP_o = OP_STR else EXMEM_B_o;
 BD_RW_i <= LC_BD;
 BD_IND_i <= EXMEM_B_o;
 
-ALEA <= '1' when    (LIDI_OP_o /= OP_NOP and LIDI_OP_o /= OP_STR and LIDI_i(15 downto 8) /= OP_NOP and LIDI_i(15 downto 8) /= OP_AFC
-                and LIDI_i(15 downto 8) /= OP_LDR and  LIDI_A_o = LIDI_i(23 downto 16)) 
+ALEA <= '1' when    
+                (LIDI_OP_o /= OP_NOP and LIDI_OP_o /= OP_STR and LIDI_OP_o /= OP_JMP and LIDI_OP_o /= OP_JMF and 
+                LIDI_i(15 downto 8) /= OP_NOP and LIDI_i(15 downto 8) /= OP_AFC and LIDI_i(15 downto 8) /= OP_LDR and LIDI_i(15 downto 8) /= OP_JMP and
+                LIDI_A_o = LIDI_i(23 downto 16)) 
+                
                 or
-                (LIDI_OP_o /= OP_NOP and LIDI_OP_o /= OP_STR and (LIDI_i(15 downto 8) = OP_ADD or LIDI_i(15 downto 8) = OP_MUL
-                or LIDI_i(15 downto 8) = OP_SOU or LIDI_i(15 downto 8) = OP_DIV or LIDI_i(15 downto 8) = OP_AND
-                or LIDI_i(15 downto 8) = OP_OR or LIDI_i(15 downto 8) = OP_NOT or LIDI_i(15 downto 8) = OP_SUP or LIDI_i(15 downto 8) = OP_INF
-                or LIDI_i(15 downto 8) = OP_EQU) and  LIDI_A_o = LIDI_i(31 downto 24)) 
+                
+                (LIDI_OP_o /= OP_NOP and LIDI_OP_o /= OP_STR and LIDI_OP_o /= OP_JMP and LIDI_OP_o /= OP_JMF and 
+                LIDI_i(15 downto 8) /= OP_COP and LIDI_i(15 downto 8) /= OP_AFC and LIDI_i(15 downto 8) /= OP_JMP
+                and LIDI_i(15 downto 8) /= OP_JMF and LIDI_i(15 downto 8) /= OP_NOT and LIDI_i(15 downto 8) /= OP_LDR and LIDI_i(15 downto 8) /= OP_STR
+                and LIDI_i(15 downto 8) /= OP_NOP and  
+                LIDI_A_o = LIDI_i(31 downto 24)) 
+                
                 or
-                (DIEX_OP_o /= OP_NOP and DIEX_OP_o /= OP_STR and LIDI_i(15 downto 8) /= OP_NOP and LIDI_i(15 downto 8) /= OP_AFC
-                and LIDI_i(15 downto 8) /= OP_LDR and  DIEX_A_o = LIDI_i(23 downto 16)) 
+                
+                (DIEX_OP_o /= OP_NOP and DIEX_OP_o /= OP_STR and DIEX_OP_o /= OP_JMP and DIEX_OP_o /= OP_JMF and 
+                LIDI_i(15 downto 8) /= OP_NOP and LIDI_i(15 downto 8) /= OP_AFC and LIDI_i(15 downto 8) /= OP_LDR and LIDI_i(15 downto 8) /= OP_JMP and
+                DIEX_A_o = LIDI_i(23 downto 16)) 
+                
                 or
-                (DIEX_OP_o /= OP_NOP and DIEX_OP_o /= OP_STR and (LIDI_i(15 downto 8) = OP_ADD or LIDI_i(15 downto 8) = OP_MUL
-                or LIDI_i(15 downto 8) = OP_SOU or LIDI_i(15 downto 8) = OP_DIV or LIDI_i(15 downto 8) = OP_AND
-                or LIDI_i(15 downto 8) = OP_OR or LIDI_i(15 downto 8) = OP_NOT or LIDI_i(15 downto 8) = OP_SUP or LIDI_i(15 downto 8) = OP_INF
-                or LIDI_i(15 downto 8) = OP_EQU) and  DIEX_A_o = LIDI_i(31 downto 24)) 
+                
+                (DIEX_OP_o /= OP_NOP and DIEX_OP_o /= OP_STR and DIEX_OP_o /= OP_JMP and DIEX_OP_o /= OP_JMF and 
+                LIDI_i(15 downto 8) /= OP_COP and LIDI_i(15 downto 8) /= OP_AFC and LIDI_i(15 downto 8) /= OP_JMP
+                and LIDI_i(15 downto 8) /= OP_JMF and LIDI_i(15 downto 8) /= OP_NOT and LIDI_i(15 downto 8) /= OP_LDR and LIDI_i(15 downto 8) /= OP_STR
+                and LIDI_i(15 downto 8) /= OP_NOP and  
+                DIEX_A_o = LIDI_i(31 downto 24))
+                
                 or
-                (EXMEM_OP_o /= OP_NOP and EXMEM_OP_o /= OP_STR and LIDI_i(15 downto 8) /= OP_NOP and LIDI_i(15 downto 8) /= OP_AFC
-                and LIDI_i(15 downto 8) /= OP_LDR and  EXMEM_A_o = LIDI_i(23 downto 16)) 
+                
+                (EXMEM_OP_o /= OP_NOP and EXMEM_OP_o /= OP_STR and EXMEM_OP_o /= OP_JMP and EXMEM_OP_o /= OP_JMF and 
+                LIDI_i(15 downto 8) /= OP_NOP and LIDI_i(15 downto 8) /= OP_AFC and LIDI_i(15 downto 8) /= OP_LDR and LIDI_i(15 downto 8) /= OP_JMP and
+                EXMEM_A_o = LIDI_i(23 downto 16)) 
+                
                 or
-                (EXMEM_OP_o /= OP_NOP and EXMEM_OP_o /= OP_STR and (LIDI_i(15 downto 8) = OP_ADD or LIDI_i(15 downto 8) = OP_MUL
-                or LIDI_i(15 downto 8) = OP_SOU or LIDI_i(15 downto 8) = OP_DIV or LIDI_i(15 downto 8) = OP_AND
-                or LIDI_i(15 downto 8) = OP_OR or LIDI_i(15 downto 8) = OP_NOT or LIDI_i(15 downto 8) = OP_SUP or LIDI_i(15 downto 8) = OP_INF
-                or LIDI_i(15 downto 8) = OP_EQU) and  EXMEM_A_o = LIDI_i(31 downto 24)) else
+                
+                (EXMEM_OP_o /= OP_NOP and EXMEM_OP_o /= OP_STR and EXMEM_OP_o /= OP_JMP and EXMEM_OP_o /= OP_JMF and 
+                LIDI_i(15 downto 8) /= OP_COP and LIDI_i(15 downto 8) /= OP_AFC and LIDI_i(15 downto 8) /= OP_JMP
+                and LIDI_i(15 downto 8) /= OP_JMF and LIDI_i(15 downto 8) /= OP_NOT and LIDI_i(15 downto 8) /= OP_LDR and LIDI_i(15 downto 8) /= OP_STR
+                and LIDI_i(15 downto 8) /= OP_NOP and  
+                EXMEM_A_o = LIDI_i(31 downto 24))
+                
+                
+                or
+                LIDI_OP_o=OP_JMF
+                or 
+                DIEX_OP_o=OP_JMF
+                or
+                EXMEM_OP_o=OP_JMF
+                
+                else
                 '0';
                 
 --BI_ADDR_i <= LIDI_B_o when LIDI_OP_o = OP_JMP;
@@ -320,10 +360,10 @@ begin
             LIDI_OP_o <= LIDI_i(15 downto 8);
             LIDI_B_o <= LIDI_i(23 downto 16);
             LIDI_C_o <= LIDI_i(31 downto 24);
-        if LIDI_OP_o = OP_JMP then
-            BI_ADDR_i <= LIDI_A_o;
-        elsif LIDI_OP_o = OP_JMF and LIDI_A_o = x"00" then
-            BI_ADDR_i <= LIDI_B_o;
+        if LIDI_i(15 downto 8) = OP_JMP then
+            BI_ADDR_i <= LIDI_i(7 downto 0);
+        elsif DIEX_OP_o = OP_JMF and DIEX_B_o = x"00" then
+            BI_ADDR_i <= DIEX_A_o;
         else
             BI_ADDR_i <= std_logic_vector(unsigned(BI_ADDR_i) + 1);
         end if;
@@ -332,6 +372,9 @@ begin
         LIDI_OP_o <= NOP_LINE(15 downto 8);
         LIDI_B_o <= NOP_LINE(23 downto 16);
         LIDI_C_o <= NOP_LINE(31 downto 24);
+        if DIEX_OP_o = OP_JMF and DIEX_B_o = x"00" then
+            BI_ADDR_i <= DIEX_A_o;
+        end if;
     end if;
     --report "ADDR: " & integer'image(to_integer(unsigned(BI_ADDR_i)));
 

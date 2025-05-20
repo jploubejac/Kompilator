@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/clem/Documents/GitHub/Kompilator/alume/alume.runs/synth_1/pipeline.tcl"
+  variable script "/home/clem/Documents/GitHub/Kompilator/alume/alume.runs/synth_1/main.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,6 +56,8 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 3
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -74,8 +76,11 @@ read_vhdl -library xil_defaultlib {
   /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/ALU.vhd
   /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_donnees.vhd
   /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd
+  /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd
   /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd
   /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd
+  /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd
+  /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/main.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -98,7 +103,7 @@ read_checkpoint -auto_incremental -incremental /home/clem/Documents/GitHub/Kompi
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top pipeline -part xc7a35tcpg236-1
+synth_design -top main -part xc7a35tcpg236-1
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
@@ -108,10 +113,10 @@ if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
 OPTRACE "write_checkpoint" START { CHECKPOINT }
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef pipeline.dcp
+write_checkpoint -force -noxdef main.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-generate_parallel_reports -reports { "report_utilization -file pipeline_utilization_synth.rpt -pb pipeline_utilization_synth.pb"  } 
+generate_parallel_reports -reports { "report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb"  } 
 OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

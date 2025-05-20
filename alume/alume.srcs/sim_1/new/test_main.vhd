@@ -10,6 +10,7 @@ signal clk : std_logic := '0';
 signal rst: std_logic:= '0';
 signal seg: std_logic_vector(6 downto 0):= (others => '0');
 signal an: std_logic_vector(3 downto 0):= (others => '0');
+signal sw: std_logic_vector(15 downto 0):= (others => '0');
 
 constant Clock_period : time := 10 ns;
 
@@ -20,7 +21,8 @@ begin
             clk => clk,
             rst => rst,
             seg => seg,
-            an => an
+            an => an,
+            sw => sw
         );
         
     clk_process : process

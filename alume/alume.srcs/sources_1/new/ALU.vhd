@@ -16,13 +16,16 @@ end ALU;
 
 architecture Behavioral of ALU is
 
--- 000 : addition
--- 001 : multiplication
--- 010 : soustraction
--- 011 : division
--- 100 : and
--- 101 : or
--- 110 : not
+-- 0000 : addition
+-- 0001 : multiplication
+-- 0010 : soustraction
+-- 0011 : division
+-- 0100 : and
+-- 0101 : or
+-- 0110 : not
+-- 0111 : inf
+-- 1000 : sup
+-- 1001 : eq
 
 signal aux: std_logic_vector (15 downto 0):= (others=>'0');
 signal inf_result : std_logic_vector(15 downto 0);
