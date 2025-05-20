@@ -47,7 +47,7 @@ extern char *yytext;
 
 Start : {DynamicArrayPushAsmLine(pAsmTable, OP_JMP, -1,0,0);} Kompilator {
           int index = DynamicArrayGetIndexIfReverse(pAsmTable, (IptfVV)isJmpWithoutAdress, NULL);
-          //todo: error handle if index!=0
+          if(index !=0 )fprintf(stderr, "Erreur du compilateur, on ne trouve pas le jump initial, veuillez contacter les développeurs");
           asmLine_t *pJmpLine;
           if(index>=0){
             pJmpLine=DynamicArrayGetByIndex(pAsmTable,index);
@@ -56,38 +56,37 @@ Start : {DynamicArrayPushAsmLine(pAsmTable, OP_JMP, -1,0,0);} Kompilator {
         }
        ;
 
-Kompilator : //tVOID tMAIN tOP tCP tOB Instruction tCB {printf("tVOID tMAIN tOP tCP tOB Instruction tCB\n ");}
-			      //| tINT tMAIN tOP tCP tOB Instruction tCB {printf("tINT tMAIN tOP tCP tOB Instruction tCB\n ");}
-            Function Kompilator {printf("Function\n");}
-            |Function {printf("Function\n");}
+Kompilator :
+            Function Kompilator 
+            |Function
             ;
 
-Instruction :  Declaration tSEM Instruction {printf("Instruction Declaration tSEM \n");}
-              |Affectation tSEM Instruction {printf("Instruction Affectation tSEM \n");}
-              |Printf tSEM Instruction {printf("Instruction Printf tSEM \n");}
-              |IfBody Instruction {printf("Instruction IfBody tSEM \n");}
-              |WhileBody Instruction {printf("Instruction WhileBody \n");}
-              |ForBody Instruction {printf("Instruction ForBody \n");}
-              |Invocation tSEM Instruction {printf("Instruction Invocation tSEM \n");}
+Instruction :  Declaration tSEM Instruction 
+              |Affectation tSEM Instruction 
+              |Printf tSEM Instruction 
+              |IfBody Instruction 
+              |WhileBody Instruction 
+              |ForBody Instruction 
+              |Invocation tSEM Instruction 
               |tERROR {fprintf(stderr, "Lexical error caught in parser at line %d near '%s'\n", yylineno, yytext);yyerrok;}
               |tERROR tSEM {fprintf(stderr, "Lexical error caught in parser at line %d near '%s'\n", yylineno, yytext);yyerrok;}
               |
               ;
 
-Declaration : Type ListeVariables {printf("Type ListeVariables ");}
+Declaration : Type ListeVariables 
               ;
 
-Affectation : ListeVariablesAff {printf("ListeVariables");}
+Affectation : ListeVariablesAff
               | ListeVariablesAff tINC
               | ListeVariablesAff tDEC
               ;
 
-ListeVariables : Variable {printf("Variable ");}
-                | Variable tSEP ListeVariables {printf("tID tSEP ListeVariables ");}
+ListeVariables : Variable 
+                | Variable tSEP ListeVariables 
                 ;
 
-ListeVariablesAff : Variable {printf("Variable ");}
-                | Variable tSEP ListeVariablesAff {printf("tID tSEP ListeVariablesAff ");}
+ListeVariablesAff : Variable 
+                | Variable tSEP ListeVariablesAff 
                 ;
 
 Variable : tID tEQ Expression {
@@ -99,7 +98,6 @@ Variable : tID tEQ Expression {
               DynamicArrayPushAsmLine(pAsmTable, OP_COP, addr_res, $3, 0);
               DynamicArrayPop(pSymbolTable);
             }
-            printf("tID tEQ Expression ");
           }
           |  tSTAR tID tEQ Expression {
               int addr_res = DynamicArrayGetIndexIf(pSymbolTable,  (IptfVV)symbolEntryIsName, (void*)$2);
@@ -110,58 +108,53 @@ Variable : tID tEQ Expression {
                 DynamicArrayPop(pSymbolTable);
               }
               DynamicArrayPushAsmLine(pAsmTable, OP_STR, addr_res, $4, 0);
-              printf("tSTAR tID tEQ Expression ");
             }
           | tID {
             int index = DynamicArrayGetIndexIf(pSymbolTable,  (IptfVV)symbolEntryIsName, (void*)$1);
             if(index<0)DynamicArrayPushSymbolEntry(pSymbolTable, $1);
-            printf("tID[%s] ", $$);
           }
           | tSTAR tID {
             int index = DynamicArrayGetIndexIf(pSymbolTable,  (IptfVV)symbolEntryIsName, (void*)$2);
             if(index<0)DynamicArrayPushSymbolEntry(pSymbolTable, $2);
-            printf("tSTAR tID[%s] ", $2);
           }
           ;
                 
-Type : tCONST {printf("tCONST ");}
-      | tINT {printf("tINT ");}
-      | tFLOAT {printf("tFLOAT ");}
+Type : tCONST 
+      | tINT 
+      | tFLOAT 
       ;
 
 Expression : Expression tADD Expression {
               DynamicArrayPushAsmLine(pAsmTable, OP_ADD, $1, $1, $3);
               $$=$1;
               DynamicArrayPop(pSymbolTable);
-              printf("Expression[%d] tADD Expression[%d] ", $1, $3);
               }
             | Expression tSUB Expression {
               DynamicArrayPushAsmLine(pAsmTable, OP_SOU, $1, $1, $3);
               $$=$1;
               DynamicArrayPop(pSymbolTable);
-              printf("Expression[%d] tADD Expression[%d] ", $1, $3);
             }
             | Expression tSTAR Expression  {
               DynamicArrayPushAsmLine(pAsmTable, OP_MUL, $1, $1, $3);
               $$=$1;
               DynamicArrayPop(pSymbolTable);
-              printf("Expression[%d] tSTAR Expression[%d] ", $1, $3);
             }
             | Expression tDIV Expression  {
               DynamicArrayPushAsmLine(pAsmTable, OP_DIV, $1, $1, $3);
               $$=$1;
               DynamicArrayPop(pSymbolTable);
-              printf("Expression[%d] tDIV Expression[%d] ", $1, $3);
             }
             | tNB {
               int addr=DynamicArrayPushSymbolEntry(pSymbolTable, "temp");
               DynamicArrayPushAsmLine(pAsmTable, OP_AFC, addr, $1, 0);
               $$=addr;
-              printf("tNB[%d] ", $1);
             } 
             | tID {
               int index = DynamicArrayGetIndexIf(pSymbolTable,  (IptfVV)symbolEntryIsName, (void*)$1);
-              if(index<0)index=DynamicArrayPushSymbolEntry(pSymbolTable, $1); //error handle
+              if(index<0){
+                
+                index=DynamicArrayPushSymbolEntry(pSymbolTable, $1); //error handle
+              }
               int addr_ret=DynamicArrayPushSymbolEntry(pSymbolTable, "temp");
               DynamicArrayPushAsmLine(pAsmTable, OP_COP, addr_ret, index,0);
               $$=addr_ret;
