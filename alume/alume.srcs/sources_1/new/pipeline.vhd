@@ -12,7 +12,8 @@ entity pipeline is
         registres_o : out Banc;
         switches : in std_logic_vector(15 downto 0);
         score : out std_logic_vector(7 downto 0);
-        timer : out std_logic_vector(7 downto 0)
+        timer : out std_logic_vector(7 downto 0);
+        buttonEntry : in std_logic_vector(7 downto 0)
         );
 end pipeline;
 
@@ -50,11 +51,10 @@ architecture Behavioral of pipeline is
            CLK : in STD_LOGIC;
            QA : out STD_LOGIC_VECTOR (7 downto 0);
            QB : out STD_LOGIC_VECTOR (7 downto 0);
-           registres_o : out Banc
+           registres_o : out Banc;
+           buttonEntry : in std_logic_vector(7 downto 0)
            );
     END COMPONENT;
-    
- 
 
     --===========================LI/DI===========================
     --Inputs
@@ -130,7 +130,8 @@ architecture Behavioral of pipeline is
     signal BR_Wb_i: std_logic := '0';
     signal BR_DATA_i: std_logic_vector(7 downto 0) := (others => '0');     
     signal BR_RST_i: std_logic := '0';
-    
+    signal BR_buttonEntry_i : std_logic_vector(7 downto 0) := (others => '0');
+
     --Outputs
     signal BR_Qa_o : std_logic_vector(7 downto 0) := (others => '0');
     signal BR_Qb_o : std_logic_vector(7 downto 0) := (others => '0');
@@ -209,7 +210,8 @@ U_banc_registres : doubleport
            CLK => CLK,
            QA => BR_QA_o,
            QB => BR_QB_o,
-           registres_o => BR_registres_o
+           registres_o => BR_registres_o,
+           buttonEntry => BR_buttonEntry_i
     );
    
     

@@ -13,7 +13,8 @@ entity doubleport is
            CLK : in STD_LOGIC;
            QA : out STD_LOGIC_VECTOR (7 downto 0);
            QB : out STD_LOGIC_VECTOR (7 downto 0);
-           registres_o : out Banc
+           registres_o : out Banc;
+           buttonEntry : in std_logic_vector(7 downto 0)
            );
            
 end doubleport;
@@ -27,6 +28,7 @@ begin
     QA <= DATA when Wb = '1' and W = A  else registres(to_integer(unsigned(A)));
     QB <= DATA when Wb = '1' and W = B  else registres(to_integer(unsigned(B)));
     registres_o <= registres;
+    registres(3) <= buttonEntry;
     
     process (CLK)
     begin
