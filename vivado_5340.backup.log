@@ -1,0 +1,93 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Tue May 20 09:43:59 2025
+# Process ID         : 5340
+# Current directory  : /home/clem/Documents/GitHub/Kompilator
+# Command line       : vivado
+# Log file           : /home/clem/Documents/GitHub/Kompilator/vivado.log
+# Journal file       : /home/clem/Documents/GitHub/Kompilator/vivado.jou
+# Running On         : maskass
+# Platform           : Debian
+# Operating System   : Debian GNU/Linux 12 (bookworm)
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i5-1235U
+# CPU Frequency      : 3473.328 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 8005 MB
+# Swap memory        : 1023 MB
+# Total Virtual      : 9029 MB
+# Available Virtual  : 4631 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/clem/Documents/GitHub/Kompilator/alume/alume.xpr
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/clem/Documents/GitHub/Kompilator/alume/alume.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/clem/Xilinx/Vivado/2024.2/data/ip'.
+update_compile_order -fileset sources_1
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp with file /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/synth_1/main.dcp
+launch_runs synth_1 -jobs 6
+[Tue May 20 09:46:20 2025] Launched synth_1...
+Run output will be captured here: /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/synth_1/runme.log
+close_project
+open_project /home/clem/Documents/GitHub/Kompilator/alume_ta_bougie/alume_ta_bougie.xpr
+INFO: [Project 1-313] Project file moved from '/home/loubejac-com/Documents/4A/Semestre2/PSI/alume_ta_bougie' since last save.
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/clem/Documents/GitHub/Kompilator/alume_ta_bougie/alume_ta_bougie.gen/sources_1'.
+CRITICAL WARNING: [Project 1-311] Could not find the file '/home/clem/Documents/GitHub/Kompilator/Kompilator/alume/test_pipeline_behav.wcfg', nor could it be found using path '/home/loubejac-com/Documents/4A/Semestre2/PSI/Kompilator/alume/test_pipeline_behav.wcfg'.
+CRITICAL WARNING: [Project 1-311] Could not find the file '/home/clem/Documents/GitHub/Kompilator/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp', nor could it be found using path '/home/loubejac-com/Documents/4A/Semestre2/PSI/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp'.
+WARNING: [Project 1-865] Could not find the file /home/clem/Documents/GitHub/Kompilator/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp
+Scanning sources...
+Finished scanning sources
+WARNING: [Project 1-865] Could not find the file /home/clem/Documents/GitHub/Kompilator/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp
+WARNING: [Project 1-865] Could not find the file /home/clem/Documents/GitHub/Kompilator/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp
+INFO: [Project 1-230] Project 'alume_ta_bougie.xpr' upgraded for this version of Vivado.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/clem/Xilinx/Vivado/2024.2/data/ip'.
+update_compile_order -fileset sources_1
+close_project
+open_project /home/clem/Documents/GitHub/Kompilator/alume/alume.xpr
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/clem/Documents/GitHub/Kompilator/alume/alume.gen/sources_1'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp'.
+WARNING: [Project 1-865] Could not find the file /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp
+Scanning sources...
+Finished scanning sources
+WARNING: [Project 1-865] Could not find the file /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/clem/Xilinx/Vivado/2024.2/data/ip'.
+update_compile_order -fileset sources_1
+close_project
+open_project /home/clem/Documents/GitHub/Kompilator/alume_ta_bougie/alume_ta_bougie.xpr
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/clem/Documents/GitHub/Kompilator/alume_ta_bougie/alume_ta_bougie.gen/sources_1'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/clem/Documents/GitHub/Kompilator/Kompilator/alume/test_pipeline_behav.wcfg'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/clem/Documents/GitHub/Kompilator/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp'.
+WARNING: [Project 1-865] Could not find the file /home/clem/Documents/GitHub/Kompilator/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp
+Scanning sources...
+Finished scanning sources
+WARNING: [Project 1-865] Could not find the file /home/clem/Documents/GitHub/Kompilator/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp
+WARNING: [Project 1-865] Could not find the file /home/clem/Documents/GitHub/Kompilator/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/clem/Xilinx/Vivado/2024.2/data/ip'.
+update_compile_order -fileset sources_1
+close_project
+open_project /home/clem/Documents/GitHub/Kompilator/alume_ta_bougie/alume_ta_bougie.xpr
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/clem/Documents/GitHub/Kompilator/alume_ta_bougie/alume_ta_bougie.gen/sources_1'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/clem/Documents/GitHub/Kompilator/Kompilator/alume/test_pipeline_behav.wcfg'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/clem/Documents/GitHub/Kompilator/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp'.
+WARNING: [Project 1-865] Could not find the file /home/clem/Documents/GitHub/Kompilator/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp
+Scanning sources...
+Finished scanning sources
+WARNING: [Project 1-865] Could not find the file /home/clem/Documents/GitHub/Kompilator/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp
+WARNING: [Project 1-865] Could not find the file /home/clem/Documents/GitHub/Kompilator/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/clem/Xilinx/Vivado/2024.2/data/ip'.
+update_compile_order -fileset sources_1

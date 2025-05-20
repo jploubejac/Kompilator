@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date         : Tue May 20 19:02:23 2025
+| Date         : Tue May 20 21:46:11 2025
 | Host         : maskass running 64-bit Debian GNU/Linux 12 (bookworm)
 | Command      : report_control_sets -verbose -file main_control_sets_placed.rpt
 | Design       : main
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |   214 |
-|    Minimum number of control sets                        |   214 |
+| Total control sets                                       |   280 |
+|    Minimum number of control sets                        |   280 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    26 |
+| Unused register locations in slices containing registers |    21 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,11 +39,11 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |   214 |
+| Total control sets |   280 |
 | >= 0 to < 4        |     1 |
 | >= 4 to < 6        |     0 |
 | >= 6 to < 8        |     0 |
-| >= 8 to < 10       |   207 |
+| >= 8 to < 10       |   273 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
@@ -58,10 +58,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              99 |           35 |
+| No           | No                    | No                     |             111 |           43 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              59 |           25 |
-| Yes          | No                    | No                     |            1672 |          600 |
+| No           | Yes                   | No                     |              52 |           24 |
+| Yes          | No                    | No                     |            2200 |          774 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -74,219 +74,285 @@ Table of Contents
 |  Clock Signal  |                    Enable Signal                   |          Set/Reset Signal         | Slice Load Count | Bel Load Count | Bels / Slice |
 +----------------+----------------------------------------------------+-----------------------------------+------------------+----------------+--------------+
 |  slow_clk_BUFG |                                                    |                                   |                2 |              2 |         1.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[109][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[98][7]_i_1_n_0        |                                   |                4 |              8 |         2.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[99][7]_i_1_n_0        |                                   |                6 |              8 |         1.33 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[9][7]_i_1_n_0         |                                   |                6 |              8 |         1.33 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[0][7]_i_1_n_0         |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[100][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[101][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[102][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[103][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[104][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[105][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[106][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[107][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[108][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[97][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[10][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[110][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[111][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[112][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[113][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[114][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[115][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[116][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[117][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[118][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[119][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[11][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[85][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[74][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[75][7]_i_1_n_0        |                                   |                4 |              8 |         2.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[76][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[77][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[78][7]_i_1_n_0        |                                   |                4 |              8 |         2.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[79][7]_i_1_n_0        |                                   |                7 |              8 |         1.14 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[7][7]_i_1_n_0         |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[80][7]_i_1_n_0        |                                   |                4 |              8 |         2.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[81][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[82][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[83][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[84][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[120][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[86][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[87][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[88][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[89][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[8][7]_i_1_n_0         |                                   |                7 |              8 |         1.14 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[90][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[91][7]_i_1_n_0        |                                   |                4 |              8 |         2.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[92][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[93][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[94][7]_i_1_n_0        |                                   |                7 |              8 |         1.14 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[95][7]_i_1_n_0        |                                   |                5 |              8 |         1.60 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[96][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[201][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[17][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[180][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[183][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[184][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[187][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[18][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[193][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[194][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[197][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[199][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[19][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[1][7]_i_1_n_0         |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[178][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[202][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[203][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[205][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[206][7]_i_1_n_0       |                                   |                7 |              8 |         1.14 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[209][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[20][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[210][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[213][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[214][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[215][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[217][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
-| ~slow_clk_BUFG | pipeline/U_banc_instructions/E[0]                  |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[147][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[121][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[122][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[123][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[124][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[125][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[126][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[127][7]_i_1_n_0       |                                   |                7 |              8 |         1.14 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[12][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[13][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[144][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[145][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[146][7]_i_1_n_0       |                                   |                6 |              8 |         1.33 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[73][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[149][7]_i_1_n_0       |                                   |                5 |              8 |         1.60 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[14][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[150][7]_i_1_n_0       |                                   |                5 |              8 |         1.60 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[156][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[15][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[161][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[162][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[165][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[166][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[16][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[176][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[177][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[240][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[229][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[22][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[230][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[231][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[232][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[233][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[234][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[235][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[236][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[237][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[238][7]_i_1_n_0       |                                   |                7 |              8 |         1.14 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[23][7]_i_1_n_0        |                                   |                5 |              8 |         1.60 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[228][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[246][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[254][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[253][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[252][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[251][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[250][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[24][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[249][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[248][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[247][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[255][7]_i_1_n_0       |                                   |                8 |              8 |         1.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[245][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[244][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[243][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[242][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
 |  slow_clk_BUFG | pipeline/U_banc_donnees/data[241][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[242][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[244][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[245][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[246][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[248][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[249][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[24][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[250][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[252][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[254][7]_i_1_n_0       |                                   |                5 |              8 |         1.60 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[25][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_registres/registres[6]_9           |                                   |                4 |              8 |         2.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/LC_BD                      |                                   |                8 |              8 |         1.00 |
-|  slow_clk_BUFG | pipeline/U_banc_registres/registres[0]_15          |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_registres/registres[10]_5          |                                   |                4 |              8 |         2.00 |
-|  slow_clk_BUFG | pipeline/U_banc_registres/registres[11]_4          |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_registres/registres[12]_3          |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_registres/registres[13]_2          |                                   |                6 |              8 |         1.33 |
-|  slow_clk_BUFG | pipeline/U_banc_registres/registres[14]_1          |                                   |                6 |              8 |         1.33 |
-|  slow_clk_BUFG | pipeline/U_banc_registres/registres[15][7]_i_1_n_0 |                                   |                4 |              8 |         2.00 |
-|  slow_clk_BUFG | pipeline/U_banc_registres/registres[1]_14          |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_registres/registres[2]_13          |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_registres/registres[4]_11          |                                   |                5 |              8 |         1.60 |
-|  slow_clk_BUFG | pipeline/U_banc_registres/registres[5]_10          |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[26][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_registres/registres[7]_8           |                                   |                5 |              8 |         1.60 |
-|  slow_clk_BUFG | pipeline/U_banc_registres/registres[8]_7           |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_registres/registres[9]_6           |                                   |                6 |              8 |         1.33 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[218][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[21][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[221][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[222][7]_i_1_n_0       |                                   |                6 |              8 |         1.33 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[224][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[225][7]_i_1_n_0       |                                   |                5 |              8 |         1.60 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[226][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[227][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[61][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[50][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[51][7]_i_1_n_0        |                                   |                4 |              8 |         2.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[52][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[53][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[54][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[55][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[56][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[57][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[58][7]_i_1_n_0        |                                   |                5 |              8 |         1.60 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[59][7]_i_1_n_0        |                                   |                5 |              8 |         1.60 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[5][7]_i_1_n_0         |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[60][7]_i_1_n_0        |                                   |                5 |              8 |         1.60 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[4][7]_i_1_n_0         |                                   |                4 |              8 |         2.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[62][7]_i_1_n_0        |                                   |                7 |              8 |         1.14 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[63][7]_i_1_n_0        |                                   |                7 |              8 |         1.14 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[64][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[65][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[66][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[67][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[68][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[69][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[6][7]_i_1_n_0         |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[70][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[71][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[72][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[49][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[28][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[29][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[2][7]_i_1_n_0         |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[30][7]_i_1_n_0        |                                   |                6 |              8 |         1.33 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[240][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[23][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
 |  slow_clk_BUFG | pipeline/U_banc_donnees/data[31][7]_i_1_n_0        |                                   |                7 |              8 |         1.14 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[32][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[33][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[34][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[35][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[36][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[37][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[38][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
 |  slow_clk_BUFG | pipeline/U_banc_donnees/data[39][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[3][7]_i_1_n_0         |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[40][7]_i_1_n_0        |                                   |                4 |              8 |         2.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[41][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[38][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[37][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[36][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[35][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[34][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[33][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[32][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[239][7]_i_1_n_0       |                                   |                8 |              8 |         1.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[30][7]_i_1_n_0        |                                   |                5 |              8 |         1.60 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[2][7]_i_1_n_0         |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[29][7]_i_1_n_0        |                                   |                5 |              8 |         1.60 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[28][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[27][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[26][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[25][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[215][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[222][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[221][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[220][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[21][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[219][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[218][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[217][7]_i_1_n_0       |                                   |                5 |              8 |         1.60 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[216][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[223][7]_i_1_n_0       |                                   |                5 |              8 |         1.60 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[214][7]_i_1_n_0       |                                   |                6 |              8 |         1.33 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[213][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[212][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[211][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[210][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[20][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[209][7]_i_1_n_0       |                                   |                5 |              8 |         1.60 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[230][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[238][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[237][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[236][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[235][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[234][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[233][7]_i_1_n_0       |                                   |                5 |              8 |         1.60 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[232][7]_i_1_n_0       |                                   |                5 |              8 |         1.60 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[231][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[40][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[22][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[229][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[228][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[227][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[226][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[225][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[224][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[79][7]_i_1_n_0        |                                   |                8 |              8 |         1.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[86][7]_i_1_n_0        |                                   |                4 |              8 |         2.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[85][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[84][7]_i_1_n_0        |                                   |                4 |              8 |         2.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[83][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[82][7]_i_1_n_0        |                                   |                4 |              8 |         2.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[81][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[80][7]_i_1_n_0        |                                   |                4 |              8 |         2.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[7][7]_i_1_n_0         |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[87][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[78][7]_i_1_n_0        |                                   |                5 |              8 |         1.60 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[77][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[76][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[75][7]_i_1_n_0        |                                   |                7 |              8 |         1.14 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[74][7]_i_1_n_0        |                                   |                4 |              8 |         2.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[73][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[72][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[71][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[94][7]_i_1_n_0        |                                   |                7 |              8 |         1.14 |
+| ~slow_clk_BUFG | pipeline/U_banc_instructions/E[0]                  |                                   |                5 |              8 |         1.60 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/LC_BD                      |                                   |                8 |              8 |         1.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[9][7]_i_1_n_0         |                                   |                8 |              8 |         1.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[99][7]_i_1_n_0        |                                   |                8 |              8 |         1.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[98][7]_i_1_n_0        |                                   |                6 |              8 |         1.33 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[97][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[96][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[95][7]_i_1_n_0        |                                   |                8 |              8 |         1.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[70][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[93][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[92][7]_i_1_n_0        |                                   |                5 |              8 |         1.60 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[91][7]_i_1_n_0        |                                   |                5 |              8 |         1.60 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[90][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[8][7]_i_1_n_0         |                                   |                4 |              8 |         2.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[89][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[88][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[47][7]_i_1_n_0        |                                   |                7 |              8 |         1.14 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[54][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[53][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[52][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[51][7]_i_1_n_0        |                                   |                4 |              8 |         2.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[50][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[4][7]_i_1_n_0         |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[49][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[48][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[55][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[46][7]_i_1_n_0        |                                   |                7 |              8 |         1.14 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[45][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[44][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[43][7]_i_1_n_0        |                                   |                5 |              8 |         1.60 |
 |  slow_clk_BUFG | pipeline/U_banc_donnees/data[42][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[43][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[44][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[45][7]_i_1_n_0        |                                   |                5 |              8 |         1.60 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[46][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[47][7]_i_1_n_0        |                                   |                8 |              8 |         1.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[48][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
-|  slow_clk_BUFG | pipeline/U_banc_donnees/data[27][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
-|  slow_clk_BUFG | pipeline/U_banc_registres/registres[3]_12          |                                   |                9 |             16 |         1.78 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[41][7]_i_1_n_0        |                                   |                5 |              8 |         1.60 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[208][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[62][7]_i_1_n_0        |                                   |                6 |              8 |         1.33 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[6][7]_i_1_n_0         |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[69][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[68][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[67][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[66][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[65][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[64][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[63][7]_i_1_n_0        |                                   |                5 |              8 |         1.60 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[3][7]_i_1_n_0         |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[61][7]_i_1_n_0        |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[60][7]_i_1_n_0        |                                   |                4 |              8 |         2.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[5][7]_i_1_n_0         |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[59][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[58][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[57][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[56][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[123][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[130][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[12][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[129][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[128][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[127][7]_i_1_n_0       |                                   |                7 |              8 |         1.14 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[126][7]_i_1_n_0       |                                   |                5 |              8 |         1.60 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[125][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[124][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[131][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[122][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[121][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[120][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[11][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[119][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[118][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[117][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[139][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[146][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[145][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[144][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[143][7]_i_1_n_0       |                                   |                7 |              8 |         1.14 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[142][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[141][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[140][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[13][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[116][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[138][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[137][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[136][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[135][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[134][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[133][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[132][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_registres/registres[1]_14          |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[0][7]_i_1_n_0         |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_registres/registres[9]_6           |                                   |                5 |              8 |         1.60 |
+|  slow_clk_BUFG | pipeline/U_banc_registres/registres[8]_7           |                                   |                5 |              8 |         1.60 |
+|  slow_clk_BUFG | pipeline/U_banc_registres/registres[7]_8           |                                   |                5 |              8 |         1.60 |
+|  slow_clk_BUFG | pipeline/U_banc_registres/registres[6]_9           |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_registres/registres[5]_10          |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_registres/registres[4]_11          |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_registres/registres[2]_13          |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[100][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
+|  slow_clk_BUFG | pipeline/U_banc_registres/registres[15][7]_i_1_n_0 |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_registres/registres[14]_1          |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_registres/registres[13]_2          |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_registres/registres[12]_3          |                                   |                5 |              8 |         1.60 |
+|  slow_clk_BUFG | pipeline/U_banc_registres/registres[11]_4          |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_registres/registres[10]_5          |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_registres/registres[0]_15          |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[108][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[115][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[114][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[113][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[112][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[111][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[110][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[10][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[109][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[207][7]_i_1_n_0       |                                   |                7 |              8 |         1.14 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[107][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[106][7]_i_1_n_0       |                                   |                5 |              8 |         1.60 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[105][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[104][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[103][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[102][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[101][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[184][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[191][7]_i_1_n_0       |                                   |                7 |              8 |         1.14 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[190][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[18][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[189][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[188][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[187][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[186][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[185][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[192][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[183][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[182][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[181][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[180][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[17][7]_i_1_n_0        |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[179][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[178][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[19][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[206][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[205][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[204][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[203][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[202][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[201][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[200][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[1][7]_i_1_n_0         |                                   |                4 |              8 |         2.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[148][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[199][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[198][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[197][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[196][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[195][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[194][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[193][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[154][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[161][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[160][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[15][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[159][7]_i_1_n_0       |                                   |                7 |              8 |         1.14 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[158][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[157][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[156][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[155][7]_i_1_n_0       |                                   |                4 |              8 |         2.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[176][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[153][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[152][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[151][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[150][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[14][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[149][7]_i_1_n_0       |                                   |                5 |              8 |         1.60 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[147][7]_i_1_n_0       |                                   |                5 |              8 |         1.60 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[163][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[177][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[175][7]_i_1_n_0       |                                   |                6 |              8 |         1.33 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[174][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[173][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[172][7]_i_1_n_0       |                                   |                5 |              8 |         1.60 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[171][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[170][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[16][7]_i_1_n_0        |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[169][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[168][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[167][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[166][7]_i_1_n_0       |                                   |                1 |              8 |         8.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[165][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[164][7]_i_1_n_0       |                                   |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | pipeline/U_banc_donnees/data[162][7]_i_1_n_0       |                                   |                3 |              8 |         2.67 |
+|  slow_clk_BUFG | pipeline/U_banc_registres/registres[3]_12          |                                   |                7 |             16 |         2.29 |
+| ~slow_clk_BUFG |                                                    | pipeline/U_banc_instructions/ALEA |                5 |             16 |         3.20 |
 |  clk_IBUF_BUFG |                                                    | rst_IBUF                          |                5 |             17 |         3.40 |
-| ~slow_clk_BUFG |                                                    | pipeline/U_banc_instructions/ALEA |                5 |             20 |         4.00 |
-|  slow_clk_BUFG |                                                    | pipeline/ADDR[7]                  |               15 |             22 |         1.47 |
+|  slow_clk_BUFG |                                                    | pipeline/ADDR[7]                  |               14 |             19 |         1.36 |
 |  clk_IBUF_BUFG |                                                    |                                   |                7 |             23 |         3.29 |
-| ~slow_clk_BUFG |                                                    |                                   |               26 |             74 |         2.85 |
+| ~slow_clk_BUFG |                                                    |                                   |               34 |             86 |         2.53 |
 +----------------+----------------------------------------------------+-----------------------------------+------------------+----------------+--------------+
 
 

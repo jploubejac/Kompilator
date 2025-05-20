@@ -3,8 +3,8 @@
 # SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Tue May 20 09:43:59 2025
-# Process ID         : 5340
+# Start of session at: Tue May 20 20:26:03 2025
+# Process ID         : 263947
 # Current directory  : /home/clem/Documents/GitHub/Kompilator
 # Command line       : vivado
 # Log file           : /home/clem/Documents/GitHub/Kompilator/vivado.log
@@ -13,13 +13,13 @@
 # Platform           : Debian
 # Operating System   : Debian GNU/Linux 12 (bookworm)
 # Processor Detail   : 12th Gen Intel(R) Core(TM) i5-1235U
-# CPU Frequency      : 3473.328 MHz
+# CPU Frequency      : 3400.000 MHz
 # CPU Physical cores : 10
 # CPU Logical cores  : 12
 # Host memory        : 8005 MB
 # Swap memory        : 1023 MB
 # Total Virtual      : 9029 MB
-# Available Virtual  : 4631 MB
+# Available Virtual  : 3583 MB
 #-----------------------------------------------------------
 start_gui
 open_project /home/clem/Documents/GitHub/Kompilator/alume/alume.xpr
@@ -33,61 +33,124 @@ update_compile_order -fileset sources_1
 reset_run synth_1
 INFO: [Project 1-1161] Replacing file /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp with file /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/synth_1/main.dcp
 launch_runs synth_1 -jobs 6
-[Tue May 20 09:46:20 2025] Launched synth_1...
+[Tue May 20 20:27:17 2025] Launched synth_1...
 Run output will be captured here: /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/synth_1/runme.log
-close_project
-open_project /home/clem/Documents/GitHub/Kompilator/alume_ta_bougie/alume_ta_bougie.xpr
-INFO: [Project 1-313] Project file moved from '/home/loubejac-com/Documents/4A/Semestre2/PSI/alume_ta_bougie' since last save.
-INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/clem/Documents/GitHub/Kompilator/alume_ta_bougie/alume_ta_bougie.gen/sources_1'.
-CRITICAL WARNING: [Project 1-311] Could not find the file '/home/clem/Documents/GitHub/Kompilator/Kompilator/alume/test_pipeline_behav.wcfg', nor could it be found using path '/home/loubejac-com/Documents/4A/Semestre2/PSI/Kompilator/alume/test_pipeline_behav.wcfg'.
-CRITICAL WARNING: [Project 1-311] Could not find the file '/home/clem/Documents/GitHub/Kompilator/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp', nor could it be found using path '/home/loubejac-com/Documents/4A/Semestre2/PSI/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp'.
-WARNING: [Project 1-865] Could not find the file /home/clem/Documents/GitHub/Kompilator/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp
-Scanning sources...
-Finished scanning sources
-WARNING: [Project 1-865] Could not find the file /home/clem/Documents/GitHub/Kompilator/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp
-WARNING: [Project 1-865] Could not find the file /home/clem/Documents/GitHub/Kompilator/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp
-INFO: [Project 1-230] Project 'alume_ta_bougie.xpr' upgraded for this version of Vivado.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/clem/Xilinx/Vivado/2024.2/data/ip'.
-update_compile_order -fileset sources_1
-close_project
-open_project /home/clem/Documents/GitHub/Kompilator/alume/alume.xpr
-INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/clem/Documents/GitHub/Kompilator/alume/alume.gen/sources_1'.
-CRITICAL WARNING: [Project 1-19] Could not find the file '/home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp'.
-WARNING: [Project 1-865] Could not find the file /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp
-Scanning sources...
-Finished scanning sources
-WARNING: [Project 1-865] Could not find the file /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/clem/Xilinx/Vivado/2024.2/data/ip'.
-update_compile_order -fileset sources_1
-close_project
-open_project /home/clem/Documents/GitHub/Kompilator/alume_ta_bougie/alume_ta_bougie.xpr
-INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/clem/Documents/GitHub/Kompilator/alume_ta_bougie/alume_ta_bougie.gen/sources_1'.
-CRITICAL WARNING: [Project 1-19] Could not find the file '/home/clem/Documents/GitHub/Kompilator/Kompilator/alume/test_pipeline_behav.wcfg'.
-CRITICAL WARNING: [Project 1-19] Could not find the file '/home/clem/Documents/GitHub/Kompilator/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp'.
-WARNING: [Project 1-865] Could not find the file /home/clem/Documents/GitHub/Kompilator/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp
-Scanning sources...
-Finished scanning sources
-WARNING: [Project 1-865] Could not find the file /home/clem/Documents/GitHub/Kompilator/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp
-WARNING: [Project 1-865] Could not find the file /home/clem/Documents/GitHub/Kompilator/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/clem/Xilinx/Vivado/2024.2/data/ip'.
-update_compile_order -fileset sources_1
-close_project
-open_project /home/clem/Documents/GitHub/Kompilator/alume_ta_bougie/alume_ta_bougie.xpr
-INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/clem/Documents/GitHub/Kompilator/alume_ta_bougie/alume_ta_bougie.gen/sources_1'.
-CRITICAL WARNING: [Project 1-19] Could not find the file '/home/clem/Documents/GitHub/Kompilator/Kompilator/alume/test_pipeline_behav.wcfg'.
-CRITICAL WARNING: [Project 1-19] Could not find the file '/home/clem/Documents/GitHub/Kompilator/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp'.
-WARNING: [Project 1-865] Could not find the file /home/clem/Documents/GitHub/Kompilator/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp
-Scanning sources...
-Finished scanning sources
-WARNING: [Project 1-865] Could not find the file /home/clem/Documents/GitHub/Kompilator/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp
-WARNING: [Project 1-865] Could not find the file /home/clem/Documents/GitHub/Kompilator/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/clem/Xilinx/Vivado/2024.2/data/ip'.
-update_compile_order -fileset sources_1
+launch_runs impl_1 -jobs 6
+[Tue May 20 20:28:18 2025] Launched impl_1...
+Run output will be captured here: /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Tue May 20 20:29:02 2025] Launched impl_1...
+Run output will be captured here: /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2024.2.0
+  ****** Build date   : Oct 30 2024-19:19:07
+    **** Build number : 2024.2.1730312347
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183AB4E8FA
+set_property PROGRAM.FILE {/home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp with file /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/synth_1/main.dcp
+launch_runs synth_1 -jobs 6
+[Tue May 20 20:42:01 2025] Launched synth_1...
+Run output will be captured here: /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 6
+[Tue May 20 20:42:47 2025] Launched impl_1...
+Run output will be captured here: /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Tue May 20 20:43:34 2025] Launched impl_1...
+Run output will be captured here: /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2024.2.0
+  ****** Build date   : Oct 30 2024-19:19:07
+    **** Build number : 2024.2.1730312347
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183AB4E8FA
+set_property PROGRAM.FILE {/home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/utils_1/imports/synth_1/ALU.dcp with file /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/synth_1/main.dcp
+launch_runs synth_1 -jobs 6
+[Tue May 20 20:47:00 2025] Launched synth_1...
+Run output will be captured here: /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 6
+[Tue May 20 20:47:47 2025] Launched impl_1...
+Run output will be captured here: /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Tue May 20 20:48:31 2025] Launched impl_1...
+Run output will be captured here: /home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2024.2.0
+  ****** Build date   : Oct 30 2024-19:19:07
+    **** Build number : 2024.2.1730312347
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183AB4E8FA
+set_property PROGRAM.FILE {/home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/clem/Documents/GitHub/Kompilator/alume/alume.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue May 20 20:50:38 2025...

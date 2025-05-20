@@ -23,6 +23,9 @@ architecture Behavioral of main is
     signal result_registres : Banc := (others => (others => '0'));
     signal be : std_logic_vector(7 downto 0) := (others => '0');
     signal button : std_logic_vector(7 downto 0) := (others => '0');
+    signal left_in_data : std_logic_vector(7 downto 0) := (others => '0');
+    signal right_in_data : std_logic_vector(7 downto 0) := (others => '0');
+
 begin
     
     pipeline: entity work.pipeline
@@ -36,8 +39,8 @@ begin
     seven_seg: entity work.seven_seg_controller
         port map(
             clk => clk,
-            left_in => result_registres(8),
-            right_in => result_registres(1),
+            left_in => left_in_data,
+            right_in => right_in_data,
             seg => seg,
             an => an
         );
@@ -52,4 +55,11 @@ begin
 button <= result_registres(3);
 leds <= std_logic_vector(to_unsigned(1, 8) sll to_integer(unsigned(result_registres(0)(2 downto 0))));
 pc_leds <= result_registres(3);
+left_in_data <=  x"FF" when unsigned(result_registres(2)) < 1 else
+                x"CA" when unsigned(result_registres(2)) >= 1 and unsigned(result_registres(1)) >= 10 else
+                result_registres(5); --when unsigned(result_registres(2)) < 15 and unsigned(result_registres(1)) < 10;
+right_in_data <= x"15" when unsigned(result_registres(2)) < 1 else
+                x"FE" when unsigned(result_registres(2)) >= 1 and unsigned(result_registres(1)) >= 10 else
+                result_registres(1); --when unsigned(result_registres(2)) < 15 and unsigned(result_registres(1)) < 10;
+                    
 end Behavioral;
