@@ -55,6 +55,12 @@ void DynamicArrayAsmLinePrint(dynamicArray_t *pArray){
         if(pEntry==NULL)return;
         strcpy(inst, int_to_instr(pEntry->op));
         switch ((int)pEntry->op) {
+            case OP_JMP:
+                printf("%d:\t%s #%d\n",i, inst, pEntry->res);
+                break;
+            case OP_JMF:
+                printf("%d:\t%s #%d %d\n",i, inst, pEntry->res, pEntry->arg1);
+                break;
             case OP_AFC:
                 printf("%d:\t%s %d #%d\n",i, inst, pEntry->res, pEntry->arg1);
                 break;
@@ -93,6 +99,12 @@ void DynamicArrayAsmLinePrintToFile(dynamicArray_t *pArray, const char *filename
         }
         strcpy(inst, int_to_instr(pEntry->op));
         switch ((int)pEntry->op) {
+            case OP_JMP:
+                fprintf(file, "%d:\t%s #%d\n",i, inst, pEntry->res);
+                break;
+            case OP_JMF:
+                fprintf(file, "%d:\t%s #%d %d\n",i, inst, pEntry->res, pEntry->arg1);
+                break;
             case OP_AFC:
                 fprintf(file, "%d:\t%s %d #%x\n",i, inst, pEntry->res, pEntry->arg1);
                 break;
