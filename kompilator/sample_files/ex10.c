@@ -2,13 +2,17 @@ void main() {
     int led_to_choose = 0;
     int score = 0;
     int timer = 60;
-    int button;
+    int button = 1;
     int timer_while=0;
-    int win;
+    int win = 0;
+    int choosing = 0;
+    int finished = 0;
+    int reset = 0;
+
     while (timer > 1) {
         led_to_choose = led_to_choose + timer;
-        while (led_to_choose > 15) {
-            led_to_choose = led_to_choose - 15;
+        while (led_to_choose > 7) {
+            led_to_choose = led_to_choose - 7;
         }
         int valeur_attendue = 1;
         int i = led_to_choose;
@@ -17,7 +21,16 @@ void main() {
             i = i - 1;
         }
         timer_while=0;
-        win =0;
+
+        if (score > 5) {
+            finished = 1;
+        }
+        if (reset == 1) {
+            score = 0;
+            timer = 60;
+        }
+
+        choosing = 1;
         while((timer_while < 5) && (win == 0)){
             if (button == valeur_attendue) {
                 score = score + 1;
@@ -25,6 +38,7 @@ void main() {
             }
             timer_while = timer_while + 1;
         }
+        choosing = 0;
         timer = timer - 1;
     }
     int c = 0;

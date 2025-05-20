@@ -1,5 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use work.types_Banc.all;
+use IEEE.numeric_std.ALL;
 
 entity main is
     Port (
@@ -18,11 +20,7 @@ architecture Behavioral of main is
 
     signal slow_clk : std_logic;
     signal result_alu : std_logic_vector(7 downto 0) := (others => '0');
-    signal result_R9 : std_logic_vector(7 downto 0) := (others => '0');
-    signal result_R1 : std_logic_vector(7 downto 0) := (others => '0');
-    signal result_R2 : std_logic_vector(7 downto 0) := (others => '0');
-    signal score : std_logic_vector(7 downto 0) := (others => '0');
-    signal timer : std_logic_vector(7 downto 0) := (others => '0');
+    signal result_registres : Banc := (others => (others => '0'));
 begin
     
     pipeline: entity work.pipeline
@@ -30,16 +28,14 @@ begin
             clk => slow_clk,
             rst => rst,
             result_alu => result_alu,
-            result_R9 => result_R9,
-            result_R1 => result_R1,
-            result_R2 => result_R2,
+            registres_o => result_registres,
             switches => sw
         );
     seven_seg: entity work.seven_seg_controller
         port map(
             clk => clk,
-            left_in => timer,
-            right_in => score,
+            left_in => result_registres(2),
+            right_in => result_registres(1),
             seg => seg,
             an => an
         );
@@ -51,8 +47,5 @@ begin
         );
 
 clk_led <= slow_clk;
-leds <= result_alu;
-score <= result_R1;
-timer <= result_R2;
-
+leds <= std_logic_vector(to_unsigned(1, 8) sll to_integer(unsigned(result_registres(0)(2 downto 0))));
 end Behavioral;

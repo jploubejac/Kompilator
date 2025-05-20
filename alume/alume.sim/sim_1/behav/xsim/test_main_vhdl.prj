@@ -4,6 +4,7 @@ vhdl xil_defaultlib  \
 "../../../../alume.srcs/sources_1/new/banc_donnees.vhd" \
 "../../../../alume.srcs/sources_1/new/banc_instructions.vhd" \
 "../../../../alume.srcs/sources_1/new/clock_div.vhd" \
+"../../../../alume.srcs/sources_1/new/type_Banc.vhd" \
 "../../../../alume.srcs/sources_1/new/doubleport.vhd" \
 "../../../../alume.srcs/sources_1/new/pipeline.vhd" \
 "../../../../alume.srcs/sources_1/new/seven_seg_controller.vhd" \

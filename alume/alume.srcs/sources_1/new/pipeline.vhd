@@ -1,6 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
+use work.types_Banc.all;
 
 -- add leds
 entity pipeline is
@@ -8,9 +9,7 @@ entity pipeline is
         clk : in std_logic;
         rst: in std_logic;
         result_alu : out std_logic_vector(7 downto 0);
-        result_R9 : out std_logic_vector(7 downto 0);
-        result_R1 : out std_logic_vector(7 downto 0);
-        result_R2 : out std_logic_vector(7 downto 0);        
+        registres_o : out Banc;
         switches : in std_logic_vector(15 downto 0);
         score : out std_logic_vector(7 downto 0);
         timer : out std_logic_vector(7 downto 0)
@@ -51,9 +50,7 @@ architecture Behavioral of pipeline is
            CLK : in STD_LOGIC;
            QA : out STD_LOGIC_VECTOR (7 downto 0);
            QB : out STD_LOGIC_VECTOR (7 downto 0);
-           R9 : out std_logic_vector(7 downto 0);
-           R1 : out STD_LOGIC_VECTOR (7 downto 0);
-           R2 : out STD_LOGIC_VECTOR (7 downto 0)
+           registres_o : out Banc
            );
     END COMPONENT;
     
@@ -137,9 +134,7 @@ architecture Behavioral of pipeline is
     --Outputs
     signal BR_Qa_o : std_logic_vector(7 downto 0) := (others => '0');
     signal BR_Qb_o : std_logic_vector(7 downto 0) := (others => '0');
-    signal BR_R9_o : std_logic_vector(7 downto 0) := (others => '0');
-    signal BR_R1_o : std_logic_vector(7 downto 0) := (others => '0');
-    signal BR_R2_o : std_logic_vector(7 downto 0) := (others => '0');
+    signal BR_registres_o : Banc := (others => (others => '0'));
 
     --===========================ALU=========================== 
     signal ALU_A_i : std_logic_vector(7 downto 0) := (others => '0');
@@ -181,9 +176,7 @@ architecture Behavioral of pipeline is
 begin
 
 result_alu <= ALU_S_o;
-result_R9 <= BR_R9_o;
-result_R1 <= BR_R1_o;
-result_R2 <= BR_R2_o;
+registres_o <= BR_registres_o;
 
 -- Instanciation du composant banc_instructions
 U_banc_instructions : banc_instructions
@@ -216,9 +209,7 @@ U_banc_registres : doubleport
            CLK => CLK,
            QA => BR_QA_o,
            QB => BR_QB_o,
-           R9 => BR_R9_o,
-           R1 => BR_R1_o,
-           R2 => BR_R2_o
+           registres_o => BR_registres_o
     );
    
     

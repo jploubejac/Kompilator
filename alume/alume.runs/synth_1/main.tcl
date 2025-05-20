@@ -77,6 +77,7 @@ read_vhdl -library xil_defaultlib {
   /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_donnees.vhd
   /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/banc_instructions.vhd
   /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/clock_div.vhd
+  /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/type_Banc.vhd
   /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/doubleport.vhd
   /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/pipeline.vhd
   /home/clem/Documents/GitHub/Kompilator/alume/alume.srcs/sources_1/new/seven_seg_controller.vhd

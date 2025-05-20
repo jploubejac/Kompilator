@@ -1,35 +1,20 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="clem" Host="maskass" Pid="28189" HostCore="12" HostMemory="7818276">
+    <Process Command="vivado" Owner="clem" Host="maskass" Pid="9884" HostCore="12" HostMemory="7818284">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="clem" Host="maskass" Pid="46069" HostCore="12" HostMemory="7818276">
+    <Process Command="vivado" Owner="clem" Host="maskass" Pid="29314" HostCore="12" HostMemory="7818284">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="clem" Host="maskass" Pid="63573" HostCore="12" HostMemory="7818276">
+    <Process Command="vivado" Owner="clem" Host="maskass" Pid="33328" HostCore="12" HostMemory="7818284">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="clem" Host="maskass" Pid="65822" HostCore="12" HostMemory="7818276">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="clem" Host="maskass" Pid="85372" HostCore="12" HostMemory="7818276">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="clem" Host="maskass" Pid="86278" HostCore="12" HostMemory="7818276">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="clem" Host="maskass" Pid="105682" HostCore="12" HostMemory="7818276">
+    <Process Command="vivado" Owner="clem" Host="maskass" Pid="51683" HostCore="12" HostMemory="7818284">
     </Process>
 </ProcessHandle>
