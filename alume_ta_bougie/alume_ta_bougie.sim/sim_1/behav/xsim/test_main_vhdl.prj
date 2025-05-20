@@ -1,0 +1,14 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../alume_ta_bougie.srcs/sources_1/new/ALU.vhd" \
+"../../../../alume_ta_bougie.srcs/sources_1/new/banc_donnees.vhd" \
+"../../../../alume_ta_bougie.srcs/sources_1/new/banc_instructions.vhd" \
+"../../../../alume_ta_bougie.srcs/sources_1/new/clock_div.vhd" \
+"../../../../alume_ta_bougie.srcs/sources_1/new/doubleport.vhd" \
+"../../../../alume_ta_bougie.srcs/sources_1/new/pipeline.vhd" \
+"../../../../alume_ta_bougie.srcs/sources_1/new/seven_seg_controller.vhd" \
+"../../../../alume_ta_bougie.srcs/sources_1/new/main.vhd" \
+"../../../../alume_ta_bougie.srcs/sim_1/new/test_main.vhd" \
+
+# Do not sort compile order
+nosort
