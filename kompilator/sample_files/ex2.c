@@ -1,6 +1,7 @@
 void main ()
 {
   int i,j,k,r;
+  int i = 1;
   int m = 3;
   j = 4;
   k = 8;
