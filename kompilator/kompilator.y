@@ -7,6 +7,7 @@
 #include "asmLine.h"
 #include "dynamicArray.h"
 #define RESULT_FILE "result.dump"
+#define INTERPRET_FILE "asm.dump"
 
 extern char *yytext;
 void yyerror(char *s);
@@ -445,7 +446,8 @@ int main(void) {
   printf("\n************************************************************************************\n");
   printf("ASM TABLE\n");
   DynamicArrayAsmLinePrint(pAsmTable);
-  DynamicArrayAsmLinePrintToFile(pAsmTable, RESULT_FILE);
+  DynamicArrayAsmLinePrintToFile(pAsmTable, RESULT_FILE,0);
+  DynamicArrayAsmLinePrintToFile(pAsmTable, INTERPRET_FILE,1);
   printf("\n************************************************************************************\n");
   printf("DELETING TABLES ✅\n");
   DynamicArrayDel(pFunctionSymbolTable);

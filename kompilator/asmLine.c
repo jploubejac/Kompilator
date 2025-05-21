@@ -87,8 +87,11 @@ void DynamicArrayAsmLinePrint(dynamicArray_t *pArray){
     
 }
 
-void DynamicArrayAsmLinePrintToFile(dynamicArray_t *pArray, const char *filename){
-    FILE *file = fopen(filename, "a");
+void DynamicArrayAsmLinePrintToFile(dynamicArray_t *pArray, const char *filename, int eff){
+    FILE *file;
+    if(eff){
+        file = fopen(filename, "w");
+    }else file = fopen(filename, "a");
     if (file == NULL) {
         perror("Error opening file");
         return;
