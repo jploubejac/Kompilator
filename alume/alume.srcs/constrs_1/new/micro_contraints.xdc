@@ -26,19 +26,19 @@ set_property -dict { PACKAGE_PIN L1  IOSTANDARD LVCMOS33 } [get_ports { debug_le
 #set_property -dict { PACKAGE_PIN L1  IOSTANDARD LVCMOS33 } [get_ports { clk_debug }];
 
 ## Segmeents 7 segments (seg[6:0] = {a,b,c,d,e,f,g})
-set_property -dict { PACKAGE_PIN W7   IOSTANDARD LVCMOS33 } [get_ports { seg[6] }]; # a
-set_property -dict { PACKAGE_PIN W6   IOSTANDARD LVCMOS33 } [get_ports { seg[5] }]; # b
-set_property -dict { PACKAGE_PIN U8   IOSTANDARD LVCMOS33 } [get_ports { seg[4] }]; # c
-set_property -dict { PACKAGE_PIN V8   IOSTANDARD LVCMOS33 } [get_ports { seg[3] }]; # d
-set_property -dict { PACKAGE_PIN U5   IOSTANDARD LVCMOS33 } [get_ports { seg[2] }]; # e
-set_property -dict { PACKAGE_PIN V5   IOSTANDARD LVCMOS33 } [get_ports { seg[1] }]; # f
-set_property -dict { PACKAGE_PIN U7   IOSTANDARD LVCMOS33 } [get_ports { seg[0] }]; # g
+set_property -dict { PACKAGE_PIN W7   IOSTANDARD LVCMOS33 } [get_ports { segments[6] }]; # a
+set_property -dict { PACKAGE_PIN W6   IOSTANDARD LVCMOS33 } [get_ports { segments[5] }]; # b
+set_property -dict { PACKAGE_PIN U8   IOSTANDARD LVCMOS33 } [get_ports { segments[4] }]; # c
+set_property -dict { PACKAGE_PIN V8   IOSTANDARD LVCMOS33 } [get_ports { segments[3] }]; # d
+set_property -dict { PACKAGE_PIN U5   IOSTANDARD LVCMOS33 } [get_ports { segments[2] }]; # e
+set_property -dict { PACKAGE_PIN V5   IOSTANDARD LVCMOS33 } [get_ports { segments[1] }]; # f
+set_property -dict { PACKAGE_PIN U7   IOSTANDARD LVCMOS33 } [get_ports { segments[0] }]; # g
 
 ## Anodes 7 segments
-set_property -dict { PACKAGE_PIN U2   IOSTANDARD LVCMOS33 } [get_ports { an[0] }];
-set_property -dict { PACKAGE_PIN U4   IOSTANDARD LVCMOS33 } [get_ports { an[1] }];
-set_property -dict { PACKAGE_PIN V4   IOSTANDARD LVCMOS33 } [get_ports { an[2] }];
-set_property -dict { PACKAGE_PIN W4   IOSTANDARD LVCMOS33 } [get_ports { an[3] }];
+set_property -dict { PACKAGE_PIN U2   IOSTANDARD LVCMOS33 } [get_ports { anodes[0] }];
+set_property -dict { PACKAGE_PIN U4   IOSTANDARD LVCMOS33 } [get_ports { anodes[1] }];
+set_property -dict { PACKAGE_PIN V4   IOSTANDARD LVCMOS33 } [get_ports { anodes[2] }];
+set_property -dict { PACKAGE_PIN W4   IOSTANDARD LVCMOS33 } [get_ports { anodes[3] }];
 
 ## Interrupteurs
 ## On utilise que les 8 premiers

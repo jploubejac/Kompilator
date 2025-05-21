@@ -11,44 +11,39 @@ entity seven_seg_controller is
         clk : in  STD_LOGIC;
         right_in : in  STD_LOGIC_VECTOR(7 downto 0);
         left_in : in  STD_LOGIC_VECTOR(7 downto 0);
-        seg : out STD_LOGIC_VECTOR(6 downto 0); -- Segments (a à g)
-        an : out STD_LOGIC_VECTOR(3 downto 0) -- Anodes (les 4 afficheurs)
+        segments : out STD_LOGIC_VECTOR(6 downto 0); -- Segments (a à g)
+        anodes : out STD_LOGIC_VECTOR(3 downto 0) -- Anodes (les 4 afficheurs)
     );
 end seven_seg_controller;
 
 architecture Behavioral of seven_seg_controller is
-    signal counter: unsigned(19 downto 0) := (others => '0');
-    signal digit_sel: integer range 0 to 3 := 0; -- afficheur actif
-    signal bcd_digit: STD_LOGIC_VECTOR(3 downto 0);
-    signal right_bcd: STD_LOGIC_VECTOR(7 downto 0);
-    signal left_bcd : STD_LOGIC_VECTOR(7 downto 0);
+    signal compteur: unsigned(19 downto 0) := (others => '0');
+    signal selection: integer range 0 to 3 := 0; -- afficheur actif
+    signal valeur_recup: STD_LOGIC_VECTOR(3 downto 0);
+    signal right_recup: STD_LOGIC_VECTOR(7 downto 0);
+    signal left_recup : STD_LOGIC_VECTOR(7 downto 0);
 begin
-    right_bcd <= right_in;
-    left_bcd  <= left_in;
+
 process(clk)
 begin
     if rising_edge(clk) then
-        counter <= counter + 1;
-        digit_sel <= to_integer(counter(19 downto 18));  -- 2 bits pour 4 états
+        compteur <= compteur + 1;
+        selection <= to_integer(compteur(19 downto 18));  -- 2 bits pour 4 états
     end if;
 end process;
 
-with digit_sel select
-    bcd_digit <= left_bcd(7 downto 4)  when 0, -- gauche
-                 left_bcd(3 downto 0)  when 1, -- gauche/milieu
-                 right_bcd(7 downto 4) when 2, -- droit/milieu
-                 right_bcd(3 downto 0)  when 3; -- droit
+right_recup <= right_in;
+left_recup  <= left_in;
 
-with digit_sel select
-    an <= "0111" when 0, -- gauche
-          "1011" when 1, -- gauche/milieu
-          "1101" when 2, -- droite/milieu
-          "1110" when 3, -- droite
-          "1111" when others;
+with selection select
+    valeur_recup <= left_recup(7 downto 4)  when 0, -- gauche
+                 left_recup(3 downto 0)  when 1, -- gauche/milieu
+                 right_recup(7 downto 4) when 2, -- droit/milieu
+                 right_recup(3 downto 0)  when 3; -- droit
 
 -- Hexa -> 7 digits
-with bcd_digit select
-    seg <= "0000001" when "0000",  -- 0
+with valeur_recup select
+    segments <= "0000001" when "0000",  -- 0
         "1001111" when "0001",  -- 1
         "0010010" when "0010",  -- 2
         "0000110" when "0011",  -- 3
@@ -65,4 +60,11 @@ with bcd_digit select
         "0110000" when "1110",  -- E
         "0111000" when "1111",  -- F
         "1111111" when others;  -- Eteint
+ 
+with selection select
+    anodes <= "0111" when 0, -- gauche
+          "1011" when 1, -- gauche/milieu
+          "1101" when 2, -- droite/milieu
+          "1110" when 3, -- droite
+          "1111" when others;
 end Behavioral;

@@ -7,8 +7,8 @@ entity main is
     Port (
         clk : in std_logic;
         rst: in  std_logic;
-        seg: out std_logic_vector(6 downto 0);
-        an : out std_logic_vector(3 downto 0);
+        segments: out std_logic_vector(6 downto 0);
+        anodes : out std_logic_vector(3 downto 0);
         leds : out std_logic_vector(7 downto 0);
         debug_leds : out std_logic_vector(7 downto 0);
         --clk_debug : out std_logic;
@@ -41,8 +41,8 @@ begin
             clk => clk,
             left_in => left_in_data,
             right_in => right_in_data,
-            seg => seg,
-            an => an
+            segments => segments,
+            anodes => anodes
         );
     clock_div: entity work.clock_div
         port map(
