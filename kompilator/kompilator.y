@@ -155,7 +155,7 @@ Expression : Expression tADD Expression {
             | tID {
               int index = DynamicArrayGetIndexIf(pSymbolTable,  (IptfVV)symbolEntryIsName, (void*)$1);
               if(index<0){
-                fprintf(stderr, "Erreur: variables '%s', utilisée main, n’a pas été déclarée (ligne %d).\n", $1, yylineno);
+                fprintf(stderr, "Erreur : variable '%s' utilisée sans avoir été déclarée (ligne %d).\n", $1, yylineno);
                 return -1;
               }
               int addr_ret=DynamicArrayPushSymbolEntry(pSymbolTable, "temp");
@@ -165,7 +165,7 @@ Expression : Expression tADD Expression {
             | tSTAR tID {
               int index = DynamicArrayGetIndexIf(pSymbolTable,  (IptfVV)symbolEntryIsName, (void*)$2);
               if(index<0){
-                fprintf(stderr, "Erreur: variables '%s', utilisée main, n’a pas été déclarée (ligne %d).\n", $2, yylineno);
+                fprintf(stderr, "Erreur : variable '%s' utilisée sans avoir été déclarée (ligne %d).\n", $2, yylineno);
                 return -1;
               }
               int addr_ret=DynamicArrayPushSymbolEntry(pSymbolTable, "temp");
